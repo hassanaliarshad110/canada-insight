@@ -220,7 +220,7 @@
     const gname = { overall: 'all amenities', local: 'local amenities', district: 'district facilities' }[S.sGroup];
     const wr = S.ward && sd.areas['ward:' + S.ward];
     const wtxt = wr ? `Ward ${S.ward} as a whole: ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).score)} (${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).low)} to ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).high)}). ` : '';
-    $('#score-count').textContent = `${wtxt}On ${gname}: ${counts.consistent_gap} communities have a consistent gap, ${counts.depends} more depend on the assumptions, out of ${rows.length} scored${S.ward ? ' in Ward ' + S.ward : ''}. Sorted lowest first. Residents and children: ${S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : ''} for the score shown; the range covers both.`;
+    $('#score-count').textContent = `${wtxt}On ${gname}: ${counts.consistent_gap} communities have a consistent gap, ${counts.depends} more depend on the assumptions, out of ${rows.length} scored${S.ward ? ' in Ward ' + S.ward : ''}. Sorted lowest first. Score shown: ${S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : ''}; the range covers every way of counting residents. Scores count the City's amenities plus non-City ones open to everyone.`;
     $('#stbl tbody').innerHTML = rows.length ? rows.map(x => {
       const c = x.s && CONS[x.s.consistency];
       return `<tr data-c="${esc(x.code)}" tabindex="0" class="${x.code === S.selected ? 'on' : ''}"><td>${esc(x.name)}${x.s && x.s.scenarios < x.s.scenarios_possible ? ' <span class="dim" title="No 2021 Census count, so fewer ways could be worked out">*</span>' : ''}</td>
@@ -564,7 +564,7 @@
     const key = scopeKey(), sc = S.data.scores && S.data.scores.areas[key];
     const out = [];
     for (const [bk, kd] of baseKinds()) {
-      const a = scopeAccess(bk), c = S.data.city_access[bk];
+      const a = scopeAccess(effKey(bk)), c = S.data.city_access[effKey(bk)];
       out.push(card(`Homes within ${metres(kd.thresholds_m[0])} of a ${kd.label.toLowerCase()}`, F.share(a && a.share_primary), F.share(c.share_primary)));
     }
     if (sc) for (const [g, l] of [['local', 'Local amenities score'], ['district', 'District facilities score'], ['overall', 'All amenities score']]) {
@@ -615,7 +615,7 @@
   function wardTopics() {
     const t = GROUPS.map(g => ({ id: g.id, title: g.title, cols: g.m.map(([k, l, f]) => ({ k, l, f, get: w => (dashRow(w) || {})[k] })) }));
     const am = baseKinds().map(([bk, kd]) => ({ k: bk, l: `Within ${metres(kd.thresholds_m[0])}: ${kd.label.toLowerCase()}`, f: 'share',
-      get: w => { const a = w ? ((S.data.wards[w] || {}).access || {})[bk] : S.data.city_access[bk]; return a && a.share_primary; } }));
+      get: w => { const k = effKey(bk); const a = w ? ((S.data.wards[w] || {}).access || {})[k] : S.data.city_access[k]; return a && a.share_primary; } }));
     const scg = [['local', 'Local score'], ['district', 'District score'], ['overall', 'All amenities score']].map(([g, l]) => ({ k: 's_' + g, l, f: 'dec2',
       get: w => { if (!w) return 1; const r = S.data.scores && S.data.scores.areas['ward:' + w]; return r ? (g === 'overall' ? r.overall : r.groups[g]).score : null; } }));
     t.push({ id: 'amenities', title: 'Amenities', cols: [...am, ...scg] });
