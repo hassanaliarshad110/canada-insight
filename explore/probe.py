@@ -11,14 +11,9 @@ def show(label, path, **q):
         print('##', label, 'ERROR', str(e)[:200])
 
 
-import urllib.request as U
-def cat(q):
-    url = 'https://api.us.socrata.com/api/catalog/v1?' + urllib.parse.urlencode({'domains': 'data.edmonton.ca', 'q': q, 'limit': 20})
-    with U.urlopen(U.Request(url, headers={'User-Agent': 'canada-insight/0.5'}), timeout=120) as r:
-        d = json.loads(r.read().decode())
-    print('## catalogue', q)
-    for x in d['results']:
-        print(x['resource']['id'], '|', x['resource']['name'], '|', x['resource'].get('columns_field_name', [])[:15])
-for q in ['2021 federal census dwelling', 'census structure type', 'census household', 'dwelling unit']:
-    try: cat(q)
-    except Exception as e: print('##', q, 'ERROR', e)
+
+show('households characteristics', '/resource/xgkv-ii9t.json', **{'$select': 'question_type, characteristic, sum(value) as v, count(*) as n', '$group': 'question_type, characteristic', '$order': 'question_type, characteristic', '$limit': '100'})
+show('2019 dwelling status citywide', '/resource/7uuj-bhr2.json')
+rows = get('/resource/xgkv-ii9t.json', **{'$limit': '50000'})
+print('## households by neighbourhood (all rows, compact)')
+print(json.dumps([[r.get('neighbourhood_number'), r.get('question_type'), r.get('characteristic'), r.get('value')] for r in rows]))
