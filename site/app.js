@@ -39,7 +39,7 @@
   function readHash() {
     const [p, qs] = location.hash.replace(/^#\/?/, '').split('?');
     let [city, view, kind] = (p || '').split('/');
-    if (view && !['dashboard', 'amenities', 'wards', 'about'].includes(view)) { kind = view; view = 'amenities'; }   // old links
+    if (view && !['dashboard', 'amenities', 'wards', 'about', 'ask'].includes(view)) { kind = view; view = 'amenities'; }   // old links
     const q = new URLSearchParams(qs || '');
     return { city, view: view || 'dashboard', kind, th: q.get('d') === '800' || q.get('d') === '1' ? 1 : 0, c: q.get('c'),
              p: q.get('p'), m: q.get('m'), w: +(q.get('w') || 0), set: q.get('set'), pm: q.get('pm') };
@@ -644,5 +644,60 @@
     const k = b.dataset.sort; S.sort = [k, S.sort[0] === k ? -S.sort[1] : (k === 'name' || k === 'share' || k === 'new' || k === 'status' || k === 'crowd' ? 1 : -1)]; renderTable();
   }));
   dark.addEventListener('change', () => { if (S.data) { restyle(); renderLegend(); renderPoints(); } });
+
+  // ---------- research assistant ----------
+  const A = { cfg: null, mode: 'quick', msgs: [], busy: false };
+  async function initAsk() {
+    try { A.cfg = await get('genie.json'); } catch { A.cfg = null; }
+    $('#ask-code-wrap').hidden = !(A.cfg && A.cfg.needs_code);
+    try { $('#ask-code').value = sessionStorage.getItem('ci-code') || ''; } catch { /* storage unavailable */ }
+    if (!A.cfg || !A.cfg.url) {
+      $('#ask-status').textContent = 'The assistant is being set up and will be available here shortly.';
+      $('#ask-send').disabled = true;
+    }
+  }
+  function md(text) {
+    const html = window.marked ? marked.parse(text || '') : esc(text);
+    return window.DOMPurify ? DOMPurify.sanitize(html) : esc(text);
+  }
+  function renderThread() {
+    $('#thread').innerHTML = A.msgs.map((m, i) => {
+      if (m.role === 'user') return `<div class="msg user">${esc(m.content)}</div>`;
+      if (m.error) return `<div class="msg ai err">${esc(m.error)}</div>`;
+      const steps = (m.steps || []).map(s => `<li>${esc(s.tool)}: <code>${esc(JSON.stringify(s.input))}</code></li>`).join('');
+      return `<div class="msg ai">${md(m.content)}<div class="meta"><span class="kind kind-ai">AI-generated</span>
+        <span>${esc(m.model || '')}</span>${m.report ? `<a href="#" data-dl="${i}">Download the report (Markdown)</a>` : ''}</div>
+        ${steps ? `<details><summary>What it looked up (${m.steps.length})</summary><ul>${steps}</ul></details>` : ''}</div>`;
+    }).join('') + (A.busy ? '<div class="msg ai"><span class="fine">Looking it up in the data…</span></div>' : '');
+    $$('#thread [data-dl]').forEach(x => x.addEventListener('click', e => {
+      e.preventDefault();
+      const m = A.msgs[+x.dataset.dl];
+      const blob = new Blob([m.content], { type: 'text/markdown' });
+      const u = URL.createObjectURL(blob), a = document.createElement('a');
+      a.href = u; a.download = 'canada-insight-report.md'; a.click(); setTimeout(() => URL.revokeObjectURL(u), 1000);
+    }));
+  }
+  async function ask(q) {
+    if (!A.cfg || !A.cfg.url || A.busy || !q.trim()) return;
+    A.msgs.push({ role: 'user', content: q.trim() });
+    A.busy = true; $('#ask-send').disabled = true; renderThread();
+    const code = $('#ask-code').value.trim();
+    try { if (code) sessionStorage.setItem('ci-code', code); } catch { /* storage unavailable */ }
+    try {
+      const history = A.msgs.filter(m => !m.error).map(m => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.content }));
+      const r = await fetch(A.cfg.url.replace(/\/$/, '') + '/ask', { method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ messages: history, city: S.city.id, ward: S.ward || null, mode: A.mode, code: code || undefined }) });
+      const d = await r.json().catch(() => ({ error: `The assistant answered ${r.status}.` }));
+      if (!r.ok || d.error) A.msgs.push({ role: 'assistant', error: d.error || `The assistant answered ${r.status}.` });
+      else A.msgs.push({ role: 'assistant', content: d.answer, steps: d.steps, model: d.model, report: A.mode === 'report' });
+    } catch (e) {
+      A.msgs.push({ role: 'assistant', error: 'The assistant could not be reached. Check your connection and try again.' });
+    }
+    A.busy = false; $('#ask-send').disabled = false; renderThread();
+  }
+  $$('#ask-mode button').forEach(b => b.addEventListener('click', () => { A.mode = b.dataset.m; $$('#ask-mode button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }));
+  $('#ask-form').addEventListener('submit', e => { e.preventDefault(); const q = $('#ask-q').value; $('#ask-q').value = ''; ask(q); });
+  $('#ask-q').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('#ask-form').requestSubmit(); } });
+  initAsk();
   boot();
 })();

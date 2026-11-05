@@ -252,3 +252,24 @@ table#tbl, table#qtbl { width: 100%; border-collapse: collapse; font-size: .95re
 .p-scores .v { font-weight: 800; font-size: 1.15rem; }
 .p-scores .r { color: var(--muted); font-size: .76rem; }
 @media (max-width: 600px) { #stbl .hide-sm { display: none; } }
+
+.ask { padding-top: clamp(24px, 4vw, 48px) !important; padding-bottom: 24px !important; max-width: 980px; }
+.ask h1 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; letter-spacing: -.02em; }
+.ask-bar { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 4px 0 14px; }
+.ask-code { display: inline-flex; gap: 8px; align-items: center; color: var(--muted); }
+.ask-code input, .ask-form textarea { font: inherit; color: var(--ink); background: var(--surface); border: 1.5px solid var(--rule); border-radius: 8px; padding: 8px 10px; }
+.thread { display: grid; gap: 12px; margin: 0 0 14px; }
+.msg { border-radius: 10px; padding: 12px 14px; max-width: 100%; overflow-x: auto; }
+.msg.user { background: var(--teal-soft); justify-self: end; max-width: 80%; }
+.msg.ai { background: var(--surface); border: 1px solid var(--rule); }
+.msg.ai table { border-collapse: collapse; font-size: .92rem; }
+.msg.ai th, .msg.ai td { border-bottom: 1px solid var(--rule); padding: 5px 8px; text-align: left; }
+.msg .meta { color: var(--muted); font-size: .8rem; margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.msg details { font-size: .82rem; color: var(--muted); margin-top: 6px; }
+.msg details code { font-size: .78rem; }
+.msg.err { background: var(--amber-soft); border: 1.5px solid var(--amber); }
+.ask-form { display: flex; gap: 10px; align-items: flex-end; }
+.ask-form textarea { flex: 1; resize: vertical; min-height: 52px; }
+.btn.primary { background: var(--teal); color: var(--surface); border-color: var(--teal); padding: 10px 18px; }
+.btn.primary:disabled { opacity: .5; cursor: wait; }
+.kind-ai { box-shadow: inset 0 0 0 1.5px var(--focus); color: var(--focus); }

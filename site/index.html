@@ -27,6 +27,7 @@
     <a href="#" data-view="dashboard">Dashboard</a>
     <a href="#" data-view="amenities">Amenities</a>
     <a href="#" data-view="wards">Ward comparison</a>
+    <a href="#" data-view="ask">Ask the data</a>
     <a href="#" data-view="about">About the data</a>
   </nav>
 </header>
@@ -176,6 +177,28 @@
   </section>
  </div>
 
+ <div class="view" data-view="ask" hidden>
+  <section class="ask" aria-labelledby="ask-h">
+    <h1 id="ask-h">Ask the data</h1>
+    <p class="lede">A research assistant that answers from this site's figures and from any of the City's open datasets. It cites every figure and says when the data can't answer. Answers are written by AI: check the sources it gives.</p>
+    <div class="ask-bar">
+      <div class="seg" role="group" aria-label="Kind of answer" id="ask-mode">
+        <button type="button" data-m="quick" aria-pressed="true">Quick answer</button>
+        <button type="button" data-m="thorough" aria-pressed="false">Thorough</button>
+        <button type="button" data-m="report" aria-pressed="false">Research report</button>
+      </div>
+      <label class="ask-code" id="ask-code-wrap" hidden><span>Access code</span><input id="ask-code" type="password" autocomplete="off"></label>
+    </div>
+    <div class="thread" id="thread" aria-live="polite"></div>
+    <form class="ask-form" id="ask-form">
+      <label class="sr" for="ask-q">Your question</label>
+      <textarea id="ask-q" rows="2" placeholder="For example: which communities in this ward grew fastest since 2021, and how far are their homes from a transit stop?"></textarea>
+      <button class="btn primary" type="submit" id="ask-send">Ask</button>
+    </form>
+    <p class="fine" id="ask-status"></p>
+  </section>
+ </div>
+
  <div class="view" data-view="about" hidden>
   <section class="about" id="method" aria-labelledby="method-h">
     <h2 id="method-h">How this is measured</h2>
@@ -225,6 +248,8 @@
 </footer>
 
 <script src="vendor/leaflet.js"></script>
+<script src="vendor/marked.min.js"></script>
+<script src="vendor/purify.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

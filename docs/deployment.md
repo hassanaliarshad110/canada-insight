@@ -35,3 +35,20 @@ python -m pytest -q
 python -m insight build --city calgary --out site/data
 python -m http.server -d site 8000
 ```
+
+## Research assistant (Ask the data)
+
+The assistant runs as a small Cloudflare Worker (`worker/genie.js`) that holds the Claude key; the website only
+sends questions to it. It answers from the published files and the City's open data portal, cites every figure,
+and has daily limits per visitor and overall.
+
+One-time setup:
+1. Create a free Cloudflare account. In **My Profile → API Tokens**, create a token from the **Edit Cloudflare
+   Workers** template. Note your **Account ID** (Workers & Pages overview page).
+2. In this repository: **Settings → Secrets and variables → Actions**, add `CLOUDFLARE_API_TOKEN`,
+   `CLOUDFLARE_ACCOUNT_ID` and `ANTHROPIC_API_KEY` (give the key a monthly spend limit in the Claude Console).
+   Optional: `GENIE_ACCESS_CODE` if only people with the code should use it.
+3. **Actions → Research assistant → Run workflow.** It deploys the worker, puts the key in Cloudflare's secret
+   store, and writes the assistant's address to `site/genie.json`, which rebuilds the site.
+
+Limits: 30 questions per visitor per day, 600 in all (`worker/wrangler.toml`).

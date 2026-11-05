@@ -12,6 +12,8 @@ Added
   same matching rules as Calgary Data Desk; filters for the City's only and for adding private ones. If
   OpenStreetMap can't be reached, the last build's copy (up to 30 days old) is used and the page says so.
 - Map tiles from OpenStreetMap (no key needed). Tests: 39.
+- Ask the data: research assistant (quick answer, thorough, research report) on a Cloudflare Worker that holds the
+  key; answers only from data it reads, cites sources, daily limits. Node tests for the worker.
 
 ## 0.3.0 (5 November 2026)
 

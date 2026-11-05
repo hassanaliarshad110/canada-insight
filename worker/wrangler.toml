@@ -1,0 +1,15 @@
+name = "canada-insight-genie"
+main = "genie.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+SITE_ORIGIN = "https://hassanaliarshad110.github.io"
+SITE_DATA = "https://hassanaliarshad110.github.io/canada-insight/data/"
+DAILY_LIMIT_IP = "30"
+DAILY_LIMIT_ALL = "600"
+
+# Daily question counters. Create once with:  npx wrangler kv namespace create LIMITS
+# then paste the id it prints here (the deploy workflow does this for you if CF_KV_ID is set).
+# [[kv_namespaces]]
+# binding = "LIMITS"
+# id = "..."
