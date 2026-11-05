@@ -15,5 +15,7 @@ Added
   no composite score. Replaces the boundary-count "amenity level" and "Needs attention" tiers.
 - Website: map, community profiles, comparison of up to three communities, sortable table, CSV download, sources
   and data quality pages; light and dark themes; keyboard and screen-reader support.
-- Tests: 24 (geometry, indicator formulas against brute force and exact distances, config validation, quality
+- Reconciliation: playground access recomputed independently during the audit (73.2% of records within 400 m)
+  against the pipeline's record-count share (73.3%).
+- Tests: 25 (geometry, indicator formulas against brute force and exact distances, config validation, quality
   checks, end-to-end on a hand-worked test city).
