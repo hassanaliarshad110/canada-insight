@@ -690,7 +690,7 @@
     if (gaps.length) out.push({ kind: 'calculated', text: `Homes built since ${S.data.growth_year} compared with older homes in ${name} (share within walking distance): ${gaps.join('; ')}.` });
     // 5. district facilities for new homes
     const dist = district.map(bk => [bk, scopeAccess(kinds[bk])]).filter(([, a]) => a && a.share_new_primary != null && a.units_new >= 50);
-    if (dist.length) out.push({ kind: 'calculated', text: `For homes built since ${S.data.growth_year} in ${name}: ` + dist.map(([bk, a]) => `${pct(a.share_new_primary)} are within ${metres(S.data.kinds[bk].thresholds_m[0])} of a ${lab(bk)}`).join('; ') + '. New communities on the city\'s edge are farther from facilities that serve several communities, some of which are planned for later phases.' });
+    if (dist.length) out.push({ kind: 'calculated', text: `For homes built since ${S.data.growth_year} in ${name}: ` + dist.map(([bk, a]) => `${pct(a.share_new_primary)} are within ${metres(S.data.kinds[bk].thresholds_m[0])} of ${an(lab(bk))}`).join('; ') + '. New communities on the city\'s edge are farther from facilities that serve several communities, some of which are planned for later phases.' });
     // 6. parks near, few playgrounds (communities in scope)
     if (kinds.park && kinds.playground) {
       const pp = Object.entries(S.data.areas).filter(([c, a]) => inScope(c) && a.access[kinds.park].status !== 'too_few_homes'
