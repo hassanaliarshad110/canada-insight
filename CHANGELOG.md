@@ -14,6 +14,14 @@ Added
   homes and amenities for cities without a linked dashboard. Switching city in the address now opens that city.
 - Research assistant: Edmonton's portal; named wards.
 
+Fixed (after the first Edmonton build)
+- The default way of counting Edmonton's residents (2021 Census plus new homes) was left out because it was listed
+  before the census it builds on; options are now built in dependency order.
+- About 7,600 Edmonton homes with no neighbourhood code are placed by location instead of left without one.
+- 36,340 census residents in four neighbourhoods renamed or renumbered since 2021 (Oliver, now Wîhkwêntôwin, and
+  three others) carried no homes; they are now placed by the census-day boundary.
+- The audit tool works for any city (ward count and population options from the city's settings).
+
 
 ## 0.4.0 (5 November 2026)
 

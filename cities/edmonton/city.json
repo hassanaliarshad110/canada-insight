@@ -71,7 +71,8 @@
     "limitations": [
       "Apartment buildings are one account each; their homes are estimated from floor area.",
       "Properties assessed under $40,000 are left out (mostly parking stalls and storage units)."
-    ]
+    ],
+    "area_from_location": true
   },
   "people": {
     "default": "census_plus_new",
@@ -104,8 +105,17 @@
         "about": "Each neighbourhood's 2021 Census count, unchanged. Neighbourhoods built since have little or no count.",
         "limitations": [
           "Counts are as of May 2021; growth since is not included.",
-          "Statistics Canada rounds counts, so neighbourhoods may not add exactly to the city total."
-        ]
+          "Statistics Canada rounds counts, so neighbourhoods may not add exactly to the city total.",
+          "Neighbourhoods renamed, renumbered or split since the census (for example Oliver, now Wîhkwêntôwin) are matched by the census-day boundary: their residents go to today's neighbourhoods in proportion to the homes inside it that were built before 2021."
+        ],
+        "census_year": 2021,
+        "boundaries": {
+          "dataset": "5bk4-5txu",
+          "title": "2021 Federal Census: Neighbourhoods as of Official Census Day",
+          "code_field": "neighbourh",
+          "name_field": "name",
+          "geometry_field": "the_geom"
+        }
       }
     }
   },
@@ -291,13 +301,14 @@
       "b4er-5rp2": 1500,
       "eg3i-f4bj": 2000,
       "wpfd-8bii": 2000,
-      "4vt2-8zrq": 120
+      "4vt2-8zrq": 120,
+      "5bk4-5txu": 2000
     },
     "extent_margin_deg": 0.05
   },
   "readiness": {
     "data_availability": "High for this module: neighbourhoods, wards, every residential property with location and year built, playgrounds, parks, transit stops, community league halls, recreation centres, libraries, 2021 Census by neighbourhood (age included). Also published: 311 requests, building and development permits, schools.",
-    "data_quality": "High. Apartment buildings are one account each, so their homes are estimated from floor area (Calgary uses building permits).",
+    "data_quality": "High. Apartment buildings are one account each, so their homes are estimated from floor area (Calgary uses building permits). About 7,600 homes have no neighbourhood code on the roll and are placed by location. Four 2021 Census neighbourhoods have since been renamed or renumbered; their residents are placed by the census-day boundary.",
     "geographic_compatibility": "Neighbourhoods (about 400, including industrial ones) in 12 named wards. Neighbourhoods are not equivalent to Calgary's communities: compare cities only at the city level.",
     "historical_coverage": "Property roll: current year (year built gives the build history). 311 from 2014. Census 2021 by neighbourhood; municipal censuses 2009 to 2019.",
     "indicator_comparability": "The access, crowding and score measures use the same method, thresholds and rules as Calgary. Population differs: Calgary uses Calgary Data Desk's estimates, Edmonton the 2021 Census plus new homes. Scores are against each city's own level, so they are not comparable between cities; shares of homes within reach are.",

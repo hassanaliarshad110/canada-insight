@@ -37,6 +37,7 @@ portal on 5 November 2026; the build records the exact figures in `sources.json`
 | [Property Assessment Data (Current Calendar Year)](https://data.edmonton.ca/d/q7d6-ambg) | City of Edmonton | 2026-11-02 | 439,825 (all classes) | `tax_class in('Residential','Other Residential') AND assessed_value >= 40000` | Homes: location, neighbourhood, class |
 | [Property Information (Current Calendar Year)](https://data.edmonton.ca/d/dkk9-cj3x) | City of Edmonton | 2026-11-02 | 439,825 | `year_built IS NOT NULL` | Year built; floor area of apartment buildings |
 | [2021 Federal Census: Population](https://data.edmonton.ca/d/eg3i-f4bj) | Statistics Canada, via the City | 2023-09-27 | 278 neighbourhoods (1,010,595 residents) | none | Residents by neighbourhood |
+| [2021 Federal Census: Neighbourhoods as of Official Census Day](https://data.edmonton.ca/d/5bk4-5txu) | City of Edmonton | 2021 | 403 | none | Census-day boundaries, used only for the 4 census neighbourhoods whose code has changed (Oliver, now Wîhkwêntôwin; Chappelle; Heritage Valley Town Centre; Horse Hill Neighbourhood 1A) |
 | [2021 Federal Census: Age and Gender](https://data.edmonton.ca/d/wpfd-8bii) | Statistics Canada, via the City | 2023-06-28 | 20,925 | `age_range='0 to 14 years' AND gender='Total'` | Children by neighbourhood (184,105) |
 | [Playgrounds](https://data.edmonton.ca/d/9nqb-w48x) | City of Edmonton | 2026-11-02 | 661 | none | Playgrounds |
 | [Parks](https://data.edmonton.ca/d/gdd9-eqv9) | City of Edmonton | 2026-11-02 | 1,197 | `status='Active' AND class not in('PUL','Unknown','Other Land Type')` | Public parks (outlines) |
@@ -48,7 +49,8 @@ portal on 5 November 2026; the build records the exact figures in `sources.json`
 How Edmonton differs from Calgary:
 - Homes are points the City publishes for each property, not parcel centres. Condominium units are one account each;
   apartment buildings ("Other Residential", 4,404 accounts) are one account each, so their homes are estimated as
-  floor area / 85 m² (an estimate, labelled as such). Properties assessed under $40,000 (about 45,000, mostly $0
+  floor area / 85 m² (an estimate, labelled as such). About 7,600 homes carry no neighbourhood code on the roll
+  (for example in Anthony Henday Southeast and the Chappelle area) and are placed in the neighbourhood that contains them. Properties assessed under $40,000 (about 45,000, mostly $0
   parking stalls, storage units and remnant parcels) are left out, as are properties with no year built (no building).
 - Residents and children come from the 2021 Census by neighbourhood on the City's portal, with residents added for
   homes built since 2021 (default) or unchanged. There is no Calgary Data Desk for Edmonton, so the dashboard shows

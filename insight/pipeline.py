@@ -147,6 +147,7 @@ class Builder:
                 continue
             out[code] = {'code': code, 'name': tidy_name(r.get(a['name_field']) or code, a.get('name_case')),
                          'attrs': {f: r.get(f) for f in a.get('extra_fields') or []}, 'mp': mp}
+        self.area_names = {c: v['name'] for c, v in out.items()}
         lons = [p[0] for v in out.values() for poly in v['mp'] for p in poly[0]]
         lats = [p[1] for v in out.values() for poly in v['mp'] for p in poly[0]]
         m = self.qcfg.get('extent_margin_deg', 0.05)
@@ -154,7 +155,7 @@ class Builder:
         return out
 
     # ---- homes -------------------------------------------------------------------------------------------------
-    def homes(self, area_codes):
+    def homes(self, area_codes, areas=None):
         h = self.cfg['homes']
         join = h.get('join')                        # year built (and floor area) kept in a second dataset
         ue = h.get('unit_estimate')                 # apartment buildings listed once: units from floor area
@@ -268,6 +269,19 @@ class Builder:
                                                 round(nogeo / max(n_read, 1), 5), 0.0))
         self.checks.append(quality.QualityCheck(s.id, f"duplicate_{h['id_field']}", 'warn' if dup_n > 0 else 'pass',
                                                 f'{dup_n:,} repeated records left out', dup_n))
+        if h.get('area_from_location') and areas:
+            # records with no area code (or one with no boundary) placed in the area that contains them
+            miss = [i for i, c in enumerate(area) if c not in area_codes]
+            if miss:
+                xy_a = np.asarray(xy, dtype=float)[miss]
+                loc = geo.locate_many(xy_a[:, 0], xy_a[:, 1], {c: self.proj.multipolygon(v['mp']) for c, v in areas.items()})
+                placed = 0
+                for i, c in zip(miss, loc):
+                    if c is not None:
+                        area[i] = c
+                        placed += 1
+                s.transformations.append(f'{placed:,} records with no {self.cfg["areas"]["level"]} code placed by location; '
+                                         f'{len(miss) - placed:,} fall outside every {self.cfg["areas"]["level"]}')
         lonlat = [self.proj.lonlat(x, y) for x, y in xy]
         self.checks.append(quality.outside_bbox(s.id, lonlat, self.extent))
         self.checks.append(quality.unknown_codes(s.id, area, area_codes))
@@ -343,9 +357,11 @@ class Builder:
         if not pc:
             return {}
         out = {}
-        for opt, o in pc['options'].items():
+        # options built from another option come after it, whatever their order in the config
+        order = sorted(pc['options'].items(), key=lambda kv: kv[1].get('type') == 'census_plus_new')
+        for opt, o in order:
             if o.get('type') == 'census':
-                r_ = self._people_census(opt, o, area_units)
+                r_ = self._people_census(opt, o, area_units, homes)
                 if r_:
                     out[opt] = r_
                 continue
@@ -353,6 +369,9 @@ class Builder:
                 base = out.get(o['based_on'])
                 if base and homes is not None:
                     out[opt] = self._people_plus_new(opt, o, base, homes)
+                else:
+                    self.checks.append(quality.QualityCheck(f"{self.cfg['id']}.people.{opt}", 'read', 'warn',
+                                                            f"left out: {o['based_on']} could not be built"))
                 continue
             key = f'people.{opt}'
             s = Source(id=f"{self.cfg['id']}.{key}", title=o['title'], publisher=o['publisher'], url=o.get('page', o['url']),
@@ -399,9 +418,9 @@ class Builder:
                                                   if r.get(ref['code_field']) and r.get(ref['field']) is not None}}
                 except (KeyError, TypeError) as e:
                     self.checks.append(quality.QualityCheck(s.id, 'homes_reference', 'warn', f'not found: {e}'))
-        return out
+        return {k: out[k] for k in pc['options'] if k in out}       # the config's order, for the page
 
-    def _people_census(self, opt, o, area_units):
+    def _people_census(self, opt, o, area_units, homes=None):
         """Residents and children by area from census tables on the city's own portal."""
         key = f'people.{opt}'
         s = self._source(key, o['dataset'], o['title'], o.get('where'), f"one {self.cfg['areas']['level']}",
@@ -426,6 +445,8 @@ class Builder:
                 by[c]['children'] += _num(r.get(o['children_field'])) or 0
         s.rows = len(rows) + len(kids)
         s.sha256 = rows_hash(rows + kids)
+        if o.get('boundaries'):
+            self._census_retired(o, by, area_units, homes, s)
         s.transformations.append(f"children aged 0 to 14 from {o.get('children_title', o.get('children_dataset'))}")
         covered = sum(u for c, u in area_units.items() if c in by and by[c]['residents'] > 0)
         share = covered / (sum(area_units.values()) or 1)
@@ -443,6 +464,53 @@ class Builder:
             self.checks.append(quality.QualityCheck(s.id, 'total', 'pass' if off < 0.005 else 'warn',
                                                     f'{tot:,.0f} residents against the published {o["expected_total"]:,}', round(off, 4), 0.005))
         return {'by_area': by, 'label': o['label'], 'about': o.get('about', '')}
+
+    def _census_retired(self, o, by, area_units, homes, s):
+        """Census areas whose code no longer exists (renamed, renumbered or split since the census): their residents and
+        children go to today's areas in proportion to the homes inside the census-day boundary that were already
+        built at the census (all homes inside, if none were)."""
+        retired = [c for c, v in by.items() if not area_units.get(c) and v['residents'] > 0]
+        if not retired or homes is None:
+            return
+        b = o['boundaries']
+        try:
+            rows = self.client.rows(b['dataset'], select=f"{b['code_field']},{b['name_field']},{b['geometry_field']}")
+        except Exception as e:                              # noqa: BLE001
+            self.checks.append(quality.QualityCheck(s.id, 'census_boundaries', 'warn', f'could not read: {e}'))
+            return
+        self._source('people.census_boundaries', b['dataset'], b.get('title', 'Census-day boundaries'), None,
+                     f"one {self.cfg['areas']['level']}", 'whole city', o.get('period', ''), None,
+                     ['used only for census areas whose code no longer exists']).rows = len(rows)
+        shapes = {norm_code(r.get(b['code_field'])): (r.get(b['name_field']), geo.as_multipolygon(r.get(b['geometry_field'])))
+                  for r in rows}
+        year = o.get('census_year') or self.cfg['growth_year']
+        xy = homes['xy']
+        wt = np.asarray(homes['weight'], dtype=float)
+        older = np.asarray([y is not None and y < year for y in homes['built']], dtype=bool)
+        moved_all = 0
+        for c in retired:
+            name, mp = shapes.get(c, (None, None))
+            if not mp:
+                continue
+            inside = geo.points_in_multipolygon(xy[:, 0], xy[:, 1], self.proj.multipolygon(mp))
+            use = inside & older if (inside & older).any() else inside
+            if not use.any():
+                continue
+            tot_w = wt[use].sum()
+            share = {}
+            for a_, w_ in zip(np.asarray(homes['area'], dtype=object)[use], wt[use]):
+                if a_ in area_units:
+                    share[a_] = share.get(a_, 0) + w_ / tot_w
+            for a_, f in share.items():
+                d = by.setdefault(a_, {'residents': 0.0, 'children': 0.0})
+                d['residents'] += by[c]['residents'] * f
+                d['children'] += by[c]['children'] * f
+            moved = by[c]['residents'] * sum(share.values())
+            moved_all += moved
+            s.transformations.append(f"{tidy_name(name or c, 'title')} ({c}, a code no longer in use): {moved:,.0f} residents placed in "
+                                     + ', '.join(f"{getattr(self, 'area_names', {}).get(a_, a_)} ({f:.0%})" for a_, f in sorted(share.items(), key=lambda kv: -kv[1]))
+                                     + ' by the homes inside its census-day boundary')
+            del by[c]
 
     def _people_plus_new(self, opt, o, base, homes):
         """Census count, plus residents for homes built since the census year (an estimate).
@@ -501,7 +569,7 @@ class Builder:
         areas = self.areas()
         wards = self.wards()
         log(f'{len(areas)} areas, {len(wards or {})} wards read ({time.time() - t0:.0f} s)')
-        homes = self.homes(set(areas))
+        homes = self.homes(set(areas), areas)
         log(f'{len(homes["id"]):,} homes read ({time.time() - t0:.0f} s)')
         ams = self.amenities()
         log(f'amenities read ({time.time() - t0:.0f} s)')

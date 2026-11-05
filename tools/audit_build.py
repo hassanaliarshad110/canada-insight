@@ -23,6 +23,8 @@ def main(d, desk=None):
     S = json.load(open(os.path.join(d, 'sources.json')))
     D = json.load(open(os.path.join(d, 'dashboard.json'))) if os.path.exists(os.path.join(d, 'dashboard.json')) else None
     kinds = A['kinds']
+    cfg = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'cities', A['city'], 'city.json')))
+    n_wards = {'calgary': 14, 'edmonton': 12}.get(A['city'])
     base = [k for k, v in kinds.items() if not v.get('variant_of')]
 
     # 1. shares are proportions, and the longer distance never reads lower than the shorter
@@ -56,7 +58,7 @@ def main(d, desk=None):
         units_w = sum(w['units'] for w in A['wards'].values())
         check('ward homes add up to the city total (within 0.5%)', abs(units_w / A['homes']['units'] - 1) < 0.005,
               f'{units_w:,.0f} vs {A["homes"]["units"]:,.0f}')
-        check('14 wards present', len(A['wards']) == 14, str(sorted(A['wards'], key=int)))
+        check(f'{n_wards} wards present', len(A['wards']) == n_wards, ', '.join(A['wards']))
         # independent check of ward placement: each ward's share = unit-weighted mean of its communities' shares
         worst = (0, '')
         for w, wd in A['wards'].items():
@@ -79,9 +81,18 @@ def main(d, desk=None):
           '' if cr else 'missing')
     if cr:
         opts = list(cr['options'])
-        check('all four ways of counting residents (as Calgary Data Desk)', set(opts) >= {'city_actual', 'city_pace', 'model', 'census2021'},
-              ', '.join(opts))
-        check("default is Calgary Data Desk's default", cr['default'] == 'city_actual', cr['default'])
+        check('every configured way of counting residents', set(opts) == set(cfg['people']['options']), ', '.join(opts))
+        check("default is the configured default", cr['default'] == cfg['people']['default'], cr['default'])
+        tots = {o: (v.get('totals') or {}).get('_all') for o, v in cr['options'].items()}
+        check('residents and children published for the city and each ward',
+              all(t for t in tots.values()) and all(('ward:' + w) in cr['options'][o]['totals'] for o in tots for w in (A.get('wards') or {})),
+              '; '.join(f"{o}: {t['residents']:,} residents, {t['children']:,} children" for o, t in tots.items() if t))
+        for o, v in cr['options'].items():
+            t = v.get('totals') or {}
+            if t.get('_all') and A.get('wards'):
+                sw = sum(t['ward:' + w]['residents'] for w in A['wards'] if 'ward:' + w in t)
+                check(f'ward residents add up to the city ({o}, within 0.5%)', abs(sw / t['_all']['residents'] - 1) < 0.005,
+                      f"{sw:,} vs {t['_all']['residents']:,}")
         neg = [(k, o) for k, v in cr['kinds'].items() for o, dd in v['by_option'].items() for d_, vals in dd.items()
                for c, x in vals.items() if not c.startswith('_') and x is not None and x < 0]
         check('crowding figures not negative', not neg, str(neg[:3]))

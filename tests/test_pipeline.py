@@ -217,7 +217,7 @@ def test_point_homes_join_census_and_new_homes(tiny_city, tmp_path):
     pts = lambda xm: {'type': 'Point', 'coordinates': [lon0 + xm / kx, mid]}
     client.tables['props'] = [
         {'acct': '1', 'nbhd': '10.0', 'cls': 'Residential', 'pt': pts(100)},
-        {'acct': '2', 'nbhd': '10', 'cls': 'Residential', 'pt': pts(300)},
+        {'acct': '2', 'nbhd': None, 'cls': 'Residential', 'pt': pts(300)},             # no code: placed by location
         {'acct': '3', 'nbhd': '10', 'cls': 'Other Residential', 'pt': pts(500)},     # apartment, 850 m2 -> 10 homes
         {'acct': '4', 'nbhd': '10', 'cls': 'Residential', 'pt': pts(700)},           # vacant: no year built
         {'acct': '5', 'nbhd': '20', 'cls': 'Residential', 'pt': pts(1100)},          # new home, area 20
@@ -227,26 +227,31 @@ def test_point_homes_join_census_and_new_homes(tiny_city, tmp_path):
     for a in client.tables['areas']:
         a['comm_code'] = {'AAA': '10', 'BBB': '20'}[a['comm_code']]
     cfg['homes'] = {'dataset': 'props', 'id_field': 'acct', 'area_field': 'nbhd', 'built_field': 'yb', 'geometry_field': 'pt',
-                    'require_built': True,
+                    'require_built': True, 'area_from_location': True,
                     'join': {'dataset': 'info', 'id_field': 'acct', 'built_field': 'yb', 'area_field': 'gfa'},
                     'unit_estimate': {'class_field': 'cls', 'equals': 'Other Residential', 'm2_per_unit': 85, 'note': 'n'}}
-    client.tables['pop'] = [{'n': '10', 'p': '24'}]
+    client.tables['pop'] = [{'n': '10', 'p': '24'}, {'n': '99', 'p': '6'}]      # 99: a code retired since the census
+    old_shape = next(a['multipolygon'] for a in client.tables['areas'] if a['comm_code'] == '10')
+    client.tables['old'] = [{'c': '99.0', 'nm': 'OLD PLACE', 'g': old_shape}]
     client.tables['age'] = [{'n': '10.0', 'v': '6'}]
-    cfg['people'] = {'default': 'plus', 'options': {
+    cfg['people'] = {'default': 'plus', 'options': {           # the derived option listed first, as in Edmonton's config
+        'plus': {'type': 'census_plus_new', 'based_on': 'census', 'label': 'Census plus new homes', 'title': 't'},
         'census': {'type': 'census', 'label': '2021 Census', 'title': 't', 'dataset': 'pop', 'code_field': 'n',
-                   'residents_field': 'p', 'children_dataset': 'age', 'children_code_field': 'n', 'children_field': 'v'},
-        'plus': {'type': 'census_plus_new', 'based_on': 'census', 'label': 'Census plus new homes', 'title': 't'}}}
+                   'residents_field': 'p', 'children_dataset': 'age', 'children_code_field': 'n', 'children_field': 'v',
+                   'boundaries': {'dataset': 'old', 'code_field': 'c', 'name_field': 'nm', 'geometry_field': 'g'}}}}
     cfg['amenities']['playground']['crowding'] = {'people': 'children', 'unit': 'u'}
     b, data, out = run(cfg, client, tmp_path)
     A = data['areas']['10']
     assert A['units'] == 12 and A['records'] == 3              # 1 + 1 + 10 estimated; the vacant property left out
     assert data['homes']['units_estimated'] == 10
     res = b.sources['people.census']
-    assert res.rows == 2
+    assert res.rows == 3
     pg = data['crowding']['kinds']['playground']['by_option']
     # census: area 20 has no count, so no children there; plus-new: 1 new home x city people per home (24 / 12 = 2)
     assert pg['census']['400'].get('20') in (None, 0.0)
     assert pg['plus']['400']['20'] is not None and pg['plus']['400']['20'] > 0
     tot = data['crowding']['options']
-    assert tot['census']['totals']['_all']['residents'] == 24          # every census resident is placed in a home
-    assert tot['plus']['totals']['_all']['residents'] == 26            # plus 1 new home x 2 people per home
+    assert list(tot) == ['plus', 'census']
+    assert tot['census']['totals']['_all']['residents'] == 30          # 24 + the retired code's 6, placed by its boundary
+    assert tot['plus']['totals']['_all']['residents'] in (32, 33)        # plus 1 new home x 2.5 people per home
+    assert any('a code no longer in use' in t and '6 residents' in t for t in res.transformations)
