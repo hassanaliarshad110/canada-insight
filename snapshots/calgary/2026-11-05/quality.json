@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-05T11:38:22Z",
+ "built_at": "2026-11-05T19:10:31Z",
  "overall": "warn",
  "checks": [
   {
@@ -42,6 +42,30 @@
    "detail": "313 rows against 313 in the previous build (+0.0%)",
    "value": 0.0,
    "threshold": 0.05
+  },
+  {
+   "source": "calgary.wards",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-01 (4 days ago; expected within 45)",
+   "value": 4,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.wards",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.wards",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "14 rows; no previous build to compare",
+   "value": null,
+   "threshold": null
   },
   {
    "source": "calgary.homes",
@@ -151,8 +175,8 @@
    "source": "calgary.amenity.park",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-10-29 (7 days ago; expected within 45)",
-   "value": 7,
+   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 45)",
+   "value": 0,
    "threshold": 45
   },
   {
@@ -346,6 +370,54 @@
    "detail": "0 of 21 locations fall outside the city extent",
    "value": 0.0,
    "threshold": 0.001
+  },
+  {
+   "source": "calgary.wards",
+   "check": "homes_outside_wards",
+   "status": "pass",
+   "detail": "0 of 500,028 homes fall outside every ward",
+   "value": 0,
+   "threshold": null
+  },
+  {
+   "source": "calgary.osm",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "4,383 rows; no previous build to compare",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.city_pace",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.city_pace",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
   },
   {
    "source": "calgary.people.model",
