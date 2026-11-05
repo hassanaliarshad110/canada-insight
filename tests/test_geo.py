@@ -73,3 +73,19 @@ def test_tidy_name():
     assert tidy_name('MCKENZIE TOWNE', 'title') == 'McKenzie Towne'
     assert tidy_name('BRIDGELAND/RIVERSIDE', 'title') == 'Bridgeland/Riverside'
     assert tidy_name('CITYSCAPE', None) == 'CITYSCAPE'
+
+
+def test_vectorised_point_in_polygon_matches_simple():
+    import numpy as np
+    rnd = random.Random(5)
+    outer = [[math.cos(t / 40 * 2 * math.pi) * (100 + rnd.uniform(-30, 30)), math.sin(t / 40 * 2 * math.pi) * (100 + rnd.uniform(-30, 30))] for t in range(40)]
+    outer.append(outer[0])
+    hole = [[-20, -20], [20, -20], [20, 20], [-20, 20], [-20, -20]]
+    mp = [[outer, hole]]
+    xs = np.array([rnd.uniform(-150, 150) for _ in range(3000)])
+    ys = np.array([rnd.uniform(-150, 150) for _ in range(3000)])
+    got = geo.points_in_multipolygon(xs, ys, mp)
+    want = [geo.point_in_multipolygon(x, y, mp) for x, y in zip(xs, ys)]
+    assert list(got) == want
+    loc = geo.locate_many(xs, ys, {'A': mp})
+    assert [v == 'A' for v in loc] == want

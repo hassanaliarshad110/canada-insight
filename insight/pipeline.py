@@ -11,6 +11,7 @@ import hashlib
 import json
 import math
 import re
+import time
 import os
 from datetime import date, datetime, timezone
 
@@ -26,6 +27,10 @@ class BuildFailed(RuntimeError):
     def __init__(self, checks):
         self.checks = checks
         super().__init__('; '.join(f'{c.source} {c.check}: {c.detail}' for c in checks))
+
+
+def log(msg):
+    print(f'[{datetime.now(timezone.utc).strftime("%H:%M:%S")}] {msg}', flush=True)
 
 
 def _now():
@@ -329,24 +334,31 @@ class Builder:
     # ---- build -------------------------------------------------------------------------------------------------
     def run(self):
         cfg = self.cfg
+        t0 = time.time()
         areas = self.areas()
         wards = self.wards()
+        log(f'{len(areas)} areas, {len(wards or {})} wards read ({time.time() - t0:.0f} s)')
         homes = self.homes(set(areas))
+        log(f'{len(homes["id"]):,} homes read ({time.time() - t0:.0f} s)')
         ams = self.amenities()
+        log(f'amenities read ({time.time() - t0:.0f} s)')
         blocking = [c for c in self.checks if c.status == 'fail']
         if blocking:
             raise BuildFailed(blocking)
         # each home's ward, by its exact location
         if wards:
-            wl = geo.AreaLocator({w: self.proj.multipolygon(v['mp']) for w, v in wards.items()}, cell=1000.0)
-            homes['ward'] = [(f'ward:{w}' if w is not None else None)
-                             for w in (wl.find(x, y) for x, y in homes['xy'])]
+            t0 = time.time()
+            located = geo.locate_many(homes['xy'][:, 0], homes['xy'][:, 1],
+                                      {w: self.proj.multipolygon(v['mp']) for w, v in wards.items()})
+            homes['ward'] = [(f'ward:{w}' if w is not None else None) for w in located]
+            log(f'homes placed in wards ({time.time() - t0:.0f} s)')
             n_out = sum(1 for w in homes['ward'] if w is None)
             self.checks.append(quality.QualityCheck(f"{cfg['id']}.wards", 'homes_outside_wards',
                                                     'warn' if n_out else 'pass',
                                                     f'{n_out:,} of {len(homes["ward"]):,} homes fall outside every ward',
                                                     n_out))
         kinds, ams = self.amenity_sets(ams, areas)
+        log(f'non-city amenities matched ({time.time() - t0:.0f} s)')
         self.kinds_expanded = kinds
         distances = {}
         part_cache = {}
@@ -370,12 +382,14 @@ class Builder:
             parts = am.get('parts') or [(0, n)]
             ds = [part_dist(key, a, am, lo, hi) for lo, hi in parts if hi > lo]
             distances[key] = np.minimum.reduce(ds) if len(ds) > 1 else (ds[0] if ds else np.full(len(homes['xy']), np.inf))
+        log(f'distances worked out ({time.time() - t0:.0f} s)')
         res = access.compute(homes, distances, kinds, cfg['growth_year'], self.today.year, cfg.get('rules'))
         if wards:
             hw = dict(homes, area=homes['ward'])
             res['wards'] = access.compute(hw, distances, kinds, cfg['growth_year'], self.today.year,
                                           dict(cfg.get('rules') or {}, min_units=0))['areas']
         res['crowding'] = self.crowding(homes, ams, distances, kinds)
+        log(f'crowding worked out ({time.time() - t0:.0f} s)')
         if res['crowding'] and res['crowding']['kinds']:
             any_k = next(iter(cfg['amenities']))
             eligible = [c for c, v in res['areas'].items() if v[any_k]['status'] != 'too_few_homes']

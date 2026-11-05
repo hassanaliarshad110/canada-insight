@@ -235,3 +235,60 @@ def simplify_multipolygon(mp, tol, digits=5):
         if rings and len(rings[0]) >= 4:
             out.append(rings)
     return out
+
+
+def points_in_multipolygon(xs, ys, mp):
+    """Vectorised point-in-polygon for many points (numpy arrays) against one projected MultiPolygon."""
+    import numpy as np
+    xs = np.asarray(xs, dtype=float)
+    ys = np.asarray(ys, dtype=float)
+    out = np.zeros(len(xs), dtype=bool)
+    for poly in mp:
+        if not poly:
+            continue
+        inside = _ring_contains(xs, ys, poly[0])
+        for hole in poly[1:]:
+            inside &= ~_ring_contains(xs, ys, hole)
+        out |= inside
+    return out
+
+
+def _ring_contains(xs, ys, ring):
+    import numpy as np
+    r = np.asarray(ring, dtype=float)
+    inside = np.zeros(len(xs), dtype=bool)
+    if len(r) < 3:
+        return inside
+    x0, y0 = r[:, 0].min(), r[:, 1].min()
+    x1, y1 = r[:, 0].max(), r[:, 1].max()
+    box = (xs >= x0) & (xs <= x1) & (ys >= y0) & (ys <= y1)
+    idx = np.nonzero(box)[0]
+    if not len(idx):
+        return inside
+    px, py = xs[idx], ys[idx]
+    c = np.zeros(len(idx), dtype=bool)
+    xa, ya = r[:, 0], r[:, 1]
+    xb, yb = np.roll(xa, 1), np.roll(ya, 1)
+    for i in range(len(r)):
+        cond = (ya[i] > py) != (yb[i] > py)
+        if not cond.any():
+            continue
+        xint = (xb[i] - xa[i]) * (py - ya[i]) / ((yb[i] - ya[i]) or 1e-12) + xa[i]
+        c ^= cond & (px < xint)
+    inside[idx] = c
+    return inside
+
+
+def locate_many(xs, ys, areas_xy):
+    """For many points, the key of the area containing each one (None where none does)."""
+    import numpy as np
+    out = np.full(len(xs), None, dtype=object)
+    free = np.ones(len(xs), dtype=bool)
+    for key, mp in areas_xy.items():
+        idx = np.nonzero(free)[0]
+        if not len(idx):
+            break
+        hit = points_in_multipolygon(np.asarray(xs)[idx], np.asarray(ys)[idx], mp)
+        out[idx[hit]] = key
+        free[idx[hit]] = False
+    return out

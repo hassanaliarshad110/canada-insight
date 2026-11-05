@@ -136,6 +136,7 @@ def select(elements, proj, city_playgrounds_xy, city_parks_xy, area_locator, own
 
     kept_pts = {'playground': geo.PointIndex([], cell=100)}
     kept_outlines = {'playground': [], 'park': []}
+    kept_boxes = {'playground': [], 'park': []}
     out, seen = [], set()
     for el in sorted(elements, key=order):
         tags = el.get('tags') or {}
@@ -181,14 +182,17 @@ def select(elements, proj, city_playgrounds_xy, city_parks_xy, area_locator, own
         if is_city:
             st['city'] += 1
             continue
-        if any(geo.point_in_multipolygon(x, y, o) for o in kept_outlines[k] if _in_box(x, y, o)):
+        if any(b[0] <= x <= b[2] and b[1] <= y <= b[3] and geo.point_in_multipolygon(x, y, o)
+               for o, b in zip(kept_outlines[k], kept_boxes[k])):
             st['twice'] += 1
             continue
         if k == 'playground' and kept_pts['playground'].nearest(x, y, SAME_M) is not None:
             st['twice'] += 1
             continue
         if k == 'park' and kept_outlines['park']:
-            near = [o for o in kept_outlines['park'] if _boxes_touch(o, mp_xy)]
+            mb = geo.bbox(mp_xy)
+            near = [o for o, b in zip(kept_outlines['park'], kept_boxes['park'])
+                    if not (b[2] < mb[0] or mb[2] < b[0] or b[3] < mb[1] or mb[3] < b[1])]
             if near and _share_inside(mp_xy, geo.AreaLocator({i: o for i, o in enumerate(near)}, cell=500)) >= PARK_OVERLAP:
                 st['twice'] += 1
                 continue
@@ -202,6 +206,7 @@ def select(elements, proj, city_playgrounds_xy, city_parks_xy, area_locator, own
             kept_pts['playground'].add(x, y)
         if mp_xy:
             kept_outlines[k].append(mp_xy)
+            kept_boxes[k].append(geo.bbox(mp_xy))
         out.append({'kind': k, 'x': x, 'y': y, 'mp': mp_xy if k == 'park' else None, 'ha': None if ha is None else round(ha, 3),
                     'private': priv, 'name': tags.get('name') or '', 'osm': f'{key[0]}/{key[1]}', 'area': area})
     return {'features': out, 'stats': stats, 'rules': RULES, 'source': SOURCE}
