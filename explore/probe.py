@@ -1,50 +1,27 @@
-"""Describe chosen Edmonton datasets in detail (columns, rows, a sample, value counts for key fields)."""
-import json
-import urllib.parse
-import urllib.request
-
+import json, urllib.parse, urllib.request
 B = 'https://data.edmonton.ca'
-
-
 def get(path, **q):
     url = B + path + ('?' + urllib.parse.urlencode(q) if q else '')
-    req = urllib.request.Request(url, headers={'User-Agent': 'canada-insight/0.5'})
-    with urllib.request.urlopen(req, timeout=180) as r:
+    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'canada-insight/0.5'}), timeout=300) as r:
         return json.loads(r.read().decode('utf-8'))
-
-
-IDS = ['65fr-66s6', 'b4er-5rp2', 'q7d6-ambg', 'dkk9-cj3x', 'dm3i-bp8w', '9nqb-w48x', 'gdd9-eqv9', '4vt2-8zrq', 'fhxi-cnhe',
-       'kaps-rk7z', 'nz3t-vyg3', 'jn25-zspi', 'eg3i-f4bj', 'wpfd-8bii', '5bk4-5txu', 'q7ua-agfg', '24uj-dj8v', 'a6zx-dzqn',
-       'jyra-si4k']
-GROUPS = {'q7d6-ambg': ['mill_class_1', 'assessment_class_1', 'tax_class', 'garage', 'ward'],
-          'dkk9-cj3x': ['building_type', 'zoning', 'legal_description'],
-          '9nqb-w48x': ['type', 'surface', 'status'], 'gdd9-eqv9': ['type', 'class', 'status'],
-          'nz3t-vyg3': ['type', 'facility_type', 'category'], 'kaps-rk7z': ['status']}
-out = {}
-for i in IDS:
+def show(label, path, **q):
     try:
-        m = get(f'/api/views/{i}.json')
-        n = get(f'/resource/{i}.json', **{'$select': 'count(*) as n'})
-        s = get(f'/resource/{i}.json', **{'$limit': '2'})
-        cols = [(c['fieldName'], c['dataTypeName']) for c in m.get('columns', [])]
-        rec = {'name': m.get('name'), 'rows': n[0].get('n') if n else None, 'updated': m.get('rowsUpdatedAt'),
-               'columns': cols, 'sample': [{k: str(v)[:100] for k, v in r.items()} for r in s]}
-        for f in GROUPS.get(i, []):
-            if f in [c for c, _ in cols]:
-                try:
-                    rec.setdefault('values', {})[f] = get(f'/resource/{i}.json', **{'$select': f'{f}, count(*) as n', '$group': f,
-                                                                                  '$order': 'n DESC', '$limit': '25'})
-                except Exception as e:                       # noqa: BLE001
-                    rec.setdefault('values', {})[f] = str(e)[:100]
-        out[i] = rec
-    except Exception as e:                                   # noqa: BLE001
-        out[i] = {'error': str(e)[:300]}
-json.dump(out, open('explore/probe.json', 'w'), indent=1)
-for i, r in out.items():
-    print('==', i, r.get('name'), 'rows', r.get('rows'), r.get('error', ''))
-    for c, t in r.get('columns', []):
-        print('   ', c, t)
-    for s in r.get('sample', [])[:1]:
-        print('   sample:', s)
-    for f, v in (r.get('values') or {}).items():
-        print('   values', f, v)
+        print('##', label); print(json.dumps(get(path, **q))[:3000])
+    except Exception as e:
+        print('##', label, 'ERROR', str(e)[:200])
+show('age values', '/resource/wpfd-8bii.json', **{'$select': 'age_range, gender, count(*) as n, sum(value) as v', '$group': 'age_range, gender', '$order': 'age_range', '$limit': '200'})
+show('census total', '/resource/eg3i-f4bj.json', **{'$select': 'sum(total_population) as p, count(*) as n'})
+show('parks meta', '/api/views/gdd9-eqv9.json')
+show('parks sample', '/resource/gdd9-eqv9.json', **{'$limit': '1'})
+show('parks count', '/resource/gdd9-eqv9.json', **{'$select': 'count(*) as n'})
+show('rec types', '/resource/nz3t-vyg3.json', **{'$select': 'facility_type, count(*) as n', '$group': 'facility_type', '$limit': '60'})
+show('rec centres', '/resource/nz3t-vyg3.json', **{'$select': 'facility_name, facility_type', '$where': "facility_type in('Recreation Centre','Leisure Centre','Multi-purpose Recreation Centre')", '$limit': '60'})
+show('year built residential', '/resource/dkk9-cj3x.json', **{'$select': 'count(*) as n, count(year_built) as with_year, min(year_built) as mn, max(year_built) as mx'})
+show('built since 2021', '/resource/dkk9-cj3x.json', **{'$select': 'count(*) as n', '$where': 'year_built >= 2021'})
+show('residential with suite', '/resource/q7d6-ambg.json', **{'$select': 'count(*) as n', '$where': "tax_class='Residential' AND suite IS NOT NULL"})
+show('residential low value', '/resource/q7d6-ambg.json', **{'$select': 'count(*) as n', '$where': "tax_class='Residential' AND assessed_value < 40000"})
+show('residential no year', '/resource/q7d6-ambg.json', **{'$select': 'count(*) as n', '$where': "tax_class='Residential'"})
+show('neighbourhood ids', '/resource/65fr-66s6.json', **{'$select': 'neighbourhood_number, name, district', '$limit': '3'})
+show('other residential sample', '/resource/q7d6-ambg.json', **{'$where': "tax_class='Other Residential'", '$limit': '3'})
+show('permits units since 2021', '/resource/24uj-dj8v.json', **{'$select': 'year, sum(units_added) as u', '$group': 'year', '$where': 'year >= 2018', '$order': 'year'})
+show('311 recent', '/resource/q7ua-agfg.json', **{'$select': 'year, count(*) as n', '$group': 'year', '$where': 'year >= 2023', '$order': 'year'})
