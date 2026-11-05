@@ -1,6 +1,6 @@
 {
  "city": "edmonton",
- "built_at": "2026-11-05T22:47:14Z",
+ "built_at": "2026-11-05T23:31:59Z",
  "overall": "warn",
  "checks": [
   {
@@ -39,9 +39,9 @@
    "source": "edmonton.areas",
    "check": "count_change",
    "status": "pass",
-   "detail": "407 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "407 rows against 407 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.wards",
@@ -63,9 +63,9 @@
    "source": "edmonton.wards",
    "check": "count_change",
    "status": "pass",
-   "detail": "12 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "12 rows against 12 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.homes_info",
@@ -79,9 +79,9 @@
    "source": "edmonton.homes_info",
    "check": "count_change",
    "status": "pass",
-   "detail": "420,751 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "420,751 rows against 420,751 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.homes",
@@ -126,9 +126,9 @@
   {
    "source": "edmonton.homes",
    "check": "invalid_area_code",
-   "status": "warn",
-   "detail": "0 records carry a community code with no boundary, 7,087 have none (1.95%)",
-   "value": 0.01953,
+   "status": "pass",
+   "detail": "0 records carry a community code with no boundary, 0 have none (0.00%)",
+   "value": 0.0,
    "threshold": 0.001
   },
   {
@@ -143,9 +143,9 @@
    "source": "edmonton.homes",
    "check": "count_change",
    "status": "pass",
-   "detail": "370,957 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "370,957 rows against 370,957 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.playground",
@@ -175,9 +175,9 @@
    "source": "edmonton.amenity.playground",
    "check": "count_change",
    "status": "pass",
-   "detail": "661 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "661 rows against 661 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.playground",
@@ -215,9 +215,9 @@
    "source": "edmonton.amenity.park",
    "check": "count_change",
    "status": "pass",
-   "detail": "1,121 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "1,121 rows against 1,121 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.park",
@@ -255,9 +255,9 @@
    "source": "edmonton.amenity.transit_stop",
    "check": "count_change",
    "status": "pass",
-   "detail": "6,587 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "6,587 rows against 6,587 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.transit_stop",
@@ -295,9 +295,9 @@
    "source": "edmonton.amenity.community_centre",
    "check": "count_change",
    "status": "pass",
-   "detail": "141 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "141 rows against 141 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.community_centre",
@@ -335,9 +335,9 @@
    "source": "edmonton.amenity.rec_centre",
    "check": "count_change",
    "status": "pass",
-   "detail": "19 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "19 rows against 19 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.rec_centre",
@@ -375,9 +375,9 @@
    "source": "edmonton.amenity.library",
    "check": "count_change",
    "status": "pass",
-   "detail": "22 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "22 rows against 22 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.amenity.library",
@@ -399,9 +399,9 @@
    "source": "edmonton.osm",
    "check": "count_change",
    "status": "pass",
-   "detail": "2,085 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "2,085 rows against 2,085 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "edmonton.people.census2021",
@@ -412,19 +412,27 @@
    "threshold": 2000
   },
   {
+   "source": "edmonton.people.census_boundaries",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2023-06-23 (1231 days ago; expected within 2000)",
+   "value": 1231,
+   "threshold": 2000
+  },
+  {
    "source": "edmonton.people.census2021",
    "check": "coverage",
    "status": "pass",
-   "detail": "94.9% of dwelling units are in areas with a census count",
-   "value": 0.9492,
+   "detail": "98.8% of dwelling units are in areas with a census count",
+   "value": 0.9877,
    "threshold": 0.9
   },
   {
    "source": "edmonton.people.census2021",
    "check": "residents_without_homes",
-   "status": "warn",
-   "detail": "36,340 census residents are in areas with no homes on the roll (boundaries changed since the census, or the area code did not match)",
-   "value": 36340,
+   "status": "pass",
+   "detail": "0 census residents are in areas with no homes on the roll (boundaries changed since the census, or the area code did not match)",
+   "value": 0,
    "threshold": 5053
   },
   {
