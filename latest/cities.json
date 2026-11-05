@@ -9,7 +9,7 @@
     "lat": 51.045,
     "lon": -114.06
    },
-   "built_at": "2026-11-05T20:10:32Z",
+   "built_at": "2026-11-05T22:42:03Z",
    "readiness": {
     "data_availability": "high",
     "data_quality": "high",
@@ -26,22 +26,24 @@
    "id": "edmonton",
    "name": "Edmonton",
    "province": "Alberta",
-   "status": "planned",
+   "status": "pilot",
    "centre": {
     "lat": 53.546,
     "lon": -113.494
    },
-   "built_at": null,
+   "built_at": "2026-11-05T22:47:14Z",
    "readiness": {
-    "data_availability": "to assess",
-    "data_quality": "to assess",
-    "geographic_compatibility": "Neighbourhoods (not communities) nested in 12 wards. Not directly comparable with Calgary communities: sizes and definitions differ.",
-    "historical_coverage": "to assess",
-    "indicator_comparability": "to assess: needs a residential property layer with year built and location, and playground, park, transit stop, recreation and library inventories.",
-    "update_frequency": "to assess",
-    "next_step": "Check each dataset the Calgary config uses for an Edmonton equivalent, record it here, then write the areas, homes and amenities sections."
+    "data_availability": "High for this module: neighbourhoods, wards, every residential property with location and year built, playgrounds, parks, transit stops, community league halls, recreation centres, libraries, 2021 Census by neighbourhood (age included). Also published: 311 requests, building and development permits, schools.",
+    "data_quality": "High. Apartment buildings are one account each, so their homes are estimated from floor area (Calgary uses building permits).",
+    "geographic_compatibility": "Neighbourhoods (about 400, including industrial ones) in 12 named wards. Neighbourhoods are not equivalent to Calgary's communities: compare cities only at the city level.",
+    "historical_coverage": "Property roll: current year (year built gives the build history). 311 from 2014. Census 2021 by neighbourhood; municipal censuses 2009 to 2019.",
+    "indicator_comparability": "The access, crowding and score measures use the same method, thresholds and rules as Calgary. Population differs: Calgary uses Calgary Data Desk's estimates, Edmonton the 2021 Census plus new homes. Scores are against each city's own level, so they are not comparable between cities; shares of homes within reach are.",
+    "update_frequency": "Assets weekly; property roll yearly; census every five years.",
+    "not_yet": "City dashboard figures (311, crime, permits, schools) are not built for Edmonton yet."
    },
-   "modules": []
+   "modules": [
+    "access"
+   ]
   }
  ]
 }

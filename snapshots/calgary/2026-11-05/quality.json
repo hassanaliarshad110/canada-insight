@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-05T20:10:32Z",
+ "built_at": "2026-11-05T22:42:03Z",
  "overall": "warn",
  "checks": [
   {
@@ -87,7 +87,7 @@
    "source": "calgary.homes",
    "check": "missing_geometry",
    "status": "pass",
-   "detail": "0 of 502,008 records have no parcel outline (left out)",
+   "detail": "0 of 502,008 records have no location (left out)",
    "value": 0.0,
    "threshold": 0.0
   },
@@ -381,9 +381,9 @@
   },
   {
    "source": "calgary.osm",
-   "check": "read",
-   "status": "warn",
-   "detail": "OpenStreetMap unreachable (OpenStreetMap could not be reached (The read operation timed out)); the copy read 2026-11-05 is used",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "4,383 rows; no previous build to compare",
    "value": null,
    "threshold": null
   },
