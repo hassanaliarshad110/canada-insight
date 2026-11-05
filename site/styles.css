@@ -284,3 +284,11 @@ table#tbl, table#qtbl { width: 100%; border-collapse: collapse; font-size: .95re
   .ward-pick { width: 100%; }
   .ward-pick select { flex: 1; min-width: 0; width: 100%; }
 }
+
+.videos { padding-top: clamp(24px, 4vw, 48px) !important; padding-bottom: 24px !important; max-width: 1200px; }
+.videos h1 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; letter-spacing: -.02em; }
+.vbrief { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; align-items: start; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
+.vbrief video { width: 100%; border-radius: 8px; background: #000; aspect-ratio: 16 / 9; }
+.vbrief h2 { font-size: 1.4rem; }
+.vbrief details { margin-top: 8px; } .vbrief details p { font-size: .95rem; }
+@media (max-width: 900px) { .vbrief { grid-template-columns: 1fr; } }

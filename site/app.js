@@ -39,7 +39,7 @@
   function readHash() {
     const [p, qs] = location.hash.replace(/^#\/?/, '').split('?');
     let [city, view, kind] = (p || '').split('/');
-    if (view && !['dashboard', 'amenities', 'wards', 'about', 'ask'].includes(view)) { kind = view; view = 'amenities'; }   // old links
+    if (view && !['dashboard', 'amenities', 'wards', 'about', 'ask', 'videos'].includes(view)) { kind = view; view = 'amenities'; }   // old links
     const q = new URLSearchParams(qs || '');
     return { city, view: view || 'dashboard', kind, th: q.get('d') === '800' || q.get('d') === '1' ? 1 : 0, c: q.get('c'),
              p: q.get('p'), m: q.get('m'), w: +(q.get('w') || 0), set: q.get('set'), pm: q.get('pm') };

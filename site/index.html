@@ -27,6 +27,7 @@
     <a href="#" data-view="dashboard">Dashboard</a>
     <a href="#" data-view="amenities">Amenities</a>
     <a href="#" data-view="wards">Ward comparison</a>
+    <a href="#" data-view="videos">Video briefs</a>
     <a href="#" data-view="ask">Ask the data</a>
     <a href="#" data-view="about">About the data</a>
   </nav>
@@ -176,6 +177,29 @@
     <h2>Which amenities are counted</h2>
     <p>By default, playgrounds and parks include the City's own and ones that are not the City's but open to everyone (mapped in OpenStreetMap: developer-held, school and community playgrounds and parks), with every one the City already lists taken out so nothing counts twice. This matches Calgary Data Desk. Use the filter on the community map to count the City's only, or to add private, residents-only ones (homeowners' association, condominium).</p>
     <p class="fine" id="osm-stats"></p>
+  </section>
+ </div>
+
+ <div class="view" data-view="videos" hidden>
+  <section class="videos" aria-labelledby="vid-h">
+    <h1 id="vid-h">Video briefs</h1>
+    <p class="lede">Short narrated briefs on one finding each, with the method and its limits. Each shows the date its figures are from; the pages above update every morning.</p>
+    <article class="vbrief">
+      <video controls preload="metadata" poster="video/playgrounds-per-child.jpg" src="video/playgrounds-per-child.mp4"></video>
+      <div>
+        <h2>Playgrounds per child in Calgary</h2>
+        <p class="fine">Published 5 November 2026. 1 minute 15 seconds. Figures as of 5 November 2026: residents counted as City's total, shared by actual growth; playgrounds: the City's plus ones open to everyone.</p>
+        <p><a href="video/playgrounds-per-child.mp4" download>Download the video (MP4, 3 MB)</a></p>
+        <details><summary>Transcript</summary>
+          <p>How many playgrounds can Calgary's children reach? We measured the distance from every home on the City's property roll to the nearest playground: the City's own, plus ones open to everyone that the City doesn't list.</p>
+          <p>But being near isn't enough. So each playground is shared among the children living within 400 metres of it.</p>
+          <p>Across Calgary, that's about 6.2 playgrounds per 1,000 children within reach.</p>
+          <p>By ward, it ranges from 10.8 in Ward 11 to 3.0 in Ward 5. In most wards, more than 8 in 10 homes are near a playground, so the difference is how many children share each one.</p>
+          <p>Homes built since 2021 are less often near one: 74 percent, against 87 percent of older homes.</p>
+          <p>These are estimates. Children are spread evenly over each community's homes, and distances are straight lines. Explore every community at Canada Insight.</p>
+        </details>
+      </div>
+    </article>
   </section>
  </div>
 
