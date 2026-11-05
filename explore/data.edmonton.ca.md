@@ -6,11 +6,11 @@
 - `xu6q-xcmj` Neighbourhood Boundaries : 2019 (dataset, updated 2019-07-11, rows None)
 - `nb64-h7uj` Neighbourhood Boundaries : 2019 (map, updated 2019-07-11, rows None)
 - `3b6m-fezs` City of Edmonton - Neighbourhoods (Centroid Point) (dataset, updated 2026-11-02, rows None)
-- `qhi4-bdpu` City of Edmonton - Business Licences (dataset, updated 2026-11-05, rows None)
 - `24uj-dj8v` General Building Permits (dataset, updated 2026-11-05, rows None)
+- `qhi4-bdpu` City of Edmonton - Business Licences (dataset, updated 2026-11-05, rows None)
 - `e8n2-hwu4` City of Edmonton Neighborhood - Map View (map, updated 2026-11-02, rows None)
-- `eg3i-f4bj` 2021 Federal Census: Population (dataset, updated 2023-09-27, rows None)
 - `5squ-mg4w` Pet  Licenses by Neighbourhood (dataset, updated 2026-11-05, rows None)
+- `eg3i-f4bj` 2021 Federal Census: Population (dataset, updated 2023-09-27, rows None)
 - `65fr-66s6` City of Edmonton - Neighbourhoods (dataset, updated 2026-11-02, rows None)
 - `gnzw-67i5` Mature Neighbourhoods (dataset, updated 2019-03-07, rows None)
 - `vd42-umu2` Mature Neighbourhood Reinvestment (dataset, updated 2014-09-04, rows None)
@@ -61,16 +61,16 @@
 
 - `gdd9-eqv9` Parks (dataset, updated 2026-11-02, rows None)
 - `jyra-si4k` Spray Parks (dataset, updated 2026-11-02, rows None)
-- `ex66-ku6s` Parks: Map View (map, updated 2026-11-02, rows None)
 - `n4yc-bxbe` Parks - Edmonton Insight Community (dataset, updated 2015-06-26, rows None)
+- `ex66-ku6s` Parks: Map View (map, updated 2026-11-02, rows None)
 - `xb8m-zs67` Parking Tickets Issued (dataset, updated 2026-11-05, rows None)
 - `5ex6-4nvf` EPark Event Parking Schedule (dataset, updated 2026-11-05, rows None)
 - `x84x-uttq` Parks Operations Districts (dataset, updated 2019-01-22, rows None)
 - `28ss-gu9g` On Street Parking - Edmonton Insight Community (dataset, updated 2015-07-09, rows None)
 - `fkk9-8ysd` River Valley Ice Surfaces - Edmonton Insight Community (dataset, updated 2018-04-04, rows None)
-- `pwdw-fub3` Vacant Land Inventory - Map View (map, updated 2021-06-21, rows None)
 - `kme6-3pd6` Environmental Sensitivity Project (2015) (dataset, updated 2019-02-04, rows None)
 - `svsw-2ub7` Vacant Land Inventory (dataset, updated 2021-06-21, rows None)
+- `pwdw-fub3` Vacant Land Inventory - Map View (map, updated 2021-06-21, rows None)
 
 ## transit_stops
 
@@ -140,10 +140,10 @@
 - `y7yb-jtjn` 2009 Census - Dwelling Unit By Structure Type And Ownership (Neighbourhood) (dataset, updated 2011-09-08, rows None)
 - `a6zx-dzqn` 2019 Census - Population by Age Range (Neighbourhood/Ward) (dataset, updated 2019-09-10, rows None)
 - `xgkv-ii9t` 2021 Federal Census: Households and Families (dataset, updated 2023-06-28, rows None)
-- `7afr-kaaj` 2012 Census - Population By Structure Type (Neighbourhood) (dataset, updated 2013-08-27, rows None)
 - `5bk4-5txu` 2021 Federal Census: Neighbourhoods as of Official Census Day (dataset, updated 2023-06-23, rows None)
 - `wpfd-8bii` 2021 Federal Census: Age and Gender (dataset, updated 2023-06-28, rows None)
 - `twh6-bi8c` 2021 Federal Census: Average and Median Age (dataset, updated 2023-06-27, rows None)
+- `6qu6-h2ec` 2021 Federal Census: Education (dataset, updated 2023-06-28, rows None)
 
 ## 311
 
@@ -155,8 +155,8 @@
 - `bcsz-zu8a` 311 Requests (2016) (dataset, updated 2019-01-17, rows None)
 - `xq32-itvg` 311 Requests (2017) (dataset, updated 2020-01-31, rows None)
 - `rb8e-6i3k` 311 Requests (2019) (dataset, updated 2022-03-15, rows None)
-- `vvnz-h46c` 311 Requests (2014) (dataset, updated 2018-04-25, rows None)
 - `t4rn-2nng` 311 Requests (2018) (dataset, updated 2021-03-10, rows None)
+- `vvnz-h46c` 311 Requests (2014) (dataset, updated 2018-04-25, rows None)
 - `3tzn-47wh` 311 Requests (2015) (dataset, updated 2018-01-31, rows None)
 - `ri59-3ugc` 311 Requests (2020) (dataset, updated 2023-03-02, rows None)
 
@@ -188,8 +188,8 @@
 
 ## traffic
 
-- `e8hk-t7j2` Residential Speed Limits and Community Traffic Management Planning - Survey Results (dataset, updated 2017-02-16, rows None)
 - `brx6-rwhf` Annual Collision Report: Fatalities and Injuries (dataset, updated 2024-09-24, rows None)
+- `e8hk-t7j2` Residential Speed Limits and Community Traffic Management Planning - Survey Results (dataset, updated 2017-02-16, rows None)
 - `5p44-if3k` Annual Collision Report: Collision Cause (dataset, updated 2024-09-24, rows None)
 - `qj76-vs2d` Automated Traffic Enforcement Zones Details - Map View (map, updated 2025-10-14, rows None)
 - `49fy-4pc4` Traffic Safety Culture - Edmonton Insight Community (dataset, updated 2017-04-18, rows None)
@@ -203,10 +203,10 @@
 ## schools
 
 - `gc4g-ct3z` Edmonton Public School Board (EPSB)_School Catchment Areas and School Locations (dataset, updated 2025-02-13, rows None)
-- `ehbr-emhe` Edmonton Public Schools (2015 - 2016) (dataset, updated 2021-06-14, rows None)
 - `kicz-beax` Map View: Edmonton Public School Board (EPSB) - School Catchment Areas (map, updated 2025-02-13, rows None)
-- `gfxq-u8uu` Edmonton Catholic Schools (Current) (dataset, updated 2026-05-04, rows None)
+- `ehbr-emhe` Edmonton Public Schools (2015 - 2016) (dataset, updated 2021-06-14, rows None)
 - `f6w2-hzex` Edmonton Catholic Schools (2016 - 2017) (dataset, updated 2021-06-16, rows None)
+- `gfxq-u8uu` Edmonton Catholic Schools (Current) (dataset, updated 2026-05-04, rows None)
 - `996c-239n` Edmonton Public School Board (EPSB)_School Locations (dataset, updated 2026-04-22, rows None)
 - `fwnt-fc2t` Map View: Edmonton Public School Board (EPSB) - School Locations (map, updated 2026-04-22, rows None)
 - `9jbh-cd9c` Edmonton Catholic Schools (Historical) (dataset, updated 2026-05-04, rows None)

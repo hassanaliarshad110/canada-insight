@@ -1,0 +1,326 @@
+== 65fr-66s6 City of Edmonton - Neighbourhoods rows 407 
+    name text
+    neighbourhood_number number
+    descriptive_name text
+    description text
+    effective_start_date calendar_date
+    effective_end_date calendar_date
+    civic_ward_name text
+    district text
+    geometry_multipolygon multipolygon
+   sample: {'name': 'ABBOTTSFIELD', 'neighbourhood_number': '2010', 'descriptive_name': 'Abbottsfield', 'description': "Abbottsfield was once owned by E.F. Carey, one of Edmonton's most \nprominent 19th century\ncitizens. ", 'effective_start_date': '1981-10-01T00:00:00.000', 'civic_ward_name': 'Métis', 'district': 'North Central', 'geometry_multipolygon': "{'type': 'MultiPolygon', 'coordinates': [[[[-113.38763361949056, 53.57613482614986], [-113.388857963"}
+== b4er-5rp2 City of Edmonton Ward Boundary and Council Composition_Current rows 12 
+    name_1 text
+    name_2 text
+    effective_start_date text
+    effective_end_date text
+    councillor text
+    councillor2 text
+    geometry_multipolygon multipolygon
+   sample: {'name_1': 'Anirniq', 'name_2': 'Anirniq Ward', 'effective_start_date': '2021-10-18T00:00:00-07:00', 'councillor': 'Erin Rutherford', 'geometry_multipolygon': "{'type': 'MultiPolygon', 'coordinates': [[[[-113.57901697970894, 53.63215354941316], [-113.579038980"}
+== q7d6-ambg Property Assessment Data (Current Calendar Year) rows 439825 
+    account_number text
+    suite text
+    house_number text
+    street_name text
+    neighbourhood_id number
+    neighbourhood text
+    ward text
+    assessed_value number
+    tax_class text
+    garage text
+    mill_class_1 text
+    mill_class_2 text
+    mill_class_3 text
+    tax_class_pct_1 number
+    tax_class_pct_2 number
+    tax_class_pct_3 number
+    latitude number
+    longitude number
+    point_location point
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_ueb5_7sqn number
+    :@computed_region_7ccj_gre3 number
+   sample: {'account_number': '6079701', 'house_number': '11922', 'street_name': '90 STREET NW', 'neighbourhood_id': '1010', 'neighbourhood': 'ALBERTA AVENUE', 'ward': 'Métis', 'assessed_value': '490000', 'tax_class': 'Residential', 'garage': 'Y', 'mill_class_1': 'RESIDENTIAL', 'tax_class_pct_1': '100', 'latitude': '53.57265406834281', 'longitude': '-113.4801677668132', 'point_location': "{'type': 'Point', 'coordinates': [-113.4801677668132, 53.57265406834281]}", ':@computed_region_ecxu_fw7u': '155', ':@computed_region_ueb5_7sqn': '5', ':@computed_region_7ccj_gre3': '42'}
+   values mill_class_1 [{'mill_class_1': 'RESIDENTIAL', 'n': '411672'}, {'mill_class_1': 'COMMERCIAL', 'n': '22964'}, {'mill_class_1': 'OTHER RESIDENTIAL', 'n': '4404'}, {'mill_class_1': 'FARMLAND', 'n': '512'}, {'mill_class_1': 'DERELICT RESIDENTIAL', 'n': '270'}, {'mill_class_1': 'NONRES MUNICIPAL/RES EDUCATION', 'n': '2'}, {'mill_class_1': 'DESIGNATED IND PROPERTIES', 'n': '1'}]
+   values tax_class [{'tax_class': 'Residential', 'n': '411672'}, {'tax_class': 'Non Residential', 'n': '23237'}, {'tax_class': 'Other Residential', 'n': '4404'}, {'tax_class': 'Farmland', 'n': '512'}]
+   values garage [{'garage': 'Y', 'n': '260279'}, {'garage': 'N', 'n': '179546'}]
+   values ward [{'ward': 'sipiwiyiniwak', 'n': '41262'}, {'ward': 'pihêsiwin', 'n': '40628'}, {'ward': "O-day'min", 'n': '39568'}, {'ward': 'Nakota Isga', 'n': '38793'}, {'ward': 'Karhiio', 'n': '38134'}, {'ward': 'Métis', 'n': '36405'}, {'ward': 'Dene', 'n': '36012'}, {'ward': 'Anirniq', 'n': '32691'}, {'ward': 'Ipiihkoohkanipiaohtsi', 'n': '32535'}, {'ward': 'tastawiyiniwak', 'n': '31339'}, {'ward': 'papastew', 'n': '31033'}, {'ward': 'Sspomitapi', 'n': '30751'}, {'n': '8896'}, {'ward': 'pihêsiwin, Ipiihkoohkanipiaohtsi', 'n': '1778'}]
+== dkk9-cj3x Property Information (Current Calendar Year) rows 439825 
+    account_number text
+    suite text
+    house_number text
+    street_name text
+    legal_description text
+    zoning text
+    lot_size number
+    total_gross_area text
+    year_built number
+    garage checkbox
+    neighbourhood_id number
+    neighbourhood text
+    ward text
+    latitude number
+    longitude number
+    point_location point
+    :@computed_region_mnf4_kaez number
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+   sample: {'account_number': '9993748', 'lot_size': '118', 'total_gross_area': '0', 'garage': 'False', 'neighbourhood_id': '2560', 'neighbourhood': 'NEWTON', 'ward': 'Métis', 'latitude': '53.58054345262815', 'longitude': '-113.42893088062539', 'point_location': "{'type': 'Point', 'coordinates': [-113.42893088062539, 53.58054345262815]}", ':@computed_region_mnf4_kaez': '10', ':@computed_region_7ccj_gre3': '236', ':@computed_region_ecxu_fw7u': '174', ':@computed_region_izdr_ja4x': '4', ':@computed_region_5jki_au6x': '3'}
+   values zoning [{'n': '157154'}, {'zoning': 'RS', 'n': '146549'}, {'zoning': 'RSF', 'n': '98642'}, {'zoning': 'RSM', 'n': '6079'}, {'zoning': 'DC1', 'n': '4913'}, {'zoning': 'RM', 'n': '4727'}, {'zoning': 'IM', 'n': '2714'}, {'zoning': 'DC2', 'n': '2030'}, {'zoning': 'MU', 'n': '2012'}, {'zoning': 'BE', 'n': '1797'}, {'zoning': 'GLDF', 'n': '1192'}, {'zoning': 'A', 'n': '1040'}, {'zoning': 'AG', 'n': '1022'}, {'zoning': 'PLD', 'n': '948'}, {'zoning': 'PSN', 'n': '947'}, {'zoning': 'PU', 'n': '895'}, {'zoning': 'PS', 'n': '744'}, {'zoning': 'DC', 'n': '620'}, {'zoning': 'RR', 'n': '554'}, {'zoning': 'SLD', 'n': '543'}, {'zoning': 'CN', 'n': '429'}, {'zoning': 'CG', 'n': '407'}, {'zoning': 'BRH', 'n': '385'}, {'zoning': 'IH', 'n': '358'}, {'zoning': 'AES', 'n': '312'}]
+   values legal_description [{'n': '4804'}, {'legal_description': 'Plan: 3779NY  Block: A / Plan: 3779NY  Block: B / Plan: 3779NY  Block: C / Plan: 3779NY  Block: D', 'n': '39'}, {'legal_description': 'Plan: 3779NY  Block: RLY', 'n': '22'}, {'legal_description': 'Plan: 2528AR  Block: 11  Lot: 11 / Plan: 2528AR  Block: 11  Lot: 12 / Plan: 2528AR  Block: 11  Lot: 13 / Plan: 2528AR  Block: 11  Lot: 14 / Plan: 2528AR  Block: 11  Lot: 15 / Plan: 2528AR  Block: 11  Lot: 16 / Plan: 2528AR  Block: 11  Lot: 17 / Plan: 2528AR  Block: 11  Lot: 18 / Plan: 2528AR  Block: 11  Lot: 19 / Plan: 2528AR  Block: 11  Lot: 20 / Plan: 2528AR  Block: 11  Lot: 21 / Plan: 2528AR  Block: 11  Lot: 22 / Plan: 2528AR  Block: 11  Lot: 23 / Plan: 2528AR  Block: 11  Lot: 24 / Plan: 2528AR  Block: 11  Lot: 25 / Plan: 2528AR  Block: 11  Lot: 26 / Plan: 2528AR  Block: 11  Lot: 27 / Plan: 2528AR  Block: 11  Lot: 28 / Plan: 2528AR  Block: 11  Lot: 29 / Plan: 2528AR  Block: 11  Lot: 30 / Plan: 2528AR  Block: 11  Lot: 31 / Plan: 2528AR  Block: 11  Lot: 32', 'n': '16'}, {'legal_description': 'Plan: 3934BU  Block: RLY', 'n': '16'}, {'legal_description': 'Plan: 1459BA  Block: 1  Lot: 1-10', 'n': '15'}, {'legal_description': 'Plan: 1307P  Block: 9  Lot: 10 / Plan: 1307P  Block: 9  Lot: 11 / Plan: 1307P  Block: 9  Lot: 12 / Plan: 1307P  Block: 9  Lot: 13 / Plan: 1307P  Block: 9  Lot: 14 / Plan: 1307P  Block: 9  Lot: 15 / Plan: 1307P  Block: 9  Lot: 3 / Plan: 1307P  Block: 9  Lot: 4 / Plan: 1307P  Block: 9  Lot: 5 / Plan: 1307P  Block: 9  Lot: 6 / Plan: 1307P  Block: 9  Lot: 7 / Plan: 1307P  Block: 9  Lot: 8 / Plan: 1307P  Block: 9  Lot: 9', 'n': '13'}, {'legal_description': 'Plan: 681HW  Block: RW  Lot: 52', 'n': '13'}, {'legal_description': 'Plan: EDMONTO  Lot: 21', 'n': '12'}, {'legal_description': 'Plan: 1225KS  Block: RW  Lot: 52', 'n': '12'}, {'legal_description': 'Plan: 6215AL  Block: 17  Lot: 1 / Plan: 6215AL  Block: 17  Lot: 16 / Plan: 6215AL  Block: 17  Lot: 17 / Plan: 6215AL  Block: 17  Lot: 18 / Plan: 6215AL  Block: 17  Lot: 19 / Plan: 6215AL  Block: 17  Lot: 2 / Plan: 6215AL  Block: 17  Lot: 20 / Plan: 6215AL  Block: 17  Lot: 3 / Plan: 6215AL  Block: 17  Lot: 4 / Plan: 6215AL  Block: 17  Lot: 5 / Plan: 6215AL  Block: 17', 'n': '11'}, {'legal_description': 'Plan: 5850R  Block: 21  Lot: 10 / Plan: 5850R  Block: 21  Lot: 11 / Plan: 5850R  Block: 21  Lot: 12 / Plan: 5850R  Block: 21  Lot: 2 / Plan: 5850R  Block: 21  Lot: 3 / Plan: 5850R  Block: 21  Lot: 4 / Plan: 5850R  Block: 21  Lot: 5 / Plan: 5850R  Block: 21  Lot: 6 / Plan: 5850R  Block: 21  Lot: 7 / Plan: 5850R  Block: 21  Lot: 8 / Plan: 5850R  Block: 21  Lot: 9', 'n': '11'}, {'legal_description': 'Plan: 1935HW  Block: RW  Lot: 54', 'n': '10'}, {'legal_description': 'Plan: 8421054', 'n': '10'}, {'legal_description': 'Plan: 5515AE  Block: 1  Lot: 10 / Plan: 5515AE  Block: 1  Lot: 11 / Plan: 5515AE  Block: 1  Lot: 12 / Plan: 5515AE  Block: 1  Lot: 13 / Plan: 5515AE  Block: 1  Lot: 14 / Plan: 5515AE  Block: 1  Lot: 15 / Plan: 5515AE  Block: 1  Lot: 7 / Plan: 5515AE  Block: 1  Lot: 8 / Plan: 5515AE  Block: 1  Lot: 9', 'n': '9'}, {'legal_description': 'Plan: 5036S  Block: 25  Lot: 28 / Plan: 5036S  Block: 25  Lot: 29 / Plan: 5036S  Block: 25  Lot: 30 / Plan: 5036S  Block: 25  Lot: 31 / Plan: 5036S  Block: 25  Lot: 32 / Plan: 5036S  Block: 25  Lot: 33 / Plan: 5036S  Block: 25  Lot: 34 / Plan: 5036S  Block: 25  Lot: 35 / Plan: 5036S  Block: 25  Lot: 36', 'n': '9'}, {'legal_description': 'Plan: 4615TR  Block: RW  Lot: 51', 'n': '9'}, {'legal_description': 'Plan: 2937MC  Block: RW  Lot: 53', 'n': '9'}, {'legal_description': 'Plan: 8175ET  Block: 36  Lot: 1 - 15', 'n': '9'}, {'legal_description': 'Plan: 1105KS  Block: RW', 'n': '9'}, {'legal_description': '52-25-4-OT', 'n': '9'}, {'legal_description': 'Plan: 1288AJ  Block: 25  Lot: 1-15', 'n': '9'}, {'legal_description': 'Plan: 4451S  Block: 38  Lot: 20 / Plan: 4451S  Block: 38  Lot: 21 / Plan: 4451S  Block: 38  Lot: 22 / Plan: 4451S  Block: 38  Lot: 27 / Plan: 4451S  Block: 38  Lot: 28 / Plan: 4451S  Block: 38  Lot: 29 / Plan: 4451S  Block: 38  Lot: 3 / Plan: 4451S  Block: 38  Lot: 4 / Plan: 4451S  Block: 38  Lot: 5', 'n': '9'}, {'legal_description': 'Plan: 5515AE  Block: 12  Lot: 1 / Plan: 5515AE  Block: 12  Lot: 2 / Plan: 5515AE  Block: 12  Lot: 3 / Plan: 5515AE  Block: 12  Lot: 4 / Plan: 5515AE  Block: 12  Lot: 5 / Plan: 5515AE  Block: 12  Lot: 6 / Plan: 5515AE  Block: 12  Lot: 7 / Plan: 5515AE  Block: 12  Lot: 8', 'n': '8'}, {'legal_description': 'Plan: 2648MC  Block: RW  Lot: 53', 'n': '8'}]
+== dm3i-bp8w Land Parcels_Assessment Parcels (Point) rows 290305 
+    id number
+    area number
+    longitude number
+    latitude number
+    geometry_point point
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+   sample: {'area': '91.49', 'longitude': '-113.33910954419696', 'latitude': '53.64157389173892', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.33910954419696, 53.64157389173892]}", ':@computed_region_7ccj_gre3': '369', ':@computed_region_ecxu_fw7u': '243', ':@computed_region_izdr_ja4x': '2', ':@computed_region_5jki_au6x': '3', ':@computed_region_mnf4_kaez': '7'}
+== 9nqb-w48x Playgrounds rows 661 
+    id number
+    name text
+    address text
+    type text
+    surface_type text
+    accessibility text
+    user_category text
+    maintainer text
+    redevelopment_date calendar_date
+    latitude number
+    longitude number
+    location location
+    geometry_point point
+    neighbourhood_id number
+    neighbourhood_name text
+    :@computed_region_3z8d_fhyb number
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_eq8d_jmrp number
+    :@computed_region_da6r_6gkw number
+   sample: {'id': '3685', 'name': 'Poplar Park', 'address': '16410 82 Street NW', 'type': 'Playground', 'surface_type': 'Sand', 'accessibility': 'Unknown', 'user_category': 'Unknown', 'maintainer': 'Parks', 'redevelopment_date': '2015-12-31T00:00:00.000', 'latitude': '53.62627312451377', 'longitude': '-113.47333288495625', 'location': '{\'latitude\': \'53.62627312451377\', \'longitude\': \'-113.47333288495625\', \'human_address\': \'{"address": ', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.47333288495625, 53.62627312451377]}", 'neighbourhood_id': '2050', 'neighbourhood_name': 'BELLE RIVE', ':@computed_region_7ccj_gre3': '106', ':@computed_region_ecxu_fw7u': '163', ':@computed_region_izdr_ja4x': '1', ':@computed_region_5jki_au6x': '2', ':@computed_region_mnf4_kaez': '6', ':@computed_region_eq8d_jmrp': '36', ':@computed_region_da6r_6gkw': '3'}
+   values type [{'type': 'Playground', 'n': '661'}]
+== gdd9-eqv9 None rows None HTTP Error 500: Server Error
+== 4vt2-8zrq ETS Bus Schedule GTFS Data Feed - Stops rows 6797 
+    stop_id text
+    stop_code text
+    stop_name text
+    stop_desc text
+    stop_lat number
+    stop_lon number
+    zone_id text
+    stop_url text
+    location_type number
+    parent_station text
+    level_name text
+    geometry_point point
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_7ccj_gre3 number
+   sample: {'stop_id': '4366', 'stop_code': '4366', 'stop_name': 'Carter Crest Road W & Rabbit Hill Road', 'stop_lat': '53.467278', 'stop_lon': '-113.578386', 'zone_id': '1EDM', 'location_type': '0', 'level_name': 'Ground Level', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.578386, 53.467278]}", ':@computed_region_ecxu_fw7u': '69', ':@computed_region_izdr_ja4x': '6', ':@computed_region_5jki_au6x': '6', ':@computed_region_mnf4_kaez': '12', ':@computed_region_7ccj_gre3': '158'}
+== fhxi-cnhe LRT Stations and Stops rows 54 
+    lrt_stop_number text
+    lrt_stop_description text
+    latitude number
+    longitude number
+    location text
+    geometry_point point
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_ueb5_7sqn number
+    :@computed_region_7ccj_gre3 number
+   sample: {'lrt_stop_number': '1516', 'lrt_stop_description': 'Churchill Stop', 'latitude': '53.54347099998313', 'longitude': '-113.48937600024414', 'location': '(53.54347099998313, -113.48937600024414)', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.48937600024414, 53.54347099998313]}", ':@computed_region_ecxu_fw7u': '242', ':@computed_region_ueb5_7sqn': '7', ':@computed_region_7ccj_gre3': '338'}
+== kaps-rk7z Community League Halls rows 141 
+    name text
+    address text
+    latitude text
+    longitude text
+    location text
+    geometry_point point
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_ueb5_7sqn number
+    :@computed_region_7ccj_gre3 number
+   sample: {'name': 'Malmo', 'latitude': '53.48547094368045', 'longitude': '-113.5311543053087', 'location': '(53.48547094368045,-113.5311543053087)', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.5311543053087, 53.48547094368045]}", ':@computed_region_ecxu_fw7u': '197', ':@computed_region_ueb5_7sqn': '9', ':@computed_region_7ccj_gre3': '148'}
+== nz3t-vyg3 Recreation Facilities rows 107 
+    category text
+    facility_type text
+    facility_name text
+    address text
+    url text
+    additional_info text
+    latitude number
+    longitude number
+    geometry_point point
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_ueb5_7sqn number
+   sample: {'category': 'Sports and Recreation Facilities', 'facility_type': 'Staffed Sports Field', 'facility_name': 'Goldstick Park & Pavilion', 'address': '4210 101 Avenue', 'url': 'https://www.edmonton.ca/activities_parks_recreation/goldstick-park-pavilion', 'latitude': '53.54544470443903', 'longitude': '-113.40257344366', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.40257344366, 53.54544470443903]}", ':@computed_region_7ccj_gre3': '394', ':@computed_region_ecxu_fw7u': '30', ':@computed_region_mnf4_kaez': '11', ':@computed_region_ueb5_7sqn': '5'}
+   values facility_type [{'facility_type': 'Arena', 'n': '22'}, {'facility_type': 'River Valley Park', 'n': '20'}, {'facility_type': 'Recreation Centre', 'n': '19'}, {'facility_type': 'Tennis Court', 'n': '17'}, {'facility_type': 'Staffed Sports Field', 'n': '8'}, {'facility_type': 'City Park', 'n': '7'}, {'facility_type': 'Outdoor Pool', 'n': '5'}, {'facility_type': 'Snowshoeing', 'n': '4'}, {'facility_type': 'Golf Course', 'n': '3'}, {'facility_type': 'Arts Program Facility', 'n': '1'}, {'facility_type': 'Arts Booking Facility', 'n': '1'}]
+   values category [{'category': 'Sports and Recreation Facilities', 'n': '74'}, {'category': 'Parks and Playgrounds', 'n': '31'}, {'category': 'Specialty (Programming / Rental) Facility', 'n': '2'}]
+== jn25-zspi Public Libraries rows 22 
+    branch_id text
+    branch text
+    address text
+    postal_code text
+    phone_number text
+    free_wifi text
+    monday_open text
+    monday_close text
+    tuesday_open text
+    tuesday_close text
+    wednesday_open text
+    wednesday_close text
+    thursday_open text
+    thursday_close text
+    friday_open text
+    friday_close text
+    saturday_open text
+    saturday_close text
+    sunday_open text
+    sunday_close text
+    latitude number
+    longitude number
+    location location
+    geometry_point point
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_da6r_6gkw number
+    :@computed_region_3z8d_fhyb number
+   sample: {'branch_id': 'EPLABB', 'branch': 'Abbottsfield - Penny McKee', 'address': '160-3210 118 Avenue', 'postal_code': 'T5W 4W1', 'phone_number': '780-496-7839', 'free_wifi': 'Yes', 'monday_open': '10:00', 'monday_close': '21:00', 'tuesday_open': '10:00', 'tuesday_close': '21:00', 'wednesday_open': '10:00', 'wednesday_close': '21:00', 'thursday_open': '10:00', 'thursday_close': '21:00', 'friday_open': '10:00', 'friday_close': '18:00', 'saturday_open': '10:00', 'saturday_close': '18:00', 'sunday_open': '10:00', 'sunday_close': '17:00', 'latitude': '53.571649', 'longitude': '-113.390542', 'location': '{\'latitude\': \'53.571649\', \'longitude\': \'-113.390542\', \'human_address\': \'{"address": "", "city": "", ', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.390542, 53.571649]}", ':@computed_region_7ccj_gre3': '243', ':@computed_region_ecxu_fw7u': '177', ':@computed_region_izdr_ja4x': '4', ':@computed_region_5jki_au6x': '3', ':@computed_region_mnf4_kaez': '10', ':@computed_region_da6r_6gkw': '7'}
+== eg3i-f4bj 2021 Federal Census: Population rows 278 
+    neighbourhood_number number
+    neighbourhood text
+    total_population number
+    ward text
+   sample: {'neighbourhood_number': '1010', 'neighbourhood': 'Alberta Avenue', 'total_population': '6565', 'ward': 'Métis Ward'}
+== wpfd-8bii 2021 Federal Census: Age and Gender rows 20925 
+    neighbourhood text
+    neighbourhood_number number
+    question_type text
+    gender text
+    age_range text
+    year number
+    value number
+    ward text
+   sample: {'neighbourhood': 'Abbottsfield', 'neighbourhood_number': '2010', 'question_type': 'Age & Gender', 'gender': 'Men+', 'age_range': '0 to 4 years', 'year': '2021', 'value': '85', 'ward': 'Métis Ward'}
+== 5bk4-5txu 2021 Federal Census: Neighbourhoods as of Official Census Day rows 403 
+    the_geom multipolygon
+    name text
+    neighbourh number
+    descriptiv text
+    descriptio text
+    date_effec calendar_date
+    time_effec text
+    date_eff_2 calendar_date
+    time_eff_2 text
+   sample: {'the_geom': "{'type': 'MultiPolygon', 'coordinates': [[[[-113.38763361949056, 53.57613482614986], [-113.383627786", 'name': 'ABBOTTSFIELD', 'neighbourh': '2010.0', 'descriptiv': 'Abbottsfield', 'descriptio': "Abbottsfield was once owned by E.F. Carey, one of Edmonton's most \nprominent 19th century\ncitizens. ", 'time_effec': '', 'time_eff_2': ''}
+== q7ua-agfg 311 Requests rows 3526267 
+    row_id text
+    date_closed calendar_date
+    date_created calendar_date
+    year number
+    month_number number
+    month text
+    request_status text
+    status_detail text
+    service_category text
+    service_description text
+    interaction_channel text
+    service_area text
+    referral_type text
+    neighbourhood_id number
+    neighbourhood text
+    ward text
+    service_category_service_area text
+    service_area_service_category text
+    service_area_service_description text
+    nbhd_latitude number
+    nbhd_longitude number
+    nbhd_location location
+    ward_latitude number
+    ward_longitude number
+    ward_location location
+    count number
+   sample: {'row_id': '25441649876068', 'date_closed': '2026-04-13T11:37:17.000', 'date_created': '2025-12-29T16:44:25.000', 'year': '2025', 'month_number': '12', 'month': 'December', 'request_status': 'Closed', 'status_detail': 'Violation Remedied', 'service_category': 'Bylaw Complaints', 'service_description': 'Snow on Walk Complaint', 'interaction_channel': 'Mobile App', 'service_area': 'Community Standards - Muni. Enforcement', 'referral_type': 'Referral', 'neighbourhood_id': '3260', 'neighbourhood': 'LAUDERDALE', 'ward': 'Anirniq', 'service_category_service_area': 'Bylaw Complaints  (Community Standards - Muni. Enforcement)', 'service_area_service_category': '(Community Standards - Muni. Enforcement)  Bylaw Complaints', 'service_area_service_description': '(Community Standards - Muni. Enforcement)  Snow on Walk Complaint', 'nbhd_latitude': '53.5884488489588', 'nbhd_longitude': '-113.504256189261', 'nbhd_location': '{\'latitude\': \'53.5884488489588\', \'longitude\': \'-113.504256189261\', \'human_address\': \'{"address": "",', 'ward_latitude': '53.6046924519307', 'ward_longitude': '-113.565272870128', 'ward_location': '{\'latitude\': \'53.6046924519307\', \'longitude\': \'-113.565272870128\', \'human_address\': \'{"address": "",', 'count': '1'}
+== 24uj-dj8v General Building Permits rows 248615 
+    row_id text
+    issue_date calendar_date
+    permit_number text
+    permit_date calendar_date
+    year number
+    month_number number
+    job_category text
+    job_description text
+    building_type text
+    work_type text
+    construction_value number
+    floor_area number
+    units_added number
+    address text
+    legal_description text
+    zoning text
+    neighbourhood_numberr text
+    neighbourhood text
+    bia text
+    count number
+    latitude number
+    longitude number
+    location location
+    geometry_point point
+    occupancy_granted_date text
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_eq8d_jmrp number
+    :@computed_region_da6r_6gkw number
+    :@computed_region_3z8d_fhyb number
+    :@computed_region_bhid_jnzh number
+   sample: {'row_id': '2-472013926', 'issue_date': '2023-06-27T00:00:00.000', 'permit_date': '2023-06-27T00:00:00.000', 'year': '2023', 'month_number': '6', 'job_category': 'Commercial Final', 'job_description': 'To demolish the Millgate Transit Centre', 'building_type': 'Transportation Terminals (440)', 'work_type': '(99) Demolition', 'construction_value': '58131', 'units_added': '0', 'address': '4503 - 86 STREET NW', 'neighbourhood_numberr': '6430', 'neighbourhood': 'MCINTYRE INDUSTRIAL', 'count': '1'}
+== a6zx-dzqn 2019 Census - Population by Age Range (Neighbourhood/Ward) rows 7581 
+    ward text
+    neighbourhood_number number
+    neighbourhood_name text
+    age_range text
+    population number
+   sample: {'ward': 'Ward 1', 'neighbourhood_number': '4010', 'neighbourhood_name': 'Alberta Park Industrial', 'age_range': '0-4', 'population': '0'}
+== jyra-si4k Spray Parks rows 78 
+    id number
+    name text
+    address text
+    type text
+    surface_type text
+    accessibility text
+    owner text
+    maintainer text
+    redevelopment_date calendar_date
+    latitude number
+    longitude number
+    location location
+    geometry_point point
+    neighbourhood_id number
+    neighbourhood_name text
+    :@computed_region_3z8d_fhyb number
+    :@computed_region_bhid_jnzh number
+    :@computed_region_7ccj_gre3 number
+    :@computed_region_ecxu_fw7u number
+    :@computed_region_izdr_ja4x number
+    :@computed_region_5jki_au6x number
+    :@computed_region_mnf4_kaez number
+    :@computed_region_da6r_6gkw number
+   sample: {'id': '3764', 'name': 'Cameron Heights Spray Deck', 'address': '3250 Cameron Heights Way NW', 'type': 'Spray Deck', 'surface_type': 'Concrete', 'accessibility': 'Wheelchair Accessible', 'owner': 'Parks', 'maintainer': 'Parks', 'redevelopment_date': '2020-10-31T00:00:00.000', 'latitude': '53.47329747669826', 'longitude': '-113.63655629657956', 'location': '{\'latitude\': \'53.47329747669826\', \'longitude\': \'-113.63655629657956\', \'human_address\': \'{"address": ', 'geometry_point': "{'type': 'Point', 'coordinates': [-113.63655629657956, 53.47329747669826]}", 'neighbourhood_id': '4466', 'neighbourhood_name': 'CAMERON HEIGHTS', ':@computed_region_bhid_jnzh': '65', ':@computed_region_7ccj_gre3': '354', ':@computed_region_ecxu_fw7u': '2', ':@computed_region_izdr_ja4x': '5', ':@computed_region_5jki_au6x': '4', ':@computed_region_mnf4_kaez': '8', ':@computed_region_da6r_6gkw': '5'}
