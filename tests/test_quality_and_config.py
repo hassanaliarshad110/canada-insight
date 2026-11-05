@@ -35,7 +35,7 @@ def test_schema_check():
 def test_every_city_config_is_valid():
     cities = {c['id']: c for c in config.all_cities()}
     assert cities['calgary']['status'] == 'pilot'
-    assert cities['edmonton']['status'] == 'planned'
+    assert cities['edmonton']['status'] == 'pilot'
     for key, a in cities['calgary']['amenities'].items():
         assert a['threshold_basis'], key
 

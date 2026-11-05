@@ -18,10 +18,10 @@
 const API = 'https://api.anthropic.com/v1/messages';
 const MODELS = { quick: 'claude-haiku-5-5', thorough: 'claude-sonnet-5-5', report: 'claude-sonnet-5-5' };
 const MAX_STEPS = { quick: 8, thorough: 14, report: 20 };
-const PORTALS = { calgary: 'https://data.calgary.ca' };
+const PORTALS = { calgary: 'https://data.calgary.ca', edmonton: 'https://data.edmonton.ca' };
 
 const SYSTEM = (city, ward, mode) => `You are the research assistant of Canada Insight, an independent civic research site by Hassan Ali, \
-currently looking at ${city}${ward ? `, Ward ${ward}` : ''}.
+currently looking at ${city}${ward ? `, ${/^\d+$/.test(ward) ? 'Ward ' + ward : ward + ' Ward'}` : ''}.
 
 Rules you never break:
 - State a number only if you read it in this conversation with a tool. Never estimate, recall or invent a statistic.
@@ -148,7 +148,7 @@ export default {
     if (limited) return json(env, { error: limited }, 429);
     const mode = MODELS[body.mode] ? body.mode : 'quick';
     const city = PORTALS[body.city] ? body.city : 'calgary';
-    const ward = Number.isInteger(body.ward) && body.ward > 0 ? body.ward : null;
+    const ward = (typeof body.ward === 'string' || typeof body.ward === 'number') && /^[\p{L}\p{N} '’.-]{1,40}$/u.test(String(body.ward)) ? String(body.ward) : null;
     const messages = (body.messages || []).slice(-12).filter(m => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
       .map(m => ({ role: m.role, content: m.content.slice(0, 4000) }));
     if (!messages.length || messages[messages.length - 1].role !== 'user') return json(env, { error: 'Ask a question.' }, 400);

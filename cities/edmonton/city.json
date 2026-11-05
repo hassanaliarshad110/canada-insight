@@ -2,18 +2,306 @@
   "id": "edmonton",
   "name": "Edmonton",
   "province": "Alberta",
-  "status": "planned",
-  "portal": {"type": "socrata", "base_url": "https://data.edmonton.ca", "publisher": "City of Edmonton"},
-  "centre": {"lat": 53.546, "lon": -113.494},
+  "status": "pilot",
+  "timezone": "America/Edmonton",
+  "centre": {
+    "lat": 53.546,
+    "lon": -113.494
+  },
+  "portal": {
+    "type": "socrata",
+    "base_url": "https://data.edmonton.ca",
+    "publisher": "City of Edmonton",
+    "licence": "City of Edmonton Open Data Terms of Use",
+    "licence_url": "https://data.edmonton.ca/stories/s/City-of-Edmonton-Open-Data-Terms-of-Use/msh8-if28/"
+  },
   "growth_year": 2021,
-  "areas": {}, "homes": {}, "amenities": {},
+  "growth_year_note": "Homes built in or after 2021, the year of the last published Census. The 2026 Census population counts are scheduled for 10 February 2027.",
+  "terms": {
+    "area": "neighbourhood",
+    "areas": "neighbourhoods",
+    "ward": "ward"
+  },
+  "areas": {
+    "level": "neighbourhood",
+    "dataset": "65fr-66s6",
+    "title": "City of Edmonton - Neighbourhoods",
+    "code_field": "neighbourhood_number",
+    "name_field": "descriptive_name",
+    "geometry_field": "geometry_multipolygon",
+    "extra_fields": [
+      "district"
+    ],
+    "simplify_m": 15
+  },
+  "wards": {
+    "dataset": "b4er-5rp2",
+    "title": "City of Edmonton Ward Boundary and Council Composition (Current)",
+    "code_field": "name_1",
+    "councillor_field": "councillor",
+    "geometry_field": "geometry_multipolygon",
+    "name_template": "{code} Ward"
+  },
+  "homes": {
+    "dataset": "q7d6-ambg",
+    "title": "Property Assessment Data (Current Calendar Year)",
+    "where": "tax_class in('Residential','Other Residential') AND assessed_value >= 40000",
+    "where_note": "Residential and other residential (apartment) properties assessed at $40,000 or more; lower values are mostly parking stalls, storage units and remnant parcels.",
+    "id_field": "account_number",
+    "area_field": "neighbourhood_id",
+    "built_field": "year_built",
+    "geometry_field": "point_location",
+    "require_built": true,
+    "placement_note": "each property placed at the point the City publishes for it",
+    "unit": "one assessed residential property (a house, a townhouse, a condominium unit or an apartment building)",
+    "join": {
+      "dataset": "dkk9-cj3x",
+      "title": "Property Information (Current Calendar Year)",
+      "id_field": "account_number",
+      "built_field": "year_built",
+      "area_field": "total_gross_area",
+      "where": "year_built IS NOT NULL"
+    },
+    "unit_estimate": {
+      "class_field": "tax_class",
+      "equals": "Other Residential",
+      "m2_per_unit": 85,
+      "note": "apartment buildings (other residential) count as their floor area divided by 85 m² per home (an estimate)"
+    },
+    "limitations": [
+      "Apartment buildings are one account each; their homes are estimated from floor area.",
+      "Properties assessed under $40,000 are left out (mostly parking stalls and storage units)."
+    ]
+  },
+  "people": {
+    "default": "census_plus_new",
+    "options": {
+      "census_plus_new": {
+        "type": "census_plus_new",
+        "based_on": "census2021",
+        "census_year": 2021,
+        "label": "2021 Census plus new homes",
+        "title": "Residents and children by neighbourhood: 2021 Census plus homes built since (estimate)",
+        "about": "Each neighbourhood's 2021 Census count, plus residents for homes built since 2021 at the neighbourhood's people per home (or the city's, for new neighbourhoods); children for new residents at the share seen in neighbourhoods mostly built in the ten years before the census.",
+        "limitations": [
+          "An estimate: no population figure between Censuses is published by neighbourhood."
+        ]
+      },
+      "census2021": {
+        "type": "census",
+        "label": "2021 Census",
+        "title": "2021 Federal Census: Population",
+        "dataset": "eg3i-f4bj",
+        "code_field": "neighbourhood_number",
+        "residents_field": "total_population",
+        "children_dataset": "wpfd-8bii",
+        "children_title": "2021 Federal Census: Age and Gender",
+        "children_code_field": "neighbourhood_number",
+        "children_field": "value",
+        "children_where": "age_range='0 to 14 years' AND gender='Total'",
+        "expected_total": 1010595,
+        "period": "11 May 2021",
+        "about": "Each neighbourhood's 2021 Census count, unchanged. Neighbourhoods built since have little or no count.",
+        "limitations": [
+          "Counts are as of May 2021; growth since is not included.",
+          "Statistics Canada rounds counts, so neighbourhoods may not add exactly to the city total."
+        ]
+      }
+    }
+  },
+  "amenities": {
+    "playground": {
+      "label": "Playground",
+      "plural": "playgrounds",
+      "group": "local",
+      "dataset": "9nqb-w48x",
+      "title": "Playgrounds",
+      "geometry": "point",
+      "geometry_field": "geometry_point",
+      "id_field": "id",
+      "thresholds_m": [
+        400,
+        800
+      ],
+      "threshold_basis": "Platform choice: 400 m (about a five-minute walk) and 800 m (about ten minutes), the same as every city.",
+      "limitations": [
+        "City-maintained playgrounds; school and other playgrounds come from OpenStreetMap where mapped."
+      ],
+      "crowding": {
+        "people": "children",
+        "per": 1000,
+        "unit": "playgrounds per 1,000 children within reach",
+        "short": "Playgrounds per 1,000 children"
+      }
+    },
+    "park": {
+      "label": "Public park",
+      "plural": "parks",
+      "group": "local",
+      "dataset": "gdd9-eqv9",
+      "title": "Parks",
+      "where": "status='Active' AND class not in('PUL','Unknown','Other Land Type')",
+      "geometry": "polygon",
+      "geometry_field": "geometry_multipolygon",
+      "id_field": "id",
+      "thresholds_m": [
+        400,
+        800
+      ],
+      "threshold_basis": "Platform choice: distance to the park's edge, 400 m and 800 m.",
+      "limitations": [
+        "Active parks of every class, from pocket parks to natural areas and river valley parks."
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 1000,
+        "unit": "park hectares per 1,000 residents within reach",
+        "short": "Park ha per 1,000 residents"
+      }
+    },
+    "transit_stop": {
+      "label": "Transit stop",
+      "plural": "transit stops",
+      "group": "local",
+      "dataset": "4vt2-8zrq",
+      "title": "ETS Bus Schedule GTFS Data Feed - Stops",
+      "where": "location_type = 0",
+      "geometry": "point",
+      "geometry_field": "geometry_point",
+      "id_field": "stop_id",
+      "thresholds_m": [
+        400,
+        800
+      ],
+      "threshold_basis": "Platform choice: 400 m and 800 m, the same as every city.",
+      "limitations": [
+        "Bus and LRT stops in the current timetable; how often they are served is not measured yet."
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 1000,
+        "unit": "transit stops per 1,000 residents within reach",
+        "short": "Stops per 1,000 residents"
+      }
+    },
+    "community_centre": {
+      "label": "Community league hall",
+      "plural": "community league halls",
+      "group": "local",
+      "dataset": "kaps-rk7z",
+      "title": "Community League Halls",
+      "geometry": "point",
+      "geometry_field": "geometry_point",
+      "id_field": "name",
+      "thresholds_m": [
+        800,
+        1600
+      ],
+      "threshold_basis": "Platform choice: 800 m and 1.6 km, the same as community centres in every city.",
+      "limitations": [
+        "Community league halls as listed by the City; programs and opening hours are not measured."
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "halls per 100,000 residents within reach",
+        "short": "Halls per 100,000 residents"
+      }
+    },
+    "rec_centre": {
+      "label": "Indoor recreation centre",
+      "plural": "indoor recreation centres",
+      "group": "district",
+      "dataset": "nz3t-vyg3",
+      "title": "Recreation Facilities",
+      "where": "facility_type='Recreation Centre'",
+      "geometry": "point",
+      "geometry_field": "geometry_point",
+      "id_field": "facility_name",
+      "thresholds_m": [
+        2000,
+        5000
+      ],
+      "threshold_basis": "Platform choice: 2 km and 5 km for facilities that serve several neighbourhoods.",
+      "limitations": [
+        "City recreation, leisure and fitness centres (19); arenas, outdoor pools and sports fields are left out."
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "indoor recreation centres per 100,000 residents within reach",
+        "short": "Rec centres per 100,000 residents"
+      }
+    },
+    "library": {
+      "label": "Public library",
+      "plural": "public libraries",
+      "group": "district",
+      "dataset": "jn25-zspi",
+      "title": "Public Libraries",
+      "geometry": "point",
+      "geometry_field": "geometry_point",
+      "id_field": "branch_id",
+      "thresholds_m": [
+        2000,
+        5000
+      ],
+      "threshold_basis": "Platform choice: 2 km and 5 km.",
+      "limitations": [
+        "Edmonton Public Library branches."
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "libraries per 100,000 residents within reach",
+        "short": "Libraries per 100,000 residents"
+      }
+    }
+  },
+  "supplements": {
+    "osm": {
+      "kinds": [
+        "playground",
+        "park"
+      ],
+      "bbox": [
+        53.38,
+        -113.72,
+        53.72,
+        -113.27
+      ],
+      "owner_words": [
+        "city of edmonton"
+      ],
+      "max_age_days": 30
+    }
+  },
+  "rules": {
+    "gap_share": 0.5,
+    "min_units": 100,
+    "recent_years": 5,
+    "recent_share": 0.25
+  },
+  "quality": {
+    "max_age_days": {
+      "default": 45,
+      "q7d6-ambg": 400,
+      "dkk9-cj3x": 400,
+      "65fr-66s6": 400,
+      "b4er-5rp2": 1500,
+      "eg3i-f4bj": 2000,
+      "wpfd-8bii": 2000,
+      "4vt2-8zrq": 120
+    },
+    "extent_margin_deg": 0.05
+  },
   "readiness": {
-    "data_availability": "to assess",
-    "data_quality": "to assess",
-    "geographic_compatibility": "Neighbourhoods (not communities) nested in 12 wards. Not directly comparable with Calgary communities: sizes and definitions differ.",
-    "historical_coverage": "to assess",
-    "indicator_comparability": "to assess: needs a residential property layer with year built and location, and playground, park, transit stop, recreation and library inventories.",
-    "update_frequency": "to assess",
-    "next_step": "Check each dataset the Calgary config uses for an Edmonton equivalent, record it here, then write the areas, homes and amenities sections."
+    "data_availability": "High for this module: neighbourhoods, wards, every residential property with location and year built, playgrounds, parks, transit stops, community league halls, recreation centres, libraries, 2021 Census by neighbourhood (age included). Also published: 311 requests, building and development permits, schools.",
+    "data_quality": "High. Apartment buildings are one account each, so their homes are estimated from floor area (Calgary uses building permits).",
+    "geographic_compatibility": "Neighbourhoods (about 400, including industrial ones) in 12 named wards. Neighbourhoods are not equivalent to Calgary's communities: compare cities only at the city level.",
+    "historical_coverage": "Property roll: current year (year built gives the build history). 311 from 2014. Census 2021 by neighbourhood; municipal censuses 2009 to 2019.",
+    "indicator_comparability": "The access, crowding and score measures use the same method, thresholds and rules as Calgary. Population differs: Calgary uses Calgary Data Desk's estimates, Edmonton the 2021 Census plus new homes. Scores are against each city's own level, so they are not comparable between cities; shares of homes within reach are.",
+    "update_frequency": "Assets weekly; property roll yearly; census every five years.",
+    "not_yet": "City dashboard figures (311, crime, permits, schools) are not built for Edmonton yet."
   }
 }

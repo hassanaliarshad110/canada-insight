@@ -48,6 +48,20 @@ same figures. The reader chooses which:
 Each community's estimate is spread evenly over its dwelling units (the same units as the access measure). Communities
 with fewer than 100 residents are not in the source and carry no people.
 
+### Edmonton
+
+There is no Calgary Data Desk for Edmonton. Residents and children come from the **2021 Census by neighbourhood**
+published on the City's portal (population, and children aged 0 to 14 from the age table):
+
+| Option | What it is |
+|---|---|
+| 2021 Census plus new homes (default) | Each neighbourhood's 2021 count, plus residents for homes built in or after 2021: new homes × the neighbourhood's residents per older home at the census (the city's figure where a neighbourhood had fewer than 50 older homes). Children for those residents at the share seen in neighbourhoods where at least half the homes were built in the ten years before the census (young families move into new homes); a neighbourhood that was already established and grew by less than half keeps its own share. |
+| 2021 Census | Each neighbourhood's 2021 count, unchanged. Neighbourhoods built since have no count. |
+
+Both are estimates. The build checks the census total against the published 1,010,595, reports census residents
+that land in a neighbourhood with no homes on the roll (boundaries changed since 2021, or codes that don't match),
+and reports the share of homes in neighbourhoods with a census count.
+
 ## Home counts on both sites
 
 Canada Insight counts every home on the current property roll. Calgary Data Desk counts a home as lived in from one

@@ -32,7 +32,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -54,6 +54,15 @@ jobs:
           SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
         run: |
           python -m insight build --city calgary --out site/data --previous previous/latest
+          # A pilot city that fails keeps its last published data and does not stop the others.
+          for c in edmonton; do
+            if ! python -m insight build --city "$c" --out site/data --previous previous/latest; then
+              echo "::warning::$c build failed; keeping its last published data"
+              rm -rf "site/data/$c"
+              if [ -d "previous/latest/$c" ]; then cp -r "previous/latest/$c" site/data/; fi
+            fi
+          done
+          python -m insight index --out site/data
 
       - name: Keep this build's data (dated snapshot on the data branch)
         run: |

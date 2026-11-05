@@ -2,4 +2,4 @@
 
 Cities are added by configuration (cities/<city>/city.json), not by code. See docs/architecture.md.
 """
-__version__ = '0.4.0'
+__version__ = '0.5.0'

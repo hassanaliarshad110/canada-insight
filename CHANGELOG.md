@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.5.0 (5 November 2026)
+
+Added
+- Edmonton (pilot): 407 neighbourhoods in 12 named wards; homes from the property roll (points, year built from
+  Property Information, apartment buildings estimated from floor area); residents and children from the 2021 Census
+  by neighbourhood, with residents added for homes built since (default) or unchanged; the same six amenities,
+  distances, crowding, scores and OpenStreetMap supplements as Calgary.
+- Build: census population types (`census`, `census_plus_new`), point homes, joined year built, unit estimates from
+  floor area, named wards. New check: census residents in areas with no homes. Residents and children per ward
+  published with each build. A pilot city that fails keeps its last data and does not stop the others.
+- Site: named wards, each city's own word for its areas, city-specific method text, and a dashboard of people,
+  homes and amenities for cities without a linked dashboard. Switching city in the address now opens that city.
+- Research assistant: Edmonton's portal; named wards.
+
+
 ## 0.4.0 (5 November 2026)
 
 Added

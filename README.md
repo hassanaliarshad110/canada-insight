@@ -59,7 +59,8 @@ python -m http.server -d site 8000
 
 ## Status
 
-Calgary: pilot. Edmonton: planned (readiness assessment not started). Calgary Data Desk remains online unchanged.
+Calgary: pilot. Edmonton: pilot (amenities, homes and 2021 Census residents; 311, safety and development not built yet).
+Calgary Data Desk remains online unchanged.
 
-Not an official City of Calgary or Government of Canada product. City data under the Open Government Licence –
-City of Calgary.
+Not an official product of any city or of the Government of Canada. Calgary data under the Open Government Licence –
+City of Calgary; Edmonton data under the City of Edmonton Open Data Terms of Use.

@@ -156,7 +156,7 @@ def test_non_city_amenities_and_wards(tiny_city, tmp_path):
     assert A['playground']['share_primary'] == 1.0
     assert A['playground|private']['share_primary'] >= A['playground']['share_primary']
     assert data['kinds']['playground|city']['variant_of'] == 'playground'
-    assert data['areas']['AAA']['ward'] == 1 and data['areas']['BBB']['ward'] == 2
+    assert data['areas']['AAA']['ward'] == '1' and data['areas']['BBB']['ward'] == '2'
     assert data['wards']['1']['access']['playground|city']['share_primary'] == round(2 / 14, 4)
     assert data['wards']['2']['councillor'] == 'Two'
     assert os.path.exists(os.path.join(out, 'wards.geojson')) and os.path.exists(os.path.join(out, 'osm_features.json'))
@@ -204,3 +204,49 @@ def test_linked_dashboard_and_fallback(tmp_path):
     d2.mkdir(parents=True)
     pipeline.write_linked(cfg, str(d2), previous_dir=str(tmp_path / 'prev'), fetch=lambda u: (_ for _ in ()).throw(OSError('down')))
     assert json.load(open(d2 / 'dashboard.json'))['stale'] is True
+
+
+def test_point_homes_join_census_and_new_homes(tiny_city, tmp_path):
+    """Edmonton-style data: homes as points, year built and floor area in a second dataset, apartment units
+    estimated from floor area, residents from census tables, and residents added for homes built since."""
+    from conftest import M_LAT
+    cfg, client = tiny_city
+    kx = 111_132.0 * 0.6293203910498374
+    lon0, lat0 = -114.0, 51.0
+    mid = lat0 + 500 * M_LAT
+    pts = lambda xm: {'type': 'Point', 'coordinates': [lon0 + xm / kx, mid]}
+    client.tables['props'] = [
+        {'acct': '1', 'nbhd': '10.0', 'cls': 'Residential', 'pt': pts(100)},
+        {'acct': '2', 'nbhd': '10', 'cls': 'Residential', 'pt': pts(300)},
+        {'acct': '3', 'nbhd': '10', 'cls': 'Other Residential', 'pt': pts(500)},     # apartment, 850 m2 -> 10 homes
+        {'acct': '4', 'nbhd': '10', 'cls': 'Residential', 'pt': pts(700)},           # vacant: no year built
+        {'acct': '5', 'nbhd': '20', 'cls': 'Residential', 'pt': pts(1100)},          # new home, area 20
+    ]
+    client.tables['info'] = [{'acct': '1', 'yb': '1980'}, {'acct': '2', 'yb': '1990'}, {'acct': '3', 'yb': '1975', 'gfa': '850'},
+                             {'acct': '5', 'yb': '2023'}]
+    for a in client.tables['areas']:
+        a['comm_code'] = {'AAA': '10', 'BBB': '20'}[a['comm_code']]
+    cfg['homes'] = {'dataset': 'props', 'id_field': 'acct', 'area_field': 'nbhd', 'built_field': 'yb', 'geometry_field': 'pt',
+                    'require_built': True,
+                    'join': {'dataset': 'info', 'id_field': 'acct', 'built_field': 'yb', 'area_field': 'gfa'},
+                    'unit_estimate': {'class_field': 'cls', 'equals': 'Other Residential', 'm2_per_unit': 85, 'note': 'n'}}
+    client.tables['pop'] = [{'n': '10', 'p': '24'}]
+    client.tables['age'] = [{'n': '10.0', 'v': '6'}]
+    cfg['people'] = {'default': 'plus', 'options': {
+        'census': {'type': 'census', 'label': '2021 Census', 'title': 't', 'dataset': 'pop', 'code_field': 'n',
+                   'residents_field': 'p', 'children_dataset': 'age', 'children_code_field': 'n', 'children_field': 'v'},
+        'plus': {'type': 'census_plus_new', 'based_on': 'census', 'label': 'Census plus new homes', 'title': 't'}}}
+    cfg['amenities']['playground']['crowding'] = {'people': 'children', 'unit': 'u'}
+    b, data, out = run(cfg, client, tmp_path)
+    A = data['areas']['10']
+    assert A['units'] == 12 and A['records'] == 3              # 1 + 1 + 10 estimated; the vacant property left out
+    assert data['homes']['units_estimated'] == 10
+    res = b.sources['people.census']
+    assert res.rows == 2
+    pg = data['crowding']['kinds']['playground']['by_option']
+    # census: area 20 has no count, so no children there; plus-new: 1 new home x city people per home (24 / 12 = 2)
+    assert pg['census']['400'].get('20') in (None, 0.0)
+    assert pg['plus']['400']['20'] is not None and pg['plus']['400']['20'] > 0
+    tot = data['crowding']['options']
+    assert tot['census']['totals']['_all']['residents'] == 24          # every census resident is placed in a home
+    assert tot['plus']['totals']['_all']['residents'] == 26            # plus 1 new home x 2 people per home

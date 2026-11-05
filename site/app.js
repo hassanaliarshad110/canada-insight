@@ -25,7 +25,7 @@
   const S = { cities: [], city: null, data: null, areas: null, sources: null, quality: null, kind: null, th: 0,
               filter: 'all', sort: ['share', 1], selected: null, compare: [], q: '', showPts: false,
               people: null, mode: 'near', sGroup: 'overall', sFilter: 'all', sq: '',
-              view: 'dashboard', ward: 0, base: null, set: 'public', dash: null, popMethod: null, wcTopic: 'people', wcSort: null, wardsGeo: null };
+              view: 'dashboard', ward: '', base: null, set: 'public', dash: null, popMethod: null, wcTopic: 'people', wcSort: null, wardsGeo: null };
   let map, areaLayer, ptsLayer, layerByCode = {};
   const ptsCache = {};
 
@@ -42,7 +42,7 @@
     if (view && !['dashboard', 'amenities', 'wards', 'about', 'ask', 'videos'].includes(view)) { kind = view; view = 'amenities'; }   // old links
     const q = new URLSearchParams(qs || '');
     return { city, view: view || 'dashboard', kind, th: q.get('d') === '800' || q.get('d') === '1' ? 1 : 0, c: q.get('c'),
-             p: q.get('p'), m: q.get('m'), w: +(q.get('w') || 0), set: q.get('set'), pm: q.get('pm') };
+             p: q.get('p'), m: q.get('m'), w: q.get('w') || '', set: q.get('set'), pm: q.get('pm') };
   }
   function writeHash() {
     if (!S.city) return;
@@ -73,7 +73,7 @@
     const first = S.cities.find(c => c.id === h.city && c.built_at) || S.cities.find(c => c.built_at);
     if (!first) { $('#headline').textContent = 'No city has been built yet.'; return; }
     S.th = h.th; S.people = h.p; S.mode = h.m === 'crowding' ? 'crowding' : 'near';
-    S.view = h.view; S.ward = h.w || 0; S.set = ['public', 'city', 'private'].includes(h.set) ? h.set : 'public'; S.popMethod = h.pm || h.p;
+    S.view = h.view; S.ward = h.w || ''; S.set = ['public', 'city', 'private'].includes(h.set) ? h.set : 'public'; S.popMethod = h.pm || h.p;
     await openCity(first.id, h.kind, h.c);
   }
 
@@ -96,11 +96,27 @@
     if (!cr || !cr.options[S.people]) S.people = cr ? cr.default : null;
     renderPeople();
     $$('.gy').forEach(e => e.textContent = S.data.growth_year);
+    applyCityText();
     $('#csv').href = base + 'access_by_area.csv';
     $('#built').textContent = `Built ${new Date(S.data.built_at).toLocaleString('en-CA', { dateStyle: 'long', timeStyle: 'short' })} from the sources listed above. Version ${S.data.version}.`;
     renderKinds(); initMap(); renderAll(); renderSources(); renderQuality(); renderOsmStats();
     showView(S.view);
     if (S.selected) focusArea(S.selected);
+  }
+
+  // words and passages that depend on the city
+  function applyCityText() {
+    const t = S.data.terms || {}, area = t.area || 'community', areas = t.areas || 'communities';
+    const cap = w => w.charAt(0).toUpperCase() + w.slice(1);
+    $$('.cn').forEach(e => e.textContent = S.data.name);
+    $$('.t-area').forEach(e => e.textContent = area);
+    $$('.t-Area').forEach(e => e.textContent = cap(area));
+    $$('.t-areas').forEach(e => e.textContent = areas);
+    $$('[data-city]').forEach(e => e.hidden = e.dataset.city !== S.city.id);
+    $$('[data-not-city]').forEach(e => e.hidden = e.dataset.notCity === S.city.id);
+    $$('[data-linked]').forEach(e => e.hidden = !S.dash);
+    for (const id of ['q-comm', 'q-score']) $('#' + id).placeholder = `Find a ${area}`;
+    $('#map').setAttribute('aria-label', `Map of ${areas}, shaded by the share of homes within walking distance`);
   }
 
   // ---------- views, ward picker, amenity sets ----------
@@ -122,20 +138,23 @@
   }
   function wardName(w) {
     const d = (S.data.wards || {})[w] || {};
-    return `Ward ${w}` + (d.councillor ? ` (${d.councillor})` : '');
+    return wardShort(w) + (d.councillor ? ` (${d.councillor})` : '');
   }
+  function wardShort(w) { return ((S.data.wards || {})[w] || {}).name || `Ward ${w}`; }
+  function areasWord() { return (S.data.terms || {}).areas || 'communities'; }
+  function areaWord() { return (S.data.terms || {}).area || 'community'; }
   function renderWardPicker() {
     const sel = $('#ward');
-    const ws = Object.keys(S.data.wards || {}).map(Number).sort((a, b) => a - b);
-    sel.innerHTML = `<option value="0">All of ${esc(S.data.name)}</option>` + ws.map(w => `<option value="${w}">${esc(wardName(w))}</option>`).join('');
-    if (!ws.includes(S.ward)) S.ward = 0;
-    sel.value = String(S.ward);
-    $('#scope-note').textContent = S.ward ? `Every figure below is for Ward ${S.ward}, set against ${S.data.name}.` : '';
+    const ws = Object.keys(S.data.wards || {});
+    sel.innerHTML = `<option value="">All of ${esc(S.data.name)}</option>` + ws.map(w => `<option value="${w}">${esc(wardName(w))}</option>`).join('');
+    if (!ws.includes(S.ward)) S.ward = '';
+    sel.value = S.ward;
+    $('#scope-note').textContent = S.ward ? `Every figure below is for ${wardShort(S.ward)}, set against ${S.data.name}.` : '';
   }
-  function scopeName() { return S.ward ? `Ward ${S.ward}` : S.data.name; }
+  function scopeName() { return S.ward ? wardShort(S.ward) : S.data.name; }
   function scopeAccess(k) { return S.ward ? ((S.data.wards[S.ward] || {}).access || {})[k] : S.data.city_access[k]; }
   function scopeKey() { return S.ward ? `ward:${S.ward}` : '_all'; }
-  function inScope(code) { return !S.ward || (S.data.areas[code] || {}).ward === S.ward; }
+  function inScope(code) { return !S.ward || String((S.data.areas[code] || {}).ward) === S.ward; }
   function renderOsmStats() {
     const o = S.data.osm, box = $('#osm-stats');
     if (!o || !o.stats) { box.textContent = 'Non-City amenities were not available for this build: City amenities only.'; $('#set-wrap').hidden = true; return; }
@@ -172,13 +191,14 @@
   function crowdShort(kind, v) { return v == null ? '–' : (v >= 10 ? Math.round(v) : v.toFixed(v >= 1 ? 1 : 2)); }
   function crowdUnitShort(kind) { const c = crowd(kind); return c ? (c.short || c.unit) : ''; }
   // ---------- scores ----------
-  const BAND_LABEL = { well_below: 'Well below Calgary', below: 'Below Calgary', around: 'Around Calgary', above: 'Above Calgary' };
+  const BAND_WORD = { well_below: 'Well below', below: 'Below', around: 'Around', above: 'Above' };
+  function bandLabel(b) { return BAND_WORD[b] ? `${BAND_WORD[b]} ${S.data.name}` : ''; }
   const CONS = { consistent_gap: ['tag-cgap', 'Consistent gap'], depends: ['tag-dep', 'Depends on assumptions'], none: ['tag-none', 'No gap'] };
   function sc2(v) { return v == null ? '–' : v.toFixed(2); }
   function scoreCell(s) {
     if (!s || s.score == null) return '<span class="dim">–</span>';
     const max = 2.5, x = v => Math.min(Math.max(v, 0), max) / max * 84;
-    return `<span class="sc ${s.band || ''}" title="${BAND_LABEL[s.band] || ''}; range ${sc2(s.low)} to ${sc2(s.high)} across ${s.scenarios} ways">
+    return `<span class="sc ${s.band || ''}" title="${bandLabel(s.band)}; range ${sc2(s.low)} to ${sc2(s.high)} across ${s.scenarios} ways">
       <b>${sc2(s.score)}</b><span class="rng" aria-hidden="true"><i style="left:${x(s.low)}px;width:${Math.max(x(s.high) - x(s.low), 2)}px"></i><span class="one" style="left:${x(1)}px"></span><span class="mark" style="left:${x(s.score) - 1}px"></span></span>
       <small>${sc2(s.low)} to ${sc2(s.high)}</small></span>`;
   }
@@ -190,6 +210,9 @@
   window.addEventListener('hashchange', () => {
     if (!S.data) return;
     const h = readHash();
+    if (h.city && h.city !== S.city.id && S.cities.find(c => c.id === h.city && c.built_at)) {
+      S.ward = h.w; S.view = h.view; openCity(h.city, h.kind, h.c); return;
+    }
     if (h.w !== S.ward) {
       S.ward = h.w; renderWardPicker(); restyle();
       if (wardLayer) wardLayer.eachLayer(l => l.setStyle(wardStyle(l.feature.properties.ward)));
@@ -198,7 +221,7 @@
     if (h.view !== S.view) showView(h.view);
   });
   $('#ward').addEventListener('change', e => {
-    S.ward = +e.target.value; renderWardPicker();
+    S.ward = e.target.value; renderWardPicker();
     restyle(); if (wardLayer) wardLayer.eachLayer(l => l.setStyle(wardStyle(l.feature.properties.ward)));
     if (S.view === 'amenities') fitScope();
     renderAll(); if (S.view === 'dashboard') renderDash(); if (S.view === 'wards') renderWards();
@@ -223,14 +246,14 @@
     rows.sort((a, b) => ((a.s && a.s.score != null) ? a.s.score : 9) - ((b.s && b.s.score != null) ? b.s.score : 9) || a.name.localeCompare(b.name));
     const gname = { overall: 'all amenities', local: 'local amenities', district: 'district facilities' }[S.sGroup];
     const wr = S.ward && sd.areas['ward:' + S.ward];
-    const wtxt = wr ? `Ward ${S.ward} as a whole: ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).score)} (${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).low)} to ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).high)}). ` : '';
-    $('#score-count').textContent = `${wtxt}On ${gname}: ${counts.consistent_gap} communities have a consistent gap, ${counts.depends} more depend on the assumptions, out of ${rows.length} scored${S.ward ? ' in Ward ' + S.ward : ''}. Sorted lowest first. Score shown: ${S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : ''}; the range covers every way of counting residents. Scores count the City's amenities plus non-City ones open to everyone.`;
+    const wtxt = wr ? `${wardShort(S.ward)} as a whole: ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).score)} (${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).low)} to ${sc2((S.sGroup === 'overall' ? wr.overall : wr.groups[S.sGroup]).high)}). ` : '';
+    $('#score-count').textContent = `${wtxt}On ${gname}: ${counts.consistent_gap} ${areasWord()} have a consistent gap, ${counts.depends} more depend on the assumptions, out of ${rows.length} scored${S.ward ? ' in ' + wardShort(S.ward) : ''}. Sorted lowest first. Score shown: ${S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : ''}; the range covers every way of counting residents. Scores count the City's amenities plus non-City ones open to everyone.`;
     $('#stbl tbody').innerHTML = rows.length ? rows.map(x => {
       const c = x.s && CONS[x.s.consistency];
       return `<tr data-c="${esc(x.code)}" tabindex="0" class="${x.code === S.selected ? 'on' : ''}"><td>${esc(x.name)}${x.s && x.s.scenarios < x.s.scenarios_possible ? ' <span class="dim" title="No 2021 Census count, so fewer ways could be worked out">*</span>' : ''}</td>
         <td class="n">${num(x.units)}</td><td class="n">${scoreCell(x.r.groups.local)}</td><td class="n">${scoreCell(x.r.groups.district)}</td><td class="n">${scoreCell(x.r.overall)}</td>
         <td>${c ? `<span class="tag ${c[0]}">${c[1]}</span>` : '<span class="dim">–</span>'}</td></tr>`;
-    }).join('') : '<tr><td colspan="6">No community matches. Clear the search or choose All.</td></tr>';
+    }).join('') : '<tr><td colspan="6">No ' + areaWord() + ' matches. Clear the search or choose All.</td></tr>';
     $$('#stbl tr[data-c]').forEach(tr => {
       const go = () => { select(tr.dataset.c); focusArea(tr.dataset.c); $('#map').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); };
       tr.addEventListener('click', go);
@@ -263,7 +286,7 @@
     const sens = S.data.sensitivity[S.kind];
     const cv = crowdVal(S.kind, scopeKey(), 0);
     const crowdNote = cv == null ? '' : ` Within ${metres(p)}, ${esc(name)} has ${crowdFmt(S.kind, cv)} who can reach them <span class="kind kind-estimate">Estimate</span> (${esc(S.data.crowding.options[S.people].label)}).`;
-    $('#headline-note').innerHTML = `${pace}${esc(k.threshold_basis || '')} ${k.threshold_url ? `<a href="${esc(k.threshold_url)}">Source</a>.` : ''} Communities with a measured gap: ${sens.gaps_at_primary} at ${metres(p)}, ${sens.gaps_at_secondary} at ${metres(s)}. <span class="kind kind-calculated">Calculated</span>${crowdNote}`;
+    $('#headline-note').innerHTML = `${pace}${esc(k.threshold_basis || '')} ${k.threshold_url ? `<a href="${esc(k.threshold_url)}">Source</a>.` : ''} ${areasWord().replace(/^./, c => c.toUpperCase())} with a measured gap: ${sens.gaps_at_primary} at ${metres(p)}, ${sens.gaps_at_secondary} at ${metres(s)}. <span class="kind kind-calculated">Calculated</span>${crowdNote}`;
     drawRings(c.share_primary, c.share_secondary, p, s);
   }
 
@@ -313,13 +336,13 @@
   }
   let wardLayer;
   function wardStyle(w) {
-    const on = S.ward && +w === S.ward;
+    const on = !!S.ward && String(w) === S.ward;
     return { fill: false, color: dark.matches ? '#E5ECE9' : '#1C2A28', weight: on ? 3.5 : 1.2, opacity: S.ward && !on ? 0.35 : 0.8, dashArray: on ? null : '5 4' };
   }
   function fitScope() {
     if (!map) return;
     if (S.ward && wardLayer) {
-      const l = wardLayer.getLayers().find(x => +x.feature.properties.ward === S.ward);
+      const l = wardLayer.getLayers().find(x => String(x.feature.properties.ward) === S.ward);
       if (l) { map.fitBounds(l.getBounds(), { padding: [12, 12] }); return; }
     }
     if (areaLayer) map.fitBounds(areaLayer.getBounds(), { padding: [10, 10] });
@@ -369,7 +392,7 @@
   $('#q-score').addEventListener('input', e => { S.sq = e.target.value; renderScores(); });
   $$('#mode-seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === (crowd(S.kind) ? S.mode : 'near'))));
     if (useCrowd()) {
-      $('#legend').innerHTML = `<div>${crowdUnitShort(S.kind)} within ${metres(th()[S.th])}, against Calgary</div><div class="sw">${colors().map(c => `<span style="background:${c}"></span>`).join('')}</div>
+      $('#legend').innerHTML = `<div>${crowdUnitShort(S.kind)} within ${metres(th()[S.th])}, against ${esc(S.data.name)}</div><div class="sw">${colors().map(c => `<span style="background:${c}"></span>`).join('')}</div>
         <div class="ticks">${['', '½', '¾', 'same', '1½×', '2×', ''].map(x => `<span>${x}</span>`).join('')}</div>
         <div class="nd"><i></i>No estimate (no ${crowd(S.kind).people} counted)</div><div class="nd"><span class="kind kind-estimate" style="margin:0">Estimate</span> ${esc(S.data.crowding.options[S.people].label)}</div>`;
       return;
@@ -407,7 +430,7 @@
 
   function renderProfile() {
     const box = $('#profile'), code = S.selected, a = code && S.data.areas[code];
-    if (!code) { box.innerHTML = '<p class="hint">Select a community on the map or in the table to see every amenity for it, and add up to three to compare.</p>'; return; }
+    if (!code) { box.innerHTML = '<p class="hint">Select a ' + areaWord() + ' on the map or in the table to see every amenity for it, and add up to three to compare.</p>'; return; }
     if (!a) { box.innerHTML = `<h3>${esc(nameOf(code))}</h3><p class="sub">No homes on the property roll, so access is not measured here.</p>`; return; }
     const newShare = a.units ? a.units_new / a.units : 0;
     const scs = S.data.scores && S.data.scores.areas[code];
@@ -425,7 +448,7 @@
           <span class="k">Built since ${S.data.growth_year}, within ${metres(p)}</span><span>${st.share_new_primary == null ? 'none built' : pct(st.share_new_primary)}</span>
           <span class="k">Median distance</span><span>${st.median_m == null ? (st.median_beyond_cap ? 'over ' + metres(s) : '–') : metres(st.median_m)}</span>
           ${crowd(k) && S.people ? `<span class="k">${crowdUnitShort(k)} within ${metres(p)} <span class="kind kind-estimate">Estimate</span></span><span>${crowdShort(k, crowdVal(k, code, 0))} <span class="k">(city ${crowdShort(k, crowdVal(k, '_all', 0))})</span></span>` : ''}
-          ${scs && scs.amenities[bk] && scs.amenities[bk].score != null ? `<span class="k">Score against Calgary</span><span>${sc2(scs.amenities[bk].score)} <span class="k">(${sc2(scs.amenities[bk].low)} to ${sc2(scs.amenities[bk].high)})</span>${scs.amenities[bk].consistency === 'consistent_gap' ? ' <span class="tag tag-cgap">Consistent gap</span>' : ''}</span>` : ''}
+          ${scs && scs.amenities[bk] && scs.amenities[bk].score != null ? `<span class="k">Score against ${esc(S.data.name)}</span><span>${sc2(scs.amenities[bk].score)} <span class="k">(${sc2(scs.amenities[bk].low)} to ${sc2(scs.amenities[bk].high)})</span>${scs.amenities[bk].consistency === 'consistent_gap' ? ' <span class="tag tag-cgap">Consistent gap</span>' : ''}</span>` : ''}
         </div></div>`;
     }).join('');
     const inCmp = S.compare.includes(code);
@@ -447,7 +470,7 @@
     if (!list.length) { box.hidden = true; return; }
     box.hidden = false;
     const kinds = baseKinds().map(([bk]) => [effKey(bk), S.data.kinds[effKey(bk)]]);
-    box.innerHTML = `<h3><span>Comparing ${list.length} ${list.length === 1 ? 'community' : 'communities'} with ${esc(S.data.name)}</span></h3>
+    box.innerHTML = `<h3><span>Comparing ${list.length} ${list.length === 1 ? areaWord() : areasWord()} with ${esc(S.data.name)}</span></h3>
       <div class="table-wrap"><table class="cmp"><thead><tr><th scope="col">Share of homes within walking distance</th>${list.map(c => `<th scope="col">${esc(S.data.areas[c].name)} <button class="x" data-x="${esc(c)}" aria-label="Remove ${esc(S.data.areas[c].name)}">×</button></th>`).join('')}<th scope="col">${esc(S.data.name)}</th></tr></thead>
       <tbody><tr><td>Homes on the property roll</td>${list.map(c => `<td>${num(S.data.areas[c].units)}</td>`).join('')}<td>${num(S.data.homes.units)}</td></tr>
       ${kinds.map(([k, kd]) => `<tr><td>${esc(kd.label)}, ${metres(kd.thresholds_m[0])}</td>${list.map(c => `<td>${pct(S.data.areas[c].access[k].share_primary)}</td>`).join('')}<td>${pct(S.data.city_access[k].share_primary)}</td></tr>`
@@ -491,7 +514,7 @@
         <td class="n">${r.median == null ? '–' : r.median >= 1e9 ? 'over ' + metres(th()[1]) : metres(r.median)}</td>
         <td class="n crowd-col">${crowdShort(S.kind, r.crowd)}</td>
         <td><span class="tag ${cls}">${lab}</span></td></tr>`;
-    }).join('') : `<tr><td colspan="7">No community matches. Clear the search or choose All.</td></tr>`;
+    }).join('') : `<tr><td colspan="7">No ${areaWord()} matches. Clear the search or choose All.</td></tr>`;
     $$('tr[data-c]', tb).forEach(tr => {
       const go = () => { select(tr.dataset.c); focusArea(tr.dataset.c); $('#map').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); };
       tr.addEventListener('click', go);
@@ -557,7 +580,7 @@
       ['issued_homes12', 'Homes in building permits issued', 'num'], ['dev_permits12', 'Development permit applications', 'num']] },
   ];
   function dm() { return S.dash && S.dash.methods[S.popMethod]; }
-  function dashRow(w) { const m = dm(); if (!m) return null; return w ? m.wards.find(r => +r.ward === +w) : m.city; }
+  function dashRow(w) { const m = dm(); if (!m) return null; return w ? m.wards.find(r => String(r.ward) === String(w)) : m.city; }
   function kindChip(k) { return k === 'estimate' ? ' <span class="kind kind-estimate">Estimate</span>' : k === 'official' ? ' <span class="kind kind-official">Official</span>' : ''; }
   function card(label, value, cityValue, kind, note) {
     return `<div class="card"><div class="l">${esc(label)}${kindChip(kind)}</div><div class="v">${value}</div>` +
@@ -577,16 +600,44 @@
     }
     return out.join('');
   }
+  // people and homes worked out by Canada Insight (cities without a linked dashboard)
+  function ownPeople(w) {
+    const o = S.data.crowding && S.data.crowding.options[S.people];
+    return o && o.totals ? o.totals[w ? 'ward:' + w : '_all'] : null;
+  }
+  function ownHomes(w) {
+    const vals = Object.values(w ? (S.data.wards[w] || {}).access || {} : S.data.city_access);
+    return vals.length ? vals[0] : null;
+  }
+  function ownPeopleGroup() {
+    const p = ownPeople(S.ward), pc = ownPeople(''), h = ownHomes(S.ward), hc = ownHomes('');
+    const o = S.data.crowding && S.data.crowding.options[S.people];
+    const newShare = x => x && x.units ? x.units_new / x.units * 100 : null;
+    return `<section class="dgroup"><h2>People and homes <small>${esc(o ? o.label : '')}</small></h2><div class="cards">` +
+      (p ? card('Residents', F.num(p.residents), pc ? F.num(pc.residents) : null, 'estimate') +
+           card('Children aged 0 to 14', F.num(p.children), pc ? F.num(pc.children) : null, 'estimate') : '') +
+      (h ? card('Homes on the property roll', F.num(h.units), hc ? F.num(hc.units) : null, 'official',
+                S.data.homes && S.data.homes.units_estimated ? 'Apartment buildings counted by floor area (an estimate).' : null) +
+           card(`Homes built since ${S.data.growth_year}`, F.num(h.units_new), hc ? F.num(hc.units_new) : null, 'official') +
+           card(`Share built since ${S.data.growth_year}`, F.pct(newShare(h)), hc ? F.pct(newShare(hc)) : null, 'calculated') : '') +
+      `</div><p class="fine">${esc(o ? o.about : '')}</p></section>`;
+  }
   function renderDash() {
     if (!S.data) return;
     const sel = $('#pop-method');
+    const cr = S.data.crowding;
+    sel.closest('.method-pick').hidden = !S.dash && !cr;
     if (S.dash) {
       sel.innerHTML = Object.entries(S.dash.methods).map(([k, m]) => `<option value="${esc(k)}">${esc(m.label)}</option>`).join('');
       sel.value = S.popMethod;
+    } else if (cr) {
+      sel.innerHTML = Object.entries(cr.options).map(([k, o]) => `<option value="${esc(k)}">${esc(o.label)}</option>`).join('');
+      sel.value = S.people;
     }
     $('#dash-h').textContent = `${scopeName()} at a glance`;
     const m = dm(), row = dashRow(S.ward), city = dashRow(0);
     const groups = [];
+    if (!S.dash) groups.push(ownPeopleGroup());
     if (m && row) {
       for (const g of GROUPS) {
         const sub = g.crime ? (m.crime_period || '') : g.period ? (m.period || '') : '';
@@ -596,7 +647,7 @@
     }
     groups.push(`<section class="dgroup findings-box" id="dash-findings"></section>`);
     groups.push(`<section class="dgroup"><h2>Amenities within reach <small>Canada Insight, ${esc(new Date(S.data.built_at).toLocaleDateString('en-CA', { dateStyle: 'medium' }))}</small></h2><div class="cards">${amenityCards()}</div>
-      <p class="fine"><a href="#" data-goto="amenities">Explore amenities community by community</a></p></section>`);
+      <p class="fine"><a href="#" data-goto="amenities">Explore amenities ${areaWord()} by ${areaWord()}</a></p></section>`);
     const tax = S.dash && S.dash.tax && S.dash.tax.by_ward;
     if (tax) {
       const sum = k => Object.values(tax).reduce((a, r) => a + (r[k] || 0), 0);
@@ -611,19 +662,34 @@
     $('#dash-groups').innerHTML = groups.join('');
     renderFindings('#dash-findings');
     $$('#dash-groups [data-goto]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); showView(a.dataset.goto); }));
-    $('#dash-sub').textContent = m ? `Residents counted with: ${m.label}. ${m.period ? 'Twelve months: ' + m.period + '.' : ''}` : 'City figures are not available in this build.';
+    $('#dash-sub').textContent = m ? `Residents counted with: ${m.label}. ${m.period ? 'Twelve months: ' + m.period + '.' : ''}` :
+      `Homes and amenities for ${S.data.name}, from the City's open data. ${(S.city.readiness || {}).not_yet || ''}`;
     $('#dash-source').innerHTML = S.dash ? `311, safety, families, development and tax figures: ${esc(S.dash.source.title)} (<a href="${esc(S.dash.source.url)}">${esc(S.dash.source.url.replace(/^https:\/\//, ''))}</a>), read ${esc((S.dash.read_at || '').slice(0, 10))}${S.dash.stale ? '. That build could not be read today, so the last copy is shown.' : ''}. They match that site exactly. Amenity figures are worked out by Canada Insight.` : '';
   }
 
   // ---------- ward comparison ----------
   function wardTopics() {
+    if (!S.dash) {
+      const pick = (f, w) => { const p = ownPeople(w); return p && p[f]; };
+      const hk = (f, w) => { const h = ownHomes(w); return h && h[f]; };
+      const t = [{ id: 'people', title: 'People and homes', cols: [
+        { k: 'r', l: 'Residents', f: 'num', get: w => pick('residents', w) },
+        { k: 'c', l: 'Children aged 0 to 14', f: 'num', get: w => pick('children', w) },
+        { k: 'u', l: 'Homes', f: 'num', get: w => hk('units', w) },
+        { k: 'n', l: `Built since ${S.data.growth_year}`, f: 'num', get: w => hk('units_new', w) },
+        { k: 's', l: `Share built since ${S.data.growth_year}`, f: 'pct', get: w => { const h = ownHomes(w); return h && h.units ? h.units_new / h.units * 100 : null; } }] }];
+      return t.concat(amenityTopic());
+    }
     const t = GROUPS.map(g => ({ id: g.id, title: g.title, cols: g.m.map(([k, l, f]) => ({ k, l, f, get: w => (dashRow(w) || {})[k] })) }));
+    t.push(...amenityTopic());
+    return t;
+  }
+  function amenityTopic() {
     const am = baseKinds().map(([bk, kd]) => ({ k: bk, l: `Within ${metres(kd.thresholds_m[0])}: ${kd.label.toLowerCase()}`, f: 'share',
       get: w => { const k = effKey(bk); const a = w ? ((S.data.wards[w] || {}).access || {})[k] : S.data.city_access[k]; return a && a.share_primary; } }));
     const scg = [['local', 'Local score'], ['district', 'District score'], ['overall', 'All amenities score']].map(([g, l]) => ({ k: 's_' + g, l, f: 'dec2',
       get: w => { if (!w) return 1; const r = S.data.scores && S.data.scores.areas['ward:' + w]; return r ? (g === 'overall' ? r.overall : r.groups[g]).score : null; } }));
-    t.push({ id: 'amenities', title: 'Amenities', cols: [...am, ...scg] });
-    return t;
+    return [{ id: 'amenities', title: 'Amenities', cols: [...am, ...scg] }];
   }
   function renderWards() {
     if (!S.data || !S.data.wards) return;
@@ -632,7 +698,7 @@
     $('#wc-topics').innerHTML = topics.map(t => `<button type="button" data-t="${t.id}" aria-pressed="${t.id === S.wcTopic}">${esc(t.title)}</button>`).join('');
     $$('#wc-topics button').forEach(b => b.addEventListener('click', () => { S.wcTopic = b.dataset.t; S.wcSort = null; renderWards(); }));
     const t = topics.find(x => x.id === S.wcTopic);
-    const ws = Object.keys(S.data.wards).map(Number).sort((a, b) => a - b);
+    const ws = Object.keys(S.data.wards);
     let rows = ws.map(w => ({ w, vals: t.cols.map(c => c.get(w)) }));
     if (S.wcSort) { const [i, dir] = S.wcSort; rows.sort((a, b) => ((a.vals[i] ?? -1e18) - (b.vals[i] ?? -1e18)) * dir); }
     const maxes = t.cols.map((c, i) => Math.max(...rows.map(r => Math.abs(r.vals[i] || 0))) || 1);
@@ -643,7 +709,8 @@
     $$('#wctbl th button').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.i; S.wcSort = [i, S.wcSort && S.wcSort[0] === i ? -S.wcSort[1] : -1]; renderWards(); }));
     const m = dm();
     $('#wc-note').textContent = t.id === 'amenities' ? 'Amenity figures: Canada Insight. Homes are placed in wards by their exact location.'
-      : `${m ? m.note || '' : ''} Source: ${S.dash ? S.dash.source.title : ''}, the same figures as that site.`;
+      : !S.dash ? `Homes: the City's property roll. Residents and children: ${(S.data.crowding.options[S.people] || {}).label || ''}, an estimate placed in wards by each home's location.`
+      : `${m ? m.note || '' : ''} Source: ${S.dash.source.title}, the same figures as that site.`;
   }
 
 
@@ -672,7 +739,7 @@
       const ratio = by[key] / by._all;
       let txt = `Within ${metres(+d)}, ${name} has ${crowdFmt(k, by[key])} who can reach them` + (S.ward ? `, ${ratio.toFixed(2)} times ${city}'s level (${crowdShort(k, by._all)})` : '') + '.';
       if (S.ward) {
-        const ws = Object.keys(S.data.wards || {}).map(w => [+w, by['ward:' + w]]).filter(x => x[1] != null).sort((a, b) => a[1] - b[1]);
+        const ws = Object.keys(S.data.wards || {}).map(w => [w, by['ward:' + w]]).filter(x => x[1] != null).sort((a, b) => a[1] - b[1]);
         const r = ws.findIndex(x => x[0] === S.ward) + 1;
         if (r) txt += ` That is ${r === 1 ? 'the lowest' : r === ws.length ? 'the highest' : ordinal(r) + ' lowest'} of the ${ws.length} wards.`;
         const a = scopeAccess(k), cA = S.data.city_access[k];
@@ -688,7 +755,7 @@
       const q = Math.ceil(all.length / 4), low = new Set(all.slice(0, q).map(x => x[0]));
       const mine = all.filter(([c]) => inScope(c));
       const lowMine = mine.filter(([c]) => low.has(c));
-      if (S.ward && mine.length) out.push({ kind: 'estimate', text: `${lowMine.length} of ${name}'s ${mine.length} communities are in ${city}'s lowest quarter for playgrounds per child within reach${lowMine.length ? ': ' + lowMine.map(([c]) => S.data.areas[c].name).join(', ') : ''}.` });
+      if (S.ward && mine.length) out.push({ kind: 'estimate', text: `${lowMine.length} of ${name}'s ${mine.length} ${areasWord()} are in ${city}'s lowest quarter for playgrounds per child within reach${lowMine.length ? ': ' + lowMine.map(([c]) => S.data.areas[c].name).join(', ') : ''}.` });
     }
     // 4. new homes against older homes, where the gap is 10 points or more
     const gaps = [];
@@ -701,7 +768,7 @@
     if (gaps.length) out.push({ kind: 'calculated', text: `Homes built since ${S.data.growth_year} compared with older homes in ${name} (share within walking distance): ${gaps.join('; ')}.` });
     // 5. district facilities for new homes
     const dist = district.map(bk => [bk, scopeAccess(kinds[bk])]).filter(([, a]) => a && a.share_new_primary != null && a.units_new >= 50);
-    if (dist.length) out.push({ kind: 'calculated', text: `For homes built since ${S.data.growth_year} in ${name}: ` + dist.map(([bk, a]) => `${pct(a.share_new_primary)} are within ${metres(S.data.kinds[bk].thresholds_m[0])} of ${an(lab(bk))}`).join('; ') + '. New communities on the city\'s edge are farther from facilities that serve several communities, some of which are planned for later phases.' });
+    if (dist.length) out.push({ kind: 'calculated', text: `For homes built since ${S.data.growth_year} in ${name}: ` + dist.map(([bk, a]) => `${pct(a.share_new_primary)} are within ${metres(S.data.kinds[bk].thresholds_m[0])} of ${an(lab(bk))}`).join('; ') + '. New ${areasWord()} on the city\'s edge are farther from facilities that serve several ${areasWord()}, some of which are planned for later phases.' });
     // 6. parks near, few playgrounds (communities in scope)
     if (kinds.park && kinds.playground) {
       const pp = Object.entries(S.data.areas).filter(([c, a]) => inScope(c) && a.access[kinds.park].status !== 'too_few_homes'
@@ -710,7 +777,7 @@
     }
     // 7. cautions
     const cc = kinds.community_centre && scopeAccess(kinds.community_centre);
-    if (cc && cc.share_primary < 0.2) out.push({ kind: 'caution', text: `Community centres read low in ${name} (${pct(cc.share_primary)} of homes within ${metres(S.data.kinds[kinds.community_centre].thresholds_m[0])}). The City's list may not include every community association hall: check before quoting this figure.` });
+    if (cc && cc.share_primary < 0.2) out.push({ kind: 'caution', text: `${plural(kinds.community_centre).replace(/^./, c => c.toUpperCase())} read low in ${name} (${pct(cc.share_primary)} of homes within ${metres(S.data.kinds[kinds.community_centre].thresholds_m[0])}). The City's list may not include every one: check before quoting this figure.` });
     return out;
   }
   function an(word) { return /^[aeiou]/i.test(word) ? 'an ' + word : 'a ' + word; }

@@ -25,6 +25,37 @@ Licence for City data: Open Government Licence – City of Calgary.
 Threshold reference: [Calgary Transit Service Guidelines (May 2025)](https://transit-prd.calgary.ca/content/dam/transit/plans---projects/Calgary%20Transit%20Service%20Guidelines%20May%202025.pdf),
 local coverage measured as residents within 400 metres of transit service.
 
+## Edmonton (pilot, added 5 November 2026)
+
+Licence for City data: City of Edmonton Open Data Terms of Use. Row counts and update dates from a survey of the
+portal on 5 November 2026; the build records the exact figures in `sources.json` every day.
+
+| Dataset | Publisher | Updated | Rows | Filter | Used for |
+|---|---|---|---|---|---|
+| [City of Edmonton - Neighbourhoods](https://data.edmonton.ca/d/65fr-66s6) | City of Edmonton | 2026-11-02 | 407 | none | Neighbourhood outlines and names |
+| [Ward Boundary and Council Composition (Current)](https://data.edmonton.ca/d/b4er-5rp2) | City of Edmonton | 2026-11-02 | 12 | none | Ward outlines, names, councillors |
+| [Property Assessment Data (Current Calendar Year)](https://data.edmonton.ca/d/q7d6-ambg) | City of Edmonton | 2026-11-02 | 439,825 (all classes) | `tax_class in('Residential','Other Residential') AND assessed_value >= 40000` | Homes: location, neighbourhood, class |
+| [Property Information (Current Calendar Year)](https://data.edmonton.ca/d/dkk9-cj3x) | City of Edmonton | 2026-11-02 | 439,825 | `year_built IS NOT NULL` | Year built; floor area of apartment buildings |
+| [2021 Federal Census: Population](https://data.edmonton.ca/d/eg3i-f4bj) | Statistics Canada, via the City | 2023-09-27 | 278 neighbourhoods (1,010,595 residents) | none | Residents by neighbourhood |
+| [2021 Federal Census: Age and Gender](https://data.edmonton.ca/d/wpfd-8bii) | Statistics Canada, via the City | 2023-06-28 | 20,925 | `age_range='0 to 14 years' AND gender='Total'` | Children by neighbourhood (184,105) |
+| [Playgrounds](https://data.edmonton.ca/d/9nqb-w48x) | City of Edmonton | 2026-11-02 | 661 | none | Playgrounds |
+| [Parks](https://data.edmonton.ca/d/gdd9-eqv9) | City of Edmonton | 2026-11-02 | 1,197 | `status='Active' AND class not in('PUL','Unknown','Other Land Type')` | Public parks (outlines) |
+| [ETS Bus Schedule GTFS Data Feed - Stops](https://data.edmonton.ca/d/4vt2-8zrq) | City of Edmonton | 2026-10-30 | 6,797 | `location_type = 0` | Bus and LRT stops |
+| [Community League Halls](https://data.edmonton.ca/d/kaps-rk7z) | City of Edmonton | 2026-11-02 | 141 | none | Community league halls |
+| [Recreation Facilities](https://data.edmonton.ca/d/nz3t-vyg3) | City of Edmonton | 2026-11-05 | 19 of 107 | `facility_type='Recreation Centre'` | Indoor recreation centres |
+| [Public Libraries](https://data.edmonton.ca/d/jn25-zspi) | Edmonton Public Library, via the City | 2026-11-04 | 22 | none | Public libraries |
+
+How Edmonton differs from Calgary:
+- Homes are points the City publishes for each property, not parcel centres. Condominium units are one account each;
+  apartment buildings ("Other Residential", 4,404 accounts) are one account each, so their homes are estimated as
+  floor area / 85 m² (an estimate, labelled as such). Properties assessed under $40,000 (about 45,000, mostly $0
+  parking stalls, storage units and remnant parcels) are left out, as are properties with no year built (no building).
+- Residents and children come from the 2021 Census by neighbourhood on the City's portal, with residents added for
+  homes built since 2021 (default) or unchanged. There is no Calgary Data Desk for Edmonton, so the dashboard shows
+  people, homes and amenities only; 311, safety and development figures are not built yet.
+- Neighbourhoods are not Calgary's communities: compare the two cities only at the city level, and scores only
+  within a city (each is against its own city's level).
+
 ## Known limitations of the sources
 
 - The property roll is the current year only; year of construction gives the build history, but demolished homes

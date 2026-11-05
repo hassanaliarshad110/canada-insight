@@ -34,7 +34,7 @@
 </header>
 <div class="scopebar">
   <label class="ward-pick"><span>Showing</span>
-    <select id="ward"><option value="0">All of Calgary</option></select>
+    <select id="ward"><option value="">All of the city</option></select>
   </label>
   <span class="scope-note" id="scope-note"></span>
 </div>
@@ -44,7 +44,7 @@
   <section class="dash" aria-labelledby="dash-h">
     <div class="dash-head">
       <div>
-        <h1 id="dash-h">Calgary at a glance</h1>
+        <h1 id="dash-h">At a glance</h1>
         <p class="lede" id="dash-sub"></p>
       </div>
       <label class="method-pick"><span>Residents counted with</span><select id="pop-method"></select></label>
@@ -85,7 +85,7 @@
 
   <section class="explore" aria-labelledby="explore-h">
     <div class="explore-head">
-      <h2 id="explore-h">Community by community</h2>
+      <h2 id="explore-h"><span class="t-Area">Community</span> by <span class="t-area">community</span></h2>
       <div class="controls">
         <div class="seg" role="group" aria-label="Walking distance">
           <button type="button" data-th="0" aria-pressed="true" id="th0">400 m</button>
@@ -114,13 +114,13 @@
         <div class="legend" id="legend"></div>
       </div>
       <aside class="profile" id="profile" aria-live="polite">
-        <p class="hint">Select a community on the map or in the table to see every amenity for it, and add up to three to compare.</p>
+        <p class="hint">Select a <span class="t-area">community</span> on the map or in the table to see every amenity for it, and add up to three to compare.</p>
       </aside>
     </div>
     <div class="compare" id="compare" hidden></div>
 
     <div class="table-head">
-      <label class="search"><span class="sr">Find a community</span><input id="q-comm" type="search" placeholder="Find a community"></label>
+      <label class="search"><span class="sr">Find a <span class="t-area">community</span></span><input id="q-comm" type="search" placeholder="Find a community"></label>
       <div class="seg filter" role="group" aria-label="Show">
         <button type="button" data-f="all" aria-pressed="true">All</button>
         <button type="button" data-f="gap" aria-pressed="false">Measured gaps</button>
@@ -147,9 +147,9 @@
 
   <section class="scores" id="scores" aria-labelledby="scores-h" hidden>
     <h2 id="scores-h">Where amenities fall behind, under every assumption</h2>
-    <p class="lede">Each score is a community's amenities within reach, per person who shares them, against Calgary's (1.00 = Calgary). It is worked out every reasonable way: both walking distances, all four ways of counting residents (the same as Calgary Data Desk), and, for the all-amenities score, two ways of weighting local amenities against district facilities. A <strong>consistent gap</strong> is below 0.80 in every one of them.</p>
+    <p class="lede">Each score is a <span class="t-area">community</span>'s amenities within reach, per person who shares them, against <span class="cn">Calgary</span>'s (1.00 = <span class="cn">Calgary</span>). It is worked out every reasonable way: both walking distances, every way of counting residents<span data-linked> (the same as Calgary Data Desk)</span>, and, for the all-amenities score, two ways of weighting local amenities against district facilities. A <strong>consistent gap</strong> is below 0.80 in every one of them.</p>
     <div class="table-head">
-      <label class="search"><span class="sr">Find a community</span><input id="q-score" type="search" placeholder="Find a community"></label>
+      <label class="search"><span class="sr">Find a <span class="t-area">community</span></span><input id="q-score" type="search" placeholder="Find a community"></label>
       <div class="seg" role="group" aria-label="Score shown" id="score-col">
         <button type="button" data-g="overall" aria-pressed="true">All amenities</button>
         <button type="button" data-g="local" aria-pressed="false">Local</button>
@@ -165,7 +165,7 @@
     <div class="table-wrap">
       <table id="stbl">
         <caption class="sr">Amenity scores against Calgary, by community</caption>
-        <thead><tr><th scope="col">Community</th><th scope="col" class="n">Homes</th>
+        <thead><tr><th scope="col" class="t-Area">Community</th><th scope="col" class="n">Homes</th>
           <th scope="col" class="n">Local amenities</th><th scope="col" class="n">District facilities</th><th scope="col" class="n">All amenities</th>
           <th scope="col">Under every assumption</th></tr></thead>
         <tbody></tbody>
@@ -175,7 +175,7 @@
 
   <section class="about" id="amen-count">
     <h2>Which amenities are counted</h2>
-    <p>By default, playgrounds and parks include the City's own and ones that are not the City's but open to everyone (mapped in OpenStreetMap: developer-held, school and community playgrounds and parks), with every one the City already lists taken out so nothing counts twice. This matches Calgary Data Desk. Use the filter on the community map to count the City's only, or to add private, residents-only ones (homeowners' association, condominium).</p>
+    <p>By default, playgrounds and parks include the City's own and ones that are not the City's but open to everyone (mapped in OpenStreetMap: developer-held, school and community playgrounds and parks), with every one the City already lists taken out so nothing counts twice.<span data-linked> This matches Calgary Data Desk.</span> Use the filter on the community map to count the City's only, or to add private, residents-only ones (homeowners' association, condominium).</p>
     <p class="fine" id="osm-stats"></p>
   </section>
  </div>
@@ -184,7 +184,8 @@
   <section class="videos" aria-labelledby="vid-h">
     <h1 id="vid-h">Video briefs</h1>
     <p class="lede">Short narrated briefs on one finding each, with the method and its limits. Each shows the date its figures are from; the pages above update every morning.</p>
-    <article class="vbrief">
+    <p class="hint" data-not-city="calgary">No video briefs for <span class="cn">this city</span> yet. Briefs for Calgary: choose Calgary at the top.</p>
+    <article class="vbrief" data-city="calgary">
       <video controls preload="metadata" poster="video/playgrounds-per-child.jpg" src="video/playgrounds-per-child.mp4"></video>
       <div>
         <h2>Playgrounds per child in Calgary</h2>
@@ -230,20 +231,20 @@
     <h2 id="method-h">How this is measured</h2>
     <div class="cols">
       <div>
-        <p>Every residential record on the city's property assessment roll is placed at the centre of its parcel. Purpose-built rental buildings, which the roll lists as one record, count as their number of units. For each kind of amenity, the straight-line distance from each home to the nearest one is measured, whichever community the amenity is in. Playgrounds and parks include ones open to everyone that the City doesn't list (from OpenStreetMap), unless you choose the City's only.</p>
-        <p>A community's figure is the share of its homes within the walking distance shown. Homes built since <span class="gy">2021</span> are measured separately, so you can see whether growth has been matched.</p>
+        <p>Every residential record on the city's property assessment roll is placed on the map<span data-city="calgary"> at the centre of its parcel. Purpose-built rental buildings, which the roll lists as one record, count as their number of units</span><span data-city="edmonton"> at the point the City publishes for it. Apartment buildings, which the roll lists as one account, count as their floor area divided by 85 m² per home (an estimate)</span>. For each kind of amenity, the straight-line distance from each home to the nearest one is measured, whichever <span class="t-area">community</span> the amenity is in. Playgrounds and parks include ones open to everyone that the City doesn't list (from OpenStreetMap), unless you choose the City's only.</p>
+        <p>A <span class="t-area">community</span>'s figure is the share of its homes within the walking distance shown. Homes built since <span class="gy">2021</span> are measured separately, so you can see whether growth has been matched.</p>
       </div>
       <div>
-        <h3>How to read a community</h3>
+        <h3>How to read a <span class="t-area">community</span></h3>
         <dl class="readings">
           <dt><span class="tag tag-gap">Measured gap</span></dt><dd>Most homes are farther than the walking distance from the nearest one in the inventory.</dd>
           <dt><span class="tag tag-check">Check inventory</span></dt><dd>A measured gap where a quarter or more of homes are less than five years old. Developer-built parks and playgrounds may not be in the city's inventory yet; confirm on the ground before treating it as real.</dd>
           <dt><span class="tag tag-ok">Most homes within reach</span></dt><dd>Half or more of homes are within the walking distance.</dd>
         </dl>
         <h3>Crowding</h3>
-        <p>Nearness can't tell a playground shared by 80 children from one shared by 400. For playgrounds and parks, each one's children (or residents) within the walking distance are added up, its share is divided among them, and each home adds up the shares of everything within reach: playgrounds per 1,000 children within reach, and park hectares per 1,000 residents within reach. Children and residents come from Calgary Data Desk's estimates, spread evenly over each community's homes, under whichever of Calgary Data Desk's four ways of counting residents you choose (the same choice as the dashboard). These are estimates.</p>
+        <p>Nearness can't tell a playground shared by 80 children from one shared by 400. For playgrounds and parks, each one's children (or residents) within the walking distance are added up, its share is divided among them, and each home adds up the shares of everything within reach: playgrounds per 1,000 children within reach, and park hectares per 1,000 residents within reach. <span data-city="calgary">Children and residents come from Calgary Data Desk's estimates, spread evenly over each community's homes, under whichever of Calgary Data Desk's four ways of counting residents you choose (the same choice as the dashboard).</span><span data-city="edmonton">Children (aged 0 to 14) and residents come from the 2021 Census by neighbourhood, published on the City's portal, spread evenly over each neighbourhood's homes; by default, residents are added for homes built since 2021 at the neighbourhood's people per home at the census. You can also use the 2021 counts unchanged.</span> These are estimates.</p>
         <h3>Scores</h3>
-        <p>Each amenity's score is the community's crowding figure divided by Calgary's. Local amenities (playgrounds, parks, transit stops) and district facilities (community centres, recreation centres, libraries) are averaged separately, each amenity capped at 2.00 so a surplus can't hide a shortage. The all-amenities score weights everything equally, or local amenities at two thirds. Bands: under 0.50 well below Calgary, 0.50 to 0.80 below, 0.80 to 1.25 around, over 1.25 above.</p>
+        <p>Each amenity's score is the <span class="t-area">community</span>'s crowding figure divided by <span class="cn">Calgary</span>'s. Local amenities (playgrounds, parks, transit stops, <span data-city="calgary">community centres</span><span data-city="edmonton">community league halls</span>) and district facilities (recreation centres, libraries) are averaged separately, each amenity capped at 2.00 so a surplus can't hide a shortage. The all-amenities score weights everything equally, or local amenities at two thirds. Bands: under 0.50 well below <span class="cn">Calgary</span>, 0.50 to 0.80 below, 0.80 to 1.25 around, over 1.25 above.</p>
         <p>No single figure is treated as the answer: the range across every way of working it out is shown, and only a gap that holds in every one is called a consistent gap. Straight-line distance is shorter than the walk itself, so these figures are the most generous reading.</p>
       </div>
     </div>
@@ -269,7 +270,7 @@
 </main>
 
 <footer class="foot">
-  <p>Canada Insight is independent research by Hassan Ali. It is not an official City of Calgary or Government of Canada product. Data: City of Calgary Open Data under the Open Government Licence – City of Calgary. Non-City amenities and map: © OpenStreetMap contributors (ODbL). City figures on the dashboard: Calgary Data Desk.</p>
+  <p>Canada Insight is independent research by Hassan Ali. It is not an official product of any city or of the Government of Canada. Data: City of Calgary Open Data under the Open Government Licence – City of Calgary; City of Edmonton Open Data under the City of Edmonton Open Data Terms of Use (Open Government Licence – City of Edmonton). Non-City amenities and map: © OpenStreetMap contributors (ODbL). Calgary figures on the dashboard: Calgary Data Desk.</p>
   <p id="built"></p>
 </footer>
 
