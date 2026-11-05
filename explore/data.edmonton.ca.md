@@ -9,8 +9,8 @@
 - `24uj-dj8v` General Building Permits (dataset, updated 2026-11-05, rows None)
 - `qhi4-bdpu` City of Edmonton - Business Licences (dataset, updated 2026-11-05, rows None)
 - `e8n2-hwu4` City of Edmonton Neighborhood - Map View (map, updated 2026-11-02, rows None)
-- `5squ-mg4w` Pet  Licenses by Neighbourhood (dataset, updated 2026-11-05, rows None)
 - `eg3i-f4bj` 2021 Federal Census: Population (dataset, updated 2023-09-27, rows None)
+- `5squ-mg4w` Pet  Licenses by Neighbourhood (dataset, updated 2026-11-05, rows None)
 - `65fr-66s6` City of Edmonton - Neighbourhoods (dataset, updated 2026-11-02, rows None)
 - `gnzw-67i5` Mature Neighbourhoods (dataset, updated 2019-03-07, rows None)
 - `vd42-umu2` Mature Neighbourhood Reinvestment (dataset, updated 2014-09-04, rows None)
@@ -22,8 +22,8 @@
 - `nydb-6rce` City of Edmonton Ward Boundary and Council Composition_Current, Historical and Future (dataset, updated 2026-11-02, rows None)
 - `acvv-cap3` Map View: Edmonton Public School Board Ward Boundaries (Current) (map, updated 2026-11-02, rows None)
 - `gx56-4iuu` Map View: Edmonton Catholic School Board Ward Boundaries (Current) (map, updated 2026-11-02, rows None)
-- `4ty8-84kz` Edmonton Catholic School District Ward Boundaries (map, updated 2021-06-24, rows None)
 - `6nas-wgmn` Edmonton Catholic School District Ward Boundaries (dataset, updated 2021-06-25, rows None)
+- `4ty8-84kz` Edmonton Catholic School District Ward Boundaries (map, updated 2021-06-24, rows None)
 - `eu9n-745s` Edmonton Catholic School District Ward Boundaries (dataset, updated 2021-06-24, rows None)
 - `bbxd-b5gz` Map View: Edmonton Public School Board Ward Boundaries (Current, Historical, and Future) (map, updated 2026-11-02, rows None)
 - `eg3i-f4bj` 2021 Federal Census: Population (dataset, updated 2023-09-27, rows None)
@@ -68,9 +68,9 @@
 - `x84x-uttq` Parks Operations Districts (dataset, updated 2019-01-22, rows None)
 - `28ss-gu9g` On Street Parking - Edmonton Insight Community (dataset, updated 2015-07-09, rows None)
 - `fkk9-8ysd` River Valley Ice Surfaces - Edmonton Insight Community (dataset, updated 2018-04-04, rows None)
+- `pwdw-fub3` Vacant Land Inventory - Map View (map, updated 2021-06-21, rows None)
 - `kme6-3pd6` Environmental Sensitivity Project (2015) (dataset, updated 2019-02-04, rows None)
 - `svsw-2ub7` Vacant Land Inventory (dataset, updated 2021-06-21, rows None)
-- `pwdw-fub3` Vacant Land Inventory - Map View (map, updated 2021-06-21, rows None)
 
 ## transit_stops
 
@@ -100,7 +100,7 @@
 - `k8gt-z8tr` Fire Rescue Public Education - Edmonton Insight Community (dataset, updated 2016-12-29, rows None)
 - `q6ci-4zv3` Established Neighbourhood Statistics - Edmonton Insight Community (dataset, updated 2015-06-24, rows None)
 - `unb8-wy5n` Edmonton City Charter - Edmonton Insight Community (dataset, updated 2016-12-28, rows None)
-- `eijd-vr5v` City Facility Cleanliness February 2015 - Edmonton Insight Community (dataset, updated 2015-06-12, rows None)
+- `7adr-xhnb` Mobile City Hall - Edmonton Insight Community (dataset, updated 2015-07-13, rows None)
 
 ## recreation
 
@@ -136,8 +136,8 @@
 - `eg3i-f4bj` 2021 Federal Census: Population (dataset, updated 2023-09-27, rows None)
 - `kyhu-r33m` 2009 Census - Population By Structure Type (Neighbourhood) (dataset, updated 2011-09-08, rows None)
 - `jkjx-2hix` 2016 Census - Population by Household Income (Neighbourhood/Ward) (dataset, updated 2016-08-26, rows None)
-- `am8d-inje` 2021 Federal Census: Visible Minorities (dataset, updated 2023-06-28, rows None)
 - `y7yb-jtjn` 2009 Census - Dwelling Unit By Structure Type And Ownership (Neighbourhood) (dataset, updated 2011-09-08, rows None)
+- `am8d-inje` 2021 Federal Census: Visible Minorities (dataset, updated 2023-06-28, rows None)
 - `a6zx-dzqn` 2019 Census - Population by Age Range (Neighbourhood/Ward) (dataset, updated 2019-09-10, rows None)
 - `xgkv-ii9t` 2021 Federal Census: Households and Families (dataset, updated 2023-06-28, rows None)
 - `5bk4-5txu` 2021 Federal Census: Neighbourhoods as of Official Census Day (dataset, updated 2023-06-23, rows None)
@@ -152,12 +152,12 @@
 - `5vsg-ahkq` 311 Explorer - Pothole Reporting (map, updated 2026-11-05, rows None)
 - `szsr-4vp6` 311 Requests on Public Property: Maintenance - Snow & Ice (map, updated 2026-11-05, rows None)
 - `q7ua-agfg` 311 Requests (dataset, updated 2026-11-05, rows None)
-- `bcsz-zu8a` 311 Requests (2016) (dataset, updated 2019-01-17, rows None)
 - `xq32-itvg` 311 Requests (2017) (dataset, updated 2020-01-31, rows None)
-- `rb8e-6i3k` 311 Requests (2019) (dataset, updated 2022-03-15, rows None)
-- `t4rn-2nng` 311 Requests (2018) (dataset, updated 2021-03-10, rows None)
 - `vvnz-h46c` 311 Requests (2014) (dataset, updated 2018-04-25, rows None)
+- `bcsz-zu8a` 311 Requests (2016) (dataset, updated 2019-01-17, rows None)
+- `t4rn-2nng` 311 Requests (2018) (dataset, updated 2021-03-10, rows None)
 - `3tzn-47wh` 311 Requests (2015) (dataset, updated 2018-01-31, rows None)
+- `rb8e-6i3k` 311 Requests (2019) (dataset, updated 2022-03-15, rows None)
 - `ri59-3ugc` 311 Requests (2020) (dataset, updated 2023-03-02, rows None)
 
 ## crime
@@ -208,8 +208,8 @@
 - `f6w2-hzex` Edmonton Catholic Schools (2016 - 2017) (dataset, updated 2021-06-16, rows None)
 - `gfxq-u8uu` Edmonton Catholic Schools (Current) (dataset, updated 2026-05-04, rows None)
 - `996c-239n` Edmonton Public School Board (EPSB)_School Locations (dataset, updated 2026-04-22, rows None)
-- `fwnt-fc2t` Map View: Edmonton Public School Board (EPSB) - School Locations (map, updated 2026-04-22, rows None)
 - `9jbh-cd9c` Edmonton Catholic Schools (Historical) (dataset, updated 2026-05-04, rows None)
+- `fwnt-fc2t` Map View: Edmonton Public School Board (EPSB) - School Locations (map, updated 2026-04-22, rows None)
 
 ## child_care
 

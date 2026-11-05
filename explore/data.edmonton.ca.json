@@ -51,19 +51,19 @@
     "q": "neighbourhood boundaries"
    },
    {
-    "id": "5squ-mg4w",
-    "name": "Pet  Licenses by Neighbourhood",
-    "type": "dataset",
-    "updated": "2026-11-05",
-    "description": "Distribution of various currently-licensed pets (cats, dogs, pigeons) by neighbourhood.\n\nNote that this is a snapshot of pets that were licensed as of the last update date of this dataset; if a pet was licensed a number of years ago but that license has since expired and not been renewed, the detail",
-    "q": "neighbourhood boundaries"
-   },
-   {
     "id": "eg3i-f4bj",
     "name": "2021 Federal Census: Population",
     "type": "dataset",
     "updated": "2023-09-27",
     "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "5squ-mg4w",
+    "name": "Pet  Licenses by Neighbourhood",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Distribution of various currently-licensed pets (cats, dogs, pigeons) by neighbourhood.\n\nNote that this is a snapshot of pets that were licensed as of the last update date of this dataset; if a pet was licensed a number of years ago but that license has since expired and not been renewed, the detail",
     "q": "neighbourhood boundaries"
    },
    {
@@ -133,18 +133,18 @@
     "q": "ward boundaries"
    },
    {
-    "id": "4ty8-84kz",
-    "name": "Edmonton Catholic School District Ward Boundaries",
-    "type": "map",
-    "updated": "2021-06-24",
-    "description": "",
-    "q": "ward boundaries"
-   },
-   {
     "id": "6nas-wgmn",
     "name": "Edmonton Catholic School District Ward Boundaries",
     "type": "dataset",
     "updated": "2021-06-25",
+    "description": "",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "4ty8-84kz",
+    "name": "Edmonton Catholic School District Ward Boundaries",
+    "type": "map",
+    "updated": "2021-06-24",
     "description": "",
     "q": "ward boundaries"
    },
@@ -435,6 +435,14 @@
     "q": "park land"
    },
    {
+    "id": "pwdw-fub3",
+    "name": "Vacant Land Inventory - Map View",
+    "type": "map",
+    "updated": "2021-06-21",
+    "description": "This is a dataset using centroid points to geolocate vacant land in the city. This inventory is a snapshot in time using data collected from May 2014. The data is based on the land inventory and provides a summary of vacant land in Edmonton\u2019s central core, established, and mature neighbourhoods at t",
+    "q": "park land"
+   },
+   {
     "id": "kme6-3pd6",
     "name": "Environmental Sensitivity Project (2015)",
     "type": "dataset",
@@ -446,14 +454,6 @@
     "id": "svsw-2ub7",
     "name": "Vacant Land Inventory",
     "type": "dataset",
-    "updated": "2021-06-21",
-    "description": "This is a dataset using centroid points to geolocate vacant land in the city. This inventory is a snapshot in time using data collected from May 2014. The data is based on the land inventory and provides a summary of vacant land in Edmonton\u2019s central core, established, and mature neighbourhoods at t",
-    "q": "park land"
-   },
-   {
-    "id": "pwdw-fub3",
-    "name": "Vacant Land Inventory - Map View",
-    "type": "map",
     "updated": "2021-06-21",
     "description": "This is a dataset using centroid points to geolocate vacant land in the city. This inventory is a snapshot in time using data collected from May 2014. The data is based on the land inventory and provides a summary of vacant land in Edmonton\u2019s central core, established, and mature neighbourhoods at t",
     "q": "park land"
@@ -647,11 +647,11 @@
     "q": "community halls"
    },
    {
-    "id": "eijd-vr5v",
-    "name": "City Facility Cleanliness February 2015 - Edmonton Insight Community",
+    "id": "7adr-xhnb",
+    "name": "Mobile City Hall - Edmonton Insight Community",
     "type": "dataset",
-    "updated": "2015-06-12",
-    "description": "This was one single topic among many as part of the February Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=193&t=1. Open from February 9 - 17, 2015. At the time the survey was launched survey invitations were sent to 2302 Insight Community Me",
+    "updated": "2015-07-13",
+    "description": "This was one single topic among many as part of the first October  2014 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=109&t=1. Open from Oct 13 - 21, 2014. At the time the survey was launched survey invitations were sent to 1639 Insight Commu",
     "q": "community halls"
    }
   ],
@@ -869,19 +869,19 @@
     "q": "population by neighbourhood"
    },
    {
-    "id": "am8d-inje",
-    "name": "2021 Federal Census: Visible Minorities",
-    "type": "dataset",
-    "updated": "2023-06-28",
-    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
-    "q": "population by neighbourhood"
-   },
-   {
     "id": "y7yb-jtjn",
     "name": "2009 Census - Dwelling Unit By Structure Type And Ownership (Neighbourhood)",
     "type": "dataset",
     "updated": "2011-09-08",
     "description": "All Census information is as of April 1, 2009.\r\nNo data on any individual residence will be released.  To protect the privacy of individuals, data is compiled and presented at the city-, ward- and neighbourhood-level only.\r\nIn order to further protect the privacy of individuals, neighbourhood data i",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "am8d-inje",
+    "name": "2021 Federal Census: Visible Minorities",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
     "q": "population by neighbourhood"
    },
    {
@@ -975,14 +975,6 @@
     "q": "311 service requests"
    },
    {
-    "id": "bcsz-zu8a",
-    "name": "311 Requests (2016)",
-    "type": "dataset",
-    "updated": "2019-01-17",
-    "description": "Listing of all requests raised to 311 in 2016, details of each call/transaction and update on the status.",
-    "q": "311 service requests"
-   },
-   {
     "id": "xq32-itvg",
     "name": "311 Requests (2017)",
     "type": "dataset",
@@ -991,11 +983,19 @@
     "q": "311 service requests"
    },
    {
-    "id": "rb8e-6i3k",
-    "name": "311 Requests (2019)",
+    "id": "vvnz-h46c",
+    "name": "311 Requests (2014)",
     "type": "dataset",
-    "updated": "2022-03-15",
-    "description": "Listing of all requests raised to 311 during the year 2019, details of each call/transaction and update on the status.\n\nFor current data, please see https://data.edmonton.ca/d/q7ua-agfg.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you ",
+    "updated": "2018-04-25",
+    "description": "Listing of all requests raised to 311 in 2014, details of each call/transaction and update on the status.",
+    "q": "311 service requests"
+   },
+   {
+    "id": "bcsz-zu8a",
+    "name": "311 Requests (2016)",
+    "type": "dataset",
+    "updated": "2019-01-17",
+    "description": "Listing of all requests raised to 311 in 2016, details of each call/transaction and update on the status.",
     "q": "311 service requests"
    },
    {
@@ -1007,19 +1007,19 @@
     "q": "311 requests"
    },
    {
-    "id": "vvnz-h46c",
-    "name": "311 Requests (2014)",
-    "type": "dataset",
-    "updated": "2018-04-25",
-    "description": "Listing of all requests raised to 311 in 2014, details of each call/transaction and update on the status.",
-    "q": "311 requests"
-   },
-   {
     "id": "3tzn-47wh",
     "name": "311 Requests (2015)",
     "type": "dataset",
     "updated": "2018-01-31",
     "description": "Listing of all requests raised to 311 in 2015, details of each call/transaction and update on the status.",
+    "q": "311 requests"
+   },
+   {
+    "id": "rb8e-6i3k",
+    "name": "311 Requests (2019)",
+    "type": "dataset",
+    "updated": "2022-03-15",
+    "description": "Listing of all requests raised to 311 during the year 2019, details of each call/transaction and update on the status.\n\nFor current data, please see https://data.edmonton.ca/d/q7ua-agfg.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you ",
     "q": "311 requests"
    },
    {
@@ -1335,19 +1335,19 @@
     "q": "schools"
    },
    {
-    "id": "fwnt-fc2t",
-    "name": "Map View: Edmonton Public School Board (EPSB) - School Locations",
-    "type": "map",
-    "updated": "2026-04-22",
-    "description": "Edmonton Public School Board (EPSB) school locations.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
-    "q": "schools"
-   },
-   {
     "id": "9jbh-cd9c",
     "name": "Edmonton Catholic Schools (Historical)",
     "type": "dataset",
     "updated": "2026-05-04",
     "description": "<p>List of all Catholic schools in Edmonton for the all available school years, excluding the most recently available. Note - some schools may not be offering all necessary grade years.</p><p>For the most recently availability school year data, see <a href=\"https://data.edmonton.ca/d/gfxq-u8uu\">Edmo",
+    "q": "schools"
+   },
+   {
+    "id": "fwnt-fc2t",
+    "name": "Map View: Edmonton Public School Board (EPSB) - School Locations",
+    "type": "map",
+    "updated": "2026-04-22",
+    "description": "Edmonton Public School Board (EPSB) school locations.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
     "q": "schools"
    }
   ],
@@ -1507,11 +1507,11 @@
   "gx56-4iuu": {
    "error": "URL can't contain control characters. '/resource/gx56-4iuu.json?$select=count(*) as n' (found at least ' ')"
   },
-  "4ty8-84kz": {
-   "error": "URL can't contain control characters. '/resource/4ty8-84kz.json?$select=count(*) as n' (found at least ' ')"
-  },
   "6nas-wgmn": {
    "error": "URL can't contain control characters. '/resource/6nas-wgmn.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "4ty8-84kz": {
+   "error": "URL can't contain control characters. '/resource/4ty8-84kz.json?$select=count(*) as n' (found at least ' ')"
   },
   "q7d6-ambg": {
    "error": "URL can't contain control characters. '/resource/q7d6-ambg.json?$select=count(*) as n' (found at least ' ')"
@@ -1651,11 +1651,11 @@
   "jkjx-2hix": {
    "error": "URL can't contain control characters. '/resource/jkjx-2hix.json?$select=count(*) as n' (found at least ' ')"
   },
-  "am8d-inje": {
-   "error": "URL can't contain control characters. '/resource/am8d-inje.json?$select=count(*) as n' (found at least ' ')"
-  },
   "y7yb-jtjn": {
    "error": "URL can't contain control characters. '/resource/y7yb-jtjn.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "am8d-inje": {
+   "error": "URL can't contain control characters. '/resource/am8d-inje.json?$select=count(*) as n' (found at least ' ')"
   },
   "6fft-ccn5": {
    "error": "URL can't contain control characters. '/resource/6fft-ccn5.json?$select=count(*) as n' (found at least ' ')"
@@ -1672,8 +1672,8 @@
   "q7ua-agfg": {
    "error": "URL can't contain control characters. '/resource/q7ua-agfg.json?$select=count(*) as n' (found at least ' ')"
   },
-  "bcsz-zu8a": {
-   "error": "URL can't contain control characters. '/resource/bcsz-zu8a.json?$select=count(*) as n' (found at least ' ')"
+  "xq32-itvg": {
+   "error": "URL can't contain control characters. '/resource/xq32-itvg.json?$select=count(*) as n' (found at least ' ')"
   },
   "fguc-rs4p": {
    "error": "URL can't contain control characters. '/resource/fguc-rs4p.json?$select=count(*) as n' (found at least ' ')"
