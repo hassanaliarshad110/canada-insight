@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-05T19:30:35Z",
+ "built_at": "2026-11-05T20:10:32Z",
  "overall": "warn",
  "checks": [
   {
@@ -381,11 +381,11 @@
   },
   {
    "source": "calgary.osm",
-   "check": "count_change",
-   "status": "pass",
-   "detail": "4,383 rows against 4,383 in the previous build (+0.0%)",
-   "value": 0.0,
-   "threshold": 0.05
+   "check": "read",
+   "status": "warn",
+   "detail": "OpenStreetMap unreachable (OpenStreetMap could not be reached (The read operation timed out)); the copy read 2026-11-05 is used",
+   "value": null,
+   "threshold": null
   },
   {
    "source": "calgary.people.city_actual",
