@@ -470,7 +470,7 @@
       return `<tr data-c="${esc(r.code)}" tabindex="0" class="${r.code === S.selected ? 'on' : ''}">
         <td>${esc(r.name)}</td><td class="n">${num(r.units)}</td>
         <td class="n"><span class="cell">${pct(r.share)}<span class="spark" aria-hidden="true"><i style="width:${(r.share || 0) * 100}%"></i></span></span></td>
-        <td class="n">${r.unew < 1 ? '<span class="dim">none built</span>' : `${pct(r.nw)} <span class="dim">of ${num(r.unew)}</span>`}</td>
+        <td class="n">${r.unew < 1 ? '<span class="dim">none built</span>' : `${num(r.unew)} <span class="dim">homes, ${pct(r.nw)} within ${metres(th()[S.th])}</span>`}</td>
         <td class="n">${r.median == null ? '–' : r.median >= 1e9 ? 'over ' + metres(th()[1]) : metres(r.median)}</td>
         <td class="n crowd-col">${crowdShort(S.kind, r.crowd)}</td>
         <td><span class="tag ${cls}">${lab}</span></td></tr>`;
