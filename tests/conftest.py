@@ -50,6 +50,11 @@ class FakeClient:
             raise OSError('not found')
         return self.tables[url]
 
+    def overpass(self, bbox):
+        if 'overpass' not in self.tables:
+            raise OSError('unreachable')
+        return self.tables['overpass']
+
     def metadata(self, dataset):
         return self.meta.get(dataset, {'title': dataset, 'publisher_updated': '2026-11-01', 'licence': 'OGL',
                                        'page': f'https://example.test/d/{dataset}'})

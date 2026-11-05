@@ -120,3 +120,87 @@ def test_unreadable_people_source_only_warns(tiny_city, tmp_path):
     assert set(data['crowding']['options']) == {'model'}
     q = json.load(open(os.path.join(out, 'quality.json')))
     assert any(c['source'] == 'tiny.people.census2021' and c['status'] == 'warn' for c in q['checks'])
+
+
+def with_osm_and_wards(cfg, client):
+    from conftest import sq, M_LAT
+    kx = 111_132.0 * 0.6293203910498374
+    m_lon = 1 / kx
+    lon0, lat0 = -114.0, 51.0
+    mid = lat0 + 500 * M_LAT
+    node = lambda i, xm, ym, **tags: {'type': 'node', 'id': i, 'lon': lon0 + xm * m_lon, 'lat': lat0 + ym * M_LAT,
+                                      'tags': {'leisure': 'playground', **tags}}
+    client.tables['overpass'] = [
+        node(1, 120, 500),                       # in A, far from the city playground: added (public)
+        node(2, 130, 500),                       # 10 m from node 1: the same playground mapped twice
+        node(3, 1010, 500),                      # 10 m from the city playground: the city's own
+        node(4, 300, 900, access='private'),     # residents only: added only with private ones
+        node(5, 500, 100, fee='yes'),            # paid: left out
+    ]
+    cfg['supplements'] = {'osm': {'kinds': ['playground', 'park'], 'bbox': [0, 0, 1, 1]}}
+    client.tables['wards'] = [{'ward_num': '1', 'councillor': 'One', 'multipolygon': sq(lon0, lat0, 1000 * m_lon, 1000 * M_LAT)},
+                              {'ward_num': '2', 'councillor': 'Two', 'multipolygon': sq(lon0 + 1000 * m_lon, lat0, 1000 * m_lon, 1000 * M_LAT)}]
+    cfg['wards'] = {'dataset': 'wards', 'code_field': 'ward_num', 'councillor_field': 'councillor', 'geometry_field': 'multipolygon'}
+
+
+def test_non_city_amenities_and_wards(tiny_city, tmp_path):
+    cfg, client = tiny_city
+    with_osm_and_wards(cfg, client)
+    b, data, out = run(cfg, client, tmp_path)
+    st = data['osm']['stats']['playground']
+    assert (st['public'], st['private'], st['city'], st['twice'], st['left_out']) == (1, 1, 1, 1, 1)
+    A = data['areas']['AAA']['access']
+    # city only: 2 of 14 units within 400 m (as before). With the public playground at x = 120 m, the homes at
+    # 100 m (10 units), 300 m and 500 m are 20, 180 and 380 m from it: all 14 units are within reach
+    assert A['playground|city']['share_primary'] == round(2 / 14, 4)
+    assert A['playground']['share_primary'] == 1.0
+    assert A['playground|private']['share_primary'] >= A['playground']['share_primary']
+    assert data['kinds']['playground|city']['variant_of'] == 'playground'
+    assert data['areas']['AAA']['ward'] == 1 and data['areas']['BBB']['ward'] == 2
+    assert data['wards']['1']['access']['playground|city']['share_primary'] == round(2 / 14, 4)
+    assert data['wards']['2']['councillor'] == 'Two'
+    assert os.path.exists(os.path.join(out, 'wards.geojson')) and os.path.exists(os.path.join(out, 'osm_features.json'))
+
+
+def test_osm_unreachable_reuses_last_copy(tiny_city, tmp_path):
+    cfg, client = tiny_city
+    with_osm_and_wards(cfg, client)
+    _, first, out = run(cfg, client, tmp_path)
+    prev = os.path.dirname(out)
+    del client.tables['overpass']
+    b = pipeline.Builder(cfg, client=client, today=date(2026, 11, 20), previous_dir=prev)
+    areas, homes, ams, res = b.run()
+    assert res['areas']['AAA']['playground']['share_primary'] == first['areas']['AAA']['access']['playground']['share_primary']
+    assert any(c.check == 'read' and 'copy read' in c.detail for c in b.checks)
+
+
+def test_linked_dashboard_and_fallback(tmp_path):
+    from insight import linked
+    w0 = {'built_at': '2026-11-05 02:12', 'period': 'Nov 2025 to Oct 2026', 'population': {'model_total': 10, 'method_about': 'x'},
+          'summary': {'requests12': 5, 'nested': {'a': 1, 'list': [1]}},
+          'wards_summary': {'city': {'ward': 0, 'requests_per_1000': 300.0, 'amenity_level': 1.0},
+                            'wards': [{'ward': 1, 'requests_per_1000': 250.0, 'amenity_level': 0.5}], 'note': 'n'}}
+    cfg = {'id': 'tiny', 'linked_dashboard': {'title': 't', 'publisher': 'p', 'page': 'https://x.test/', 'base_url': 'https://x.test/',
+                                              'default_method': 'm', 'methods': {'m': 'Method'}}}
+    calls = []
+
+    def fetch(url):
+        calls.append(url)
+        if url.endswith('w0.json'):
+            return w0
+        raise OSError('none')
+    d = tmp_path / 'tiny'
+    d.mkdir()
+    pipeline.write_linked(cfg, str(d), fetch=fetch)
+    out = json.load(open(d / 'dashboard.json'))
+    m = out['methods']['m']
+    assert m['wards'][0] == {'ward': 1, 'requests_per_1000': 250.0}         # old amenity level dropped
+    assert m['summary'] == {'requests12': 5, 'nested': {'a': 1}}
+    # unreachable: the previous copy is kept and marked stale
+    prev = tmp_path / 'prev' / 'tiny'
+    prev.mkdir(parents=True)
+    (prev / 'dashboard.json').write_text(json.dumps(out))
+    d2 = tmp_path / 'new' / 'tiny'
+    d2.mkdir(parents=True)
+    pipeline.write_linked(cfg, str(d2), previous_dir=str(tmp_path / 'prev'), fetch=lambda u: (_ for _ in ()).throw(OSError('down')))
+    assert json.load(open(d2 / 'dashboard.json'))['stale'] is True

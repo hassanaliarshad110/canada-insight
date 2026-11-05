@@ -40,6 +40,14 @@
     },
     "simplify_m": 15
   },
+  "wards": {
+    "dataset": "tz8z-hyaz",
+    "title": "Ward Boundaries",
+    "code_field": "ward_num",
+    "councillor_field": "councillor",
+    "geometry_field": "multipolygon",
+    "label": "Ward"
+  },
   "homes": {
     "dataset": "4bsw-nn7w",
     "title": "Current Year Property Assessments (Parcel)",
@@ -265,6 +273,25 @@
       }
     }
   },
+  "supplements": {
+    "osm": {
+      "kinds": [
+        "playground",
+        "park"
+      ],
+      "bbox": [
+        50.84,
+        -114.32,
+        51.22,
+        -113.85
+      ],
+      "owner_words": [
+        "city of calgary",
+        "calgary parks"
+      ],
+      "max_age_days": 30
+    }
+  },
   "rules": {
     "gap_share": 0.5,
     "min_units": 100,
@@ -287,5 +314,18 @@
     "historical_coverage": "Property roll: current year only (year of construction gives a build history). 311 from 2010.",
     "indicator_comparability": "Reference city.",
     "update_frequency": "Assets weekly to monthly; property roll yearly."
+  },
+  "linked_dashboard": {
+    "title": "Calgary Data Desk daily build",
+    "publisher": "Calgary Data Desk (Hassan Ali), from City of Calgary, Calgary Police Service, Government of Alberta, Statistics Canada and CMHC data",
+    "page": "https://hassanaliarshad110.github.io/calgary-data-desk/",
+    "base_url": "https://hassanaliarshad110.github.io/calgary-data-desk/",
+    "default_method": "city_actual",
+    "methods": {
+      "city_actual": "City's total, shared by actual growth",
+      "city_pace": "City's total, one rate for all",
+      "model": "Growth model",
+      "census2021": "2021 Census, no growth"
+    }
   }
 }

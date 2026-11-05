@@ -113,6 +113,10 @@ class PointIndex:
             self.grid.setdefault((int(x // cell), int(y // cell)), []).append((x, y))
             self.n += 1
 
+    def add(self, x, y):
+        self.grid.setdefault((int(x // self.cell), int(y // self.cell)), []).append((x, y))
+        self.n += 1
+
     def nearest(self, x, y, max_dist):
         """Distance to the nearest point, or None if none within max_dist."""
         if not self.n:

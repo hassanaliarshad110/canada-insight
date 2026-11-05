@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.0 (5 November 2026)
+
+Added
+- Dashboard page: Calgary at a glance, every figure filterable by ward: people and homes, 311, safety and traffic,
+  children, child care and schools, development, amenities and property tax. City figures are read from Calgary
+  Data Desk's daily build so both sites match; residents can be counted with any of the Data Desk's four methods.
+- Ward picker on every page (map zooms to the ward, tables filter to its communities), and a ward-by-ward
+  comparison for every topic, including amenities by ward (homes placed in wards by exact location).
+- Playgrounds and parks that are not the City's but open to everyone (OpenStreetMap), counted by default with the
+  same matching rules as Calgary Data Desk; filters for the City's only and for adding private ones. If
+  OpenStreetMap can't be reached, the last build's copy (up to 30 days old) is used and the page says so.
+- Map tiles from OpenStreetMap (no key needed). Tests: 39.
+
 ## 0.3.0 (5 November 2026)
 
 Added

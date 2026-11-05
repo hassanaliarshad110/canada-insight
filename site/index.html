@@ -23,17 +23,49 @@
     <span class="sr">City</span>
     <select id="city"></select>
   </label>
-  <nav class="links" aria-label="About the data">
-    <a href="#method">Method</a>
-    <a href="#sources">Sources</a>
-    <a href="#quality">Data quality</a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#" data-view="dashboard">Dashboard</a>
+    <a href="#" data-view="amenities">Amenities</a>
+    <a href="#" data-view="wards">Ward comparison</a>
+    <a href="#" data-view="about">About the data</a>
   </nav>
 </header>
+<div class="scopebar">
+  <label class="ward-pick"><span>Showing</span>
+    <select id="ward"><option value="0">All of Calgary</option></select>
+  </label>
+  <span class="scope-note" id="scope-note"></span>
+</div>
 
 <main id="main">
+ <div class="view" data-view="dashboard" hidden>
+  <section class="dash" aria-labelledby="dash-h">
+    <div class="dash-head">
+      <div>
+        <h1 id="dash-h">Calgary at a glance</h1>
+        <p class="lede" id="dash-sub"></p>
+      </div>
+      <label class="method-pick"><span>Residents counted with</span><select id="pop-method"></select></label>
+    </div>
+    <div id="dash-groups"></div>
+    <p class="fine" id="dash-source"></p>
+  </section>
+ </div>
+
+ <div class="view" data-view="wards" hidden>
+  <section class="wardcmp" aria-labelledby="wc-h">
+    <h1 id="wc-h">Ward by ward</h1>
+    <p class="lede">All 14 wards side by side. Choose a topic, and select a column to sort. The ward chosen above is highlighted.</p>
+    <div class="seg topics" role="group" aria-label="Topic" id="wc-topics"></div>
+    <div class="table-wrap"><table id="wctbl"><caption class="sr">Ward comparison</caption><thead></thead><tbody></tbody><tfoot></tfoot></table></div>
+    <p class="fine" id="wc-note"></p>
+  </section>
+ </div>
+
+ <div class="view" data-view="amenities" hidden>
   <section class="hero" aria-labelledby="q">
     <h1 id="q">Can people walk to everyday amenities, and are new homes keeping up?</h1>
-    <p class="lede" id="lede">Distance from every home on the city's property roll to the nearest amenity in the city's own inventory.</p>
+    <p class="lede" id="lede">Distance from every home on the City's property roll to the nearest amenity: the City's own, plus playgrounds and parks open to everyone that the City doesn't list.</p>
 
     <div class="amenities" role="group" aria-label="Amenity" id="kinds"></div>
 
@@ -58,6 +90,12 @@
         <div class="seg" role="group" aria-label="Map shows" id="mode-wrap" hidden>
           <span id="mode-seg" style="display:contents"><button type="button" data-m="near" aria-pressed="true">Near</button><button type="button" data-m="crowding" aria-pressed="false">Score</button></span>
         </div>
+        <label class="set-pick" id="set-wrap" hidden><span class="sr">Which amenities</span>
+          <select id="set">
+            <option value="public">City + open to everyone</option>
+            <option value="city">City's only</option>
+            <option value="private">+ private (residents only)</option>
+          </select></label>
         <label class="toggle"><input type="checkbox" id="show-pts"> Show locations</label>
       </div>
     </div>
@@ -131,11 +169,19 @@
     </div>
   </section>
 
+  <section class="about" id="amen-count">
+    <h2>Which amenities are counted</h2>
+    <p>By default, playgrounds and parks include the City's own and ones that are not the City's but open to everyone (mapped in OpenStreetMap: developer-held, school and community playgrounds and parks), with every one the City already lists taken out so nothing counts twice. This matches Calgary Data Desk. Use the filter on the community map to count the City's only, or to add private, residents-only ones (homeowners' association, condominium).</p>
+    <p class="fine" id="osm-stats"></p>
+  </section>
+ </div>
+
+ <div class="view" data-view="about" hidden>
   <section class="about" id="method" aria-labelledby="method-h">
     <h2 id="method-h">How this is measured</h2>
     <div class="cols">
       <div>
-        <p>Every residential record on the city's property assessment roll is placed at the centre of its parcel. Purpose-built rental buildings, which the roll lists as one record, count as their number of units. For each kind of amenity, the straight-line distance from each home to the nearest one in the city's inventory is measured, whichever community the amenity is in.</p>
+        <p>Every residential record on the city's property assessment roll is placed at the centre of its parcel. Purpose-built rental buildings, which the roll lists as one record, count as their number of units. For each kind of amenity, the straight-line distance from each home to the nearest one is measured, whichever community the amenity is in. Playgrounds and parks include ones open to everyone that the City doesn't list (from OpenStreetMap), unless you choose the City's only.</p>
         <p>A community's figure is the share of its homes within the walking distance shown. Homes built since <span class="gy">2021</span> are measured separately, so you can see whether growth has been matched.</p>
       </div>
       <div>
@@ -170,10 +216,11 @@
     <p id="quality-sum"></p>
     <div class="table-wrap"><table id="qtbl"><thead><tr><th scope="col">Source</th><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Detail</th></tr></thead><tbody></tbody></table></div>
   </section>
+  </div>
 </main>
 
 <footer class="foot">
-  <p>Canada Insight is independent research by Hassan Ali. It is not an official City of Calgary or Government of Canada product. Data: City of Calgary Open Data under the Open Government Licence – City of Calgary. Map: © OpenStreetMap contributors, © CARTO.</p>
+  <p>Canada Insight is independent research by Hassan Ali. It is not an official City of Calgary or Government of Canada product. Data: City of Calgary Open Data under the Open Government Licence – City of Calgary. Non-City amenities and map: © OpenStreetMap contributors (ODbL). City figures on the dashboard: Calgary Data Desk.</p>
   <p id="built"></p>
 </footer>
 

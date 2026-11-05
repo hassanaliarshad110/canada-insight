@@ -40,11 +40,44 @@ button { font: inherit; color: inherit; }
 .brand svg { width: 28px; height: 28px; fill: none; stroke: var(--teal); stroke-width: 3; }
 .brand .dot { fill: var(--teal); stroke: none; }
 .city-pick select { font: inherit; font-weight: 700; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 4px 28px 4px 10px; }
-.links { margin-left: auto; display: flex; gap: 20px; }
-.links a { color: var(--muted); text-decoration: none; font-weight: 500; }
-.links a:hover { color: var(--ink); text-decoration: underline; }
+.tabs { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+.tabs a { color: var(--muted); text-decoration: none; font-weight: 600; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
+.tabs a:hover { color: var(--ink); background: var(--teal-soft); }
+.tabs a[aria-current="page"] { color: var(--surface); background: var(--teal); }
+.scopebar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px clamp(16px, 4vw, 48px); background: var(--surface); border-bottom: 1px solid var(--rule); position: sticky; top: 61px; z-index: 999; }
+.ward-pick { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; }
+.ward-pick select, .method-pick select, .set-pick select { font: inherit; font-weight: 700; color: var(--ink); background: var(--paper); border: 1.5px solid var(--teal); border-radius: 8px; padding: 5px 10px; max-width: 100%; }
+.method-pick select, .set-pick select { font-weight: 500; border-color: var(--rule); }
+.scope-note { color: var(--muted); font-size: .9rem; }
+.view[hidden] { display: none; }
+.dash, .wardcmp { padding-top: clamp(24px, 4vw, 48px) !important; padding-bottom: 24px !important; }
+.dash h1, .wardcmp h1 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; letter-spacing: -.02em; }
+.dash-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 24px; margin-bottom: 18px; }
+.method-pick { display: inline-flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: .88rem; }
+.dgroup { margin: 26px 0 0; }
+.dgroup h2 { font-size: 1.2rem; margin-bottom: 10px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.dgroup h2 small { font-weight: 500; color: var(--muted); font-size: .85rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.card .l { color: var(--muted); font-size: .86rem; line-height: 1.3; min-height: 2.6em; }
+.card .v { font-size: 1.7rem; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 2px; }
+.card .v small { font-size: .9rem; font-weight: 600; color: var(--muted); }
+.card .c { color: var(--muted); font-size: .85rem; }
+.card .c b { color: var(--ink); }
+.card .up { color: var(--amber); } .card .down { color: var(--teal); }
+.card .note { margin-top: 6px; font-size: .78rem; color: var(--amber); }
+.card a.more { font-size: .82rem; }
+.topics { margin: 6px 0 16px; flex-wrap: wrap; }
+#wctbl { width: 100%; border-collapse: collapse; font-size: .93rem; }
+#wctbl th, #wctbl td { padding: 8px 10px; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+#wctbl th:first-child, #wctbl td:first-child { text-align: left; }
+#wctbl th button { border: 0; background: none; font-weight: 700; cursor: pointer; padding: 0; text-align: inherit; white-space: normal; }
+#wctbl tr.on { background: var(--teal-soft); font-weight: 700; }
+#wctbl tfoot td { font-weight: 700; border-top: 2px solid var(--ink); }
+#wctbl .barcell { display: inline-flex; align-items: center; gap: 8px; justify-content: flex-end; }
+#wctbl .barcell i { display: inline-block; height: 8px; background: var(--teal-2); border-radius: 4px; }
 
-main > section { padding: 0 clamp(16px, 4vw, 48px); }
+main > section, .view > section { padding: 0 clamp(16px, 4vw, 48px); }
 .hero { padding-top: clamp(28px, 6vw, 72px) !important; padding-bottom: 40px !important; }
 .hero h1 { font-size: clamp(2rem, 4.6vw, 3.6rem); font-weight: 800; letter-spacing: -.025em; max-width: 22ch; }
 .lede { color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
@@ -173,7 +206,10 @@ table#tbl, table#qtbl { width: 100%; border-collapse: collapse; font-size: .95re
 @media (max-width: 600px) {
   body { font-size: 16px; }
   .top { gap: 12px; flex-wrap: wrap; }
-  .links { margin-left: 0; width: 100%; gap: 16px; font-size: .92rem; }
+  .tabs { margin-left: 0; width: 100%; font-size: .9rem; overflow-x: auto; flex-wrap: nowrap; }
+  .scopebar { top: 0; position: static; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .card .v { font-size: 1.35rem; }
   .bar { grid-template-columns: 8.5em 1fr 3em; }
   .search input { width: 100%; }
   .search { flex: 1 1 100%; }

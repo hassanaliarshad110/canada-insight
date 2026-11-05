@@ -58,7 +58,7 @@ def _num_year(v):
 
 
 class Builder:
-    def __init__(self, cfg, client=None, today=None, previous=None):
+    def __init__(self, cfg, client=None, today=None, previous=None, previous_dir=None):
         self.cfg = cfg
         self.client = client or SocrataClient(cfg['portal']['base_url'])
         self.today = today or date.today()
@@ -66,6 +66,7 @@ class Builder:
         self.sources, self.checks = {}, []
         self.previous = previous or {}          # {source id: rows} from the last published build
         self.qcfg = cfg.get('quality') or {}
+        self.previous_dir = previous_dir
 
     # ---- provenance --------------------------------------------------------------------------------------------
     def _source(self, key, dataset, title, query, unit, coverage, period, limitations, transformations):
@@ -329,34 +330,175 @@ class Builder:
     def run(self):
         cfg = self.cfg
         areas = self.areas()
+        wards = self.wards()
         homes = self.homes(set(areas))
         ams = self.amenities()
         blocking = [c for c in self.checks if c.status == 'fail']
         if blocking:
             raise BuildFailed(blocking)
+        # each home's ward, by its exact location
+        if wards:
+            wl = geo.AreaLocator({w: self.proj.multipolygon(v['mp']) for w, v in wards.items()}, cell=1000.0)
+            homes['ward'] = [(f'ward:{w}' if w is not None else None)
+                             for w in (wl.find(x, y) for x, y in homes['xy'])]
+            n_out = sum(1 for w in homes['ward'] if w is None)
+            self.checks.append(quality.QualityCheck(f"{cfg['id']}.wards", 'homes_outside_wards',
+                                                    'warn' if n_out else 'pass',
+                                                    f'{n_out:,} of {len(homes["ward"]):,} homes fall outside every ward',
+                                                    n_out))
+        kinds, ams = self.amenity_sets(ams, areas)
+        self.kinds_expanded = kinds
         distances = {}
-        for key, a in cfg['amenities'].items():
+        for key, a in kinds.items():
             cap = a['thresholds_m'][1]
+            am = ams[key]
             if a['geometry'] == 'point':
-                distances[key] = access.distances_to_points(homes['xy'], ams[key]['xy'], cap)
+                distances[key] = access.distances_to_points(homes['xy'], am['xy'], cap)
             else:
-                loc = geo.AreaLocator({i: p for i, p in enumerate(ams[key]['polys'])}, cell=1000.0)
-                distances[key] = access.distances_to_polygons(homes['xy'], ams[key]['polys'], cap,
+                loc = geo.AreaLocator({i: p for i, p in enumerate(am['polys'])}, cell=1000.0)
+                distances[key] = access.distances_to_polygons(homes['xy'], am['polys'], cap,
                                                               inside=lambda x, y, loc=loc: loc.find(x, y) is not None)
-        res = access.compute(homes, distances, {k: a for k, a in cfg['amenities'].items()},
-                             cfg['growth_year'], self.today.year, cfg.get('rules'))
-        res['crowding'] = self.crowding(homes, ams, distances)
+        res = access.compute(homes, distances, kinds, cfg['growth_year'], self.today.year, cfg.get('rules'))
+        if wards:
+            hw = dict(homes, area=homes['ward'])
+            res['wards'] = access.compute(hw, distances, kinds, cfg['growth_year'], self.today.year,
+                                          dict(cfg.get('rules') or {}, min_units=0))['areas']
+        res['crowding'] = self.crowding(homes, ams, distances, kinds)
         if res['crowding'] and res['crowding']['kinds']:
             any_k = next(iter(cfg['amenities']))
             eligible = [c for c, v in res['areas'].items() if v[any_k]['status'] != 'too_few_homes']
-            res['scores'] = scores.compute(res['crowding'], cfg['amenities'], eligible)
+            eligible += list(res.get('wards') or {})
+            base = {k: a for k, a in kinds.items() if not a.get('variant_of')}
+            res['scores'] = scores.compute(res['crowding'], base, eligible)
+        res['ward_info'] = {w: {'name': v['name'], 'councillor': v.get('councillor')} for w, v in (wards or {}).items()}
+        self.wards_data = wards
         return areas, homes, ams, res
 
-    def crowding(self, homes, ams, distances):
-        """Two-step floating catchment for amenities with a `crowding` section, under each people option."""
+    # ---- wards ---------------------------------------------------------------------------------------------------
+    def wards(self):
+        wc = self.cfg.get('wards')
+        if not wc:
+            return None
+        fields = [wc['code_field'], wc['geometry_field']] + [f for f in (wc.get('name_field'), wc.get('councillor_field')) if f]
+        s = self._source('wards', wc['dataset'], wc.get('title', 'Wards'), None, 'one ward boundary', 'whole city',
+                         'current boundaries', wc.get('limitations'),
+                         ['each home placed in the ward that contains it (point in polygon)'])
+        rows = self.client.rows(wc['dataset'], select=','.join(fields))
+        self.checks.append(quality.required_fields(s.id, rows, [wc['code_field'], wc['geometry_field']]))
+        self._count_check('wards', len(rows))
+        s.rows = len(rows)
+        s.sha256 = rows_hash([{k: r.get(k) for k in fields if k != wc['geometry_field']} for r in rows])
+        out = {}
+        for r in rows:
+            mp = geo.as_multipolygon(r.get(wc['geometry_field']))
+            if not mp or r.get(wc['code_field']) in (None, ''):
+                continue
+            try:
+                code = int(float(r[wc['code_field']]))
+            except (TypeError, ValueError):
+                code = str(r[wc['code_field']])
+            out[code] = {'mp': mp, 'name': f"{wc.get('label', 'Ward')} {code}",
+                         'councillor': r.get(wc.get('councillor_field')) if wc.get('councillor_field') else None}
+        return out
+
+    # ---- amenity sets: the city's own, plus non-city ones open to everyone, plus private ones --------------------------
+    def amenity_sets(self, ams, areas):
+        """Expand amenity kinds that have non-city additions into three sets:
+              <kind>           the city's own + non-city ones open to everyone (the default, as Calgary Data Desk)
+              <kind>|city      the city's own only
+              <kind>|private   + private, residents-only ones
+        Returns (kinds config, amenities) including the variants."""
+        cfg = self.cfg
+        kinds = {k: dict(a) for k, a in cfg['amenities'].items()}
+        sup = (cfg.get('supplements') or {}).get('osm')
+        self.osm_result = None
+        if not sup:
+            return kinds, ams
+        feats = self._osm_features(sup, ams, areas)
+        if feats is None:
+            return kinds, ams
+        out = dict(ams)
+        for k in sup['kinds']:
+            if k not in kinds:
+                continue
+            pub = [f for f in feats if f['kind'] == k and not f['private']]
+            pri = [f for f in feats if f['kind'] == k and f['private']]
+            base = ams[k]
+            city_label = kinds[k]['label']
+
+            def merged(extra, base=base):
+                if kinds[k]['geometry'] == 'point':
+                    xy = list(base['xy']) + [(f['x'], f['y']) for f in extra]
+                    return {'xy': xy, 'polys': [], 'supply': [1.0] * len(xy), 'features': base['features']}
+                polys = list(base['polys']) + [f['mp'] for f in extra]
+                return {'xy': [], 'polys': polys, 'supply': list(base['supply']) + [f['ha'] for f in extra],
+                        'features': base['features']}
+            out[f'{k}|city'] = base
+            out[k] = merged(pub)
+            out[f'{k}|private'] = merged(pub + pri)
+            kinds[f'{k}|city'] = dict(kinds[k], variant_of=k, set='city', label=f'{city_label} (city only)')
+            kinds[f'{k}|private'] = dict(kinds[k], variant_of=k, set='private', label=f'{city_label} (with private)')
+            kinds[k]['set'] = 'public'
+            out[k]['osm_features'] = pub
+            out[f'{k}|private']['osm_features'] = pub + pri
+        self.osm_result['added'] = {k: {'public': sum(1 for f in feats if f['kind'] == k and not f['private']),
+                                        'private': sum(1 for f in feats if f['kind'] == k and f['private'])}
+                                    for k in sup['kinds']}
+        return kinds, out
+
+    def _osm_features(self, sup, ams, areas):
+        """Non-city features (projected), fetched from OpenStreetMap; if it cannot be reached, the last build's copy
+        (kept up to max_age_days) is used and the source says so; with neither, the city's own only."""
+        from .supplements import osm
+        key = 'osm'
+        s = Source(id=f"{self.cfg['id']}.{key}", title=osm.SOURCE['title'], publisher='OpenStreetMap contributors',
+                   url=osm.SOURCE['url'], api=osm.ENDPOINTS[0], licence=osm.SOURCE['licence'], coverage='whole city',
+                   period='current map', unit='one mapped playground or park',
+                   limitations=['Volunteer-mapped: coverage is uneven, and a missing feature means nobody has mapped it.',
+                                'Only features not already in the city\'s inventory are added (matching rules in the method).'],
+                   fetched_at=_now(), transformations=['matched against the city\'s own playgrounds and park sites; '
+                                                       'duplicates and features outside every community left out'])
+        self.sources[key] = s
+        area_loc = geo.AreaLocator({c: self.proj.multipolygon(v['mp']) for c, v in areas.items()}, cell=1000.0)
+        try:
+            elements = self.client.overpass(sup['bbox']) if hasattr(self.client, 'overpass') else osm.fetch(sup['bbox'])
+            res = osm.select(elements, self.proj, ams['playground']['xy'] if 'playground' in ams else [],
+                             ams['park']['polys'] if 'park' in ams else [], area_loc,
+                             tuple(sup.get('owner_words') or ()))
+            s.rows = len(elements)
+            s.sha256 = rows_hash([{'t': e.get('type'), 'i': e.get('id')} for e in elements])
+            s.publisher_updated = self.today.isoformat()
+            self.osm_result = {'stats': res['stats'], 'rules': res['rules'], 'reused': None}
+            self._count_check('osm', len(elements))
+            return res['features']
+        except Exception as e:                              # noqa: BLE001
+            prev = os.path.join(self.previous_dir or '', self.cfg['id'], 'osm_features.json')
+            if self.previous_dir and os.path.exists(prev):
+                with open(prev, encoding='utf-8') as f:
+                    saved = json.load(f)
+                age = (self.today - date.fromisoformat(saved['read_on'])).days
+                if age <= sup.get('max_age_days', 30):
+                    feats = [dict(ft, x=self.proj.xy(*ft['lonlat'])[0], y=self.proj.xy(*ft['lonlat'])[1],
+                                  mp=[[self.proj.ring(r) for r in poly] for poly in ft['rings']] if ft.get('rings') else None)
+                             for ft in saved['features']]
+                    self.checks.append(quality.QualityCheck(s.id, 'read', 'warn',
+                                                            f'OpenStreetMap unreachable ({e}); the copy read {saved["read_on"]} is used'))
+                    s.publisher_updated = saved['read_on']
+                    s.rows = saved.get('rows')
+                    self.osm_result = {'stats': saved.get('stats'), 'rules': saved.get('rules'), 'reused': saved['read_on']}
+                    return feats
+            self.checks.append(quality.QualityCheck(s.id, 'read', 'warn',
+                                                    f'OpenStreetMap unreachable ({e}) and no recent copy: city amenities only'))
+            del self.sources[key]
+            return None
+
+    def crowding(self, homes, ams, distances, kinds):
+        """Two-step floating catchment for amenities with a `crowding` section, under each people option.
+        Averages are kept for communities and for wards ('ward:N')."""
         cfg = self.cfg
         units = np.asarray(homes['weight'], dtype=float)
         area = np.asarray(homes['area'], dtype=object)
+        ward = np.asarray(homes.get('ward') or [None] * len(units), dtype=object)
         area_units = {}
         for a_, u in zip(homes['area'], homes['weight']):
             if a_:
@@ -366,7 +508,7 @@ class Builder:
             return None
         out = {'options': {k: {'label': v['label'], 'about': v['about']} for k, v in opts.items()},
                'default': cfg['people'].get('default'), 'kinds': {}}
-        for key, a in cfg['amenities'].items():
+        for key, a in kinds.items():
             cr = a.get('crowding')
             if not cr:
                 continue
@@ -391,6 +533,9 @@ class Builder:
                 for di, d in enumerate(a['thresholds_m']):
                     r, demand = crowding.reach(pairs_by_d[di], people, am['supply'], len(units), cr.get('per', 1000))
                     avg = crowding.area_average(r, people, area)
+                    if ward.any():
+                        wavg = crowding.area_average(r, people, ward)
+                        avg.update({k2: v for k2, v in wavg.items() if k2 != '_all'})
                     vals[str(d)] = {k2: (None if v is None else round(v, 3)) for k2, v in avg.items()}
                     vals[str(d)]['_amenities_with_people'] = int((demand > 0).sum())
                 res_k['by_option'][opt] = vals
@@ -408,8 +553,18 @@ def write(builder, areas, homes, ams, res, out_dir):
     os.makedirs(os.path.join(d, 'amenities'), exist_ok=True)
     built_at = _now()
     est_units = round(sum(w for w, k in zip(homes['weight'], homes['weight_kind']) if k == 'estimate'), 1)
+    kcfg = getattr(builder, 'kinds_expanded', None) or cfg['amenities']
     kinds = {k: {f: a.get(f) for f in ('label', 'plural', 'group', 'geometry', 'thresholds_m', 'threshold_basis',
-                                       'threshold_url', 'limitations')} for k, a in cfg['amenities'].items()}
+                                       'threshold_url', 'limitations', 'variant_of', 'set')} for k, a in kcfg.items()}
+    # each community's ward: the ward holding most of its homes
+    comm_ward = {}
+    if homes.get('ward'):
+        tally = {}
+        for a_, w_, u_ in zip(homes['area'], homes['ward'], homes['weight']):
+            if a_ and w_:
+                tally.setdefault(a_, {}).setdefault(w_, 0)
+                tally[a_][w_] += u_
+        comm_ward = {a_: int(max(t.items(), key=lambda kv: kv[1])[0].split(':')[1]) for a_, t in tally.items()}
     # areas with homes, in name order
     table = {}
     for code in sorted(res['areas'], key=lambda c: (areas.get(c) or {}).get('name', c)):
@@ -417,7 +572,8 @@ def write(builder, areas, homes, ams, res, out_dir):
         any_k = next(iter(res['areas'][code].values()))
         table[code] = {'name': a['name'], 'attrs': a.get('attrs', {}), 'units': any_k['units'],
                        'records': any_k['records'], 'units_new': any_k['units_new'],
-                       'units_recent': any_k['units_recent'], 'access': res['areas'][code]}
+                       'units_recent': any_k['units_recent'], 'access': res['areas'][code],
+                       'ward': comm_ward.get(code)}
         href = getattr(builder, 'homes_ref', None)
         if href and href['by_area'].get(code) is not None:
             table[code]['homes_reference'] = href['by_area'][code]
@@ -440,6 +596,12 @@ def write(builder, areas, homes, ams, res, out_dir):
         'areas': table,
         'crowding': res.get('crowding'),
         'scores': res.get('scores'),
+        'wards': ({str(int(w.split(':')[1])): {**(res.get('ward_info') or {}).get(int(w.split(':')[1]), {}),
+                                               'units': next(iter(v.values()))['units'],
+                                               'units_new': next(iter(v.values()))['units_new'], 'access': v}
+                   for w, v in sorted((res.get('wards') or {}).items(), key=lambda kv: int(kv[0].split(':')[1]))}
+                  if res.get('wards') else None),
+        'osm': getattr(builder, 'osm_result', None),
     }
     with open(os.path.join(d, 'access.json'), 'w', encoding='utf-8') as f:
         json.dump(payload, f, separators=(',', ':'))
@@ -456,8 +618,40 @@ def write(builder, areas, homes, ams, res, out_dir):
     with open(os.path.join(d, 'areas.geojson'), 'w', encoding='utf-8') as f:
         json.dump(_feature_collection(feats), f, separators=(',', ':'))
     for k, v in ams.items():
-        with open(os.path.join(d, 'amenities', f'{k}.geojson'), 'w', encoding='utf-8') as f:
-            json.dump(_feature_collection(v['features']), f, separators=(',', ':'))
+        fts = [dict(ft, properties=dict(ft.get('properties') or {}, source='city')) for ft in v['features']]
+        for o in v.get('osm_features') or []:
+            if o.get('mp'):
+                simp = geo.simplify_multipolygon(o['mp'], 8, digits=1)
+                geom = {'type': 'MultiPolygon', 'coordinates': [[[[round(c, 6) for c in builder.proj.lonlat(x, y)]
+                                                                  for x, y in ring] for ring in poly] for poly in simp]}
+            else:
+                geom = {'type': 'Point', 'coordinates': [round(c, 6) for c in builder.proj.lonlat(o['x'], o['y'])]}
+            fts.append({'type': 'Feature', 'geometry': geom,
+                        'properties': {'id': o['osm'], 'name': o['name'], 'source': 'osm', 'private': o['private']}})
+        with open(os.path.join(d, 'amenities', f'{k.replace("|", "-")}.geojson'), 'w', encoding='utf-8') as f:
+            json.dump(_feature_collection(fts), f, separators=(',', ':'))
+    if getattr(builder, 'wards_data', None):
+        wf = []
+        for w, v in builder.wards_data.items():
+            simp = geo.simplify_multipolygon(builder.proj.multipolygon(v['mp']), 20, digits=1)
+            wf.append({'type': 'Feature', 'properties': {'ward': w, 'name': v['name'], 'councillor': v.get('councillor')},
+                       'geometry': {'type': 'MultiPolygon', 'coordinates': [[[[round(c, 5) for c in builder.proj.lonlat(x, y)]
+                                                                              for x, y in ring] for ring in poly] for poly in simp]}})
+        with open(os.path.join(d, 'wards.geojson'), 'w', encoding='utf-8') as f:
+            json.dump(_feature_collection(wf), f, separators=(',', ':'))
+    osm_all = []
+    for k, v in ams.items():
+        if k.endswith('|private'):
+            for o in v.get('osm_features') or []:
+                osm_all.append({'kind': o['kind'], 'private': o['private'], 'ha': o['ha'], 'name': o['name'], 'osm': o['osm'],
+                                'area': o['area'], 'lonlat': list(builder.proj.lonlat(o['x'], o['y'])),
+                                'rings': [[[list(builder.proj.lonlat(x, y)) for x, y in ring] for ring in poly]
+                                          for poly in o['mp']] if o.get('mp') else None})
+    if osm_all:
+        o_r = getattr(builder, 'osm_result', None) or {}
+        with open(os.path.join(d, 'osm_features.json'), 'w', encoding='utf-8') as f:
+            json.dump({'read_on': o_r.get('reused') or builder.today.isoformat(), 'stats': o_r.get('stats'),
+                       'rules': o_r.get('rules'), 'features': osm_all}, f, separators=(',', ':'))
     # the table for spreadsheets
     with open(os.path.join(d, 'access_by_area.csv'), 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
@@ -466,7 +660,7 @@ def write(builder, areas, homes, ams, res, out_dir):
                     'share_new_within_primary', 'share_older_within_primary', 'median_m', 'status'])
         for code, r in table.items():
             for k, st in r['access'].items():
-                th = cfg['amenities'][k]['thresholds_m']
+                th = kcfg[k]['thresholds_m']
                 w.writerow([code, r['name'], k, st['units'], st['units_new'], st['share_primary'], th[0],
                             st['share_secondary'], th[1], st['share_new_primary'], st['share_old_primary'],
                             st['median_m'] if st['median_m'] is not None else f'>{th[1]}', st['status']])
@@ -509,6 +703,33 @@ def previous_counts(prev_dir, city):
 
 def build_city(city_id, out_dir, previous_dir=None, client=None, today=None):
     cfg = config.load(city_id)
-    b = Builder(cfg, client=client, today=today, previous=previous_counts(previous_dir, city_id))
+    b = Builder(cfg, client=client, today=today, previous=previous_counts(previous_dir, city_id), previous_dir=previous_dir)
     areas, homes, ams, res = b.run()
-    return write(b, areas, homes, ams, res, out_dir)
+    d = write(b, areas, homes, ams, res, out_dir)
+    write_linked(cfg, d, previous_dir)
+    return d
+
+
+def write_linked(cfg, d, previous_dir=None, fetch=None):
+    """dashboard.json from the linked source; if it cannot be read, the last build's copy is kept (and marked)."""
+    lc = cfg.get('linked_dashboard')
+    if not lc:
+        return None
+    from . import linked
+    path = os.path.join(d, 'dashboard.json')
+    try:
+        data = linked.build(lc, **({'fetch': fetch} if fetch else {}))
+        data['read_at'] = _now()
+        data['stale'] = False
+    except Exception as e:                                  # noqa: BLE001
+        prev = os.path.join(previous_dir or '', cfg['id'], 'dashboard.json')
+        if not (previous_dir and os.path.exists(prev)):
+            print(f'linked dashboard not available: {e}')
+            return None
+        with open(prev, encoding='utf-8') as f:
+            data = json.load(f)
+        data['stale'] = True
+        data['stale_reason'] = str(e)[:200]
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, separators=(',', ':'))
+    return path
