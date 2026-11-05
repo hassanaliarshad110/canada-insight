@@ -349,15 +349,27 @@ class Builder:
         kinds, ams = self.amenity_sets(ams, areas)
         self.kinds_expanded = kinds
         distances = {}
+        part_cache = {}
+
+        def part_dist(key, a, am, lo, hi):
+            base_key = a.get('variant_of') or key
+            ck = (base_key, lo, hi)
+            if ck not in part_cache:
+                cap = a['thresholds_m'][1]
+                if a['geometry'] == 'point':
+                    part_cache[ck] = access.distances_to_points(homes['xy'], am['xy'][lo:hi], cap)
+                else:
+                    polys = am['polys'][lo:hi]
+                    loc = geo.AreaLocator({i: p for i, p in enumerate(polys)}, cell=1000.0)
+                    part_cache[ck] = access.distances_to_polygons(homes['xy'], polys, cap,
+                                                                  inside=lambda x, y, loc=loc: loc.find(x, y) is not None)
+            return part_cache[ck]
         for key, a in kinds.items():
-            cap = a['thresholds_m'][1]
             am = ams[key]
-            if a['geometry'] == 'point':
-                distances[key] = access.distances_to_points(homes['xy'], am['xy'], cap)
-            else:
-                loc = geo.AreaLocator({i: p for i, p in enumerate(am['polys'])}, cell=1000.0)
-                distances[key] = access.distances_to_polygons(homes['xy'], am['polys'], cap,
-                                                              inside=lambda x, y, loc=loc: loc.find(x, y) is not None)
+            n = len(am['xy']) if a['geometry'] == 'point' else len(am['polys'])
+            parts = am.get('parts') or [(0, n)]
+            ds = [part_dist(key, a, am, lo, hi) for lo, hi in parts if hi > lo]
+            distances[key] = np.minimum.reduce(ds) if len(ds) > 1 else (ds[0] if ds else np.full(len(homes['xy']), np.inf))
         res = access.compute(homes, distances, kinds, cfg['growth_year'], self.today.year, cfg.get('rules'))
         if wards:
             hw = dict(homes, area=homes['ward'])
@@ -436,6 +448,12 @@ class Builder:
             out[f'{k}|city'] = base
             out[k] = merged(pub)
             out[f'{k}|private'] = merged(pub + pri)
+            nb = len(base['xy']) if kinds[k]['geometry'] == 'point' else len(base['polys'])
+            # each set = the city's items, then public additions, then private ones: parts let distances and
+            # catchments be worked out once per part and combined (much faster than redoing whole sets)
+            out[f'{k}|city']['parts'] = [(0, nb)]
+            out[k]['parts'] = [(0, nb), (nb, nb + len(pub))]
+            out[f'{k}|private']['parts'] = [(0, nb), (nb, nb + len(pub)), (nb + len(pub), nb + len(pub) + len(pri))]
             kinds[f'{k}|city'] = dict(kinds[k], variant_of=k, set='city', label=f'{city_label} (city only)')
             kinds[f'{k}|private'] = dict(kinds[k], variant_of=k, set='private', label=f'{city_label} (with private)')
             kinds[k]['set'] = 'public'
@@ -508,21 +526,37 @@ class Builder:
             return None
         out = {'options': {k: {'label': v['label'], 'about': v['about']} for k, v in opts.items()},
                'default': cfg['people'].get('default'), 'kinds': {}}
+        pair_cache = {}
         for key, a in kinds.items():
             cr = a.get('crowding')
             if not cr:
                 continue
             am = ams[key]
+            n = len(am['xy']) if a['geometry'] == 'point' else len(am['polys'])
+            parts = am.get('parts') or [(0, n)]
+            base_key = a.get('variant_of') or key
             pairs_by_d = []
             for d in a['thresholds_m']:
-                if a['geometry'] == 'point':
-                    pairs_by_d.append(crowding.pairs_points(homes['xy'], am['xy'], d))
-                else:
-                    inside_c = np.where(distances[key] == 0)[0]
-                    pairs_by_d.append(crowding.pairs_polygons(
-                        homes['xy'], am['polys'], d,
-                        inside=lambda k, x, y, polys=am['polys']: geo.point_in_multipolygon(x, y, polys[k]),
-                        inside_candidates=inside_c))
+                js, is_ = [], []
+                for lo, hi in parts:
+                    if hi <= lo:
+                        continue
+                    ck = (base_key, lo, hi, d)
+                    if ck not in pair_cache:
+                        if a['geometry'] == 'point':
+                            pair_cache[ck] = crowding.pairs_points(homes['xy'], am['xy'][lo:hi], d)
+                        else:
+                            polys = am['polys'][lo:hi]
+                            inside_c = np.where(distances[key] == 0)[0]
+                            pair_cache[ck] = crowding.pairs_polygons(
+                                homes['xy'], polys, d,
+                                inside=lambda k, x, y, polys=polys: geo.point_in_multipolygon(x, y, polys[k]),
+                                inside_candidates=inside_c)
+                    j, i = pair_cache[ck]
+                    js.append(j + lo)
+                    is_.append(i)
+                pairs_by_d.append((np.concatenate(js) if js else np.zeros(0, dtype=np.int64),
+                                   np.concatenate(is_) if is_ else np.zeros(0, dtype=np.int64)))
             res_k = {'people': cr['people'], 'unit': cr['unit'], 'short': cr.get('short', cr['unit']),
                      'per': cr.get('per', 1000), 'by_option': {}}
             for opt, o in opts.items():
