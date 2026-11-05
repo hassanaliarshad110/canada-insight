@@ -1,0 +1,19 @@
+{
+  "id": "edmonton",
+  "name": "Edmonton",
+  "province": "Alberta",
+  "status": "planned",
+  "portal": {"type": "socrata", "base_url": "https://data.edmonton.ca", "publisher": "City of Edmonton"},
+  "centre": {"lat": 53.546, "lon": -113.494},
+  "growth_year": 2021,
+  "areas": {}, "homes": {}, "amenities": {},
+  "readiness": {
+    "data_availability": "to assess",
+    "data_quality": "to assess",
+    "geographic_compatibility": "Neighbourhoods (not communities) nested in 12 wards. Not directly comparable with Calgary communities: sizes and definitions differ.",
+    "historical_coverage": "to assess",
+    "indicator_comparability": "to assess: needs a residential property layer with year built and location, and playground, park, transit stop, recreation and library inventories.",
+    "update_frequency": "to assess",
+    "next_step": "Check each dataset the Calgary config uses for an Edmonton equivalent, record it here, then write the areas, homes and amenities sections."
+  }
+}

@@ -1,0 +1,84 @@
+name: Build and publish
+
+on:
+  schedule:
+    - cron: '41 11 * * *'        # daily, about 4:41 a.m. in Calgary (off the hour so GitHub runs it on time)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write                # to keep each build's data on the 'data' branch
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.txt pytest
+      - run: python -m pytest -q
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.txt
+
+      - name: Last published data (for count-change checks)
+        run: |
+          if git fetch --depth 1 origin data 2>/dev/null; then
+            git worktree add -b data-new previous FETCH_HEAD
+          else
+            git worktree add --detach previous HEAD
+            (cd previous && git checkout -q --orphan data-new && git rm -rfq .)
+          fi
+          mkdir -p previous/latest
+
+      - name: Build every live or pilot city
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+        run: |
+          python -m insight build --city calgary --out site/data --previous previous/latest
+
+      - name: Keep this build's data (dated snapshot on the data branch)
+        run: |
+          day=$(date -u +%F)
+          cd previous
+          git config user.name 'canada-insight build'
+          git config user.email 'actions@users.noreply.github.com'
+          for d in ../site/data/*/; do
+            c=$(basename "$d")
+            mkdir -p "snapshots/$c/$day" latest
+            rm -rf "snapshots/$c/$day" && cp -r "$d" "snapshots/$c/$day"
+            rm -rf "latest/$c" && cp -r "$d" "latest/$c"
+          done
+          cp ../site/data/cities.json latest/
+          git add -A
+          git commit -q -m "Data build $day" || echo 'no change'
+          git push origin HEAD:data
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: site}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

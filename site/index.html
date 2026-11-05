@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canada Insight</title>
+<meta name="description" content="Independent civic research on Canadian cities from official open data: who can walk to everyday amenities, and whether new homes are keeping up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231F6F64' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%231F6F64' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%231F6F64'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="#/" aria-label="Canada Insight, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14"/><circle cx="16" cy="16" r="7"/><circle class="dot" cx="16" cy="16" r="2.5"/></svg>
+    <span>Canada Insight</span>
+  </a>
+  <label class="city-pick">
+    <span class="sr">City</span>
+    <select id="city"></select>
+  </label>
+  <nav class="links" aria-label="About the data">
+    <a href="#method">Method</a>
+    <a href="#sources">Sources</a>
+    <a href="#quality">Data quality</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="q">
+    <h1 id="q">Can people walk to everyday amenities, and are new homes keeping up?</h1>
+    <p class="lede" id="lede">Distance from every home on the city's property roll to the nearest amenity in the city's own inventory.</p>
+
+    <div class="amenities" role="group" aria-label="Amenity" id="kinds"></div>
+
+    <div class="answer">
+      <figure class="rings" id="rings" aria-hidden="true"></figure>
+      <div class="statement">
+        <p class="big" id="headline">Loading the latest build…</p>
+        <div class="pace" id="pace"></div>
+        <p class="fine" id="headline-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="explore" aria-labelledby="explore-h">
+    <div class="explore-head">
+      <h2 id="explore-h">Community by community</h2>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Walking distance">
+          <button type="button" data-th="0" aria-pressed="true" id="th0">400 m</button>
+          <button type="button" data-th="1" aria-pressed="false" id="th1">800 m</button>
+        </div>
+        <label class="toggle"><input type="checkbox" id="show-pts"> Show locations</label>
+      </div>
+    </div>
+    <div class="explore-body">
+      <div class="map-wrap">
+        <div id="map" role="region" aria-label="Map of communities, shaded by the share of homes within walking distance"></div>
+        <div class="legend" id="legend"></div>
+      </div>
+      <aside class="profile" id="profile" aria-live="polite">
+        <p class="hint">Select a community on the map or in the table to see every amenity for it, and add up to three to compare.</p>
+      </aside>
+    </div>
+    <div class="compare" id="compare" hidden></div>
+
+    <div class="table-head">
+      <label class="search"><span class="sr">Find a community</span><input id="q-comm" type="search" placeholder="Find a community"></label>
+      <div class="seg filter" role="group" aria-label="Show">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="gap" aria-pressed="false">Measured gaps</button>
+        <button type="button" data-f="gap_check" aria-pressed="false">Check inventory</button>
+      </div>
+      <a class="dl" id="csv" href="#" download>Download the table (CSV)</a>
+    </div>
+    <div class="table-wrap">
+      <table id="tbl">
+        <caption class="sr">Share of homes within walking distance, by community</caption>
+        <thead><tr>
+          <th scope="col"><button data-sort="name">Community</button></th>
+          <th scope="col" class="n"><button data-sort="units">Homes</button></th>
+          <th scope="col" class="n"><button data-sort="share">Within distance</button></th>
+          <th scope="col" class="n"><button data-sort="new">Homes built since <span class="gy">2021</span></button></th>
+          <th scope="col" class="n"><button data-sort="median">Median distance</button></th>
+          <th scope="col"><button data-sort="status">Reading</button></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="about" id="method" aria-labelledby="method-h">
+    <h2 id="method-h">How this is measured</h2>
+    <div class="cols">
+      <div>
+        <p>Every residential record on the city's property assessment roll is placed at the centre of its parcel. Purpose-built rental buildings, which the roll lists as one record, count as their number of units. For each kind of amenity, the straight-line distance from each home to the nearest one in the city's inventory is measured, whichever community the amenity is in.</p>
+        <p>A community's figure is the share of its homes within the walking distance shown. Homes built since <span class="gy">2021</span> are measured separately, so you can see whether growth has been matched.</p>
+      </div>
+      <div>
+        <h3>How to read a community</h3>
+        <dl class="readings">
+          <dt><span class="tag tag-gap">Measured gap</span></dt><dd>Most homes are farther than the walking distance from the nearest one in the inventory.</dd>
+          <dt><span class="tag tag-check">Check inventory</span></dt><dd>A measured gap where a quarter or more of homes are less than five years old. Developer-built parks and playgrounds may not be in the city's inventory yet; confirm on the ground before treating it as real.</dd>
+          <dt><span class="tag tag-ok">Most homes within reach</span></dt><dd>Half or more of homes are within the walking distance.</dd>
+        </dl>
+        <p>There is no overall score: each amenity stands on its own. Straight-line distance is shorter than the walk itself, so these figures are the most generous reading.</p>
+      </div>
+    </div>
+    <div class="kinds-legend">
+      <span class="kind kind-official">Official</span> published by the city as-is
+      <span class="kind kind-calculated">Calculated</span> worked out here from official data with a stated formula
+      <span class="kind kind-estimate">Estimate</span> involves an assumption
+    </div>
+    <p><a href="https://github.com/hassanaliarshad110/canada-insight/blob/main/docs/methodology/access.md">Full method, formulas and tests</a></p>
+  </section>
+
+  <section class="about" id="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Sources</h2>
+    <div id="source-list"></div>
+  </section>
+
+  <section class="about" id="quality" aria-labelledby="quality-h">
+    <h2 id="quality-h">Data quality</h2>
+    <p id="quality-sum"></p>
+    <div class="table-wrap"><table id="qtbl"><thead><tr><th scope="col">Source</th><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Detail</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Canada Insight is independent research by Hassan Ali. It is not an official City of Calgary or Government of Canada product. Data: City of Calgary Open Data under the Open Government Licence – City of Calgary. Map: © OpenStreetMap contributors, © CARTO.</p>
+  <p id="built"></p>
+</footer>
+
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

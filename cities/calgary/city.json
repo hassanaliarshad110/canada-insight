@@ -1,0 +1,149 @@
+{
+  "id": "calgary",
+  "name": "Calgary",
+  "province": "Alberta",
+  "status": "pilot",
+  "timezone": "America/Edmonton",
+  "centre": {"lat": 51.045, "lon": -114.06},
+  "portal": {
+    "type": "socrata",
+    "base_url": "https://data.calgary.ca",
+    "publisher": "City of Calgary",
+    "licence": "Open Government Licence - City of Calgary",
+    "licence_url": "https://data.calgary.ca/stories/s/Open-Calgary-Terms-of-Use/u45n-7awa"
+  },
+  "growth_year": 2021,
+  "growth_year_note": "Homes built in or after 2021, the year of the last published Census (counted 11 May 2021). The 2026 Census population counts are scheduled for 10 February 2027.",
+  "terms": {"area": "community", "areas": "communities", "ward": "ward"},
+  "areas": {
+    "level": "community",
+    "dataset": "surr-xmvs",
+    "title": "Community District Boundaries",
+    "code_field": "comm_code",
+    "name_field": "name",
+    "geometry_field": "multipolygon",
+    "extra_fields": ["class", "sector"],
+    "report_where": {"field": "class", "equals": "Residential"},
+    "simplify_m": 15
+  },
+  "homes": {
+    "dataset": "4bsw-nn7w",
+    "title": "Current Year Property Assessments (Parcel)",
+    "where": "assessment_class='RE' AND property_type='LI' AND starts_with(sub_property_use,'R')",
+    "where_note": "Residential assessment class, land with a building, residential use code (as the City codes dwellings).",
+    "id_field": "roll_number",
+    "area_field": "comm_code",
+    "built_field": "year_of_construction",
+    "geometry_field": "multipolygon",
+    "unit": "one assessed residential property (a house, a townhouse or a condominium unit)",
+    "unit_weights": {
+      "file": "rental_units.json",
+      "list": "properties",
+      "id": "roll",
+      "units": "units",
+      "kind": "source",
+      "title": "Rental building units (Calgary Data Desk growth model input, built 28 October 2026)",
+      "note": "Purpose-built rental buildings are one record each on the roll. Their units are taken from matching building permits (658 buildings, 43,677 units) or estimated from assessed value (1,569 buildings, 32,163 units). Records missing from the residential filter are read by roll number."
+    }
+  },
+  "amenities": {
+    "playground": {
+      "label": "Playground",
+      "plural": "playgrounds",
+      "group": "local",
+      "dataset": "bdu9-amk8",
+      "title": "Playground Equipment",
+      "where": "type_description='MULTI PLAY COMPLEX' AND life_cycle_status in('ACTIVE','INSTALLED')",
+      "geometry": "point",
+      "geometry_field": "point",
+      "id_field": "asset_cd",
+      "thresholds_m": [400, 800],
+      "threshold_basis": "Platform choice: 400 m (about a five-minute walk) and 800 m (about ten minutes), common neighbourhood planning distances.",
+      "limitations": ["City-maintained play structures only; school, developer and condominium playgrounds that are not in the City's inventory are not counted."]
+    },
+    "park": {
+      "label": "Public park",
+      "plural": "parks",
+      "group": "local",
+      "dataset": "kami-qbfh",
+      "title": "Parks Sites",
+      "where": "planning_category not in('NON-PARK','PARKS DEPOT')",
+      "geometry": "polygon",
+      "geometry_field": "the_geom",
+      "id_field": "asset_cd",
+      "thresholds_m": [400, 800],
+      "threshold_basis": "Platform choice: distance to the park's edge, 400 m and 800 m.",
+      "limitations": ["Every City park site of any size counts, including small sub-neighbourhood parks and linear parks along pathways.", "Parks in new communities may still be held by the developer and missing from the City's inventory."]
+    },
+    "transit_stop": {
+      "label": "Transit stop",
+      "plural": "transit stops",
+      "group": "local",
+      "dataset": "muzh-c9qc",
+      "title": "Calgary Transit Stops",
+      "where": "status='ACTIVE'",
+      "geometry": "point",
+      "geometry_field": "point",
+      "id_field": "teleride_number",
+      "thresholds_m": [400, 800],
+      "threshold_basis": "Calgary Transit Service Guidelines (May 2025) measure local coverage as residents within 400 metres of transit service.",
+      "threshold_url": "https://transit-prd.calgary.ca/content/dam/transit/plans---projects/Calgary%20Transit%20Service%20Guidelines%20May%202025.pdf",
+      "limitations": ["A stop is not a service level: how often buses come is not measured here (planned: the GTFS timetable)."]
+    },
+    "community_centre": {
+      "label": "Community centre",
+      "plural": "community centres",
+      "group": "local",
+      "dataset": "x34e-bcjz",
+      "title": "Community Services",
+      "where": "type='Community Centre'",
+      "geometry": "point",
+      "geometry_field": "point",
+      "id_field": "name",
+      "thresholds_m": [800, 1600],
+      "threshold_basis": "Platform choice: 800 m and 1.6 km.",
+      "limitations": ["Community association halls and centres as listed by the City; opening hours and programs are not measured."]
+    },
+    "rec_centre": {
+      "label": "Indoor recreation centre",
+      "plural": "indoor recreation centres",
+      "group": "district",
+      "dataset": "hxfu-6d96",
+      "title": "Recreation Facilities",
+      "where": "facility_type in('Leisure Centre','Leisure Centre - Municipal','Aquatic & Fitness Centre','Fieldhouse')",
+      "geometry": "point",
+      "geometry_field": "point",
+      "id_field": "complex_name",
+      "thresholds_m": [2000, 5000],
+      "threshold_basis": "Platform choice: 2 km and 5 km for facilities that serve several communities.",
+      "limitations": ["Leisure centres, aquatic and fitness centres and fieldhouses, municipal and not-for-profit. Arenas, outdoor pools, golf courses and other single-purpose sites are left out. Capacity and opening hours are not measured."]
+    },
+    "library": {
+      "label": "Public library",
+      "plural": "public libraries",
+      "group": "district",
+      "dataset": "x34e-bcjz",
+      "title": "Community Services",
+      "where": "type='Library'",
+      "geometry": "point",
+      "geometry_field": "point",
+      "id_field": "name",
+      "thresholds_m": [2000, 5000],
+      "threshold_basis": "Platform choice: 2 km and 5 km.",
+      "limitations": ["Library branches as listed by the City; hours and size are not measured."]
+    }
+  },
+  "rules": {"gap_share": 0.5, "min_units": 100, "recent_years": 5, "recent_share": 0.25},
+  "quality": {
+    "max_age_days": {"default": 45, "4bsw-nn7w": 400, "surr-xmvs": 400, "muzh-c9qc": 120},
+    "extent_margin_deg": 0.05
+  },
+  "readiness": {
+    "data_availability": "high",
+    "data_quality": "high",
+    "geographic_compatibility": "Communities (about 300) nest in 14 wards; 2021 Census tables are published by community.",
+    "historical_coverage": "Property roll: current year only (year of construction gives a build history). 311 from 2010.",
+    "indicator_comparability": "Reference city.",
+    "update_frequency": "Assets weekly to monthly; property roll yearly."
+  }
+}
