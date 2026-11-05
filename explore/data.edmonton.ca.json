@@ -1,0 +1,1772 @@
+{
+ "domain": "data.edmonton.ca",
+ "topics": {
+  "neighbourhoods": [
+   {
+    "id": "xu6q-xcmj",
+    "name": "Neighbourhood Boundaries : 2019",
+    "type": "dataset",
+    "updated": "2019-07-11",
+    "description": "Spatial view of current neighbourhood boundaries found within the boundaries of the City of Edmonton. Note - this map includes both residential and industrial neighbourhoods.",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "nb64-h7uj",
+    "name": "Neighbourhood Boundaries : 2019",
+    "type": "map",
+    "updated": "2019-07-11",
+    "description": "Spatial view of current neighbourhood boundaries found within the boundaries of the City of Edmonton. Note - this map includes both residential and industrial neighbourhoods.",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "3b6m-fezs",
+    "name": "City of Edmonton - Neighbourhoods (Centroid Point)",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of centroids for current neighbourhood boundaries found within the boundaries of the City of Edmonton. Note - this map includes both residential and industrial neighbourhoods. Also, due to the configuration of a neighbourhood, the centroid may not necessarily lie properly within a neighbourhood",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "qhi4-bdpu",
+    "name": "City of Edmonton - Business Licences",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "A list of businesses with a valid licence to operate in Edmonton.",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "24uj-dj8v",
+    "name": "General Building Permits",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "List of issued building permits from the City of Edmonton - Urban Planning & Economy Department for the public to do construction or maintenance on a structure located in the City. Note - All records start from January 1, 2009.\nPlease note : the decision was made to not release applicant information",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "e8n2-hwu4",
+    "name": "City of Edmonton Neighborhood - Map View",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "List of centroids for current neighbourhood boundaries found within the boundaries of the City of Edmonton. Note - this map includes both residential and industrial neighbourhoods. Also, due to the configuration of a neighbourhood, the centroid may not necessarily lie properly within a neighbourhood",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "eg3i-f4bj",
+    "name": "2021 Federal Census: Population",
+    "type": "dataset",
+    "updated": "2023-09-27",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "5squ-mg4w",
+    "name": "Pet  Licenses by Neighbourhood",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Distribution of various currently-licensed pets (cats, dogs, pigeons) by neighbourhood.\n\nNote that this is a snapshot of pets that were licensed as of the last update date of this dataset; if a pet was licensed a number of years ago but that license has since expired and not been renewed, the detail",
+    "q": "neighbourhood boundaries"
+   },
+   {
+    "id": "65fr-66s6",
+    "name": "City of Edmonton - Neighbourhoods",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of current neighbourhoods and their unique identifier number.  Included are both residential and industrial neighbourhoods.",
+    "q": "neighbourhoods"
+   },
+   {
+    "id": "gnzw-67i5",
+    "name": "Mature Neighbourhoods",
+    "type": "dataset",
+    "updated": "2019-03-07",
+    "description": "Mature neighbourhoods in Edmonton are those generally completed before 1970, the majority of which experienced their greatest growth in the post-WWII era.\nThese neighbourhoods form a rough concentric oval around the city centre and are formally defined by the <a href =\"https://www.edmonton.ca/city_g",
+    "q": "neighbourhoods"
+   },
+   {
+    "id": "vd42-umu2",
+    "name": "Mature Neighbourhood Reinvestment",
+    "type": "dataset",
+    "updated": "2014-09-04",
+    "description": "Summary of development activities in Mature Neighbourhood Overlay neighbourhoods. This data-set is from 2000 to present year. Data is updated annually.",
+    "q": "neighbourhoods"
+   },
+   {
+    "id": "3jmw-i9z8",
+    "name": "Mature Neighbourhoods Map",
+    "type": "map",
+    "updated": "2019-03-07",
+    "description": "Mature neighbourhoods in Edmonton are those generally completed before 1970, the majority of which experienced their greatest growth in the post-WWII era.\nThese neighbourhoods form a rough concentric oval around the city centre and are formally defined by the <a href =\"https://www.edmonton.ca/city_g",
+    "q": "neighbourhoods"
+   }
+  ],
+  "wards": [
+   {
+    "id": "b4er-5rp2",
+    "name": "City of Edmonton Ward Boundary and Council Composition_Current",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "This dataset provides the current (as of the date that this dataset was last refreshed) geometric polygons of the City of Edmonton's civic ward boundaries and the associated Council member in office.",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "nydb-6rce",
+    "name": "City of Edmonton Ward Boundary and Council Composition_Current, Historical and Future",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "This dataset provides the current, future, and historical geometric polygons of the City of Edmonton's civic ward boundaries and the associated Council member in office.\n\nThe associated map can be used to filter to display the ward boundaries as of a specified date. It's also possible to use the API",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "acvv-cap3",
+    "name": "Map View: Edmonton Public School Board Ward Boundaries (Current)",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "This dataset provides the current (as of the date that this dataset was last refreshed) geometric polygons of the Edmonton Public School Division ward boundaries and the associated board trustee in office.",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "gx56-4iuu",
+    "name": "Map View: Edmonton Catholic School Board Ward Boundaries (Current)",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "This dataset provides the current (as of the date that this dataset was last refreshed) geometric polygons of the Edmonton Catholic Separate School Division ward boundaries and the associated board trustee in office.",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "4ty8-84kz",
+    "name": "Edmonton Catholic School District Ward Boundaries",
+    "type": "map",
+    "updated": "2021-06-24",
+    "description": "",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "6nas-wgmn",
+    "name": "Edmonton Catholic School District Ward Boundaries",
+    "type": "dataset",
+    "updated": "2021-06-25",
+    "description": "",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "eu9n-745s",
+    "name": "Edmonton Catholic School District Ward Boundaries",
+    "type": "dataset",
+    "updated": "2021-06-24",
+    "description": "",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "bbxd-b5gz",
+    "name": "Map View: Edmonton Public School Board Ward Boundaries (Current, Historical, and Future)",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "This dataset provides the Current, Historical, and Future geometric polygons of the Edmonton Public School Division ward boundaries and the associated board trustee in office.",
+    "q": "ward boundaries"
+   },
+   {
+    "id": "eg3i-f4bj",
+    "name": "2021 Federal Census: Population",
+    "type": "dataset",
+    "updated": "2023-09-27",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "wards 2021"
+   },
+   {
+    "id": "xifx-5erj",
+    "name": "2021 Official Election Results (by Voting Station)",
+    "type": "dataset",
+    "updated": "2021-11-10",
+    "description": "Official Results from the 2021 Edmonton Municipal and School Board Elections. Results are displayed for each Candidate, by Race and by Voting Station.",
+    "q": "wards 2021"
+   },
+   {
+    "id": "am8d-inje",
+    "name": "2021 Federal Census: Visible Minorities",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "wards 2021"
+   },
+   {
+    "id": "xgkv-ii9t",
+    "name": "2021 Federal Census: Households and Families",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "wards 2021"
+   }
+  ],
+  "property": [
+   {
+    "id": "q7d6-ambg",
+    "name": "Property Assessment Data (Current Calendar Year)",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "The City of Edmonton does not warrant or guarantee the completeness and accuracy of the information presented.\n\nThe City of Edmonton does not assume responsibility nor accept any liability arising from any use of the information other than for property assessment interpretation.\n\nThis dataset is the",
+    "q": "property assessment current"
+   },
+   {
+    "id": "dkk9-cj3x",
+    "name": "Property Information (Current Calendar Year)",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "The information is collected for property assessment interpretation purposes only.\n\nThe City of Edmonton does not warrant or guarantee the completeness and accuracy of the information presented.\n\nThe City of Edmonton does not assume responsibility nor accept any liability arising from any use of the",
+    "q": "property assessment current"
+   },
+   {
+    "id": "cbwx-icpx",
+    "name": "March 2021 Mixed Topic - Property Assessment Customer Satisfaction - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2021-03-30",
+    "description": "\"This was one single topic among many, from the March 2021 Mixed Topic survey. To view the survey questions, click the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/6THegmcslzIKlD0hYFxLIy?t=1\n\nOpen from March 10-17, 2021.\n\nAt the time the survey was launched survey invitations were se",
+    "q": "property assessment current"
+   },
+   {
+    "id": "n3yp-22sq",
+    "name": "Property Assessment February 2015 - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-12",
+    "description": "This was one single topic among many as part of the February Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=193&t=1. Open from February 9 - 17, 2015. At the time the survey was launched survey invitations were sent to 2302 Insight Community Me",
+    "q": "property assessment current"
+   },
+   {
+    "id": "t6t7-p39g",
+    "name": "Property Assessment Videos - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-05",
+    "description": "This was one single topic among many as part of the April Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=254&t=1. Open from April 14 - 22, 2015. At the time the survey was launched survey invitations were sent to 2592 Insight Community Members",
+    "q": "property assessment current"
+   },
+   {
+    "id": "53kx-vrtj",
+    "name": "February 2023 Mixed Topic - Property Assessment Customer Satisfaction - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2024-08-23",
+    "description": "This was one single topic among many, from the February 2023 Mixed Topic survey. To view the survey questions, click the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/6KxoMshR0y7JK82oE5abH3?t=1\n\nOpen from February 14-21, 2023.\n\nAt the time the survey was launched survey invitations we",
+    "q": "property assessment current"
+   },
+   {
+    "id": "72aw-fq6m",
+    "name": "2012 Budget Consultation Survey - Satisfaction With City Services",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Data on overall satisfaction with City services; satisfaction with individual services; recommendations for Edmonton as a place to live, work and visit.      \r\n\r\nD1 to B11 - Demographic information.  \r\nB1  - Overall satisfaction with City services.\r\nB2_0 to B2_2 - Recommending Edmonton.\r\nB8_0 to B8_",
+    "q": "property assessment current"
+   },
+   {
+    "id": "vs5w-kusp",
+    "name": "New Edmonton Civic Tower - Integrated Service Centre - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-02",
+    "description": "This was one single topic among many as part of the May Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=310&t=1. Open from May 11 - 19, 2015. . At the time the survey was launched survey invitations were sent to 2709 Insight Community Members. ",
+    "q": "property assessment current"
+   },
+   {
+    "id": "qi6a-xuwt",
+    "name": "Property Assessment Data (Historical)",
+    "type": "dataset",
+    "updated": "2026-01-12",
+    "description": "This dataset contains the historical assessed value of properties within the City of Edmonton. It is effective from 2012-01-01 until 2025-12-31.\n\nThe information is collected for property assessment interpretation purposes only.\n\nThe City of Edmonton does not warrant or guarantee the completeness an",
+    "q": "property assessment"
+   },
+   {
+    "id": "qq8s-xvpf",
+    "name": "Property Assessment - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2019-06-26",
+    "description": "This was one single topic among a couple from the February 2019 Mixed Topic survey. To view the survey questions, click on the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/5Zm2RDGSw7B7iGL4Hao69s?t=1\n\nOpen from February 12 - 19, 2019. \n\nAt the time the survey was launched survey invit",
+    "q": "property assessment"
+   },
+   {
+    "id": "x9sw-zhhj",
+    "name": "Property Assessment (Customer Service) - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2018-02-02",
+    "description": "This was one single topic among many, from the January 2018 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/c/a/5tBVVaDNRuo6Uu7bW5dbDL?t=1\r\n\r\nOpen from January 9 - 16, 2018. \r\n\r\nAt the time the survey was launched survey invit",
+    "q": "property assessment"
+   },
+   {
+    "id": "dm3i-bp8w",
+    "name": "Land Parcels_Assessment Parcels (Point)",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "This dataset contains centroid point geometry for all Assessment Parcels in the City of Edmonton.\n\nThe City of Edmonton has shifted the delivery of legal and title parcel mapping to the provincial government and their designated partners.  As of November 1st, 2021, the City will no longer provide da",
+    "q": "property assessment"
+   }
+  ],
+  "playgrounds": [
+   {
+    "id": "9nqb-w48x",
+    "name": "Playgrounds",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of all playgrounds in Edmonton. Details include surface and accessibility attributes to provide information on where children of all ages and abilities can play. Play areas may consist of one or more co-located playgrounds. The list includes playgrounds owned by Parks, School Boards, or Private",
+    "q": "playground"
+   },
+   {
+    "id": "g57c-ph4j",
+    "name": "Map View: Playgrounds",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "List of all playgrounds in Edmonton. Details include surface and accessibility attributes to provide information on where children of all ages and abilities can play. Play areas may consist of one or more co-located playgrounds. The list does not include playgrounds that are linked to schools and pr",
+    "q": "playground"
+   },
+   {
+    "id": "timd-rmce",
+    "name": "Playground Zones - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2018-02-02",
+    "description": "This was one single topic among many, from the January 2018 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/c/a/5tBVVaDNRuo6Uu7bW5dbDL?t=1\r\n\r\nOpen from January 9 - 16, 2018. \r\n\r\nAt the time the survey was launched survey invit",
+    "q": "playground"
+   },
+   {
+    "id": "wtyf-sg38",
+    "name": "Monthly Photo Enforcement Tickets Issued in Playgrounds Map",
+    "type": "map",
+    "updated": "2025-08-11",
+    "description": "This dataset contains the location (the approximate latitude/longitude of the enforcement zone's mid point), the number of tickets issues at the various speed ranges in excess of the enforce speed limit and the number of enforcement hours (Deployment Hours) by month of enforcement.",
+    "q": "playground"
+   },
+   {
+    "id": "baei-id48",
+    "name": "Community Drop-in Program - Summer 2014",
+    "type": "dataset",
+    "updated": "2021-06-17",
+    "description": "Free summer recreation programs (Green Shack, playground program, spray parks, skate parks, youth programs, Flying Eagle program) including location, program dates and times.",
+    "q": "playground"
+   },
+   {
+    "id": "3dmm-v9f8",
+    "name": "Community Drop-in Program - Summer 2018",
+    "type": "dataset",
+    "updated": "2018-06-04",
+    "description": "Free summer recreation programs (Green Shack, playground program, spray parks, skate parks, youth programs, Flying Eagle program) including location, program dates and times.",
+    "q": "playground"
+   },
+   {
+    "id": "p29t-f7mu",
+    "name": "Community Drop-in Program - Summer 2019",
+    "type": "dataset",
+    "updated": "2020-08-31",
+    "description": "Free summer recreation programs (Green Shack, playground program, spray parks, skate parks, youth programs, Flying Eagle program) including location, program dates and times.",
+    "q": "playground"
+   },
+   {
+    "id": "gv8b-i2pa",
+    "name": "Community Drop-in Program - Summer 2019",
+    "type": "map",
+    "updated": "2020-08-31",
+    "description": "Free summer recreation programs (Green Shack, playground program, spray parks, skate parks, youth programs, Flying Eagle program) including location, program dates and times.",
+    "q": "playground"
+   }
+  ],
+  "parks": [
+   {
+    "id": "gdd9-eqv9",
+    "name": "Parks",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of all park spaces in Edmonton",
+    "q": "parks"
+   },
+   {
+    "id": "jyra-si4k",
+    "name": "Spray Parks",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of all spray parks in Edmonton",
+    "q": "parks"
+   },
+   {
+    "id": "ex66-ku6s",
+    "name": "Parks: Map View",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "List of all park spaces in Edmonton",
+    "q": "parks"
+   },
+   {
+    "id": "n4yc-bxbe",
+    "name": "Parks - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-26",
+    "description": "This was one single topic among many as part of the June 2015 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=325&t=1. Open from June 08 - 16, 2015. At the time the survey was launched survey invitations were sent to 2834 Insight Community Memb",
+    "q": "parks"
+   },
+   {
+    "id": "xb8m-zs67",
+    "name": "Parking Tickets Issued",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "This dataset contains details from individual parking tickets that were issued by enforcing the specific bylaw code-section and sub-section.  Tickets issued data starts from Jan 1, 2009 to present day.\n\nTo view the bylaw, click on this link:\n\nhttps://www.edmonton.ca/residential_neighbourhoods/docume",
+    "q": "parks"
+   },
+   {
+    "id": "5ex6-4nvf",
+    "name": "EPark Event Parking Schedule",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "This dataset contains the current and historic record of days/nights when the EPark Event Parking rates were scheduled and any corresponding messaging that may accompany these instances.",
+    "q": "parks"
+   },
+   {
+    "id": "x84x-uttq",
+    "name": "Parks Operations Districts",
+    "type": "dataset",
+    "updated": "2019-01-22",
+    "description": "These 4 districts are used for Parks Operations for a variety of reasons.",
+    "q": "parks"
+   },
+   {
+    "id": "28ss-gu9g",
+    "name": "On Street Parking - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-07-09",
+    "description": "This was one single topic among many as part of the October Mixed Topic survey. \r\nTest link to view these questions only: \r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=215&t=1\r\nOpen from Oct 14 - 21, 2014 \r\nAt the time the survey was launched survey invitations were sent to 1639 Insight Communi",
+    "q": "parks"
+   },
+   {
+    "id": "fkk9-8ysd",
+    "name": "River Valley Ice Surfaces - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2018-04-04",
+    "description": "This was one single topic among many, from the March 2018 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/c/a/5WM7loCI0KkDUZuGrPnJ7d?t=1\r\n\r\nOpen from March 20-27, 2018. \r\n\r\nAt the time the survey was launched survey invitation",
+    "q": "park land"
+   },
+   {
+    "id": "pwdw-fub3",
+    "name": "Vacant Land Inventory - Map View",
+    "type": "map",
+    "updated": "2021-06-21",
+    "description": "This is a dataset using centroid points to geolocate vacant land in the city. This inventory is a snapshot in time using data collected from May 2014. The data is based on the land inventory and provides a summary of vacant land in Edmonton\u2019s central core, established, and mature neighbourhoods at t",
+    "q": "park land"
+   },
+   {
+    "id": "kme6-3pd6",
+    "name": "Environmental Sensitivity Project (2015)",
+    "type": "dataset",
+    "updated": "2019-02-04",
+    "description": "Historically, the City of Edmonton has managed \u2018natural areas\u2019 within the North Saskatchewan River Valley and the Tablelands separately, guided by inventories such as the Ribbon of Green and Geowest (1993). Over the past decade, City policy has shifted to manage natural areas with consideration of t",
+    "q": "park land"
+   },
+   {
+    "id": "svsw-2ub7",
+    "name": "Vacant Land Inventory",
+    "type": "dataset",
+    "updated": "2021-06-21",
+    "description": "This is a dataset using centroid points to geolocate vacant land in the city. This inventory is a snapshot in time using data collected from May 2014. The data is based on the land inventory and provides a summary of vacant land in Edmonton\u2019s central core, established, and mature neighbourhoods at t",
+    "q": "park land"
+   }
+  ],
+  "transit_stops": [
+   {
+    "id": "9j6k-uzig",
+    "name": "Deprecated - ETS - Bus Stops by Landmarks",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of  Edmonton Transit bus stop id numbers clustered around prominent City of Edmonton landmarks, as used in the ETS Trip Planner.\n\n* Deprecated - will be removed as no longer maintained in the City of Edmonton *",
+    "q": "bus stops"
+   },
+   {
+    "id": "2waj-kcfd",
+    "name": "Bus Stops: Upcoming Changes",
+    "type": "dataset",
+    "updated": "2020-11-26",
+    "description": "Details the bus stops that will be opening, closing, or changing for April 25, 2021 when the new bus network launches.",
+    "q": "bus stops"
+   },
+   {
+    "id": "vcv7-8k9f",
+    "name": "Bus Stops: Upcoming Changes - Map View",
+    "type": "map",
+    "updated": "2020-11-26",
+    "description": "Details the bus stops that will be opening, closing, or changing for April 25, 2021 when the new bus network launches.",
+    "q": "bus stops"
+   },
+   {
+    "id": "4vt2-8zrq",
+    "name": "ETS Bus Schedule GTFS Data Feed - Stops",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "List of all transit bus stops in Edmonton.\n\nSee https://developers.google.com/transit/gtfs/reference#stopstxt for documentation.",
+    "q": "bus stops"
+   },
+   {
+    "id": "hnhf-yaps",
+    "name": "ETS Bus Schedule GTFS Data Feed - Transfers",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "List of transfer points for various bus stops in Edmonton.\n\nSee https://developers.google.com/transit/gtfs/reference#transferstxt for documentation.",
+    "q": "bus stops"
+   },
+   {
+    "id": "greh-g7ac",
+    "name": "ETS Bus Schedule GTFS Data Feed - Stop Times",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "This dataset lists the times that a vehicle arrives at and departs from individual stops for each trip in Edmonton.\n\nSee https://developers.google.com/transit/gtfs/reference#stop_timestxt for documentation.",
+    "q": "bus stops"
+   },
+   {
+    "id": "cjvj-bxmi",
+    "name": "Snow and Ice Control in Edmonton - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2019-07-23",
+    "description": "This was one single topic among a couple from the April 2019 Mixed Topic survey. To view the survey questions, click on the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/5enTBQVbIsLKnhCBvlqKoy?t=1\n\nOpen from April 9 - 16, 2019. \n\nAt the time the survey was launched survey invitations ",
+    "q": "bus stops"
+   },
+   {
+    "id": "d577-xky7",
+    "name": "ETS Bus Schedule GTFS Data Feed - Routes",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "List of all bus routes in Edmonton.\n\nSee https://developers.google.com/transit/gtfs/reference#routestxt for documentation.",
+    "q": "bus stops"
+   },
+   {
+    "id": "4fvt-p2se",
+    "name": "ETS GTFS Feed: Trip Schedule",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "Data from the various .txt files in https://gtfs.edmonton.ca/TMGTFSRealTimeWebService/GTFS/gtfs.zip joined together to create a more user-friendly representation of transit schedule data.\n\nDay of the week information is missing because the above GTFS feed does not include data in calendar.txt. The s",
+    "q": "transit stops"
+   },
+   {
+    "id": "ctwr-tvrd",
+    "name": "ETS Bus Schedule GTFS Data Feed - Trips",
+    "type": "dataset",
+    "updated": "2026-10-30",
+    "description": "This dataset lists all trips and their routes in Edmonton. A trip is a sequence of two or more stops that occurs at specific time.\n\nFor documentation please see https://developers.google.com/transit/gtfs/reference#tripstxt.",
+    "q": "transit stops"
+   },
+   {
+    "id": "fhxi-cnhe",
+    "name": "LRT Stations and Stops",
+    "type": "dataset",
+    "updated": "2026-10-28",
+    "description": "There are 36 stations along the route.  Several LRT stations in the downtown core connect to Edmonton's convenient pedway system. Park and ride is available at Clareview, Belvedere, Stadium, Century Park and Davies LRT Stations.",
+    "q": "transit stops"
+   },
+   {
+    "id": "um86-qcr7",
+    "name": "Transit Ridership and Public Health Measures Survey - Aug 2021 - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2021-08-30",
+    "description": "This survey focused on mask requirements on transit, anticipated transit use if public health measures are lifted and perceived COVID-19 safety at different stages of the customer journey. To view the survey questions, click the following link: https://www.edmontoninsightcommunity.ca/c/a/5cfE1EbDqUn",
+    "q": "ets stops"
+   }
+  ],
+  "community_halls": [
+   {
+    "id": "kaps-rk7z",
+    "name": "Community League Halls",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "List of all Community League Halls in Edmonton",
+    "q": "community league"
+   },
+   {
+    "id": "uqbc-s85r",
+    "name": "Front Yards In Bloom Summary",
+    "type": "dataset",
+    "updated": "2017-10-19",
+    "description": "Outlines the progression of Front Yards in Bloom since starting in 1999. Front Yards in Bloom (FYinB) is supported by the City of Edmonton, Edmonton Horticultural Society and postal workers.\r\nData prior to 2007 is estimated.",
+    "q": "community league"
+   },
+   {
+    "id": "59j9-dv23",
+    "name": "Public Grants (2010-2012)",
+    "type": "dataset",
+    "updated": "2013-03-05",
+    "description": "City of Edmonton grants awarded 2010-2012 to non-for-profit  organizations in the multicultural, recreation/amateur sport and social service sectors: Community Investment Hosting and Operating grants, Community Facility Partner Capital grants, Community League Infrastructure Grants, Family and Commu",
+    "q": "community league"
+   },
+   {
+    "id": "gngq-scch",
+    "name": "Sports Fields (Polygons): Map View",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "A list of outdoor sports fields/infrastructure within Edmonton, with polygon geometry.\n\nNote that not all of these facilities are owned and maintained by the City of Edmonton; for facilities owned by entities other than the City of Edmonton (community leagues for example), it is possible that there ",
+    "q": "community league"
+   },
+   {
+    "id": "gn92-9jfe",
+    "name": "Sports Fields (Points): Map View",
+    "type": "map",
+    "updated": "2026-11-02",
+    "description": "A list of outdoor sports fields/infrastructure within Edmonton, with point geometry.\n\nNote that not all of these facilities are owned and maintained by the City of Edmonton; for facilities owned by entities other than the City of Edmonton (community leagues for example), it is possible that there ma",
+    "q": "community league"
+   },
+   {
+    "id": "89iu-2ewr",
+    "name": "Sports Fields (Polygons)",
+    "type": "dataset",
+    "updated": "2026-11-02",
+    "description": "A list of outdoor sports fields/infrastructure within Edmonton, with polygon geometry.\n\nNote that not all of these facilities are owned and maintained by the City of Edmonton; for facilities owned by entities other than the City of Edmonton (community leagues for example), it is possible that there ",
+    "q": "community league"
+   },
+   {
+    "id": "ukww-xkmj",
+    "name": "311 Explorer",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "<p>311 service requests on public property. With this dataset you will be able to:</p><ul><li>view the various types of service requests on public property that have been generated in a neighborhood, ward or across the city;</li><li>see the status of service requests; or</li><li>use maps or charts f",
+    "q": "community league"
+   },
+   {
+    "id": "fcbe-wvcw",
+    "name": "Parks July 2014 - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-07-23",
+    "description": "This was one single topic among many as part of the July 2014 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=46&t=1. Open from July 08 - 20, 2014. At the time the survey was launched survey invitations were sent to 846 Insight Community Member",
+    "q": "community league"
+   },
+   {
+    "id": "k8gt-z8tr",
+    "name": "Fire Rescue Public Education - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2016-12-29",
+    "description": "This was one single topic among many as part of the October 2016 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1266&as=H7LM4c5nA8&t=1\r\n\r\nOpen from October 11 - 18, 2016. \r\n\r\nAt the time the survey was launched surve",
+    "q": "community halls"
+   },
+   {
+    "id": "q6ci-4zv3",
+    "name": "Established Neighbourhood Statistics - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-24",
+    "description": "This was one single topic among many as part of the December Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=141&t=1. Open from November 30 - December 09, 2014. At the time the survey was launched survey invitations were sent to 2035 Insight Co",
+    "q": "community halls"
+   },
+   {
+    "id": "unb8-wy5n",
+    "name": "Edmonton City Charter - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2016-12-28",
+    "description": "This was one single topic among many as part of the October 2016 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1266&as=H7LM4c5nA8&t=1\r\n\r\nOpen from October 11 - 18, 2016. \r\n\r\nAt the time the survey was launched surve",
+    "q": "community halls"
+   },
+   {
+    "id": "eijd-vr5v",
+    "name": "City Facility Cleanliness February 2015 - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-12",
+    "description": "This was one single topic among many as part of the February Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=193&t=1. Open from February 9 - 17, 2015. At the time the survey was launched survey invitations were sent to 2302 Insight Community Me",
+    "q": "community halls"
+   }
+  ],
+  "recreation": [
+   {
+    "id": "nz3t-vyg3",
+    "name": "Recreation Facilities",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Lists City of Edmonton owned, operated, and/or funded recreation facilities.",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "kab2-3f3p",
+    "name": "Map View: Recreation Facilities",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "Lists City of Edmonton owned, operated, and/or funded recreation facilities.",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "4fkf-qvva",
+    "name": "Recreation Facilities Drop - In Programs (14 day)",
+    "type": "dataset",
+    "updated": "2020-11-13",
+    "description": "Recreation Facilities Drop - In Programs (14 day)",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "4t2w-dyg7",
+    "name": "Recreation Facilities: Scheduled Classes and Events",
+    "type": "dataset",
+    "updated": "2021-12-24",
+    "description": "Scheduled classes and events offered by recreation facilities; data retrieved 2021-12-24 13:13.\n\nPlease see https://movelearnplay.edmonton.ca/COE/public/category/browse/PROG for live data (in particular the number of spaces currently available).",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "fvac-m6qj",
+    "name": "Community Recreation Facilities - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2019-07-24",
+    "description": "This was one single topic among a couple from the May 2019 Mixed Topic survey. To view the survey questions, click on the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/5enTBQVbIsLKnhCBvlqKoy?t=1\n\nOpen from May 14 - 21, 2019. \n\nAt the time the survey was launched survey invitations wer",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "7yt8-7467",
+    "name": "Attractions",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "List of all types of attractions owned by the City of Edmonton.  Recreation Facilities, Outdoor Pools, Arenas and general attractions.",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "tkwr-wt2b",
+    "name": "Recreation Centres - Map View",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "List of all types of attractions owned by the City of Edmonton.  Recreation Facilities, Outdoor Pools, Arenas and general attractions.",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "t4ft-guz9",
+    "name": "Recreation Facilities_Membership Prices",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "This dataset represents the prices for memberships offered by the City of Edmonton for the Recreation Facilities & Attractions.",
+    "q": "recreation facilities"
+   },
+   {
+    "id": "te2a-bfia",
+    "name": "Recreation Centres",
+    "type": "dataset",
+    "updated": "2021-06-25",
+    "description": "Spatial view of all recreational centres owned by the City of Edmonton",
+    "q": "recreation centres"
+   },
+   {
+    "id": "8bqn-8unq",
+    "name": "Recreation Centres - Map View (Polygon)",
+    "type": "map",
+    "updated": "2021-06-25",
+    "description": "Spatial view of all recreational centres owned by the City of Edmonton",
+    "q": "recreation centres"
+   },
+   {
+    "id": "pzqj-7c3v",
+    "name": "Child Minding at CIty Recreation Centres - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2016-11-07",
+    "description": "This was one single topic among many as part of the May 2016 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1034&as=2vI4vr1V7R&t=1\r\n\r\nOpen from May 10 - 17, 2016. \r\n\r\nAt the time the survey was launched survey invita",
+    "q": "recreation centres"
+   },
+   {
+    "id": "mdkr-4c27",
+    "name": "Recreation Facilities_Drop-in Fitness",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "This dataset represents all the existing drop in dryland fitness activities happening at our recreation centres. This is a rolling 7 day schedule from the current date + 7 days. (Drop in yoga, drop in basketball, drop in volleyball etc). These drop in activities are set for spontaneous use and are i",
+    "q": "recreation centres"
+   }
+  ],
+  "libraries": [
+   {
+    "id": "qdgm-hex6",
+    "name": "Most Popular Books by Branch \u2013 Edmonton Public Library",
+    "type": "dataset",
+    "updated": "2025-02-10",
+    "description": "A snapshot of the top ten books with the highest number of holds at Edmonton Public Library, each week from 9 AM Monday to 9 AM Monday, organized by customer home library branch. See Public Libraries dataset for branch data - https://data.edmonton.ca/Community-Centres/Public-Libraries/jn25-zspi)",
+    "q": "library branches"
+   },
+   {
+    "id": "pftn-eqhn",
+    "name": "Edmonton Public Library Rooms for Rent",
+    "type": "dataset",
+    "updated": "2016-09-02",
+    "description": "List of program and meeting rooms available for rental at Edmonton Public Library branches. Includes room capacity and contact information.",
+    "q": "library branches"
+   },
+   {
+    "id": "jn25-zspi",
+    "name": "Public Libraries",
+    "type": "dataset",
+    "updated": "2026-11-04",
+    "description": "List of public libraries in Edmonton",
+    "q": "library branches"
+   },
+   {
+    "id": "jpf5-5wik",
+    "name": "Public Library - Holiday Closures",
+    "type": "dataset",
+    "updated": "2026-10-07",
+    "description": "A list of public libraries in Edmonton and their corresponding holiday closure dates.",
+    "q": "library branches"
+   },
+   {
+    "id": "xk55-7imf",
+    "name": "Edmonton Heritage - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2016-12-28",
+    "description": "This was one single topic among many as part of the October 2016 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1266&as=H7LM4c5nA8&t=1\r\n\r\nOpen from October 11 - 18, 2016. \r\n\r\nAt the time the survey was launched surve",
+    "q": "library branches"
+   },
+   {
+    "id": "72aw-fq6m",
+    "name": "2012 Budget Consultation Survey - Satisfaction With City Services",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Data on overall satisfaction with City services; satisfaction with individual services; recommendations for Edmonton as a place to live, work and visit.      \r\n\r\nD1 to B11 - Demographic information.  \r\nB1  - Overall satisfaction with City services.\r\nB2_0 to B2_2 - Recommending Edmonton.\r\nB8_0 to B8_",
+    "q": "library branches"
+   },
+   {
+    "id": "7yfs-7jmx",
+    "name": "Public Libraries - Map View",
+    "type": "map",
+    "updated": "2026-11-04",
+    "description": "List of public libraries in Edmonton",
+    "q": "libraries"
+   },
+   {
+    "id": "89gr-fhqe",
+    "name": "Stanley A Milner Library - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-26",
+    "description": "This was one single topic among many as part of the June 2015 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=325&t=1. Open from June 08 - 16, 2015. At the time the survey was launched survey invitations were sent to 2834 Insight Community Memb",
+    "q": "libraries"
+   },
+   {
+    "id": "ma8q-mjck",
+    "name": "Edmonton Public Library Usage - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-07-13",
+    "description": "This was one single topic among many as part of the first October  2014 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=109&t=1. Open from Oct 13 - 21, 2014. At the time the survey was launched survey invitations were sent to 1639 Insight Commu",
+    "q": "libraries"
+   },
+   {
+    "id": "g3kd-gh2q",
+    "name": "PARKING_ZONES",
+    "type": "map",
+    "updated": "2024-01-10",
+    "description": "EPark is the City of Edmonton\u2019s owned and operated paid parking program - managing paid parking at all curbside locations across the city and at four parkades - City Hall Parkade, Library Parkade, Century Place Parkade and Canada Place Parkade.\n\nEPark allows customers to pay for City-managed parking",
+    "q": "libraries"
+   }
+  ],
+  "population": [
+   {
+    "id": "qzrg-q4nv",
+    "name": "2009 Census - Population By Single Year Of Age And Gender (Neighbourhood)",
+    "type": "dataset",
+    "updated": "2011-09-08",
+    "description": "All Census information is as of April 1, 2009.\r\nAges of residents are effective April 1, 2009.\r\nNo data on any individual residence will be released.  To protect the privacy of individuals, data is compiled and presented at the city-, ward- and neighbourhood-level only.\r\nIn order to further protect ",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "eg3i-f4bj",
+    "name": "2021 Federal Census: Population",
+    "type": "dataset",
+    "updated": "2023-09-27",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "kyhu-r33m",
+    "name": "2009 Census - Population By Structure Type (Neighbourhood)",
+    "type": "dataset",
+    "updated": "2011-09-08",
+    "description": "All Census information is as of April 1, 2009.\r\nNo data on any individual residence will be released.  To protect the privacy of individuals, data is compiled and presented at the city-, ward- and neighbourhood-level only.\r\nIn order to further protect the privacy of individuals, neighbourhood data i",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "jkjx-2hix",
+    "name": "2016 Census - Population by Household Income (Neighbourhood/Ward)",
+    "type": "dataset",
+    "updated": "2016-08-26",
+    "description": "All Census information is as of April 1, 2016. No data on any individual residence will be released. To protect the privacy of individuals, data is compiled and presented at the city, ward and neighbourhood level only. Neighbourhood results with a population under 50 are not posted to protect the in",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "am8d-inje",
+    "name": "2021 Federal Census: Visible Minorities",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "y7yb-jtjn",
+    "name": "2009 Census - Dwelling Unit By Structure Type And Ownership (Neighbourhood)",
+    "type": "dataset",
+    "updated": "2011-09-08",
+    "description": "All Census information is as of April 1, 2009.\r\nNo data on any individual residence will be released.  To protect the privacy of individuals, data is compiled and presented at the city-, ward- and neighbourhood-level only.\r\nIn order to further protect the privacy of individuals, neighbourhood data i",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "a6zx-dzqn",
+    "name": "2019 Census - Population by Age Range (Neighbourhood/Ward)",
+    "type": "dataset",
+    "updated": "2019-09-10",
+    "description": "All Census information is as of April 1, 2019. No data on any individual residence will be released. To protect the privacy of individuals, data is compiled and presented at the city, ward and neighbourhood level only. Neighbourhood results with a population under 50 are not posted to protect the in",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "xgkv-ii9t",
+    "name": "2021 Federal Census: Households and Families",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "population by neighbourhood"
+   },
+   {
+    "id": "7afr-kaaj",
+    "name": "2012 Census - Population By Structure Type (Neighbourhood)",
+    "type": "dataset",
+    "updated": "2013-08-27",
+    "description": "All Census information is as of April 1, 2012. No data on any individual residence will be released.  To protect the privacy of individuals, data is compiled and presented at the city, ward and neighbourhood level only.  Neighbourhood results with a population under 49 are not posted to protect the ",
+    "q": "census neighbourhood population"
+   },
+   {
+    "id": "5bk4-5txu",
+    "name": "2021 Federal Census: Neighbourhoods as of Official Census Day",
+    "type": "dataset",
+    "updated": "2023-06-23",
+    "description": "A historical snapshot of neighbourhood boundaries as they were on the official census day for the 28th Census of Canada (the 2021 Federal Census).\n\nThe associated datasets are at:\n- https://data.edmonton.ca/browse?tags=2021%20federal%20census",
+    "q": "federal census 2021 neighbourhood"
+   },
+   {
+    "id": "wpfd-8bii",
+    "name": "2021 Federal Census: Age and Gender",
+    "type": "dataset",
+    "updated": "2023-06-28",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "federal census 2021 neighbourhood"
+   },
+   {
+    "id": "twh6-bi8c",
+    "name": "2021 Federal Census: Average and Median Age",
+    "type": "dataset",
+    "updated": "2023-06-27",
+    "description": "Statistics Canada data from the 2021 Census of Population, aligned to Edmonton's neighbourhood boundaries. For the neighbourhood boundaries as they were at the time of the census, please see https://data.edmonton.ca/d/5bk4-5txu.\n\nSource: Statistics Canada, 2021 Census of Population, 2023-06-23. Repr",
+    "q": "federal census 2021 neighbourhood"
+   }
+  ],
+  "311": [
+   {
+    "id": "6fft-ccn5",
+    "name": "Heat Map",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "311 Explorer is a web-based mapping tool that uses the City\u2019s open data information to search, filter, and display 311 service requests on public property.  You will be able to:\r\n\r\nView the various types of service requests on public property that have been generated in a neighborhood, ward or acros",
+    "q": "311 service requests"
+   },
+   {
+    "id": "ukww-xkmj",
+    "name": "311 Explorer",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "<p>311 service requests on public property. With this dataset you will be able to:</p><ul><li>view the various types of service requests on public property that have been generated in a neighborhood, ward or across the city;</li><li>see the status of service requests; or</li><li>use maps or charts f",
+    "q": "311 service requests"
+   },
+   {
+    "id": "5vsg-ahkq",
+    "name": "311 Explorer - Pothole Reporting",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "311 Explorer is a web-based mapping tool that uses the City\u2019s open data information to search, filter, and display 311 service requests on public property.  You will be able to:\r\n\r\nView the various types of service requests on public property that have been generated in a neighborhood, ward or acros",
+    "q": "311 service requests"
+   },
+   {
+    "id": "szsr-4vp6",
+    "name": "311 Requests on Public Property: Maintenance - Snow & Ice",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "311 Explorer is a web-based mapping tool that uses the City\u2019s open data information to search, filter, and display 311 service requests on public property.  You will be able to:\r\n\r\nView the various types of service requests on public property that have been generated in a neighborhood, ward or acros",
+    "q": "311 service requests"
+   },
+   {
+    "id": "q7ua-agfg",
+    "name": "311 Requests",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Listing of all requests raised to 311, details of each call/transaction and update on the status.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you would like to check the status, please see the \"check your status\" search box at https://",
+    "q": "311 service requests"
+   },
+   {
+    "id": "bcsz-zu8a",
+    "name": "311 Requests (2016)",
+    "type": "dataset",
+    "updated": "2019-01-17",
+    "description": "Listing of all requests raised to 311 in 2016, details of each call/transaction and update on the status.",
+    "q": "311 service requests"
+   },
+   {
+    "id": "xq32-itvg",
+    "name": "311 Requests (2017)",
+    "type": "dataset",
+    "updated": "2020-01-31",
+    "description": "Listing of all requests raised to 311 in 2017, details of each call/transaction and update on the status.",
+    "q": "311 service requests"
+   },
+   {
+    "id": "rb8e-6i3k",
+    "name": "311 Requests (2019)",
+    "type": "dataset",
+    "updated": "2022-03-15",
+    "description": "Listing of all requests raised to 311 during the year 2019, details of each call/transaction and update on the status.\n\nFor current data, please see https://data.edmonton.ca/d/q7ua-agfg.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you ",
+    "q": "311 service requests"
+   },
+   {
+    "id": "vvnz-h46c",
+    "name": "311 Requests (2014)",
+    "type": "dataset",
+    "updated": "2018-04-25",
+    "description": "Listing of all requests raised to 311 in 2014, details of each call/transaction and update on the status.",
+    "q": "311 requests"
+   },
+   {
+    "id": "t4rn-2nng",
+    "name": "311 Requests (2018)",
+    "type": "dataset",
+    "updated": "2021-03-10",
+    "description": "Listing of all requests raised to 311 during the year 2018, details of each call/transaction and update on the status.\n\nFor current data, please see https://data.edmonton.ca/d/q7ua-agfg.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you ",
+    "q": "311 requests"
+   },
+   {
+    "id": "3tzn-47wh",
+    "name": "311 Requests (2015)",
+    "type": "dataset",
+    "updated": "2018-01-31",
+    "description": "Listing of all requests raised to 311 in 2015, details of each call/transaction and update on the status.",
+    "q": "311 requests"
+   },
+   {
+    "id": "ri59-3ugc",
+    "name": "311 Requests (2020)",
+    "type": "dataset",
+    "updated": "2023-03-02",
+    "description": "Listing of all requests raised to 311 during the year 2020, details of each call/transaction and update on the status.\n\nFor current data, please see https://data.edmonton.ca/d/q7ua-agfg.\n\nThis is anonymized data intended for reporting on trends; if you have a specific reference number for which you ",
+    "q": "311 requests"
+   }
+  ],
+  "crime": [
+   {
+    "id": "fguc-rs4p",
+    "name": "Edmontonians' Perception Survey - Overall Quality Of Life",
+    "type": "dataset",
+    "updated": "2015-09-11",
+    "description": "In 2014, the City of Edmonton contracted Leger to conduct a survey of Edmontonians designed to understand perceptions on key measures relating to the quality of life in Edmonton.\r\n\r\nThis research is aimed at capturing citizen perception based performance measures which feed into the corporate perfor",
+    "q": "crime"
+   },
+   {
+    "id": "i2x2-wadk",
+    "name": "Edmontonians' Perception Survey - Connectedness",
+    "type": "dataset",
+    "updated": "2015-09-11",
+    "description": "In 2014, the City of Edmonton contracted Leger to conduct a survey of Edmontonians designed to understand perceptions on key measures relating to the quality of life in Edmonton.\n\nThis research is aimed at capturing citizen perception based performance measures which feed into the corporate performa",
+    "q": "crime"
+   },
+   {
+    "id": "72aw-fq6m",
+    "name": "2012 Budget Consultation Survey - Satisfaction With City Services",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Data on overall satisfaction with City services; satisfaction with individual services; recommendations for Edmonton as a place to live, work and visit.      \r\n\r\nD1 to B11 - Demographic information.  \r\nB1  - Overall satisfaction with City services.\r\nB2_0 to B2_2 - Recommending Edmonton.\r\nB8_0 to B8_",
+    "q": "crime"
+   },
+   {
+    "id": "3cvu-pkdw",
+    "name": "Vehicle for Hire - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2018-12-19",
+    "description": "This was one single topic among several from the November 2018 Mixed Topic survey. To view the survey questions, click on the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/5bXxA20u7SX96Y3PUC1tGM?t=1\n\nOpen from November 13 - 20, 2018. \n\nAt the time the survey was launched survey invita",
+    "q": "crime"
+   },
+   {
+    "id": "tbsz-v2rj",
+    "name": "Cannabis - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2017-12-05",
+    "description": "This was one single topic among many from the November 2017 Mixed Topic Part 1 survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1990&as=ZC4sh3q1eh&t=1\r\n\r\nOpen from November 14 - 22, 2017. \r\n\r\nAt the time the survey was launched su",
+    "q": "crime"
+   },
+   {
+    "id": "f2ri-59cx",
+    "name": "Edmontonians' Perception Survey - Safety In The City",
+    "type": "dataset",
+    "updated": "2015-09-11",
+    "description": "In 2014, the City of Edmonton contracted Leger to conduct a survey of Edmontonians designed to understand perceptions on key measures relating to the quality of life in Edmonton.\n\nThis research is aimed at capturing citizen perception based performance measures which feed into the corporate performa",
+    "q": "crime"
+   },
+   {
+    "id": "863d-s5ie",
+    "name": "Liquor Stores - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-08-05",
+    "description": "This was one single topic among many as part of the July 2015 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=417&t=1. Open from July 13 - 21, 2015. At the time the survey was launched survey invitations were sent to 3130 Insight Community Memb",
+    "q": "crime"
+   },
+   {
+    "id": "cjcn-85t7",
+    "name": "Measuring Progress Questionnaire - Safety In The City",
+    "type": "dataset",
+    "updated": "2015-09-11",
+    "description": "This was survey sent to the Insight Community in conjunction with a telephone survey performed to gauge residents thoughts on the City and how they think about their city. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=182&as=yN1J0gu9Dz&t=1. Open from January 26 ",
+    "q": "crime"
+   }
+  ],
+  "permits": [
+   {
+    "id": "24uj-dj8v",
+    "name": "General Building Permits",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "List of issued building permits from the City of Edmonton - Urban Planning & Economy Department for the public to do construction or maintenance on a structure located in the City. Note - All records start from January 1, 2009.\nPlease note : the decision was made to not release applicant information",
+    "q": "building permits"
+   },
+   {
+    "id": "itki-s8y9",
+    "name": "Building Permits - Map Search",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "ACCESSING BUILDING PERMIT INFORMATION\nThe City of Edmonton's Urban Planning and Economy Department offers a public dataset where you can search for issued building permits by type, location, zoning, units added, and description of work. This visualization specifically details the building type for e",
+    "q": "building permits"
+   },
+   {
+    "id": "25sf-z8zd",
+    "name": "Residential Building Permits 2009-2014",
+    "type": "dataset",
+    "updated": "2016-10-07",
+    "description": "Summary of annual neighbourhood permits for new building construction and alterations. This data-set is from 2009 to 2014. Data is updated semi-annually.",
+    "q": "building permits"
+   },
+   {
+    "id": "tdhd-tsk6",
+    "name": "Building Permit Application and Inspection Processing Times",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Current processing times for building permit applications and inspections.",
+    "q": "building permits"
+   },
+   {
+    "id": "6m3t-buta",
+    "name": "General Building Permits - Map View",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "List of issued building permits from the City of Edmonton - Urban Planning & Economy Department for the public to do construction or maintenance on a structure located in the City. Note - All records start from January 1, 2009.\r\nPlease note : the decision was made to not release applicant informatio",
+    "q": "building permits"
+   },
+   {
+    "id": "8t7s-6vwq",
+    "name": "Residential Building Permits 2015",
+    "type": "dataset",
+    "updated": "2016-10-07",
+    "description": "Summary of annual neighbourhood permits for new building construction and alterations. This data-set is from 2015 to present year. Data is updated semi-annually.",
+    "q": "building permits"
+   },
+   {
+    "id": "nsi9-jdb5",
+    "name": "General Building Permits - Garage and Garden Suites Map",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "List of issued building permits from the City of Edmonton - Urban Planning & Economy Department for the public to do construction or maintenance on a structure located in the City. Note - All records start from January 1, 2009.\r\nPlease note : the decision was made to not release applicant informatio",
+    "q": "building permits"
+   },
+   {
+    "id": "66ut-y7w2",
+    "name": "Development Permits - Map Search",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "ACCESSING DEVELOPMENT PERMIT INFORMATION\nThe City of Edmonton's Urban Planning and Economy Department offers a public dataset where you can search for development permits by type, status, location, and description of work. This dataset also showcases the outcome of development permit applications.\n\n",
+    "q": "building permits"
+   },
+   {
+    "id": "2ccn-pwtu",
+    "name": "Development Permits",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "List of development permits from the City of Edmonton - Urban Planning & Economy Department. \n\nDevelopment permits approve the use of a site, as well as the size and location of any buildings or structures. It is written approval from the City that development plans meet the Edmonton Zoning Bylaw re",
+    "q": "development permits"
+   },
+   {
+    "id": "td5d-74xf",
+    "name": "Follow-up on Development Permit Notification Letters - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-06-08",
+    "description": "This was one single topic among many as part of the April Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=254&t=1. Open from April 14 - 22, 2015. At the time the survey was launched survey invitations were sent to *** Insight Community Members.",
+    "q": "development permits"
+   },
+   {
+    "id": "2976-zu3f",
+    "name": "Temporary Sign Locations",
+    "type": "dataset",
+    "updated": "2026-11-05",
+    "description": "Inventory of current and future and development permits for temporary on-premises and off-premises signs issued by the City of Edmonton on private property.  Available (approved) sign locations are also shown to help expedite the application process.\r\n\r\nFor further information, please visit:\r\n\r\nhttp",
+    "q": "development permits"
+   },
+   {
+    "id": "2gp3-msju",
+    "name": "Temporary Sign Locations - Map",
+    "type": "map",
+    "updated": "2026-11-05",
+    "description": "Inventory of current and future and development permits for temporary on-premises and off-premises signs issued by the City of Edmonton on private property.  Available (approved) sign locations are also shown to help expedite the application process.\r\n\r\nFor further information, please visit:\r\n\r\nhttp",
+    "q": "development permits"
+   }
+  ],
+  "traffic": [
+   {
+    "id": "e8hk-t7j2",
+    "name": "Residential Speed Limits and Community Traffic Management Planning - Survey Results",
+    "type": "dataset",
+    "updated": "2017-02-16",
+    "description": "This was one single topic on Residential Speed Limits and Community Traffic Management Planning, conducted in January 2017. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1505&as=jH02dg2O7S&t=1\r\n\r\nOpen from January 5 - 15, 2017. \r\n\r\nAt ",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "brx6-rwhf",
+    "name": "Annual Collision Report: Fatalities and Injuries",
+    "type": "dataset",
+    "updated": "2024-09-24",
+    "description": "<p>Age and Gender for Those Who Were Injured at Various Types of Traffic Control.</p><p>In <a href=\"https://www.edmontonpolice.ca/TrafficVehicles/TrafficCollisions/ReportACollision\">September 2022, CRCs</a> were launched in Edmonton to be a centralized place for residents to report their collisions.",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "5p44-if3k",
+    "name": "Annual Collision Report: Collision Cause",
+    "type": "dataset",
+    "updated": "2024-09-24",
+    "description": "<p>Main Collision Causes.</p><p>In <a href=\"https://www.edmontonpolice.ca/TrafficVehicles/TrafficCollisions/ReportACollision\">September 2022, CRCs</a> were launched in Edmonton to be a centralized place for residents to report their collisions. This new process changed the collision data collection ",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "qj76-vs2d",
+    "name": "Automated Traffic Enforcement Zones Details - Map View",
+    "type": "map",
+    "updated": "2025-10-14",
+    "description": "This dataset represents the centre points of each Zone or Operational Area where Photo Enforcement is conducted.  An enforcement unit can be found anywhere along the area of the Zone, thus the actual range of enforcement would extend beyond the indicated area of the zone.  The centre points are extr",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "49fy-4pc4",
+    "name": "Traffic Safety Culture - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2017-04-18",
+    "description": "This was one single topic on Traffic Safety Culture. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1095&as=ly5Bo19WX4&t=1\r\n\r\nOpen from July 25, 2016 to August 3, 2016.\r\n\r\nAt the time the survey was launched survey invitations were sent",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "epqc-y5cq",
+    "name": "All Photo Enforcement Zone Centre Points",
+    "type": "dataset",
+    "updated": "2025-10-14",
+    "description": "This dataset represents the centre points of each Zone or Operational Area where Photo Enforcement is conducted.  An enforcement unit can be found anywhere along the area of the Zone, thus the actual range of enforcement would extend beyond the indicated area of the zone.  The centre points are extr",
+    "q": "traffic collisions"
+   },
+   {
+    "id": "77sf-j5rj",
+    "name": "Annual Collision Report: Collision Severity",
+    "type": "dataset",
+    "updated": "2024-09-24",
+    "description": "<p>Severity of Collisions by Population and Road Users.</p><p>In <a href=\"https://www.edmontonpolice.ca/TrafficVehicles/TrafficCollisions/ReportACollision\">September 2022, CRCs</a> were launched in Edmonton to be a centralized place for residents to report their collisions. This new process changed ",
+    "q": "collisions"
+   },
+   {
+    "id": "mf6n-s5ts",
+    "name": "Annual Collision Report: Top Collision Locations",
+    "type": "dataset",
+    "updated": "2026-09-02",
+    "description": "Top 50 Intersection and Midblock Collision Locations",
+    "q": "collisions"
+   },
+   {
+    "id": "jduq-w5pj",
+    "name": "Annual Collision Report: Temporal",
+    "type": "dataset",
+    "updated": "2024-09-24",
+    "description": "<p>Collision Dates and Times.</p><p>In <a href=\"https://www.edmontonpolice.ca/TrafficVehicles/TrafficCollisions/ReportACollision\">September 2022, CRCs</a> were launched in Edmonton to be a centralized place for residents to report their collisions. This new process changed the collision data collect",
+    "q": "collisions"
+   },
+   {
+    "id": "9zjr-97nw",
+    "name": "Annual Collision Report: Objects",
+    "type": "dataset",
+    "updated": "2024-09-24",
+    "description": "<p>Fixed Objects and Road Users Involved in Collisions</p><p>In <a href=\"https://www.edmontonpolice.ca/TrafficVehicles/TrafficCollisions/ReportACollision\">September 2022, CRCs</a> were launched in Edmonton to be a centralized place for residents to report their collisions. This new process changed t",
+    "q": "collisions"
+   },
+   {
+    "id": "mbyc-ffgt",
+    "name": "Scheduled Photo Enforcement Zones - History",
+    "type": "dataset",
+    "updated": "2025-10-13",
+    "description": "This dataset represents the historic Zones or the historic Operational Areas where Photo Radar Enforcement was scheduled to be conducted.  An enforcement unit can be found anywhere along the area of the Zone.  Designated Zones are continuously reviewed, revised, added, removed and otherwise updated ",
+    "q": "collisions"
+   }
+  ],
+  "schools": [
+   {
+    "id": "gc4g-ct3z",
+    "name": "Edmonton Public School Board (EPSB)_School Catchment Areas and School Locations",
+    "type": "dataset",
+    "updated": "2025-02-13",
+    "description": "Edmonton Public School Board (EPSB) school catchment areas and school locations, over time. As subsequent years' data is obtained, it will be appended to this dataset so that changes in catchment areas over time can be seen.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
+    "q": "schools"
+   },
+   {
+    "id": "ehbr-emhe",
+    "name": "Edmonton Public Schools (2015 - 2016)",
+    "type": "dataset",
+    "updated": "2021-06-14",
+    "description": "List of all public schools in Edmonton for the 2015-2016 school year",
+    "q": "schools"
+   },
+   {
+    "id": "kicz-beax",
+    "name": "Map View: Edmonton Public School Board (EPSB) - School Catchment Areas",
+    "type": "map",
+    "updated": "2025-02-13",
+    "description": "Edmonton Public School Board (EPSB) school catchment areas and school locations, over time. As subsequent years' data is obtained, it will be appended to this dataset so that changes in catchment areas over time can be seen.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
+    "q": "schools"
+   },
+   {
+    "id": "gfxq-u8uu",
+    "name": "Edmonton Catholic Schools (Current)",
+    "type": "dataset",
+    "updated": "2026-05-04",
+    "description": "List of all Catholic schools in Edmonton for the current (most recently provided) school year. Note - some schools may not be offering all necessary grade years.",
+    "q": "schools"
+   },
+   {
+    "id": "f6w2-hzex",
+    "name": "Edmonton Catholic Schools (2016 - 2017)",
+    "type": "dataset",
+    "updated": "2021-06-16",
+    "description": "List of all Catholic schools in Edmonton for the 2016 - 2017 school year. Note - some schools may not be offering all necessary grade years.",
+    "q": "schools"
+   },
+   {
+    "id": "996c-239n",
+    "name": "Edmonton Public School Board (EPSB)_School Locations",
+    "type": "dataset",
+    "updated": "2026-04-22",
+    "description": "Edmonton Public School Board (EPSB) school locations.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
+    "q": "schools"
+   },
+   {
+    "id": "fwnt-fc2t",
+    "name": "Map View: Edmonton Public School Board (EPSB) - School Locations",
+    "type": "map",
+    "updated": "2026-04-22",
+    "description": "Edmonton Public School Board (EPSB) school locations.\n\nPlease see https://www.epsb.ca/schools/findaschool/.",
+    "q": "schools"
+   },
+   {
+    "id": "9jbh-cd9c",
+    "name": "Edmonton Catholic Schools (Historical)",
+    "type": "dataset",
+    "updated": "2026-05-04",
+    "description": "<p>List of all Catholic schools in Edmonton for the all available school years, excluding the most recently available. Note - some schools may not be offering all necessary grade years.</p><p>For the most recently availability school year data, see <a href=\"https://data.edmonton.ca/d/gfxq-u8uu\">Edmo",
+    "q": "schools"
+   }
+  ],
+  "child_care": [
+   {
+    "id": "k8gt-z8tr",
+    "name": "Fire Rescue Public Education - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2016-12-29",
+    "description": "This was one single topic among many as part of the October 2016 Mixed Topic survey. To view the survey questions, click on the following link:\r\n\r\nhttps://www.edmontoninsightcommunity.ca/R.aspx?a=1266&as=H7LM4c5nA8&t=1\r\n\r\nOpen from October 11 - 18, 2016. \r\n\r\nAt the time the survey was launched surve",
+    "q": "child care"
+   },
+   {
+    "id": "eu32-pfnf",
+    "name": "NextGen - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2019-07-24",
+    "description": "This was one single topic among a couple from the May 2019 Mixed Topic survey. To view the survey questions, click on the following link:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/5enTBQVbIsLKnhCBvlqKoy?t=1\n\nOpen from May 14 - 21, 2019. \n\nAt the time the survey was launched survey invitations wer",
+    "q": "child care"
+   },
+   {
+    "id": "ksf2-dty2",
+    "name": "July 2020 Mixed Topic - Masks in Public - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2020-07-30",
+    "description": "This was the July 2020 Mixed Topic survey. Test link to view these questions:\n\nhttps://www.edmontoninsightcommunity.ca/c/a/6adRlA0lB4q1SZeGaPn6ns?t=1rEFID2vM8?t=1\n\nOpen from July 14-21, 2020. \n\nAt the time the survey was launched survey invitations were sent to 12,131 Insight Community Members. 3811",
+    "q": "daycare"
+   }
+  ],
+  "budget": [
+   {
+    "id": "gds5-6aiq",
+    "name": "2012 Budget Consultation Survey - Taxes And Balancing Budget",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Given the following options to deal with increased costs to pay for City services, which would you support to balance the budget the most and which would you support the least?     \r\n\r\nCOLUMNS\r\nThe most   1\r\nThe least    2\r\n\r\n  -  SURVEY at http://www.edmonton.ca/budgetconsultation",
+    "q": "budget"
+   },
+   {
+    "id": "da9s-v9j8",
+    "name": "Approved Operating Budget - Expenses",
+    "type": "dataset",
+    "updated": "2026-10-07",
+    "description": "Summary of the City of Edmonton's Financial Operating Budget by Fund Type, Department, Branch, and Program.\n\nThis dataset powers the Edmonton Open Budget site budget.edmonton.ca. Budget is as of Sept 30, 2026.",
+    "q": "budget"
+   },
+   {
+    "id": "qycq-4ckj",
+    "name": "City of Edmonton - Financial Budget",
+    "type": "dataset",
+    "updated": "2014-05-13",
+    "description": "High-level detail summary of the City of Edmonton's 2014 Financial Operating Budget by Department or Civic Agency. In addition, one can see Full Time equivalencies at - https://data.edmonton.ca/Financial/City-of-Edmonton-Financial-Budget-Full-Time-Equiva/eazf-zhey",
+    "q": "budget"
+   },
+   {
+    "id": "m84q-ghmu",
+    "name": "Approved Operating Budget - Revenues",
+    "type": "dataset",
+    "updated": "2026-10-07",
+    "description": "Summary of the City of Edmonton's Financial Operating Budget by Fund Type, Department, Branch, and Program.\n\nThis dataset powers the Revenues Module of the Edmonton Open Budget site budget.edmonton.ca. Budget is as of Sept 30, 2026.",
+    "q": "budget"
+   },
+   {
+    "id": "87u8-3yfv",
+    "name": "2012 Budget Consultation Survey - Perception Of Taxes",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Identify the respondent's perception of what their current share of total tax dollars goes between the three levels of government (including income taxes and property taxes)\r\n\r\nD1 to B11 - Demographic information. \r\nB3_0 to B3_2 - percent (what one thinks is the current share ) \r\nB4_0 to B4_2 - perc",
+    "q": "budget"
+   },
+   {
+    "id": "2crc-aced",
+    "name": "2012 Budget Consultation Survey -  Household Spending",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "This portion of the survey, identifies roughly how much the respondent's household monthly spending goes to the different areas:\r\n\r\n0.\tGroceries \r\n1.\tHousing costs \r\n2.\tUtilities, TV, phone \r\n3.\tMunicipal Property taxes \r\n4.\tIncome taxes \r\n5.\tLeisure activities \r\n6.\tPersonal insurance and pension \r\n",
+    "q": "budget"
+   },
+   {
+    "id": "72aw-fq6m",
+    "name": "2012 Budget Consultation Survey - Satisfaction With City Services",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Data on overall satisfaction with City services; satisfaction with individual services; recommendations for Edmonton as a place to live, work and visit.      \r\n\r\nD1 to B11 - Demographic information.  \r\nB1  - Overall satisfaction with City services.\r\nB2_0 to B2_2 - Recommending Edmonton.\r\nB8_0 to B8_",
+    "q": "budget"
+   },
+   {
+    "id": "x2gc-xf9e",
+    "name": "2012 Budget Consultation Survey - City Goals And Outcomes",
+    "type": "dataset",
+    "updated": "2011-12-12",
+    "description": "Over the past few years, the City has worked with thousands of Edmontonians to set a long-term vision for the City in 2040. Edmontonians also helped create 10-year goals for the city to move towards the vision.  From that input, City Council embedded the goals a strategic plan (www.edmonton.ca/Strat",
+    "q": "budget"
+   },
+   {
+    "id": "pdmi-3qjb",
+    "name": "Open Data Budget - Capital (2015)",
+    "type": "dataset",
+    "updated": "2025-11-18",
+    "description": "Summary of the City of Edmonton's Financial Capital Budget by Service, Branch, and Profile.",
+    "q": "capital budget"
+   },
+   {
+    "id": "r993-376i",
+    "name": "Open Data Budget - Capital Details (2015)",
+    "type": "dataset",
+    "updated": "2025-11-18",
+    "description": "Summary of the City of Edmonton's Financial Capital Budget Details by Service, Branch, and Profile.",
+    "q": "capital budget"
+   },
+   {
+    "id": "552h-hjwj",
+    "name": "Capital Projects",
+    "type": "dataset",
+    "updated": "2026-10-05",
+    "description": "Data is used by the building.edmonton.ca application. Contains information on capital projects in the City of Edmonton.",
+    "q": "capital budget"
+   },
+   {
+    "id": "sjbw-xvdm",
+    "name": "City Budgeting - Edmonton Insight Community",
+    "type": "dataset",
+    "updated": "2015-08-05",
+    "description": "This was one single topic among many as part of the July 2015 Mixed Topic survey. Test link to view these questions: https://www.edmontoninsightcommunity.ca/R.aspx?a=417&t=1. Open from July 13 - 21, 2015. At the time the survey was launched survey invitations were sent to 3130 Insight Community Memb",
+    "q": "capital budget"
+   }
+  ]
+ },
+ "datasets": {
+  "xu6q-xcmj": {
+   "error": "URL can't contain control characters. '/resource/xu6q-xcmj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "nb64-h7uj": {
+   "error": "URL can't contain control characters. '/resource/nb64-h7uj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "3b6m-fezs": {
+   "error": "URL can't contain control characters. '/resource/3b6m-fezs.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "qhi4-bdpu": {
+   "error": "URL can't contain control characters. '/resource/qhi4-bdpu.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "24uj-dj8v": {
+   "error": "URL can't contain control characters. '/resource/24uj-dj8v.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "e8n2-hwu4": {
+   "error": "URL can't contain control characters. '/resource/e8n2-hwu4.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "b4er-5rp2": {
+   "error": "URL can't contain control characters. '/resource/b4er-5rp2.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "nydb-6rce": {
+   "error": "URL can't contain control characters. '/resource/nydb-6rce.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "acvv-cap3": {
+   "error": "URL can't contain control characters. '/resource/acvv-cap3.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gx56-4iuu": {
+   "error": "URL can't contain control characters. '/resource/gx56-4iuu.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "4ty8-84kz": {
+   "error": "URL can't contain control characters. '/resource/4ty8-84kz.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "6nas-wgmn": {
+   "error": "URL can't contain control characters. '/resource/6nas-wgmn.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "q7d6-ambg": {
+   "error": "URL can't contain control characters. '/resource/q7d6-ambg.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "dkk9-cj3x": {
+   "error": "URL can't contain control characters. '/resource/dkk9-cj3x.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "cbwx-icpx": {
+   "error": "URL can't contain control characters. '/resource/cbwx-icpx.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "n3yp-22sq": {
+   "error": "URL can't contain control characters. '/resource/n3yp-22sq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "t6t7-p39g": {
+   "error": "URL can't contain control characters. '/resource/t6t7-p39g.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "53kx-vrtj": {
+   "error": "URL can't contain control characters. '/resource/53kx-vrtj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "9nqb-w48x": {
+   "error": "URL can't contain control characters. '/resource/9nqb-w48x.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "g57c-ph4j": {
+   "error": "URL can't contain control characters. '/resource/g57c-ph4j.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "timd-rmce": {
+   "error": "URL can't contain control characters. '/resource/timd-rmce.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "wtyf-sg38": {
+   "error": "URL can't contain control characters. '/resource/wtyf-sg38.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "baei-id48": {
+   "error": "URL can't contain control characters. '/resource/baei-id48.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "3dmm-v9f8": {
+   "error": "URL can't contain control characters. '/resource/3dmm-v9f8.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gdd9-eqv9": {
+   "error": "URL can't contain control characters. '/resource/gdd9-eqv9.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "jyra-si4k": {
+   "error": "URL can't contain control characters. '/resource/jyra-si4k.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "ex66-ku6s": {
+   "error": "URL can't contain control characters. '/resource/ex66-ku6s.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "n4yc-bxbe": {
+   "error": "URL can't contain control characters. '/resource/n4yc-bxbe.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "xb8m-zs67": {
+   "error": "URL can't contain control characters. '/resource/xb8m-zs67.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "5ex6-4nvf": {
+   "error": "URL can't contain control characters. '/resource/5ex6-4nvf.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "9j6k-uzig": {
+   "error": "URL can't contain control characters. '/resource/9j6k-uzig.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "2waj-kcfd": {
+   "error": "URL can't contain control characters. '/resource/2waj-kcfd.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "vcv7-8k9f": {
+   "error": "URL can't contain control characters. '/resource/vcv7-8k9f.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "4vt2-8zrq": {
+   "error": "URL can't contain control characters. '/resource/4vt2-8zrq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "hnhf-yaps": {
+   "error": "URL can't contain control characters. '/resource/hnhf-yaps.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "greh-g7ac": {
+   "error": "URL can't contain control characters. '/resource/greh-g7ac.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "kaps-rk7z": {
+   "error": "URL can't contain control characters. '/resource/kaps-rk7z.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "uqbc-s85r": {
+   "error": "URL can't contain control characters. '/resource/uqbc-s85r.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "59j9-dv23": {
+   "error": "URL can't contain control characters. '/resource/59j9-dv23.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gngq-scch": {
+   "error": "URL can't contain control characters. '/resource/gngq-scch.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gn92-9jfe": {
+   "error": "URL can't contain control characters. '/resource/gn92-9jfe.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "89iu-2ewr": {
+   "error": "URL can't contain control characters. '/resource/89iu-2ewr.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "nz3t-vyg3": {
+   "error": "URL can't contain control characters. '/resource/nz3t-vyg3.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "kab2-3f3p": {
+   "error": "URL can't contain control characters. '/resource/kab2-3f3p.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "4fkf-qvva": {
+   "error": "URL can't contain control characters. '/resource/4fkf-qvva.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "4t2w-dyg7": {
+   "error": "URL can't contain control characters. '/resource/4t2w-dyg7.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "fvac-m6qj": {
+   "error": "URL can't contain control characters. '/resource/fvac-m6qj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "7yt8-7467": {
+   "error": "URL can't contain control characters. '/resource/7yt8-7467.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "qdgm-hex6": {
+   "error": "URL can't contain control characters. '/resource/qdgm-hex6.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "pftn-eqhn": {
+   "error": "URL can't contain control characters. '/resource/pftn-eqhn.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "jn25-zspi": {
+   "error": "URL can't contain control characters. '/resource/jn25-zspi.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "jpf5-5wik": {
+   "error": "URL can't contain control characters. '/resource/jpf5-5wik.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "xk55-7imf": {
+   "error": "URL can't contain control characters. '/resource/xk55-7imf.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "72aw-fq6m": {
+   "error": "URL can't contain control characters. '/resource/72aw-fq6m.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "qzrg-q4nv": {
+   "error": "URL can't contain control characters. '/resource/qzrg-q4nv.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "eg3i-f4bj": {
+   "error": "URL can't contain control characters. '/resource/eg3i-f4bj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "kyhu-r33m": {
+   "error": "URL can't contain control characters. '/resource/kyhu-r33m.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "jkjx-2hix": {
+   "error": "URL can't contain control characters. '/resource/jkjx-2hix.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "am8d-inje": {
+   "error": "URL can't contain control characters. '/resource/am8d-inje.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "y7yb-jtjn": {
+   "error": "URL can't contain control characters. '/resource/y7yb-jtjn.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "6fft-ccn5": {
+   "error": "URL can't contain control characters. '/resource/6fft-ccn5.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "ukww-xkmj": {
+   "error": "URL can't contain control characters. '/resource/ukww-xkmj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "5vsg-ahkq": {
+   "error": "URL can't contain control characters. '/resource/5vsg-ahkq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "szsr-4vp6": {
+   "error": "URL can't contain control characters. '/resource/szsr-4vp6.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "q7ua-agfg": {
+   "error": "URL can't contain control characters. '/resource/q7ua-agfg.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "bcsz-zu8a": {
+   "error": "URL can't contain control characters. '/resource/bcsz-zu8a.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "fguc-rs4p": {
+   "error": "URL can't contain control characters. '/resource/fguc-rs4p.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "i2x2-wadk": {
+   "error": "URL can't contain control characters. '/resource/i2x2-wadk.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "3cvu-pkdw": {
+   "error": "URL can't contain control characters. '/resource/3cvu-pkdw.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "tbsz-v2rj": {
+   "error": "URL can't contain control characters. '/resource/tbsz-v2rj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "f2ri-59cx": {
+   "error": "URL can't contain control characters. '/resource/f2ri-59cx.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "itki-s8y9": {
+   "error": "URL can't contain control characters. '/resource/itki-s8y9.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "25sf-z8zd": {
+   "error": "URL can't contain control characters. '/resource/25sf-z8zd.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "tdhd-tsk6": {
+   "error": "URL can't contain control characters. '/resource/tdhd-tsk6.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "6m3t-buta": {
+   "error": "URL can't contain control characters. '/resource/6m3t-buta.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "8t7s-6vwq": {
+   "error": "URL can't contain control characters. '/resource/8t7s-6vwq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "e8hk-t7j2": {
+   "error": "URL can't contain control characters. '/resource/e8hk-t7j2.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "brx6-rwhf": {
+   "error": "URL can't contain control characters. '/resource/brx6-rwhf.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "5p44-if3k": {
+   "error": "URL can't contain control characters. '/resource/5p44-if3k.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "qj76-vs2d": {
+   "error": "URL can't contain control characters. '/resource/qj76-vs2d.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "49fy-4pc4": {
+   "error": "URL can't contain control characters. '/resource/49fy-4pc4.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "epqc-y5cq": {
+   "error": "URL can't contain control characters. '/resource/epqc-y5cq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gc4g-ct3z": {
+   "error": "URL can't contain control characters. '/resource/gc4g-ct3z.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "ehbr-emhe": {
+   "error": "URL can't contain control characters. '/resource/ehbr-emhe.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "kicz-beax": {
+   "error": "URL can't contain control characters. '/resource/kicz-beax.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gfxq-u8uu": {
+   "error": "URL can't contain control characters. '/resource/gfxq-u8uu.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "f6w2-hzex": {
+   "error": "URL can't contain control characters. '/resource/f6w2-hzex.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "996c-239n": {
+   "error": "URL can't contain control characters. '/resource/996c-239n.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "k8gt-z8tr": {
+   "error": "URL can't contain control characters. '/resource/k8gt-z8tr.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "eu32-pfnf": {
+   "error": "URL can't contain control characters. '/resource/eu32-pfnf.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "ksf2-dty2": {
+   "error": "URL can't contain control characters. '/resource/ksf2-dty2.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "gds5-6aiq": {
+   "error": "URL can't contain control characters. '/resource/gds5-6aiq.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "da9s-v9j8": {
+   "error": "URL can't contain control characters. '/resource/da9s-v9j8.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "qycq-4ckj": {
+   "error": "URL can't contain control characters. '/resource/qycq-4ckj.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "m84q-ghmu": {
+   "error": "URL can't contain control characters. '/resource/m84q-ghmu.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "87u8-3yfv": {
+   "error": "URL can't contain control characters. '/resource/87u8-3yfv.json?$select=count(*) as n' (found at least ' ')"
+  },
+  "2crc-aced": {
+   "error": "URL can't contain control characters. '/resource/2crc-aced.json?$select=count(*) as n' (found at least ' ')"
+  }
+ }
+}
