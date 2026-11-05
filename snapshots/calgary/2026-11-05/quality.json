@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-05T19:10:31Z",
+ "built_at": "2026-11-05T19:30:35Z",
  "overall": "warn",
  "checks": [
   {
@@ -63,9 +63,9 @@
    "source": "calgary.wards",
    "check": "count_change",
    "status": "pass",
-   "detail": "14 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "14 rows against 14 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "calgary.homes",
@@ -383,9 +383,9 @@
    "source": "calgary.osm",
    "check": "count_change",
    "status": "pass",
-   "detail": "4,383 rows; no previous build to compare",
-   "value": null,
-   "threshold": null
+   "detail": "4,383 rows against 4,383 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
   },
   {
    "source": "calgary.people.city_actual",
