@@ -9,15 +9,14 @@ def show(label, path, **q):
         print('##', label); print(json.dumps(get(path, **q))[:2500])
     except Exception as e:
         print('##', label, 'ERROR', str(e)[:200])
-# join check: other residential accounts in property information (gross area, year)
-acc = [r['account_number'] for r in get('/resource/q7d6-ambg.json', **{'$select': 'account_number', '$where': "tax_class='Other Residential'", '$limit': '8'})]
-show('other residential info', '/resource/dkk9-cj3x.json', **{'$select': 'account_number, total_gross_area, year_built, zoning, lot_size', '$where': 'account_number in(' + ','.join(f"'{a}'" for a in acc) + ')'})
-show('low value residential sample', '/resource/q7d6-ambg.json', **{'$select': 'account_number, suite, house_number, street_name, assessed_value', '$where': "tax_class='Residential' AND assessed_value < 40000", '$limit': '8'})
-acc2 = [r['account_number'] for r in get('/resource/q7d6-ambg.json', **{'$select': 'account_number', '$where': "tax_class='Residential' AND assessed_value < 40000", '$limit': '8'})]
-show('low value info', '/resource/dkk9-cj3x.json', **{'$select': 'account_number, total_gross_area, year_built, zoning', '$where': 'account_number in(' + ','.join(f"'{a}'" for a in acc2) + ')'})
-show('value bands', '/resource/q7d6-ambg.json', **{'$select': "case(assessed_value < 20000, 'a <20k', assessed_value < 40000, 'b 20-40k', assessed_value < 80000, 'c 40-80k', true, 'd 80k+') as band, count(*) as n", '$where': "tax_class='Residential'", '$group': 'band', '$order': 'band'})
-show('other residential gross area sum', '/resource/dkk9-cj3x.json', **{'$select': 'count(*) as n', '$where': "total_gross_area IS NOT NULL AND total_gross_area != '0'"})
-show('neighbourhood code types', '/resource/q7d6-ambg.json', **{'$select': 'neighbourhood_id', '$limit': '3'})
-show('ward names', '/resource/b4er-5rp2.json', **{'$select': 'name_1, name_2, councillor'})
-show('dk ward vs nbhd', '/resource/65fr-66s6.json', **{'$select': 'count(*) as n, count(geometry_multipolygon) as g', '$where': 'effective_end_date IS NULL'})
-show('parks classes', '/resource/gdd9-eqv9.json', **{'$select': 'class, status, count(*) as n, sum(area) as a', '$group': 'class, status', '$order': 'n DESC', '$limit': '40'})
+
+cur = {str(int(float(r['neighbourhood_number']))): r['descriptive_name'] for r in get('/resource/65fr-66s6.json', **{'$select': 'neighbourhood_number, descriptive_name', '$limit': '1000'})}
+cen = get('/resource/eg3i-f4bj.json', **{'$select': 'neighbourhood_number, neighbourhood, total_population', '$limit': '1000'})
+missing = [(r['neighbourhood_number'], r['neighbourhood'], r['total_population']) for r in cen if str(int(float(r['neighbourhood_number']))) not in cur]
+print('## census codes not current', json.dumps(sorted(missing, key=lambda x: -float(x[2] or 0))))
+old = get('/resource/5bk4-5txu.json', **{'$select': 'neighbourh, name', '$limit': '1000'})
+oldc = {str(int(float(r['neighbourh']))): r['name'] for r in old}
+print('## current codes not in 2021 boundaries', json.dumps([(c, n) for c, n in cur.items() if c not in oldc]))
+print('## 2021 codes not current', json.dumps([(c, n) for c, n in oldc.items() if c not in cur]))
+show('homes no nbhd by class', '/resource/q7d6-ambg.json', **{'$select': 'tax_class, ward, count(*) as n', '$where': "neighbourhood_id IS NULL AND tax_class in('Residential','Other Residential') AND assessed_value >= 40000", '$group': 'tax_class, ward', '$order': 'n DESC', '$limit': '30'})
+show('homes no nbhd sample', '/resource/q7d6-ambg.json', **{'$select': 'account_number, suite, house_number, street_name, neighbourhood, ward, latitude, longitude', '$where': "neighbourhood_id IS NULL AND tax_class='Residential' AND assessed_value >= 40000", '$limit': '10'})
