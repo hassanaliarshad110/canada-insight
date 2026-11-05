@@ -20,6 +20,9 @@ Fixed (after the first Edmonton build)
 - About 7,600 Edmonton homes with no neighbourhood code are placed by location instead of left without one.
 - 36,340 census residents in four neighbourhoods renamed or renumbered since 2021 (Oliver, now Wîhkwêntôwin, and
   three others) carried no homes; they are now placed by the census-day boundary.
+- Edmonton apartment homes: 185 m² of gross floor area per home instead of 85 m². At 85 m² apartment neighbourhoods
+  had 1.4 to 1.9 times as many homes as the 2021 Census counted households; 185 m² is fitted on households by neighbourhood.
+- Calgary: when OpenStreetMap can't be reached, the saved copy's row count is recorded.
 - The audit tool works for any city (ward count and population options from the city's settings).
 
 

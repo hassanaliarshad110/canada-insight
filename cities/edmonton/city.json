@@ -65,11 +65,12 @@
     "unit_estimate": {
       "class_field": "tax_class",
       "equals": "Other Residential",
-      "m2_per_unit": 85,
-      "note": "apartment buildings (other residential) count as their floor area divided by 85 m² per home (an estimate)"
+      "m2_per_unit": 185,
+      "note": "apartment buildings (other residential) count as their gross floor area divided by 185 m² per home (an estimate, calibrated on 2021 Census households by neighbourhood)",
+      "basis": "Fitted on 2021 Census households in 278 neighbourhoods: each roll record matched 0.88 households and each home estimated at 85 m² matched 0.41, so a home takes about 185 m² of the gross floor area the roll records (which includes corridors, common areas and, in mixed buildings, other uses)."
     },
     "limitations": [
-      "Apartment buildings are one account each; their homes are estimated from floor area.",
+      "Apartment buildings are one account each; their homes are estimated from gross floor area at 185 m² per home, calibrated on 2021 Census households (checked in apartment neighbourhoods such as Downtown and Wîhkwêntôwin).",
       "Properties assessed under $40,000 are left out (mostly parking stalls and storage units)."
     ],
     "area_from_location": true

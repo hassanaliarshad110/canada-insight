@@ -744,7 +744,7 @@ class Builder:
                     self.checks.append(quality.QualityCheck(s.id, 'read', 'warn',
                                                             f'OpenStreetMap unreachable ({e}); the copy read {saved["read_on"]} is used'))
                     s.publisher_updated = saved['read_on']
-                    s.rows = saved.get('rows')
+                    s.rows = saved.get('rows') or len(saved['features'])
                     self.osm_result = {'stats': saved.get('stats'), 'rules': saved.get('rules'), 'reused': saved['read_on']}
                     return feats
             self.checks.append(quality.QualityCheck(s.id, 'read', 'warn',
