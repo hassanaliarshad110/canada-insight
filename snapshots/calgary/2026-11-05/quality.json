@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-05T11:08:24Z",
+ "built_at": "2026-11-05T11:38:22Z",
  "overall": "warn",
  "checks": [
   {
@@ -346,6 +346,38 @@
    "detail": "0 of 21 locations fall outside the city extent",
    "value": 0.0,
    "threshold": 0.001
+  },
+  {
+   "source": "calgary.people.model",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.model",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.census2021",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "97.7% of dwelling units are in areas with an estimate",
+   "value": 0.9768,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.census2021",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
   }
  ]
 }
