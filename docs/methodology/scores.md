@@ -36,11 +36,11 @@ The cap stops a surplus of one amenity hiding a shortage of another. A group sco
 | Choice | Options |
 |---|---|
 | Walking distance | each amenity's shorter and longer distance |
-| People | growth model; 2021 Census |
+| People | Calgary Data Desk's four ways of counting residents: City's total shared by actual growth (default), City's total one rate for all, growth model, 2021 Census |
 | Weights (all-amenities score only) | equal; local-heavy |
 
-Amenity and group scores are worked out 4 ways; the all-amenities score 8 ways. The figure shown is the default
-(shorter distance, growth model, equal weights); the range is the lowest to the highest across all of them.
+Amenity and group scores are worked out 8 ways; the all-amenities score 16 ways. The figure shown is the default
+(shorter distance, City's total shared by actual growth, equal weights); the range is the lowest to the highest across all of them.
 
 | Label | Rule |
 |---|---|

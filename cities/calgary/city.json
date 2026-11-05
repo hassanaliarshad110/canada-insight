@@ -77,8 +77,37 @@
     "residents_field": "residents",
     "children_field": "children_0_14",
     "updated_field": "built_at",
-    "default": "model",
+    "default": "city_actual",
     "options": {
+      "city_actual": {
+        "label": "City's total, shared by actual growth",
+        "title": "Residents and children by community: City's total, shared by actual growth (Calgary Data Desk)",
+        "publisher": "Calgary Data Desk (Hassan Ali), from City of Calgary open data, the City's population estimate and the 2021 Census",
+        "url": "https://hassanaliarshad110.github.io/calgary-data-desk/data/city_actual/w0.json",
+        "page": "https://hassanaliarshad110.github.io/calgary-data-desk/",
+        "period": "today, estimated daily",
+        "about": "All of Calgary adds up to the City's own population estimate and forecast; each community is its 2021 Census count plus the growth its new homes explain, with the rest of the City's growth spread over every community's 2021 count. Calgary Data Desk's default.",
+        "limitations": [
+          "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
+          "Communities with fewer than 100 residents are not included and get no residents or children.",
+          "The City's figure for 2026 onward is a forecast (Calgary and Region Economic Outlook, spring 2026)."
+        ],
+        "max_age_days": 7
+      },
+      "city_pace": {
+        "label": "City's total, one rate for all",
+        "title": "Residents and children by community: City's total, one rate for all (Calgary Data Desk)",
+        "publisher": "Calgary Data Desk (Hassan Ali), from City of Calgary open data, the City's population estimate and the 2021 Census",
+        "url": "https://hassanaliarshad110.github.io/calgary-data-desk/data/city_pace/w0.json",
+        "page": "https://hassanaliarshad110.github.io/calgary-data-desk/",
+        "period": "today, estimated daily",
+        "about": "All of Calgary adds up to the City's own estimate; communities built since 2021 keep their growth model count, every other community grows by one factor from its 2021 count.",
+        "limitations": [
+          "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
+          "Communities with fewer than 100 residents are not included and get no residents or children."
+        ],
+        "max_age_days": 7
+      },
       "model": {
         "label": "Growth model",
         "title": "Residents and children by community: growth model (Calgary Data Desk)",

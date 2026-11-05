@@ -40,7 +40,9 @@ same figures. The reader chooses which:
 
 | Option | What it is |
 |---|---|
-| Growth model (default) | 2021 Census for each community, grown with the homes built since on the City's property roll. Children: 2021 Census children plus children for residents added since, at the share seen in communities new at the 2021 Census. |
+| City's total, shared by actual growth (default, as on Calgary Data Desk) | All of Calgary adds up to the City's own estimate and forecast; growth goes where homes were built, the rest spread over every community's 2021 count. |
+| City's total, one rate for all | All of Calgary adds up to the City's estimate; every community grows by one factor (new communities keep their growth model count). |
+| Growth model | 2021 Census for each community, grown with the homes built since on the City's property roll. Children: 2021 Census children plus children for residents added since, at the share seen in communities new at the 2021 Census. |
 | 2021 Census | Each community's 2021 count, unchanged. Communities built since 2021 have no count, so they carry no people and get no figure. |
 
 Each community's estimate is spread evenly over its dwelling units (the same units as the access measure). Communities

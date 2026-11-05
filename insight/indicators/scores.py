@@ -11,10 +11,10 @@ AMENITY SCORE (one amenity, one scenario)
 
 SCENARIOS
     distance:  the amenity's shorter and longer walking distance                                    (2)
-    people:    each people option in the city config (Calgary: growth model, 2021 Census)          (2)
+    people:    each people option in the city config (Calgary: Data Desk's four ways of counting)  (4)
     weights:   for the overall score only: equal across all amenities, or local amenities weighted
                more (local group 2/3 of the weight, district group 1/3)                            (2)
-    Amenity and group scores have 4 scenarios; the overall score has 8.
+    Amenity and group scores have 2 x (people options) scenarios; the overall score twice as many.
 
 GROUP AND OVERALL SCORES
     local     = mean of capped scores of the local amenities (playground, park, transit stop)

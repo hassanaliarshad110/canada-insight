@@ -73,7 +73,7 @@
     const first = S.cities.find(c => c.id === h.city && c.built_at) || S.cities.find(c => c.built_at);
     if (!first) { $('#headline').textContent = 'No city has been built yet.'; return; }
     S.th = h.th; S.people = h.p; S.mode = h.m === 'crowding' ? 'crowding' : 'near';
-    S.view = h.view; S.ward = h.w || 0; S.set = ['public', 'city', 'private'].includes(h.set) ? h.set : 'public'; S.popMethod = h.pm;
+    S.view = h.view; S.ward = h.w || 0; S.set = ['public', 'city', 'private'].includes(h.set) ? h.set : 'public'; S.popMethod = h.pm || h.p;
     await openCity(first.id, h.kind, h.c);
   }
 
@@ -88,6 +88,7 @@
     S.base = bases.includes(kind) ? kind : bases[0];
     S.kind = effKey(S.base);
     if (S.dash && !S.dash.methods[S.popMethod]) S.popMethod = S.dash.default_method;
+    if (S.data.crowding && S.data.crowding.options[S.popMethod]) S.people = S.popMethod;
     renderWardPicker();
     S.selected = code && S.data.areas[code] ? code : null;
     S.compare = [];
@@ -199,7 +200,13 @@
     renderAll(); if (S.view === 'dashboard') renderDash(); if (S.view === 'wards') renderWards();
   });
   $('#set').addEventListener('change', e => { S.set = e.target.value; S.kind = effKey(S.base); renderAll(); });
-  $('#pop-method').addEventListener('change', e => { S.popMethod = e.target.value; renderDash(); renderWards(); writeHash(); });
+  $('#pop-method').addEventListener('change', e => { setPeople(e.target.value); });
+  function setPeople(m) {
+    // one way of counting residents for the whole site, the same choices as Calgary Data Desk
+    S.popMethod = m;
+    if (S.data.crowding && S.data.crowding.options[m]) S.people = m;
+    renderPeople(); renderAll(); renderDash(); renderWards(); writeHash();
+  }
   $$('#score-col button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.g === S.sGroup)));
     $$('#score-filter button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === S.sFilter)));
     const pick = r => S.sGroup === 'overall' ? r.overall : r.groups[S.sGroup];
@@ -233,7 +240,7 @@
     box.hidden = false;
     $('#people-seg').innerHTML = Object.entries(cr.options).map(([k, o]) =>
       `<button type="button" data-p="${esc(k)}" aria-pressed="${k === S.people}">${esc(o.label)}</button>`).join('');
-    $$('#people-seg button').forEach(b => b.addEventListener('click', () => { S.people = b.dataset.p; renderPeople(); renderAll(); }));
+    $$('#people-seg button').forEach(b => b.addEventListener('click', () => { setPeople(b.dataset.p); }));
     $('#people-about').textContent = (cr.options[S.people] || {}).about || '';
   }
 
