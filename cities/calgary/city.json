@@ -132,7 +132,9 @@
       ],
       "crowding": {
         "people": "children",
-        "unit": "playgrounds per 1,000 children within reach"
+        "per": 1000,
+        "unit": "playgrounds per 1,000 children within reach",
+        "short": "Playgrounds per 1,000 children"
       }
     },
     "park": {
@@ -156,7 +158,9 @@
       ],
       "crowding": {
         "people": "residents",
-        "unit": "park hectares per 1,000 residents within reach"
+        "per": 1000,
+        "unit": "park hectares per 1,000 residents within reach",
+        "short": "Park ha per 1,000 residents"
       }
     },
     "transit_stop": {
@@ -177,7 +181,13 @@
       "threshold_url": "https://transit-prd.calgary.ca/content/dam/transit/plans---projects/Calgary%20Transit%20Service%20Guidelines%20May%202025.pdf",
       "limitations": [
         "A stop is not a service level: how often buses come is not measured here (planned: the GTFS timetable)."
-      ]
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 1000,
+        "unit": "transit stops per 1,000 residents within reach",
+        "short": "Stops per 1,000 residents"
+      }
     },
     "community_centre": {
       "label": "Community centre",
@@ -196,7 +206,13 @@
       "threshold_basis": "Platform choice: 800 m and 1.6 km.",
       "limitations": [
         "Community association halls and centres as listed by the City; opening hours and programs are not measured."
-      ]
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "community centres per 100,000 residents within reach",
+        "short": "Centres per 100,000 residents"
+      }
     },
     "rec_centre": {
       "label": "Indoor recreation centre",
@@ -215,7 +231,13 @@
       "threshold_basis": "Platform choice: 2 km and 5 km for facilities that serve several communities.",
       "limitations": [
         "Leisure centres, aquatic and fitness centres and fieldhouses, municipal and not-for-profit. Arenas, outdoor pools, golf courses and other single-purpose sites are left out. Capacity and opening hours are not measured."
-      ]
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "indoor recreation centres per 100,000 residents within reach",
+        "short": "Rec centres per 100,000 residents"
+      }
     },
     "library": {
       "label": "Public library",
@@ -234,7 +256,13 @@
       "threshold_basis": "Platform choice: 2 km and 5 km.",
       "limitations": [
         "Library branches as listed by the City; hours and size are not measured."
-      ]
+      ],
+      "crowding": {
+        "people": "residents",
+        "per": 100000,
+        "unit": "libraries per 100,000 residents within reach",
+        "short": "Libraries per 100,000 residents"
+      }
     }
   },
   "rules": {

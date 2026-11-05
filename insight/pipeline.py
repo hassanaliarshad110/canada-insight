@@ -17,7 +17,7 @@ from datetime import date, datetime, timezone
 import numpy as np
 
 from . import __version__, config, geo, quality
-from .indicators import access, crowding
+from .indicators import access, crowding, scores
 from .model import Source
 from .socrata import SocrataClient, rows_hash
 
@@ -346,6 +346,10 @@ class Builder:
         res = access.compute(homes, distances, {k: a for k, a in cfg['amenities'].items()},
                              cfg['growth_year'], self.today.year, cfg.get('rules'))
         res['crowding'] = self.crowding(homes, ams, distances)
+        if res['crowding'] and res['crowding']['kinds']:
+            any_k = next(iter(cfg['amenities']))
+            eligible = [c for c, v in res['areas'].items() if v[any_k]['status'] != 'too_few_homes']
+            res['scores'] = scores.compute(res['crowding'], cfg['amenities'], eligible)
         return areas, homes, ams, res
 
     def crowding(self, homes, ams, distances):
@@ -377,14 +381,15 @@ class Builder:
                         homes['xy'], am['polys'], d,
                         inside=lambda k, x, y, polys=am['polys']: geo.point_in_multipolygon(x, y, polys[k]),
                         inside_candidates=inside_c))
-            res_k = {'people': cr['people'], 'unit': cr['unit'], 'by_option': {}}
+            res_k = {'people': cr['people'], 'unit': cr['unit'], 'short': cr.get('short', cr['unit']),
+                     'per': cr.get('per', 1000), 'by_option': {}}
             for opt, o in opts.items():
                 per_unit = {c: (v[cr['people']] / area_units[c]) for c, v in o['by_area'].items()
                             if area_units.get(c)}
                 people = units * np.asarray([per_unit.get(c, 0.0) for c in area], dtype=float)
                 vals = {}
                 for di, d in enumerate(a['thresholds_m']):
-                    r, demand = crowding.reach(pairs_by_d[di], people, am['supply'], len(units))
+                    r, demand = crowding.reach(pairs_by_d[di], people, am['supply'], len(units), cr.get('per', 1000))
                     avg = crowding.area_average(r, people, area)
                     vals[str(d)] = {k2: (None if v is None else round(v, 3)) for k2, v in avg.items()}
                     vals[str(d)]['_amenities_with_people'] = int((demand > 0).sum())
@@ -434,6 +439,7 @@ def write(builder, areas, homes, ams, res, out_dir):
                         'crowding': 'estimate (people per home are estimated)'},
         'areas': table,
         'crowding': res.get('crowding'),
+        'scores': res.get('scores'),
     }
     with open(os.path.join(d, 'access.json'), 'w', encoding='utf-8') as f:
         json.dump(payload, f, separators=(',', ':'))

@@ -108,6 +108,9 @@ def test_crowding_end_to_end(tiny_city, tmp_path):
     assert data['crowding']['default'] == 'model'
     assert set(data['crowding']['kinds']) == {'playground', 'park'}
     assert data['areas']['BBB']['homes_reference'] == 3 and data['homes']['reference']['total'] == 16
+    sc = data['scores']['areas']['BBB']
+    assert set(sc['groups']) == {'local'} and sc['amenities']['playground']['scenarios'] == 4
+    assert sc['amenities']['playground']['score'] == round(pg['BBB'] / pg['_all'], 3)
 
 
 def test_unreadable_people_source_only_warns(tiny_city, tmp_path):

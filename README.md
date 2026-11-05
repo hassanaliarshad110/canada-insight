@@ -29,6 +29,10 @@ Straight-line distance; the city's inventory only. See the method for what this 
 **Crowding** (playgrounds and parks): how much is within reach for the people who share it, with residents and
 children taken from Calgary Data Desk's growth model or the 2021 Census (your choice on the site).
 
+**Amenity scores**: each amenity against Calgary's level, local and district summaries, worked out under every
+combination of distance, population count and weighting. A community is called a consistent gap only when it is
+below 0.80 under all of them.
+
 ## Documentation
 
 | | |
@@ -37,6 +41,7 @@ children taken from Calgary Data Desk's growth model or the 2021 Census (your ch
 | [Architecture](docs/architecture.md) | City-independent core, data model, data flow, technology choices |
 | [Method: access to everyday amenities](docs/methodology/access.md) | Formulas, thresholds, readings, limitations, checks |
 | [Method: crowding at playgrounds and parks](docs/methodology/crowding.md) | Two-step floating catchment, people estimates, limitations |
+| [Method: amenity scores and consistent gaps](docs/methodology/scores.md) | Scores against Calgary, ranges across assumptions |
 | [Data-source register](docs/data-sources.md) | Every dataset, its publisher, dates and filters |
 | [Data quality](docs/data-quality.md) | The checks, and the latest results |
 | [Adding a city](docs/city-onboarding.md) | Readiness assessment and configuration |

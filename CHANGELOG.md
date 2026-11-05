@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0 (5 November 2026)
+
+Added
+- Amenity scores against Calgary for all six amenities (crowding extended to transit stops, community centres,
+  recreation centres and libraries), local and district group scores, and an all-amenities score.
+- Each score worked out 4 or 8 ways (both distances, growth model and 2021 Census, two weightings), shown as a
+  range; "consistent gap" only where a community is below 0.80 in every way.
+- Site: "Where amenities fall behind, under every assumption" table, scores in each community profile, map "Score"
+  view. Tests: 36.
+
 ## 0.2.0 (5 November 2026)
 
 Added

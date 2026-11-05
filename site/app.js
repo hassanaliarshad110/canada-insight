@@ -24,7 +24,7 @@
 
   const S = { cities: [], city: null, data: null, areas: null, sources: null, quality: null, kind: null, th: 0,
               filter: 'all', sort: ['share', 1], selected: null, compare: [], q: '', showPts: false,
-              people: null, mode: 'near' };
+              people: null, mode: 'near', sGroup: 'overall', sFilter: 'all', sq: '' };
   let map, areaLayer, ptsLayer, layerByCode = {};
   const ptsCache = {};
 
@@ -110,10 +110,50 @@
   function crowdFmt(kind, v) {
     if (v == null) return '–';
     const c = crowd(kind);
-    return (v >= 10 ? Math.round(v) : v.toFixed(v >= 1 ? 1 : 2)) + (c.people === 'children' ? ' per 1,000 children' : ' ha per 1,000 residents');
+    return (v >= 10 ? Math.round(v) : v.toFixed(v >= 1 ? 1 : 2)) + ' ' + (c.unit || '').replace(/ within reach$/, '');
   }
   function crowdShort(kind, v) { return v == null ? '–' : (v >= 10 ? Math.round(v) : v.toFixed(v >= 1 ? 1 : 2)); }
-  function crowdUnitShort(kind) { const c = crowd(kind); return c ? (c.people === 'children' ? 'Playgrounds per 1,000 children' : 'Park ha per 1,000 residents') : ''; }
+  function crowdUnitShort(kind) { const c = crowd(kind); return c ? (c.short || c.unit) : ''; }
+  // ---------- scores ----------
+  const BAND_LABEL = { well_below: 'Well below Calgary', below: 'Below Calgary', around: 'Around Calgary', above: 'Above Calgary' };
+  const CONS = { consistent_gap: ['tag-cgap', 'Consistent gap'], depends: ['tag-dep', 'Depends on assumptions'], none: ['tag-none', 'No gap'] };
+  function sc2(v) { return v == null ? '–' : v.toFixed(2); }
+  function scoreCell(s) {
+    if (!s || s.score == null) return '<span class="dim">–</span>';
+    const max = 2.5, x = v => Math.min(Math.max(v, 0), max) / max * 84;
+    return `<span class="sc ${s.band || ''}" title="${BAND_LABEL[s.band] || ''}; range ${sc2(s.low)} to ${sc2(s.high)} across ${s.scenarios} ways">
+      <b>${sc2(s.score)}</b><span class="rng" aria-hidden="true"><i style="left:${x(s.low)}px;width:${Math.max(x(s.high) - x(s.low), 2)}px"></i><span class="one" style="left:${x(1)}px"></span><span class="mark" style="left:${x(s.score) - 1}px"></span></span>
+      <small>${sc2(s.low)} to ${sc2(s.high)}</small></span>`;
+  }
+  function renderScores() {
+    const sec = $('#scores'), sd = S.data.scores;
+    if (!sd) { sec.hidden = true; return; }
+    sec.hidden = false;
+    $$('#score-col button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.g === S.sGroup)));
+    $$('#score-filter button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === S.sFilter)));
+    const pick = r => S.sGroup === 'overall' ? r.overall : r.groups[S.sGroup];
+    const q = S.sq.trim().toLowerCase();
+    let rows = Object.entries(sd.areas).map(([code, r]) => ({ code, name: (S.data.areas[code] || {}).name || code, units: (S.data.areas[code] || {}).units, r, s: pick(r) }));
+    const counts = { consistent_gap: 0, depends: 0 };
+    rows.forEach(x => { if (x.s && counts[x.s.consistency] != null) counts[x.s.consistency]++; });
+    if (q) rows = rows.filter(x => x.name.toLowerCase().includes(q));
+    if (S.sFilter !== 'all') rows = rows.filter(x => x.s && x.s.consistency === S.sFilter);
+    rows.sort((a, b) => ((a.s && a.s.score != null) ? a.s.score : 9) - ((b.s && b.s.score != null) ? b.s.score : 9) || a.name.localeCompare(b.name));
+    const gname = { overall: 'all amenities', local: 'local amenities', district: 'district facilities' }[S.sGroup];
+    $('#score-count').textContent = `On ${gname}: ${counts.consistent_gap} communities have a consistent gap, ${counts.depends} more depend on the assumptions, out of ${Object.keys(sd.areas).length} scored. Sorted lowest first. Residents and children: ${S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : ''} for the score shown; the range covers both.`;
+    $('#stbl tbody').innerHTML = rows.length ? rows.map(x => {
+      const c = x.s && CONS[x.s.consistency];
+      return `<tr data-c="${esc(x.code)}" tabindex="0" class="${x.code === S.selected ? 'on' : ''}"><td>${esc(x.name)}${x.s && x.s.scenarios < x.s.scenarios_possible ? ' <span class="dim" title="No 2021 Census count, so fewer ways could be worked out">*</span>' : ''}</td>
+        <td class="n">${num(x.units)}</td><td class="n">${scoreCell(x.r.groups.local)}</td><td class="n">${scoreCell(x.r.groups.district)}</td><td class="n">${scoreCell(x.r.overall)}</td>
+        <td>${c ? `<span class="tag ${c[0]}">${c[1]}</span>` : '<span class="dim">–</span>'}</td></tr>`;
+    }).join('') : '<tr><td colspan="6">No community matches. Clear the search or choose All.</td></tr>';
+    $$('#stbl tr[data-c]').forEach(tr => {
+      const go = () => { select(tr.dataset.c); focusArea(tr.dataset.c); $('#map').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); };
+      tr.addEventListener('click', go);
+      tr.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+  }
+
   function renderPeople() {
     const box = $('#people'), cr = S.data.crowding;
     if (!cr) { box.hidden = true; return; }
@@ -221,7 +261,10 @@
   function renderLegend() {
     const mt = $('#mode-wrap');
     mt.hidden = !crowd(S.kind);
-    $$('#mode-seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === (crowd(S.kind) ? S.mode : 'near'))));
+    $$('#score-col button').forEach(b => b.addEventListener('click', () => { S.sGroup = b.dataset.g; renderScores(); }));
+  $$('#score-filter button').forEach(b => b.addEventListener('click', () => { S.sFilter = b.dataset.f; renderScores(); }));
+  $('#q-score').addEventListener('input', e => { S.sq = e.target.value; renderScores(); });
+  $$('#mode-seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === (crowd(S.kind) ? S.mode : 'near'))));
     if (useCrowd()) {
       $('#legend').innerHTML = `<div>${crowdUnitShort(S.kind)} within ${metres(th()[S.th])}, against Calgary</div><div class="sw">${colors().map(c => `<span style="background:${c}"></span>`).join('')}</div>
         <div class="ticks">${['', '½', '¾', 'same', '1½×', '2×', ''].map(x => `<span>${x}</span>`).join('')}</div>
@@ -263,6 +306,9 @@
     if (!code) { box.innerHTML = '<p class="hint">Select a community on the map or in the table to see every amenity for it, and add up to three to compare.</p>'; return; }
     if (!a) { box.innerHTML = `<h3>${esc(nameOf(code))}</h3><p class="sub">No homes on the property roll, so access is not measured here.</p>`; return; }
     const newShare = a.units ? a.units_new / a.units : 0;
+    const scs = S.data.scores && S.data.scores.areas[code];
+    const block = scs ? `<div class="p-scores">${[['local', 'Local amenities', scs.groups.local], ['district', 'District facilities', scs.groups.district], ['overall', 'All amenities', scs.overall]].map(([g, l, s]) =>
+      `<div><span class="l">${l}</span><span class="v">${sc2(s && s.score)}</span><br><span class="r">${s && s.low != null ? sc2(s.low) + ' to ' + sc2(s.high) : ''}</span>${s && CONS[s.consistency] ? `<br><span class="tag ${CONS[s.consistency][0]}">${CONS[s.consistency][1]}</span>` : ''}</div>`).join('')}</div>` : '';
     const rows = Object.entries(S.data.kinds).map(([k, kd]) => {
       const st = a.access[k], [p, s] = kd.thresholds_m, [cls, lab] = STATUS[st.status];
       const cityv = S.data.city_access[k].share_primary;
@@ -274,12 +320,13 @@
           <span class="k">Built since ${S.data.growth_year}, within ${metres(p)}</span><span>${st.share_new_primary == null ? 'none built' : pct(st.share_new_primary)}</span>
           <span class="k">Median distance</span><span>${st.median_m == null ? (st.median_beyond_cap ? 'over ' + metres(s) : '–') : metres(st.median_m)}</span>
           ${crowd(k) && S.people ? `<span class="k">${crowdUnitShort(k)} within ${metres(p)} <span class="kind kind-estimate">Estimate</span></span><span>${crowdShort(k, crowdVal(k, code, 0))} <span class="k">(city ${crowdShort(k, crowdVal(k, '_all', 0))})</span></span>` : ''}
+          ${scs && scs.amenities[k] && scs.amenities[k].score != null ? `<span class="k">Score against Calgary</span><span>${sc2(scs.amenities[k].score)} <span class="k">(${sc2(scs.amenities[k].low)} to ${sc2(scs.amenities[k].high)})</span>${scs.amenities[k].consistency === 'consistent_gap' ? ' <span class="tag tag-cgap">Consistent gap</span>' : ''}</span>` : ''}
         </div></div>`;
     }).join('');
     const inCmp = S.compare.includes(code);
     box.innerHTML = `<h3>${esc(a.name)}</h3>
       <p class="sub">${num(a.units)} homes on the property roll, ${Math.round(newShare * 100)}% built since ${S.data.growth_year} <span class="kind kind-official">Official</span>${a.homes_reference != null ? `<br><span title="${esc((S.data.homes.reference || {}).note || '')}">Calgary Data Desk counts ${num(a.homes_reference)} lived in (from a year after they're built)</span>` : ''}${(a.attrs && a.attrs.sector) ? '<br>' + esc(a.attrs.sector[0] + a.attrs.sector.slice(1).toLowerCase()) + ' sector' : ''}</p>
-      ${rows}
+      ${block}${rows}
       <div class="actions"><button class="btn" id="cmp-btn" ${!inCmp && S.compare.length >= 3 ? 'disabled' : ''}>${inCmp ? 'Remove from comparison' : 'Add to comparison'}</button>
       <button class="btn" id="zoom-btn">Zoom to it</button></div>`;
     $('#cmp-btn').addEventListener('click', () => {
@@ -370,7 +417,7 @@
   }
 
   function renderAll() {
-    renderHero(); renderLegend(); restyle(); renderTable(); renderProfile(); renderCompare(); renderPoints(); writeHash();
+    renderHero(); renderLegend(); restyle(); renderTable(); renderProfile(); renderCompare(); renderPoints(); renderScores(); writeHash();
     $$('#th0, #th1').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.th === S.th)));
   }
 

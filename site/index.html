@@ -56,7 +56,7 @@
           <button type="button" data-th="1" aria-pressed="false" id="th1">800 m</button>
         </div>
         <div class="seg" role="group" aria-label="Map shows" id="mode-wrap" hidden>
-          <span id="mode-seg" style="display:contents"><button type="button" data-m="near" aria-pressed="true">Near</button><button type="button" data-m="crowding" aria-pressed="false">Crowding</button></span>
+          <span id="mode-seg" style="display:contents"><button type="button" data-m="near" aria-pressed="true">Near</button><button type="button" data-m="crowding" aria-pressed="false">Score</button></span>
         </div>
         <label class="toggle"><input type="checkbox" id="show-pts"> Show locations</label>
       </div>
@@ -103,6 +103,34 @@
     </div>
   </section>
 
+  <section class="scores" id="scores" aria-labelledby="scores-h" hidden>
+    <h2 id="scores-h">Where amenities fall behind, under every assumption</h2>
+    <p class="lede">Each score is a community's amenities within reach, per person who shares them, against Calgary's (1.00 = Calgary). It is worked out eight ways: both walking distances, both ways of counting people, and two ways of weighting local amenities against district facilities. A <strong>consistent gap</strong> is below 0.80 in every one of them.</p>
+    <div class="table-head">
+      <label class="search"><span class="sr">Find a community</span><input id="q-score" type="search" placeholder="Find a community"></label>
+      <div class="seg" role="group" aria-label="Score shown" id="score-col">
+        <button type="button" data-g="overall" aria-pressed="true">All amenities</button>
+        <button type="button" data-g="local" aria-pressed="false">Local</button>
+        <button type="button" data-g="district" aria-pressed="false">District</button>
+      </div>
+      <div class="seg" role="group" aria-label="Show" id="score-filter">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="consistent_gap" aria-pressed="false">Consistent gaps</button>
+        <button type="button" data-f="depends" aria-pressed="false">Depends on assumptions</button>
+      </div>
+    </div>
+    <p class="fine" id="score-count"></p>
+    <div class="table-wrap">
+      <table id="stbl">
+        <caption class="sr">Amenity scores against Calgary, by community</caption>
+        <thead><tr><th scope="col">Community</th><th scope="col" class="n">Homes</th>
+          <th scope="col" class="n">Local amenities</th><th scope="col" class="n">District facilities</th><th scope="col" class="n">All amenities</th>
+          <th scope="col">Under every assumption</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="about" id="method" aria-labelledby="method-h">
     <h2 id="method-h">How this is measured</h2>
     <div class="cols">
@@ -119,7 +147,9 @@
         </dl>
         <h3>Crowding</h3>
         <p>Nearness can't tell a playground shared by 80 children from one shared by 400. For playgrounds and parks, each one's children (or residents) within the walking distance are added up, its share is divided among them, and each home adds up the shares of everything within reach: playgrounds per 1,000 children within reach, and park hectares per 1,000 residents within reach. Children and residents come from Calgary Data Desk's estimates, spread evenly over each community's homes, under the growth model or the 2021 Census, whichever you choose. These are estimates.</p>
-        <p>There is no overall score: each amenity stands on its own. Straight-line distance is shorter than the walk itself, so these figures are the most generous reading.</p>
+        <h3>Scores</h3>
+        <p>Each amenity's score is the community's crowding figure divided by Calgary's. Local amenities (playgrounds, parks, transit stops) and district facilities (community centres, recreation centres, libraries) are averaged separately, each amenity capped at 2.00 so a surplus can't hide a shortage. The all-amenities score weights everything equally, or local amenities at two thirds. Bands: under 0.50 well below Calgary, 0.50 to 0.80 below, 0.80 to 1.25 around, over 1.25 above.</p>
+        <p>No single figure is treated as the answer: the range across all eight ways of working it out is shown, and only a gap that holds in every one is called a consistent gap. Straight-line distance is shorter than the walk itself, so these figures are the most generous reading.</p>
       </div>
     </div>
     <div class="kinds-legend">

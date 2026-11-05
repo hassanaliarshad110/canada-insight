@@ -77,9 +77,9 @@ def pairs_polygons(homes_xy, polygons_xy, d, spacing=20.0, inside=None, inside_c
     return np.concatenate(J), np.concatenate(I)
 
 
-def reach(pairs, people, supply, n_homes):
+def reach(pairs, people, supply, n_homes, per=1000.0):
     """Two-step floating catchment. pairs: (amenity idx, home idx); people: per home; supply: per amenity.
-    Returns reach per home (supply per 1,000 people within reach) and the demand on each amenity."""
+    Returns reach per home (supply per `per` people within reach, default 1,000) and the demand on each amenity."""
     j, i = pairs
     people = np.asarray(people, dtype=float)
     supply = np.asarray(supply, dtype=float)
@@ -88,7 +88,7 @@ def reach(pairs, people, supply, n_homes):
     ratio = np.divide(supply, demand, out=np.zeros_like(supply), where=demand > 0)
     r = np.zeros(n_homes)
     np.add.at(r, i, ratio[j])
-    return r * 1000.0, demand
+    return r * per, demand
 
 
 def area_average(values, people, groups):
