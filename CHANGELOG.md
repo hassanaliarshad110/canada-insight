@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 (5 November 2026)
+
+Added
+- Crowding at playgrounds and parks (two-step floating catchment): playgrounds per 1,000 children within reach and
+  park hectares per 1,000 residents within reach, at both walking distances. Labelled as an estimate.
+- Residents and children read from Calgary Data Desk's published estimates, with a switch between the growth model
+  and the 2021 Census, so both sites show the same people figures.
+- Each community shows Calgary Data Desk's "homes lived in" beside Canada Insight's "homes on the property roll".
+- Map toggle between "Near" and "Crowding"; crowding column in the table and comparison.
+- Tests: 32.
+
 ## 0.1.0 (5 November 2026)
 
 First release, built after an audit of Calgary Data Desk (`docs/audit-calgary-data-desk-2026-11.md`). Calgary Data

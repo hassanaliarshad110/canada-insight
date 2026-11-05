@@ -17,7 +17,7 @@ from datetime import date, datetime, timezone
 import numpy as np
 
 from . import __version__, config, geo, quality
-from .indicators import access
+from .indicators import access, crowding
 from .model import Source
 from .socrata import SocrataClient, rows_hash
 
@@ -256,8 +256,74 @@ class Builder:
             pts_ll = [self.proj.lonlat(x, y) for x, y in xy] if xy else \
                 [self.proj.lonlat(*mp[0][0][0]) for mp in polys if mp and mp[0] and mp[0][0]]
             self.checks.append(quality.outside_bbox(s.id, pts_ll, self.extent))
-            out[key] = {'xy': xy, 'polys': polys, 'features': feats}
+            supply = [1.0] * len(xy) if a['geometry'] == 'point' else [geo.area(p) / 10_000 for p in polys]
+            out[key] = {'xy': xy, 'polys': polys, 'features': feats, 'supply': supply}
         return out
+
+    # ---- people (estimates, for crowding) ---------------------------------------------------------------------------
+    def people(self, area_units):
+        """{option: {'by_area': {code: {'residents', 'children'}}, ...}} from each source in the config's `people`
+        section. A source that cannot be read is skipped with a warning: crowding is then left out for that option,
+        and the distance figures are unaffected."""
+        pc = self.cfg.get('people')
+        if not pc:
+            return {}
+        out = {}
+        for opt, o in pc['options'].items():
+            key = f'people.{opt}'
+            s = Source(id=f"{self.cfg['id']}.{key}", title=o['title'], publisher=o['publisher'], url=o.get('page', o['url']),
+                       api=o['url'], licence=o.get('licence', ''), coverage='whole city', period=o.get('period', ''),
+                       unit=f"one {self.cfg['areas']['level']}", limitations=list(o.get('limitations') or []),
+                       fetched_at=_now(), transformations=[
+                           'each area\'s residents and children spread evenly over its dwelling units',
+                           'areas with fewer than %s residents are not in the source and get none' % o.get('min_residents', 100)])
+            try:
+                raw = self._fetch_json(o['url'])
+            except Exception as e:
+                self.checks.append(quality.QualityCheck(s.id, 'read', 'warn', f'could not read: {e}; crowding left out'))
+                continue
+            node = raw
+            for k in pc['path']:
+                node = node[k]
+            rows = node if isinstance(node, list) else list(node.values())
+            s.rows = len(rows)
+            s.sha256 = rows_hash(rows)
+            s.publisher_updated = (str(raw.get(pc.get('updated_field', 'built_at')) or '')[:10]) or None
+            by = {}
+            for r in rows:
+                code = r.get(pc['code_field'])
+                if code:
+                    by[code] = {'residents': float(r.get(pc['residents_field']) or 0),
+                                'children': float(r.get(pc['children_field']) or 0)}
+            covered = sum(u for c, u in area_units.items() if c in by)
+            total = sum(area_units.values()) or 1
+            share = covered / total
+            self.checks.append(quality.QualityCheck(
+                s.id, 'coverage', 'warn' if share < 0.97 else 'pass',
+                f'{share:.1%} of dwelling units are in areas with an estimate', round(share, 4), 0.97))
+            self.checks.append(quality.stale(s.id, s.publisher_updated, o.get('max_age_days', 7), self.today))
+            self.sources[key] = s
+            out[opt] = {'by_area': by, 'label': o['label'], 'about': o.get('about', '')}
+            ref = pc.get('homes_reference')
+            if ref and opt == pc.get('default'):
+                try:
+                    node = raw
+                    for k in ref['path']:
+                        node = node[k]
+                    self.homes_ref = {'label': ref['label'], 'note': ref.get('note', ''),
+                                      'by_area': {r[ref['code_field']]: r.get(ref['field']) for r in node
+                                                  if r.get(ref['code_field']) and r.get(ref['field']) is not None}}
+                except (KeyError, TypeError) as e:
+                    self.checks.append(quality.QualityCheck(s.id, 'homes_reference', 'warn', f'not found: {e}'))
+        return out
+
+    def _fetch_json(self, url):
+        if hasattr(self.client, 'fetch_json'):
+            return self.client.fetch_json(url)
+        import urllib.request
+        req = urllib.request.Request(url, headers={'User-Agent': 'canada-insight/0.1'})
+        with urllib.request.urlopen(req, timeout=300) as r:
+            return json.loads(r.read().decode('utf-8'))
 
     # ---- build -------------------------------------------------------------------------------------------------
     def run(self):
@@ -279,7 +345,52 @@ class Builder:
                                                               inside=lambda x, y, loc=loc: loc.find(x, y) is not None)
         res = access.compute(homes, distances, {k: a for k, a in cfg['amenities'].items()},
                              cfg['growth_year'], self.today.year, cfg.get('rules'))
+        res['crowding'] = self.crowding(homes, ams, distances)
         return areas, homes, ams, res
+
+    def crowding(self, homes, ams, distances):
+        """Two-step floating catchment for amenities with a `crowding` section, under each people option."""
+        cfg = self.cfg
+        units = np.asarray(homes['weight'], dtype=float)
+        area = np.asarray(homes['area'], dtype=object)
+        area_units = {}
+        for a_, u in zip(homes['area'], homes['weight']):
+            if a_:
+                area_units[a_] = area_units.get(a_, 0) + u
+        opts = self.people(area_units)
+        if not opts:
+            return None
+        out = {'options': {k: {'label': v['label'], 'about': v['about']} for k, v in opts.items()},
+               'default': cfg['people'].get('default'), 'kinds': {}}
+        for key, a in cfg['amenities'].items():
+            cr = a.get('crowding')
+            if not cr:
+                continue
+            am = ams[key]
+            pairs_by_d = []
+            for d in a['thresholds_m']:
+                if a['geometry'] == 'point':
+                    pairs_by_d.append(crowding.pairs_points(homes['xy'], am['xy'], d))
+                else:
+                    inside_c = np.where(distances[key] == 0)[0]
+                    pairs_by_d.append(crowding.pairs_polygons(
+                        homes['xy'], am['polys'], d,
+                        inside=lambda k, x, y, polys=am['polys']: geo.point_in_multipolygon(x, y, polys[k]),
+                        inside_candidates=inside_c))
+            res_k = {'people': cr['people'], 'unit': cr['unit'], 'by_option': {}}
+            for opt, o in opts.items():
+                per_unit = {c: (v[cr['people']] / area_units[c]) for c, v in o['by_area'].items()
+                            if area_units.get(c)}
+                people = units * np.asarray([per_unit.get(c, 0.0) for c in area], dtype=float)
+                vals = {}
+                for di, d in enumerate(a['thresholds_m']):
+                    r, demand = crowding.reach(pairs_by_d[di], people, am['supply'], len(units))
+                    avg = crowding.area_average(r, people, area)
+                    vals[str(d)] = {k2: (None if v is None else round(v, 3)) for k2, v in avg.items()}
+                    vals[str(d)]['_amenities_with_people'] = int((demand > 0).sum())
+                res_k['by_option'][opt] = vals
+            out['kinds'][key] = res_k
+        return out
 
 
 def _feature_collection(features):
@@ -302,6 +413,9 @@ def write(builder, areas, homes, ams, res, out_dir):
         table[code] = {'name': a['name'], 'attrs': a.get('attrs', {}), 'units': any_k['units'],
                        'records': any_k['records'], 'units_new': any_k['units_new'],
                        'units_recent': any_k['units_recent'], 'access': res['areas'][code]}
+        href = getattr(builder, 'homes_ref', None)
+        if href and href['by_area'].get(code) is not None:
+            table[code]['homes_reference'] = href['by_area'][code]
     payload = {
         'city': cfg['id'], 'name': cfg['name'], 'built_at': built_at, 'version': __version__,
         'level': cfg['areas']['level'], 'terms': cfg.get('terms', {}), 'growth_year': cfg['growth_year'],
@@ -310,11 +424,16 @@ def write(builder, areas, homes, ams, res, out_dir):
         'homes': {'records': len(homes['id']), 'units': round(float(sum(homes['weight'])), 1),
                   'units_estimated': est_units, 'unit': cfg['homes'].get('unit'),
                   'not_in_an_area': sum(1 for a in homes['area'] if not a or a not in areas),
-                  'rental_weights': getattr(builder, 'weights_note', None)},
+                  'rental_weights': getattr(builder, 'weights_note', None),
+                  'reference': ({'label': builder.homes_ref['label'], 'note': builder.homes_ref['note'],
+                                 'total': round(sum(v for v in builder.homes_ref['by_area'].values() if v))}
+                                if getattr(builder, 'homes_ref', None) else None)},
         'value_kinds': {'units': 'official (one per roll record) except rental buildings, whose units are from building '
                                  'permits (official) or estimated from assessed value (estimate)',
-                        'share_*': 'calculated', 'status': 'calculated (a stated rule, not a score)'},
+                        'share_*': 'calculated', 'status': 'calculated (a stated rule, not a score)',
+                        'crowding': 'estimate (people per home are estimated)'},
         'areas': table,
+        'crowding': res.get('crowding'),
     }
     with open(os.path.join(d, 'access.json'), 'w', encoding='utf-8') as f:
         json.dump(payload, f, separators=(',', ':'))

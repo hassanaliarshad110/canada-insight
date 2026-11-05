@@ -73,3 +73,47 @@ def test_large_drop_in_rows_stops_the_build(tiny_city, tmp_path):
     b = pipeline.Builder(cfg, client=client, today=date(2026, 11, 5), previous={'homes': 1000})
     with pytest.raises(pipeline.BuildFailed):
         b.run()
+
+
+def with_people(cfg, client, a_children=40, b_children=100, missing_census=False):
+    client.tables['https://people.test/model'] = {'built_at': '2026-11-05', 'amenity_gap': {'by_comm': [
+        {'code': 'AAA', 'residents': 140, 'children_0_14': a_children},
+        {'code': 'BBB', 'residents': 50, 'children_0_14': b_children}]},
+        'communities': [{'code': 'AAA', 'homes_now': 13}, {'code': 'BBB', 'homes_now': 3}]}
+    cfg['people'] = {'path': ['amenity_gap', 'by_comm'], 'code_field': 'code', 'residents_field': 'residents',
+                     'children_field': 'children_0_14', 'default': 'model', 'options': {
+                         'model': {'label': 'Growth model', 'title': 't', 'publisher': 'p', 'url': 'https://people.test/model'},
+                         'census2021': {'label': '2021 Census', 'title': 't', 'publisher': 'p',
+                                        'url': 'https://people.test/missing' if missing_census else 'https://people.test/model'}}}
+    cfg['people']['homes_reference'] = {'path': ['communities'], 'code_field': 'code', 'field': 'homes_now',
+                                        'label': 'Homes lived in (reference)'}
+    cfg['amenities']['playground']['crowding'] = {'people': 'children', 'unit': 'playgrounds per 1,000 children'}
+    cfg['amenities']['park']['crowding'] = {'people': 'residents', 'unit': 'park ha per 1,000 residents'}
+
+
+def test_crowding_end_to_end(tiny_city, tmp_path):
+    """Community A: 14 units, 40 children (2.857 per unit). B: 5 units, 100 children (20 per unit).
+    At 400 m the playground reaches A's homes at 700 and 900 m (2 units, 5.714 children) and B's at 1,100 and 1,300 m
+    (2 units, 40 children): 45.714 children in all, so each reaching child's home gets 1,000 / 45.714 = 21.875."""
+    cfg, client = tiny_city
+    with_people(cfg, client)
+    _, data, _ = run(cfg, client, tmp_path)
+    pg = data['crowding']['kinds']['playground']['by_option']['model']['400']
+    reach = 1000 / (2 * 40 / 14 + 2 * 20)
+    assert abs(pg['AAA'] - round(reach * (2 * 40 / 14) / 40, 3)) < 1e-3       # children-weighted over all of A
+    assert abs(pg['BBB'] - round(reach * 40 / 100, 3)) < 1e-3
+    # conservation: one playground, all of it shared out among the children within reach
+    total_children = 140
+    assert abs(pg['_all'] * total_children / 1000 - 1.0) < 1e-3
+    assert data['crowding']['default'] == 'model'
+    assert set(data['crowding']['kinds']) == {'playground', 'park'}
+    assert data['areas']['BBB']['homes_reference'] == 3 and data['homes']['reference']['total'] == 16
+
+
+def test_unreadable_people_source_only_warns(tiny_city, tmp_path):
+    cfg, client = tiny_city
+    with_people(cfg, client, missing_census=True)
+    b, data, out = run(cfg, client, tmp_path)
+    assert set(data['crowding']['options']) == {'model'}
+    q = json.load(open(os.path.join(out, 'quality.json')))
+    assert any(c['source'] == 'tiny.people.census2021' and c['status'] == 'warn' for c in q['checks'])

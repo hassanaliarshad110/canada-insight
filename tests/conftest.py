@@ -45,6 +45,11 @@ class FakeClient:
     def rows(self, dataset, select=None, where=None, order=':id'):
         return [r for p in self.pages(dataset, select, where, order) for r in p]
 
+    def fetch_json(self, url):
+        if url not in self.tables:
+            raise OSError('not found')
+        return self.tables[url]
+
     def metadata(self, dataset):
         return self.meta.get(dataset, {'title': dataset, 'publisher_updated': '2026-11-01', 'licence': 'OGL',
                                        'page': f'https://example.test/d/{dataset}'})

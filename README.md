@@ -26,6 +26,9 @@ Calgary, 5 November 2026 (share of homes within the shorter distance, homes buil
 
 Straight-line distance; the city's inventory only. See the method for what this does and does not show.
 
+**Crowding** (playgrounds and parks): how much is within reach for the people who share it, with residents and
+children taken from Calgary Data Desk's growth model or the 2021 Census (your choice on the site).
+
 ## Documentation
 
 | | |
@@ -33,6 +36,7 @@ Straight-line distance; the city's inventory only. See the method for what this 
 | [Audit of Calgary Data Desk](docs/audit-calgary-data-desk-2026-11.md) | What the existing product does, what is sound and what could mislead, with recalculations |
 | [Architecture](docs/architecture.md) | City-independent core, data model, data flow, technology choices |
 | [Method: access to everyday amenities](docs/methodology/access.md) | Formulas, thresholds, readings, limitations, checks |
+| [Method: crowding at playgrounds and parks](docs/methodology/crowding.md) | Two-step floating catchment, people estimates, limitations |
 | [Data-source register](docs/data-sources.md) | Every dataset, its publisher, dates and filters |
 | [Data quality](docs/data-quality.md) | The checks, and the latest results |
 | [Adding a city](docs/city-onboarding.md) | Readiness assessment and configuration |

@@ -4,7 +4,10 @@
   "province": "Alberta",
   "status": "pilot",
   "timezone": "America/Edmonton",
-  "centre": {"lat": 51.045, "lon": -114.06},
+  "centre": {
+    "lat": 51.045,
+    "lon": -114.06
+  },
   "portal": {
     "type": "socrata",
     "base_url": "https://data.calgary.ca",
@@ -14,7 +17,11 @@
   },
   "growth_year": 2021,
   "growth_year_note": "Homes built in or after 2021, the year of the last published Census (counted 11 May 2021). The 2026 Census population counts are scheduled for 10 February 2027.",
-  "terms": {"area": "community", "areas": "communities", "ward": "ward"},
+  "terms": {
+    "area": "community",
+    "areas": "communities",
+    "ward": "ward"
+  },
   "areas": {
     "level": "community",
     "dataset": "surr-xmvs",
@@ -23,8 +30,14 @@
     "name_field": "name",
     "name_case": "title",
     "geometry_field": "multipolygon",
-    "extra_fields": ["class", "sector"],
-    "report_where": {"field": "class", "equals": "Residential"},
+    "extra_fields": [
+      "class",
+      "sector"
+    ],
+    "report_where": {
+      "field": "class",
+      "equals": "Residential"
+    },
     "simplify_m": 15
   },
   "homes": {
@@ -47,6 +60,57 @@
       "note": "Purpose-built rental buildings are one record each on the roll. Their units are taken from matching building permits (658 buildings, 43,677 units) or estimated from assessed value (1,569 buildings, 32,163 units). Records missing from the residential filter are read by roll number."
     }
   },
+  "people": {
+    "path": [
+      "amenity_gap",
+      "by_comm"
+    ],
+    "code_field": "code",
+    "residents_field": "residents",
+    "children_field": "children_0_14",
+    "updated_field": "built_at",
+    "default": "model",
+    "options": {
+      "model": {
+        "label": "Growth model",
+        "title": "Residents and children by community: growth model (Calgary Data Desk)",
+        "publisher": "Calgary Data Desk (Hassan Ali), from City of Calgary open data and the 2021 Census",
+        "url": "https://hassanaliarshad110.github.io/calgary-data-desk/data/model/w0.json",
+        "page": "https://hassanaliarshad110.github.io/calgary-data-desk/",
+        "period": "today, estimated daily",
+        "about": "2021 Census for each community, grown with the homes built since on the City's property roll. Children: 2021 Census children plus children for residents added since, at the share seen in communities new at the 2021 Census.",
+        "limitations": [
+          "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
+          "Communities with fewer than 100 residents are not included and get no residents or children."
+        ],
+        "max_age_days": 7
+      },
+      "census2021": {
+        "label": "2021 Census",
+        "title": "Residents and children by community: 2021 Census (via Calgary Data Desk)",
+        "publisher": "Statistics Canada 2021 Census, as published by the City of Calgary",
+        "url": "https://hassanaliarshad110.github.io/calgary-data-desk/data/census2021/w0.json",
+        "page": "https://data.calgary.ca/d/f9wk-wej9",
+        "period": "11 May 2021",
+        "about": "Each community's 2021 Census count, unchanged. Communities built since 2021 have no count, so they carry no residents or children and get no crowding figure.",
+        "limitations": [
+          "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
+          "Communities with fewer than 100 residents are not included and get no residents or children.",
+          "No growth since May 2021: fast-growing communities are undercounted."
+        ],
+        "max_age_days": 7
+      }
+    },
+    "homes_reference": {
+      "path": [
+        "communities"
+      ],
+      "code_field": "code",
+      "field": "homes_now",
+      "label": "Homes lived in (Calgary Data Desk)",
+      "note": "Calgary Data Desk counts a home as lived in one year after it is built; Canada Insight counts every home on the current property roll, including homes built this year and last. Both use the same roll and rental units."
+    }
+  },
   "amenities": {
     "playground": {
       "label": "Playground",
@@ -58,9 +122,18 @@
       "geometry": "point",
       "geometry_field": "point",
       "id_field": "asset_cd",
-      "thresholds_m": [400, 800],
+      "thresholds_m": [
+        400,
+        800
+      ],
       "threshold_basis": "Platform choice: 400 m (about a five-minute walk) and 800 m (about ten minutes), common neighbourhood planning distances.",
-      "limitations": ["City-maintained play structures only; school, developer and condominium playgrounds that are not in the City's inventory are not counted."]
+      "limitations": [
+        "City-maintained play structures only; school, developer and condominium playgrounds that are not in the City's inventory are not counted."
+      ],
+      "crowding": {
+        "people": "children",
+        "unit": "playgrounds per 1,000 children within reach"
+      }
     },
     "park": {
       "label": "Public park",
@@ -72,9 +145,19 @@
       "geometry": "polygon",
       "geometry_field": "the_geom",
       "id_field": "asset_cd",
-      "thresholds_m": [400, 800],
+      "thresholds_m": [
+        400,
+        800
+      ],
       "threshold_basis": "Platform choice: distance to the park's edge, 400 m and 800 m.",
-      "limitations": ["Every City park site of any size counts, including small sub-neighbourhood parks and linear parks along pathways.", "Parks in new communities may still be held by the developer and missing from the City's inventory."]
+      "limitations": [
+        "Every City park site of any size counts, including small sub-neighbourhood parks and linear parks along pathways.",
+        "Parks in new communities may still be held by the developer and missing from the City's inventory."
+      ],
+      "crowding": {
+        "people": "residents",
+        "unit": "park hectares per 1,000 residents within reach"
+      }
     },
     "transit_stop": {
       "label": "Transit stop",
@@ -86,10 +169,15 @@
       "geometry": "point",
       "geometry_field": "point",
       "id_field": "teleride_number",
-      "thresholds_m": [400, 800],
+      "thresholds_m": [
+        400,
+        800
+      ],
       "threshold_basis": "Calgary Transit Service Guidelines (May 2025) measure local coverage as residents within 400 metres of transit service.",
       "threshold_url": "https://transit-prd.calgary.ca/content/dam/transit/plans---projects/Calgary%20Transit%20Service%20Guidelines%20May%202025.pdf",
-      "limitations": ["A stop is not a service level: how often buses come is not measured here (planned: the GTFS timetable)."]
+      "limitations": [
+        "A stop is not a service level: how often buses come is not measured here (planned: the GTFS timetable)."
+      ]
     },
     "community_centre": {
       "label": "Community centre",
@@ -101,9 +189,14 @@
       "geometry": "point",
       "geometry_field": "point",
       "id_field": "name",
-      "thresholds_m": [800, 1600],
+      "thresholds_m": [
+        800,
+        1600
+      ],
       "threshold_basis": "Platform choice: 800 m and 1.6 km.",
-      "limitations": ["Community association halls and centres as listed by the City; opening hours and programs are not measured."]
+      "limitations": [
+        "Community association halls and centres as listed by the City; opening hours and programs are not measured."
+      ]
     },
     "rec_centre": {
       "label": "Indoor recreation centre",
@@ -115,9 +208,14 @@
       "geometry": "point",
       "geometry_field": "point",
       "id_field": "complex_name",
-      "thresholds_m": [2000, 5000],
+      "thresholds_m": [
+        2000,
+        5000
+      ],
       "threshold_basis": "Platform choice: 2 km and 5 km for facilities that serve several communities.",
-      "limitations": ["Leisure centres, aquatic and fitness centres and fieldhouses, municipal and not-for-profit. Arenas, outdoor pools, golf courses and other single-purpose sites are left out. Capacity and opening hours are not measured."]
+      "limitations": [
+        "Leisure centres, aquatic and fitness centres and fieldhouses, municipal and not-for-profit. Arenas, outdoor pools, golf courses and other single-purpose sites are left out. Capacity and opening hours are not measured."
+      ]
     },
     "library": {
       "label": "Public library",
@@ -129,14 +227,29 @@
       "geometry": "point",
       "geometry_field": "point",
       "id_field": "name",
-      "thresholds_m": [2000, 5000],
+      "thresholds_m": [
+        2000,
+        5000
+      ],
       "threshold_basis": "Platform choice: 2 km and 5 km.",
-      "limitations": ["Library branches as listed by the City; hours and size are not measured."]
+      "limitations": [
+        "Library branches as listed by the City; hours and size are not measured."
+      ]
     }
   },
-  "rules": {"gap_share": 0.5, "min_units": 100, "recent_years": 5, "recent_share": 0.25},
+  "rules": {
+    "gap_share": 0.5,
+    "min_units": 100,
+    "recent_years": 5,
+    "recent_share": 0.25
+  },
   "quality": {
-    "max_age_days": {"default": 45, "4bsw-nn7w": 400, "surr-xmvs": 400, "muzh-c9qc": 120},
+    "max_age_days": {
+      "default": 45,
+      "4bsw-nn7w": 400,
+      "surr-xmvs": 400,
+      "muzh-c9qc": 120
+    },
     "extent_margin_deg": 0.05
   },
   "readiness": {

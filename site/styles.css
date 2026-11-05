@@ -181,3 +181,11 @@ table#tbl, table#qtbl { width: 100%; border-collapse: collapse; font-size: .95re
   #tbl .hide-sm { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .rings .arc0, .rings .arc1 { transition: none; } }
+
+.people { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 14px; }
+.people-l { color: var(--muted); font-size: .92rem; }
+.people .fine { margin: 0; flex: 1 1 320px; }
+#mode-wrap[hidden], .people[hidden] { display: none; }
+#mode-seg button { border: 0; background: transparent; padding: 6px 14px; cursor: pointer; font-weight: 500; color: var(--muted); }
+#mode-seg button + button { border-left: 1.5px solid var(--rule); }
+#mode-seg button[aria-pressed="true"] { background: var(--teal-soft); color: var(--ink); font-weight: 700; }

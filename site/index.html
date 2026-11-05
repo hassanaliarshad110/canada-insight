@@ -55,8 +55,16 @@
           <button type="button" data-th="0" aria-pressed="true" id="th0">400 m</button>
           <button type="button" data-th="1" aria-pressed="false" id="th1">800 m</button>
         </div>
+        <div class="seg" role="group" aria-label="Map shows" id="mode-wrap" hidden>
+          <span id="mode-seg" style="display:contents"><button type="button" data-m="near" aria-pressed="true">Near</button><button type="button" data-m="crowding" aria-pressed="false">Crowding</button></span>
+        </div>
         <label class="toggle"><input type="checkbox" id="show-pts"> Show locations</label>
       </div>
+    </div>
+    <div class="people" id="people" hidden>
+      <span class="people-l">Residents and children counted with</span>
+      <div class="seg" role="group" aria-label="Residents and children counted with" id="people-seg"></div>
+      <span class="fine" id="people-about"></span>
     </div>
     <div class="explore-body">
       <div class="map-wrap">
@@ -83,10 +91,11 @@
         <caption class="sr">Share of homes within walking distance, by community</caption>
         <thead><tr>
           <th scope="col"><button data-sort="name">Community</button></th>
-          <th scope="col" class="n"><button data-sort="units">Homes</button></th>
+          <th scope="col" class="n"><button data-sort="units">Homes on the roll</button></th>
           <th scope="col" class="n"><button data-sort="share">Within distance</button></th>
           <th scope="col" class="n"><button data-sort="new">Homes built since <span class="gy">2021</span></button></th>
           <th scope="col" class="n"><button data-sort="median">Median distance</button></th>
+          <th scope="col" class="n crowd-col"><button data-sort="crowd">Within reach</button></th>
           <th scope="col"><button data-sort="status">Reading</button></th>
         </tr></thead>
         <tbody></tbody>
@@ -108,6 +117,8 @@
           <dt><span class="tag tag-check">Check inventory</span></dt><dd>A measured gap where a quarter or more of homes are less than five years old. Developer-built parks and playgrounds may not be in the city's inventory yet; confirm on the ground before treating it as real.</dd>
           <dt><span class="tag tag-ok">Most homes within reach</span></dt><dd>Half or more of homes are within the walking distance.</dd>
         </dl>
+        <h3>Crowding</h3>
+        <p>Nearness can't tell a playground shared by 80 children from one shared by 400. For playgrounds and parks, each one's children (or residents) within the walking distance are added up, its share is divided among them, and each home adds up the shares of everything within reach: playgrounds per 1,000 children within reach, and park hectares per 1,000 residents within reach. Children and residents come from Calgary Data Desk's estimates, spread evenly over each community's homes, under the growth model or the 2021 Census, whichever you choose. These are estimates.</p>
         <p>There is no overall score: each amenity stands on its own. Straight-line distance is shorter than the walk itself, so these figures are the most generous reading.</p>
       </div>
     </div>
