@@ -67,8 +67,8 @@ main > section { padding: 0 clamp(16px, 4vw, 48px); }
 .pace { display: grid; gap: 10px; max-width: 520px; }
 .bar { display: grid; grid-template-columns: 11.5em 1fr 3.4em; gap: 12px; align-items: center; }
 .bar .lbl { color: var(--muted); font-size: .92rem; }
-.bar .track { height: 12px; background: var(--nodata); border-radius: 6px; overflow: hidden; }
-.bar .fill { height: 100%; background: var(--teal); border-radius: 6px; }
+.bar .track { display: block; height: 12px; background: var(--nodata); border-radius: 6px; overflow: hidden; }
+.bar .fill { display: block; height: 100%; background: var(--teal); border-radius: 6px; }
 .bar.new .fill { background: var(--amber); }
 .bar .v { font-weight: 700; text-align: right; }
 .fine { color: var(--muted); font-size: .88rem; margin: 14px 0 0; max-width: 64ch; }

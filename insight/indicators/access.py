@@ -94,13 +94,14 @@ def summarise(d, weights, built, thresholds, growth_year, recent_from):
         'units_recent': round(float(w[recent].sum()), 1),
         'share_primary': _share(within_p, w),
         'share_secondary': _share(within_s, w),
+        'share_primary_records': _share(within_p, np.ones_like(w)),   # each roll record once: weights sensitivity
         'share_new_primary': _share(within_p[new], w[new]) if new.any() else None,
         'share_old_primary': _share(within_p[old], w[old]) if old.any() else None,
         'units_beyond_primary': round(float(w[~within_p].sum()), 1),
         'median_m': None if med is None else (round(med) if med <= cap else None),
         'median_beyond_cap': bool(med is not None and med > cap),
     }
-    for k in ('share_primary', 'share_secondary', 'share_new_primary', 'share_old_primary'):
+    for k in ('share_primary', 'share_secondary', 'share_new_primary', 'share_old_primary', 'share_primary_records'):
         if out[k] is not None:
             out[k] = round(out[k], 4)
     return out

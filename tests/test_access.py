@@ -15,6 +15,7 @@ def test_shares_are_weighted_by_units():
     assert s['units'] == 13
     assert s['share_primary'] == round(11 / 13, 4)              # 100 m (10 units) and 300 m (1 unit)
     assert s['share_secondary'] == round(12 / 13, 4)
+    assert s['share_primary_records'] == 0.5                     # unweighted: 2 of 4 records
     assert s['share_new_primary'] == 0.0                       # the only new home is 500 m away
     assert s['share_old_primary'] == round(10 / 11, 4)         # unknown year is in neither group
     assert s['units_beyond_primary'] == 2

@@ -21,6 +21,7 @@
     "title": "Community District Boundaries",
     "code_field": "comm_code",
     "name_field": "name",
+    "name_case": "title",
     "geometry_field": "multipolygon",
     "extra_fields": ["class", "sector"],
     "report_where": {"field": "class", "equals": "Residential"},

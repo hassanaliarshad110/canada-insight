@@ -66,3 +66,10 @@ def test_simplify_keeps_shape_closed():
     assert out[0] == out[-1]
     assert 8 < len(out) < len(ring)
     assert abs(geo.ring_area(out) - geo.ring_area(ring)) / geo.ring_area(ring) < 0.05
+
+
+def test_tidy_name():
+    from insight.pipeline import tidy_name
+    assert tidy_name('MCKENZIE TOWNE', 'title') == 'McKenzie Towne'
+    assert tidy_name('BRIDGELAND/RIVERSIDE', 'title') == 'Bridgeland/Riverside'
+    assert tidy_name('CITYSCAPE', None) == 'CITYSCAPE'

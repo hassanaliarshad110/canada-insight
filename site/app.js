@@ -6,7 +6,7 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const pct = v => v == null ? '–' : (v * 100 >= 99.5 && v < 1 ? '>99' : Math.round(v * 100)) + '%';
   const num = v => v == null ? '–' : Math.round(v).toLocaleString('en-CA');
-  const metres = m => m >= 1000 ? (m / 1000).toLocaleString('en-CA', { maximumFractionDigits: 1 }) + ' km' : m + ' m';
+  const metres = m => m >= 1000 ? (m / 1000).toLocaleString('en-CA', { maximumFractionDigits: 1 }) + '\u00a0km' : m + '\u00a0m';
 
   const BINS = [0.25, 0.5, 0.7, 0.85, 0.95];        // the 0.5 break is the gap rule
   const COLORS_LIGHT = ['#E3B04F', '#F3DDAE', '#CFE5DC', '#8CC3B3', '#3F8F80', '#165A50'];

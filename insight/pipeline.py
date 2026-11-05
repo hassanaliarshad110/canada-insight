@@ -10,6 +10,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 import os
 from datetime import date, datetime, timezone
 
@@ -36,6 +37,16 @@ def _first_ring(geom):
     if not mp or not mp[0] or not mp[0][0]:
         return None
     return mp[0][0]
+
+
+def tidy_name(name, case=None):
+    """Publisher names as people write them: 'MCKENZIE TOWNE' -> 'McKenzie Towne' when the config asks for title case."""
+    name = (name or '').strip()
+    if case != 'title' or not name.isupper():
+        return name
+    out = re.sub(r"[A-Za-z]+('[A-Za-z]+)?", lambda m: m.group(0).capitalize(), name.lower())
+    out = re.sub(r'\bMc([a-z])', lambda m: 'Mc' + m.group(1).upper(), out)
+    return re.sub(r'\b(Sw|Se|Nw|Ne|Ii|Iii)\b', lambda m: m.group(0).upper(), out)
 
 
 def _num_year(v):
@@ -97,7 +108,7 @@ class Builder:
             code = r.get(a['code_field'])
             if not mp or not code:
                 continue
-            out[code] = {'code': code, 'name': (r.get(a['name_field']) or code).strip(),
+            out[code] = {'code': code, 'name': tidy_name(r.get(a['name_field']) or code, a.get('name_case')),
                          'attrs': {f: r.get(f) for f in a.get('extra_fields') or []}, 'mp': mp}
         lons = [p[0] for v in out.values() for poly in v['mp'] for p in poly[0]]
         lats = [p[1] for v in out.values() for poly in v['mp'] for p in poly[0]]
@@ -169,8 +180,13 @@ class Builder:
         s.rows = n_read + extra_read
         s.sha256 = h_hash.hexdigest()
         if uw:
-            s.transformations.append(f'{extra_read:,} rental building records outside the filter added by roll number '
-                                     f'({len(extra) - extra_read:,} listed in the weights file were not found on the roll)')
+            missing_w = sum(1 for rid in extra if rid not in seen)
+            s.transformations.append(f'{len(extra) - missing_w:,} rental buildings outside the residential filter added by '
+                                     f'roll number ({extra_read:,} rows read); {missing_w:,} buildings listed in the '
+                                     f'weights file were not found on the current roll and are not counted')
+            used = sum(weights[rid][0] for rid in weights if rid in seen)
+            self.weights_note = {'buildings_listed': len(weights), 'buildings_found': len(weights) - missing_w,
+                                 'units_used': round(used, 1)}
         fail_at = self.qcfg.get('homes_missing_geometry_fail', 0.05)
         self.checks.append(quality.QualityCheck(s.id, 'missing_geometry',
                                                 'fail' if nogeo / max(n_read, 1) > fail_at else 'warn' if nogeo else 'pass',
@@ -293,7 +309,8 @@ def write(builder, areas, homes, ams, res, out_dir):
         'sensitivity': res['sensitivity'], 'city_access': res['city'],
         'homes': {'records': len(homes['id']), 'units': round(float(sum(homes['weight'])), 1),
                   'units_estimated': est_units, 'unit': cfg['homes'].get('unit'),
-                  'not_in_an_area': sum(1 for a in homes['area'] if not a or a not in areas)},
+                  'not_in_an_area': sum(1 for a in homes['area'] if not a or a not in areas),
+                  'rental_weights': getattr(builder, 'weights_note', None)},
         'value_kinds': {'units': 'official (one per roll record) except rental buildings, whose units are from building '
                                  'permits (official) or estimated from assessed value (estimate)',
                         'share_*': 'calculated', 'status': 'calculated (a stated rule, not a score)'},
