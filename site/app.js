@@ -186,6 +186,12 @@
     if (!sd) { sec.hidden = true; return; }
     sec.hidden = false;
     $$('.tabs a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); showView(a.dataset.view); }));
+  window.addEventListener('hashchange', () => {
+    if (!S.data) return;
+    const h = readHash();
+    if (h.w !== S.ward) { S.ward = h.w; renderWardPicker(); renderAll(); }
+    if (h.view !== S.view) showView(h.view);
+  });
   $('#ward').addEventListener('change', e => {
     S.ward = +e.target.value; renderWardPicker();
     restyle(); if (wardLayer) wardLayer.eachLayer(l => l.setStyle(wardStyle(l.feature.properties.ward)));
@@ -577,6 +583,7 @@
           g.m.map(([k, l, f, kind, note]) => card(l, F[f](row[k]), city ? F[f](city[k]) : null, kind, note)).join('') + '</div></section>');
       }
     }
+    groups.push(`<section class="dgroup findings-box" id="dash-findings"></section>`);
     groups.push(`<section class="dgroup"><h2>Amenities within reach <small>Canada Insight, ${esc(new Date(S.data.built_at).toLocaleDateString('en-CA', { dateStyle: 'medium' }))}</small></h2><div class="cards">${amenityCards()}</div>
       <p class="fine"><a href="#" data-goto="amenities">Explore amenities community by community</a></p></section>`);
     const tax = S.dash && S.dash.tax && S.dash.tax.by_ward;
@@ -591,6 +598,7 @@
         card('From homes', F.money(val('residential')), S.ward ? F.money(sum('residential')) : null, 'estimate') + '</div></section>');
     }
     $('#dash-groups').innerHTML = groups.join('');
+    renderFindings('#dash-findings');
     $$('#dash-groups [data-goto]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); showView(a.dataset.goto); }));
     $('#dash-sub').textContent = m ? `Residents counted with: ${m.label}. ${m.period ? 'Twelve months: ' + m.period + '.' : ''}` : 'City figures are not available in this build.';
     $('#dash-source').innerHTML = S.dash ? `311, safety, families, development and tax figures: ${esc(S.dash.source.title)} (<a href="${esc(S.dash.source.url)}">${esc(S.dash.source.url.replace(/^https:\/\//, ''))}</a>), read ${esc((S.dash.read_at || '').slice(0, 10))}${S.dash.stale ? '. That build could not be read today, so the last copy is shown.' : ''}. They match that site exactly. Amenity figures are worked out by Canada Insight.` : '';
@@ -627,10 +635,87 @@
       : `${m ? m.note || '' : ''} Source: ${S.dash ? S.dash.source.title : ''}, the same figures as that site.`;
   }
 
+
+  // ---------- key findings, worked out from the data for whatever is selected (city or ward) ----------
+  function pctPts(a, b) { return Math.round((a - b) * 100); }
+  function findings() {
+    const out = [], name = scopeName(), city = S.data.name, key = scopeKey();
+    const kinds = Object.fromEntries(baseKinds().map(([bk]) => [bk, effKey(bk)]));
+    const lab = bk => S.data.kinds[bk].label.toLowerCase();
+    const plural = bk => S.data.kinds[bk].plural || lab(bk) + 's';
+    const local = baseKinds().filter(([, v]) => v.group === 'local').map(([k]) => k);
+    const district = baseKinds().filter(([, v]) => v.group === 'district').map(([k]) => k);
+    // 1. nearness of local amenities
+    const near = local.map(bk => ({ bk, a: scopeAccess(kinds[bk]), c: S.data.city_access[kinds[bk]] })).filter(x => x.a && x.c);
+    if (near.length) {
+      const parts = near.map(x => `${pct(x.a.share_primary)} of homes are within ${metres(S.data.kinds[x.bk].thresholds_m[0])} of ${an(lab(x.bk))}` + (S.ward ? ` (${city}: ${pct(x.c.share_primary)})` : ''));
+      out.push({ kind: 'calculated', text: `In ${name}, ${parts.join('; ')}.` });
+    }
+    // 2. crowding: near, but shared by how many people
+    for (const bk of local) {
+      const k = kinds[bk], c = crowd(k);
+      if (!c || !S.people) continue;
+      const d = String(S.data.kinds[k].thresholds_m[0]);
+      const by = c.by_option[S.people] && c.by_option[S.people][d];
+      if (!by || by[key] == null || !by._all) continue;
+      const ratio = by[key] / by._all;
+      let txt = `Within ${metres(+d)}, ${name} has ${crowdFmt(k, by[key])} who can reach them` + (S.ward ? `, ${ratio.toFixed(2)} times ${city}'s level (${crowdShort(k, by._all)})` : '') + '.';
+      if (S.ward) {
+        const ws = Object.keys(S.data.wards || {}).map(w => [+w, by['ward:' + w]]).filter(x => x[1] != null).sort((a, b) => a[1] - b[1]);
+        const r = ws.findIndex(x => x[0] === S.ward) + 1;
+        if (r) txt += ` That is ${r === 1 ? 'the lowest' : r === ws.length ? 'the highest' : ordinal(r) + ' lowest'} of the ${ws.length} wards.`;
+        const a = scopeAccess(k), cA = S.data.city_access[k];
+        if (a && a.share_primary >= cA.share_primary - 0.02 && ratio < 0.8) txt += ` So ${plural(bk)} are near, but shared by more ${c.people} than in most of ${city}.`;
+      }
+      out.push({ kind: 'estimate', text: txt });
+    }
+    // 3. communities in the lowest quarter for playgrounds per child, within the scope
+    const pk = kinds.playground, pc = pk && crowd(pk);
+    if (pc && S.people) {
+      const by = pc.by_option[S.people][String(S.data.kinds[pk].thresholds_m[0])] || {};
+      const all = Object.entries(by).filter(([c, v]) => !c.startsWith('_') && !c.startsWith('ward:') && v != null && S.data.areas[c] && S.data.areas[c].access[pk].status !== 'too_few_homes').sort((a, b) => a[1] - b[1]);
+      const q = Math.ceil(all.length / 4), low = new Set(all.slice(0, q).map(x => x[0]));
+      const mine = all.filter(([c]) => inScope(c));
+      const lowMine = mine.filter(([c]) => low.has(c));
+      if (S.ward && mine.length) out.push({ kind: 'estimate', text: `${lowMine.length} of ${name}'s ${mine.length} communities are in ${city}'s lowest quarter for playgrounds per child within reach${lowMine.length ? ': ' + lowMine.map(([c]) => S.data.areas[c].name).join(', ') : ''}.` });
+    }
+    // 4. new homes against older homes, where the gap is 10 points or more
+    const gaps = [];
+    for (const [bk] of baseKinds()) {
+      const a = scopeAccess(kinds[bk]);
+      if (!a || a.share_new_primary == null || a.share_old_primary == null || a.units_new < 50) continue;
+      const g = pctPts(a.share_new_primary, a.share_old_primary);
+      if (Math.abs(g) >= 10) gaps.push(`${lab(bk)} ${pct(a.share_new_primary)} against ${pct(a.share_old_primary)}`);
+    }
+    if (gaps.length) out.push({ kind: 'calculated', text: `Homes built since ${S.data.growth_year} compared with older homes in ${name} (share within walking distance): ${gaps.join('; ')}.` });
+    // 5. district facilities for new homes
+    const dist = district.map(bk => [bk, scopeAccess(kinds[bk])]).filter(([, a]) => a && a.share_new_primary != null && a.units_new >= 50);
+    if (dist.length) out.push({ kind: 'calculated', text: `For homes built since ${S.data.growth_year} in ${name}: ` + dist.map(([bk, a]) => `${pct(a.share_new_primary)} are within ${metres(S.data.kinds[bk].thresholds_m[0])} of a ${lab(bk)}`).join('; ') + '. New communities on the city\'s edge are farther from facilities that serve several communities, some of which are planned for later phases.' });
+    // 6. parks near, few playgrounds (communities in scope)
+    if (kinds.park && kinds.playground) {
+      const pp = Object.entries(S.data.areas).filter(([c, a]) => inScope(c) && a.access[kinds.park].status !== 'too_few_homes'
+        && a.access[kinds.park].share_primary >= 0.9 && a.access[kinds.playground].share_primary < 0.5).map(([, a]) => a.name);
+      if (pp.length) out.push({ kind: 'calculated', text: `Parks within easy reach but few playgrounds (90% or more of homes near a park, under half near a playground): ${pp.slice(0, 12).join(', ')}${pp.length > 12 ? ` and ${pp.length - 12} more` : ''}.` });
+    }
+    // 7. cautions
+    const cc = kinds.community_centre && scopeAccess(kinds.community_centre);
+    if (cc && cc.share_primary < 0.2) out.push({ kind: 'caution', text: `Community centres read low in ${name} (${pct(cc.share_primary)} of homes within ${metres(S.data.kinds[kinds.community_centre].thresholds_m[0])}). The City's list may not include every community association hall: check before quoting this figure.` });
+    return out;
+  }
+  function an(word) { return /^[aeiou]/i.test(word) ? 'an ' + word : 'a ' + word; }
+  function ordinal(n) { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+  function renderFindings(target) {
+    const f = findings();
+    const chip = k => k === 'estimate' ? '<span class="kind kind-estimate">Estimate</span>' : k === 'caution' ? '<span class="kind kind-caution">Check</span>' : '<span class="kind kind-calculated">Calculated</span>';
+    $(target).innerHTML = f.length ? `<h2>What the data shows for ${esc(scopeName())}</h2><ul class="findings">${f.map(x => `<li>${esc(x.text)} ${chip(x.kind)}</li>`).join('')}</ul>
+      <p class="fine">Worked out from the published figures each morning, the same way for every ward. Facts, not recommendations. Residents and children: ${esc(S.data.crowding && S.data.crowding.options[S.people] ? S.data.crowding.options[S.people].label : '')}; amenities: ${esc({ public: "City's plus non-City ones open to everyone", city: "City's only", private: 'including private ones' }[S.set])}.</p>` : '';
+  }
+
   function renderAll() {
     $('#set-wrap').hidden = !S.data.kinds[S.base + '|city'];
     $('#set').value = S.set;
-    renderHero(); renderLegend(); restyle(); renderTable(); renderProfile(); renderCompare(); renderPoints(); renderScores(); writeHash();
+    renderHero(); renderLegend(); restyle(); renderTable(); renderProfile(); renderCompare(); renderPoints(); renderScores();
+    renderFindings('#findings'); writeHash();
     $$('#th0, #th1').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.th === S.th)));
   }
 
