@@ -190,7 +190,11 @@
   window.addEventListener('hashchange', () => {
     if (!S.data) return;
     const h = readHash();
-    if (h.w !== S.ward) { S.ward = h.w; renderWardPicker(); renderAll(); }
+    if (h.w !== S.ward) {
+      S.ward = h.w; renderWardPicker(); restyle();
+      if (wardLayer) wardLayer.eachLayer(l => l.setStyle(wardStyle(l.feature.properties.ward)));
+      renderAll(); renderDash(); renderWards(); if (S.view === 'amenities') fitScope();
+    }
     if (h.view !== S.view) showView(h.view);
   });
   $('#ward').addEventListener('change', e => {
@@ -249,7 +253,7 @@
     const name = scopeName();
     const cityC = S.data.city_access[S.kind];
     $('#th0').textContent = metres(p); $('#th1').textContent = metres(s);
-    $('#headline').innerHTML = `<strong>${pct(c.share_primary)}</strong> of ${esc(name)}'s homes are within ${metres(p)} of a ${esc(baseLabel().toLowerCase())}, and <strong>${pct(c.share_secondary)}</strong> within ${metres(s)}.` +
+    $('#headline').innerHTML = `<strong>${pct(c.share_primary)}</strong> of ${esc(name)}'s homes are within ${metres(p)} of ${esc(an(baseLabel().toLowerCase()))}, and <strong>${pct(c.share_secondary)}</strong> within ${metres(s)}.` +
       (S.ward ? ` <span class="vs">${esc(S.data.name)}: ${pct(cityC.share_primary)} and ${pct(cityC.share_secondary)}.</span>` : '');
     const bars = [['Homes built before ' + S.data.growth_year, c.share_old_primary, ''], ['Homes built since ' + S.data.growth_year, c.share_new_primary, 'new']];
     $('#pace').innerHTML = `<p class="fine" style="margin:0 0 4px">Within ${metres(p)}:</p>` + bars.map(([l, v, cls]) =>
@@ -565,7 +569,7 @@
     const out = [];
     for (const [bk, kd] of baseKinds()) {
       const a = scopeAccess(effKey(bk)), c = S.data.city_access[effKey(bk)];
-      out.push(card(`Homes within ${metres(kd.thresholds_m[0])} of a ${kd.label.toLowerCase()}`, F.share(a && a.share_primary), F.share(c.share_primary)));
+      out.push(card(`Homes within ${metres(kd.thresholds_m[0])} of ${an(kd.label.toLowerCase())}`, F.share(a && a.share_primary), F.share(c.share_primary)));
     }
     if (sc) for (const [g, l] of [['local', 'Local amenities score'], ['district', 'District facilities score'], ['overall', 'All amenities score']]) {
       const v = g === 'overall' ? sc.overall : sc.groups[g];

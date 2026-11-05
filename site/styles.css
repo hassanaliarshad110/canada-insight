@@ -280,3 +280,7 @@ table#tbl, table#qtbl { width: 100%; border-collapse: collapse; font-size: .95re
 .findings li { line-height: 1.5; }
 .kind-caution { box-shadow: inset 0 0 0 1.5px var(--amber); color: var(--amber); }
 .dgroup.findings-box { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px !important; }
+@media (max-width: 600px) {
+  .ward-pick { width: 100%; }
+  .ward-pick select { flex: 1; min-width: 0; width: 100%; }
+}
