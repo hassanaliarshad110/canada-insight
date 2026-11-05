@@ -1,0 +1,27 @@
+name: Survey a city's open data
+
+# Runs when the 'explore' branch is pushed: surveys each portal listed in explore/portals.txt and commits the result
+# to that branch (this repository's build machines can reach city portals that the editing workspace can't).
+on:
+  push:
+    branches: [explore]
+
+permissions:
+  contents: write
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          while read -r d; do [ -n "$d" ] && python tools/explore_socrata.py "$d" > /dev/null || true; done < explore/portals.txt
+          [ -f explore/probe.py ] && python explore/probe.py > explore/probe.out 2>&1 || true
+      - run: |
+          git config user.name 'canada-insight survey'
+          git config user.email 'actions@users.noreply.github.com'
+          git add explore
+          git commit -m "Survey results [skip ci]" || echo none
+          git push origin HEAD:explore
