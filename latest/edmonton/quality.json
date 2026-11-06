@@ -1,14 +1,14 @@
 {
  "city": "edmonton",
- "built_at": "2026-11-06T00:00:57Z",
+ "built_at": "2026-11-06T00:28:29Z",
  "overall": "warn",
  "checks": [
   {
    "source": "edmonton.areas",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 400)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 400)",
+   "value": 4,
    "threshold": 400
   },
   {
@@ -47,8 +47,8 @@
    "source": "edmonton.wards",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 1500)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 1500)",
+   "value": 4,
    "threshold": 1500
   },
   {
@@ -71,8 +71,8 @@
    "source": "edmonton.homes_info",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 400)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 400)",
+   "value": 4,
    "threshold": 400
   },
   {
@@ -87,8 +87,8 @@
    "source": "edmonton.homes",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 400)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 400)",
+   "value": 4,
    "threshold": 400
   },
   {
@@ -151,8 +151,8 @@
    "source": "edmonton.amenity.playground",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 45)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 45)",
+   "value": 4,
    "threshold": 45
   },
   {
@@ -191,8 +191,8 @@
    "source": "edmonton.amenity.park",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 45)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 45)",
+   "value": 4,
    "threshold": 45
   },
   {
@@ -231,8 +231,8 @@
    "source": "edmonton.amenity.transit_stop",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-10-30 (6 days ago; expected within 120)",
-   "value": 6,
+   "detail": "last updated by the publisher 2026-10-30 (7 days ago; expected within 120)",
+   "value": 7,
    "threshold": 120
   },
   {
@@ -271,8 +271,8 @@
    "source": "edmonton.amenity.community_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-02 (3 days ago; expected within 45)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-02 (4 days ago; expected within 45)",
+   "value": 4,
    "threshold": 45
   },
   {
@@ -311,8 +311,8 @@
    "source": "edmonton.amenity.rec_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-05 (0 days ago; expected within 45)",
-   "value": 0,
+   "detail": "last updated by the publisher 2026-11-05 (1 days ago; expected within 45)",
+   "value": 1,
    "threshold": 45
   },
   {
@@ -351,8 +351,8 @@
    "source": "edmonton.amenity.library",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-04 (1 days ago; expected within 45)",
-   "value": 1,
+   "detail": "last updated by the publisher 2026-11-04 (2 days ago; expected within 45)",
+   "value": 2,
    "threshold": 45
   },
   {
@@ -407,16 +407,16 @@
    "source": "edmonton.people.census2021",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2023-09-27 (1135 days ago; expected within 2000)",
-   "value": 1135,
+   "detail": "last updated by the publisher 2023-09-27 (1136 days ago; expected within 2000)",
+   "value": 1136,
    "threshold": 2000
   },
   {
    "source": "edmonton.people.census_boundaries",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2023-06-23 (1231 days ago; expected within 2000)",
-   "value": 1231,
+   "detail": "last updated by the publisher 2023-06-23 (1232 days ago; expected within 2000)",
+   "value": 1232,
    "threshold": 2000
   },
   {
