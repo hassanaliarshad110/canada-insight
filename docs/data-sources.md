@@ -51,7 +51,10 @@ How Edmonton differs from Calgary:
   apartment buildings ("Other Residential", 4,404 accounts) are one account each, so their homes are estimated as
   gross floor area / 185 m² (an estimate, labelled as such). 185 m² comes from a fit on 2021 Census
   households by neighbourhood: at 85 m² apartment neighbourhoods had 1.4 to 1.9 times as many older homes as 2021 households
-  (Downtown, Wîhkwêntôwin, Garneau, Boyle Street), because gross floor area includes corridors and common space. About 7,600 homes carry no neighbourhood code on the roll
+  (Downtown, Wîhkwêntôwin, Garneau, Boyle Street), because gross floor area includes corridors and common space.
+  Check after calibration (build of 5 November 2026): 385,917 homes built before 2021 against 396,450 households
+  at the 2021 Census (Wîhkwêntôwin 0.99, Boyle Street 0.99, Garneau 1.09, Downtown 1.33). The city total is a few
+  percent low, most likely because a house with a secondary suite is one account on the roll. About 7,600 homes carry no neighbourhood code on the roll
   (for example in Anthony Henday Southeast and the Chappelle area) and are placed in the neighbourhood that contains them. Properties assessed under $40,000 (about 45,000, mostly $0
   parking stalls, storage units and remnant parcels) are left out, as are properties with no year built (no building).
 - Residents and children come from the 2021 Census by neighbourhood on the City's portal, with residents added for
