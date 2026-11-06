@@ -1,6 +1,6 @@
 {
  "city": "edmonton",
- "built_at": "2026-11-05T23:31:59Z",
+ "built_at": "2026-11-06T00:00:57Z",
  "overall": "warn",
  "checks": [
   {
@@ -423,8 +423,8 @@
    "source": "edmonton.people.census2021",
    "check": "coverage",
    "status": "pass",
-   "detail": "98.8% of dwelling units are in areas with a census count",
-   "value": 0.9877,
+   "detail": "98.7% of dwelling units are in areas with a census count",
+   "value": 0.9874,
    "threshold": 0.9
   },
   {
