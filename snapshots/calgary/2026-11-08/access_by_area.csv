@@ -1,0 +1,2491 @@
+code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,share_within_secondary,secondary_m,share_new_within_primary,share_older_within_primary,median_m,status
+01C,01C,playground,1.0,0.0,1.0,400,1.0,800,,1.0,347,too_few_homes
+01C,01C,park,1.0,0.0,0.0,400,1.0,800,,0.0,783,too_few_homes
+01C,01C,transit_stop,1.0,0.0,0.0,400,1.0,800,,0.0,786,too_few_homes
+01C,01C,community_centre,1.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+01C,01C,rec_centre,1.0,0.0,0.0,2000,1.0,5000,,0.0,4282,too_few_homes
+01C,01C,library,1.0,0.0,0.0,2000,1.0,5000,,0.0,3496,too_few_homes
+01C,01C,playground|city,1.0,0.0,1.0,400,1.0,800,,1.0,347,too_few_homes
+01C,01C,playground|private,1.0,0.0,1.0,400,1.0,800,,1.0,347,too_few_homes
+01C,01C,park|city,1.0,0.0,0.0,400,1.0,800,,0.0,783,too_few_homes
+01C,01C,park|private,1.0,0.0,0.0,400,1.0,800,,0.0,783,too_few_homes
+01F,01F,playground,101.0,0.0,0.0495,400,0.9703,800,,0.0495,592,gap
+01F,01F,park,101.0,0.0,0.5941,400,1.0,800,,0.5941,353,no_gap
+01F,01F,transit_stop,101.0,0.0,0.2475,400,0.9802,800,,0.2475,483,gap
+01F,01F,community_centre,101.0,0.0,0.0,800,0.5644,1600,,0.0,1407,gap
+01F,01F,rec_centre,101.0,0.0,0.0,2000,0.5743,5000,,0.0,4835,gap
+01F,01F,library,101.0,0.0,0.0,2000,0.5446,5000,,0.0,4884,gap
+01F,01F,playground|city,101.0,0.0,0.0495,400,0.9703,800,,0.0495,592,gap
+01F,01F,playground|private,101.0,0.0,0.0495,400,0.9703,800,,0.0495,592,gap
+01F,01F,park|city,101.0,0.0,0.505,400,1.0,800,,0.505,399,no_gap
+01F,01F,park|private,101.0,0.0,0.5941,400,1.0,800,,0.5941,353,no_gap
+01H,01H,playground,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+01H,01H,park,2.0,0.0,0.0,400,1.0,800,,0.0,593,too_few_homes
+01H,01H,transit_stop,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+01H,01H,community_centre,2.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+01H,01H,rec_centre,2.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+01H,01H,library,2.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+01H,01H,playground|city,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+01H,01H,playground|private,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+01H,01H,park|city,2.0,0.0,0.0,400,1.0,800,,0.0,593,too_few_homes
+01H,01H,park|private,2.0,0.0,0.0,400,1.0,800,,0.0,593,too_few_homes
+02K,02K,playground,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,park,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,transit_stop,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,community_centre,1.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+02K,02K,rec_centre,1.0,0.0,0.0,2000,1.0,5000,,0.0,4442,too_few_homes
+02K,02K,library,1.0,0.0,0.0,2000,1.0,5000,,0.0,4447,too_few_homes
+02K,02K,playground|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,playground|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,park|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02K,02K,park|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+02L,02L,playground,5.0,2.0,0.4,400,0.4,800,1.0,0.0,>800,too_few_homes
+02L,02L,park,5.0,2.0,0.4,400,0.6,800,1.0,0.0,729,too_few_homes
+02L,02L,transit_stop,5.0,2.0,0.0,400,0.4,800,0.0,0.0,>800,too_few_homes
+02L,02L,community_centre,5.0,2.0,0.0,800,0.0,1600,0.0,0.0,>1600,too_few_homes
+02L,02L,rec_centre,5.0,2.0,0.0,2000,0.6,5000,0.0,0.0,4845,too_few_homes
+02L,02L,library,5.0,2.0,0.0,2000,1.0,5000,0.0,0.0,3254,too_few_homes
+02L,02L,playground|city,5.0,2.0,0.4,400,0.4,800,1.0,0.0,>800,too_few_homes
+02L,02L,playground|private,5.0,2.0,0.4,400,0.4,800,1.0,0.0,>800,too_few_homes
+02L,02L,park|city,5.0,2.0,0.4,400,0.6,800,1.0,0.0,729,too_few_homes
+02L,02L,park|private,5.0,2.0,0.4,400,0.6,800,1.0,0.0,729,too_few_homes
+03W,03W,playground,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,park,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,transit_stop,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,community_centre,6.0,1.0,0.0,800,0.0,1600,0.0,0.0,>1600,too_few_homes
+03W,03W,rec_centre,6.0,1.0,0.0,2000,0.0,5000,0.0,0.0,>5000,too_few_homes
+03W,03W,library,6.0,1.0,0.0,2000,0.0,5000,0.0,0.0,>5000,too_few_homes
+03W,03W,playground|city,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,playground|private,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,park|city,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+03W,03W,park|private,6.0,1.0,0.0,400,0.0,800,0.0,0.0,>800,too_few_homes
+06A,06A,playground,11.0,0.0,0.0,400,0.4545,800,,0.0,>800,too_few_homes
+06A,06A,park,11.0,0.0,0.0,400,1.0,800,,0.0,536,too_few_homes
+06A,06A,transit_stop,11.0,0.0,0.0,400,0.4545,800,,0.0,>800,too_few_homes
+06A,06A,community_centre,11.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+06A,06A,rec_centre,11.0,0.0,0.0,2000,1.0,5000,,0.0,3558,too_few_homes
+06A,06A,library,11.0,0.0,0.0,2000,0.4545,5000,,0.0,>5000,too_few_homes
+06A,06A,playground|city,11.0,0.0,0.0,400,0.4545,800,,0.0,>800,too_few_homes
+06A,06A,playground|private,11.0,0.0,0.0,400,0.8182,800,,0.0,725,too_few_homes
+06A,06A,park|city,11.0,0.0,0.0,400,1.0,800,,0.0,536,too_few_homes
+06A,06A,park|private,11.0,0.0,0.0,400,1.0,800,,0.0,536,too_few_homes
+06C,06C,playground,1.0,0.0,0.0,400,1.0,800,,0.0,647,too_few_homes
+06C,06C,park,1.0,0.0,0.0,400,1.0,800,,0.0,589,too_few_homes
+06C,06C,transit_stop,1.0,0.0,0.0,400,1.0,800,,0.0,468,too_few_homes
+06C,06C,community_centre,1.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+06C,06C,rec_centre,1.0,0.0,0.0,2000,1.0,5000,,0.0,3609,too_few_homes
+06C,06C,library,1.0,0.0,0.0,2000,1.0,5000,,0.0,2951,too_few_homes
+06C,06C,playground|city,1.0,0.0,0.0,400,1.0,800,,0.0,647,too_few_homes
+06C,06C,playground|private,1.0,0.0,0.0,400,1.0,800,,0.0,647,too_few_homes
+06C,06C,park|city,1.0,0.0,0.0,400,1.0,800,,0.0,589,too_few_homes
+06C,06C,park|private,1.0,0.0,0.0,400,1.0,800,,0.0,589,too_few_homes
+09O,09O,playground,3.0,0.0,0.6667,400,1.0,800,,0.6667,283,too_few_homes
+09O,09O,park,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+09O,09O,transit_stop,3.0,0.0,0.3333,400,0.3333,800,,0.3333,>800,too_few_homes
+09O,09O,community_centre,3.0,0.0,0.0,800,0.3333,1600,,0.0,>1600,too_few_homes
+09O,09O,rec_centre,3.0,0.0,0.0,2000,0.3333,5000,,0.0,>5000,too_few_homes
+09O,09O,library,3.0,0.0,0.0,2000,0.3333,5000,,0.0,>5000,too_few_homes
+09O,09O,playground|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+09O,09O,playground|private,3.0,0.0,0.6667,400,1.0,800,,0.6667,283,too_few_homes
+09O,09O,park|city,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+09O,09O,park|private,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+09P,09P,playground,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+09P,09P,park,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+09P,09P,transit_stop,27.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+09P,09P,community_centre,27.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+09P,09P,rec_centre,27.0,0.0,0.0,2000,0.8148,5000,,0.0,4376,too_few_homes
+09P,09P,library,27.0,0.0,0.0,2000,0.8148,5000,,0.0,4641,too_few_homes
+09P,09P,playground|city,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+09P,09P,playground|private,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+09P,09P,park|city,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+09P,09P,park|private,27.0,0.0,0.0,400,0.3704,800,,0.0,>800,too_few_homes
+10E,10E,playground,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+10E,10E,park,2.0,0.0,0.0,400,1.0,800,,0.0,660,too_few_homes
+10E,10E,transit_stop,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+10E,10E,community_centre,2.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+10E,10E,rec_centre,2.0,0.0,0.0,2000,1.0,5000,,0.0,3282,too_few_homes
+10E,10E,library,2.0,0.0,0.0,2000,1.0,5000,,0.0,3323,too_few_homes
+10E,10E,playground|city,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+10E,10E,playground|private,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+10E,10E,park|city,2.0,0.0,0.0,400,1.0,800,,0.0,709,too_few_homes
+10E,10E,park|private,2.0,0.0,0.0,400,1.0,800,,0.0,660,too_few_homes
+12A,12A,playground,47.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12A,12A,park,47.0,0.0,1.0,400,1.0,800,,1.0,178,too_few_homes
+12A,12A,transit_stop,47.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12A,12A,community_centre,47.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12A,12A,rec_centre,47.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12A,12A,library,47.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12A,12A,playground|city,47.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12A,12A,playground|private,47.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12A,12A,park|city,47.0,0.0,1.0,400,1.0,800,,1.0,178,too_few_homes
+12A,12A,park|private,47.0,0.0,1.0,400,1.0,800,,1.0,178,too_few_homes
+12B,12B,playground,5.0,0.0,0.0,400,0.8,800,,0.0,469,too_few_homes
+12B,12B,park,5.0,0.0,0.8,400,0.8,800,,0.8,67,too_few_homes
+12B,12B,transit_stop,5.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12B,12B,community_centre,5.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12B,12B,rec_centre,5.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12B,12B,library,5.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12B,12B,playground|city,5.0,0.0,0.0,400,0.8,800,,0.0,469,too_few_homes
+12B,12B,playground|private,5.0,0.0,0.0,400,0.8,800,,0.0,469,too_few_homes
+12B,12B,park|city,5.0,0.0,0.8,400,0.8,800,,0.8,67,too_few_homes
+12B,12B,park|private,5.0,0.0,0.8,400,0.8,800,,0.8,67,too_few_homes
+12C,12C,playground,24.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+12C,12C,park,24.0,0.0,0.7083,400,1.0,800,,0.7083,301,too_few_homes
+12C,12C,transit_stop,24.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12C,12C,community_centre,24.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12C,12C,rec_centre,24.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12C,12C,library,24.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12C,12C,playground|city,24.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+12C,12C,playground|private,24.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+12C,12C,park|city,24.0,0.0,0.5417,400,1.0,800,,0.5417,394,too_few_homes
+12C,12C,park|private,24.0,0.0,0.7083,400,1.0,800,,0.7083,301,too_few_homes
+12J,12J,playground,8.0,0.0,0.0,400,0.5,800,,0.0,>800,too_few_homes
+12J,12J,park,8.0,0.0,0.0,400,0.625,800,,0.0,752,too_few_homes
+12J,12J,transit_stop,8.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12J,12J,community_centre,8.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12J,12J,rec_centre,8.0,0.0,0.0,2000,0.75,5000,,0.0,4707,too_few_homes
+12J,12J,library,8.0,0.0,0.0,2000,0.875,5000,,0.0,4521,too_few_homes
+12J,12J,playground|city,8.0,0.0,0.0,400,0.5,800,,0.0,>800,too_few_homes
+12J,12J,playground|private,8.0,0.0,0.0,400,0.5,800,,0.0,>800,too_few_homes
+12J,12J,park|city,8.0,0.0,0.0,400,0.625,800,,0.0,752,too_few_homes
+12J,12J,park|private,8.0,0.0,0.0,400,0.625,800,,0.0,752,too_few_homes
+12K,12K,playground,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12K,12K,park,2.0,0.0,1.0,400,1.0,800,,1.0,74,too_few_homes
+12K,12K,transit_stop,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12K,12K,community_centre,2.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12K,12K,rec_centre,2.0,0.0,0.0,2000,1.0,5000,,0.0,4246,too_few_homes
+12K,12K,library,2.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12K,12K,playground|city,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12K,12K,playground|private,2.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12K,12K,park|city,2.0,0.0,1.0,400,1.0,800,,1.0,74,too_few_homes
+12K,12K,park|private,2.0,0.0,1.0,400,1.0,800,,1.0,74,too_few_homes
+12L,12L,playground,6.0,0.0,0.0,400,0.1667,800,,0.0,>800,too_few_homes
+12L,12L,park,6.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+12L,12L,transit_stop,6.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+12L,12L,community_centre,6.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+12L,12L,rec_centre,6.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12L,12L,library,6.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+12L,12L,playground|city,6.0,0.0,0.0,400,0.1667,800,,0.0,>800,too_few_homes
+12L,12L,playground|private,6.0,0.0,0.0,400,0.1667,800,,0.0,>800,too_few_homes
+12L,12L,park|city,6.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+12L,12L,park|private,6.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+13F,13F,playground,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,park,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,transit_stop,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,community_centre,3.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+13F,13F,rec_centre,3.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+13F,13F,library,3.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+13F,13F,playground|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,playground|private,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,park|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13F,13F,park|private,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13G,13G,playground,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13G,13G,park,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+13G,13G,transit_stop,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13G,13G,community_centre,3.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+13G,13G,rec_centre,3.0,0.0,0.0,2000,0.3333,5000,,0.0,>5000,too_few_homes
+13G,13G,library,3.0,0.0,0.0,2000,0.3333,5000,,0.0,>5000,too_few_homes
+13G,13G,playground|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13G,13G,playground|private,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13G,13G,park|city,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+13G,13G,park|private,3.0,0.0,0.0,400,0.3333,800,,0.0,>800,too_few_homes
+13M,13M,playground,5.0,0.0,0.0,400,0.2,800,,0.0,>800,too_few_homes
+13M,13M,park,5.0,0.0,0.6,400,1.0,800,,0.6,387,too_few_homes
+13M,13M,transit_stop,5.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+13M,13M,community_centre,5.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+13M,13M,rec_centre,5.0,0.0,0.0,2000,0.2,5000,,0.0,>5000,too_few_homes
+13M,13M,library,5.0,0.0,0.0,2000,0.2,5000,,0.0,>5000,too_few_homes
+13M,13M,playground|city,5.0,0.0,0.0,400,0.2,800,,0.0,>800,too_few_homes
+13M,13M,playground|private,5.0,0.0,0.0,400,0.2,800,,0.0,>800,too_few_homes
+13M,13M,park|city,5.0,0.0,0.6,400,1.0,800,,0.6,387,too_few_homes
+13M,13M,park|private,5.0,0.0,0.6,400,1.0,800,,0.6,387,too_few_homes
+ABB,Abbeydale,playground,1899.0,0.0,0.9884,400,1.0,800,,0.9884,165,no_gap
+ABB,Abbeydale,park,1899.0,0.0,1.0,400,1.0,800,,1.0,62,no_gap
+ABB,Abbeydale,transit_stop,1899.0,0.0,1.0,400,1.0,800,,1.0,139,no_gap
+ABB,Abbeydale,community_centre,1899.0,0.0,0.93,800,1.0,1600,,0.93,531,no_gap
+ABB,Abbeydale,rec_centre,1899.0,0.0,0.0511,2000,1.0,5000,,0.0511,2552,gap
+ABB,Abbeydale,library,1899.0,0.0,0.0674,2000,1.0,5000,,0.0674,2491,gap
+ABB,Abbeydale,playground|city,1899.0,0.0,0.9884,400,1.0,800,,0.9884,172,no_gap
+ABB,Abbeydale,playground|private,1899.0,0.0,0.9884,400,1.0,800,,0.9884,165,no_gap
+ABB,Abbeydale,park|city,1899.0,0.0,1.0,400,1.0,800,,1.0,69,no_gap
+ABB,Abbeydale,park|private,1899.0,0.0,1.0,400,1.0,800,,1.0,62,no_gap
+ACA,Acadia,playground,4511.0,21.0,0.9687,400,1.0,800,1.0,0.9686,211,no_gap
+ACA,Acadia,park,4511.0,21.0,0.9951,400,1.0,800,1.0,0.9951,142,no_gap
+ACA,Acadia,transit_stop,4511.0,21.0,0.9612,400,1.0,800,1.0,0.961,144,no_gap
+ACA,Acadia,community_centre,4511.0,21.0,0.7307,800,1.0,1600,0.0952,0.7336,627,no_gap
+ACA,Acadia,rec_centre,4511.0,21.0,1.0,2000,1.0,5000,1.0,1.0,693,no_gap
+ACA,Acadia,library,4511.0,21.0,0.546,2000,1.0,5000,0.0,0.5487,2054,no_gap
+ACA,Acadia,playground|city,4511.0,21.0,0.3212,400,0.8184,800,1.0,0.3179,458,gap
+ACA,Acadia,playground|private,4511.0,21.0,0.9929,400,1.0,800,1.0,0.9929,198,no_gap
+ACA,Acadia,park|city,4511.0,21.0,0.9951,400,1.0,800,1.0,0.9951,147,no_gap
+ACA,Acadia,park|private,4511.0,21.0,0.9951,400,1.0,800,1.0,0.9951,142,no_gap
+ALB,Albert Park/Radisson Heights,playground,2246.0,61.0,0.9987,400,1.0,800,1.0,0.9986,196,no_gap
+ALB,Albert Park/Radisson Heights,park,2246.0,61.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+ALB,Albert Park/Radisson Heights,transit_stop,2246.0,61.0,0.9987,400,1.0,800,1.0,0.9986,126,no_gap
+ALB,Albert Park/Radisson Heights,community_centre,2246.0,61.0,0.6701,800,1.0,1600,0.3934,0.6763,463,no_gap
+ALB,Albert Park/Radisson Heights,rec_centre,2246.0,61.0,0.5677,2000,1.0,5000,0.7377,0.57,2011,no_gap
+ALB,Albert Park/Radisson Heights,library,2246.0,61.0,0.5721,2000,1.0,5000,0.7049,0.5756,1972,no_gap
+ALB,Albert Park/Radisson Heights,playground|city,2246.0,61.0,0.7925,400,1.0,800,0.4754,0.7991,248,no_gap
+ALB,Albert Park/Radisson Heights,playground|private,2246.0,61.0,0.9987,400,1.0,800,1.0,0.9986,196,no_gap
+ALB,Albert Park/Radisson Heights,park|city,2246.0,61.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+ALB,Albert Park/Radisson Heights,park|private,2246.0,61.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+ALP,Alpine Park,playground,1077.0,1066.0,0.8858,400,1.0,800,0.8856,1.0,211,no_gap
+ALP,Alpine Park,park,1077.0,1066.0,0.9972,400,1.0,800,0.9972,1.0,92,no_gap
+ALP,Alpine Park,transit_stop,1077.0,1066.0,0.3333,400,0.5218,800,0.3368,0.0,714,gap_check
+ALP,Alpine Park,community_centre,1077.0,1066.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+ALP,Alpine Park,rec_centre,1077.0,1066.0,0.0,2000,0.1068,5000,0.0,0.0,>5000,gap_check
+ALP,Alpine Park,library,1077.0,1066.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+ALP,Alpine Park,playground|city,1077.0,1066.0,0.8858,400,1.0,800,0.8856,1.0,211,no_gap
+ALP,Alpine Park,playground|private,1077.0,1066.0,0.8858,400,1.0,800,0.8856,1.0,211,no_gap
+ALP,Alpine Park,park|city,1077.0,1066.0,0.9879,400,1.0,800,0.9887,1.0,108,no_gap
+ALP,Alpine Park,park|private,1077.0,1066.0,0.9972,400,1.0,800,0.9972,1.0,92,no_gap
+ALT,Altadore,playground,3343.0,271.0,0.9973,400,1.0,800,1.0,0.9969,244,no_gap
+ALT,Altadore,park,3343.0,271.0,0.9961,400,1.0,800,1.0,0.9956,175,no_gap
+ALT,Altadore,transit_stop,3343.0,271.0,1.0,400,1.0,800,1.0,1.0,141,no_gap
+ALT,Altadore,community_centre,3343.0,271.0,0.3527,800,0.9815,1600,0.2731,0.3675,1032,gap
+ALT,Altadore,rec_centre,3343.0,271.0,1.0,2000,1.0,5000,1.0,1.0,1270,no_gap
+ALT,Altadore,library,3343.0,271.0,0.9545,2000,1.0,5000,0.8856,0.959,1095,no_gap
+ALT,Altadore,playground|city,3343.0,271.0,0.8962,400,1.0,800,0.8967,0.8919,278,no_gap
+ALT,Altadore,playground|private,3343.0,271.0,0.9973,400,1.0,800,1.0,0.9969,244,no_gap
+ALT,Altadore,park|city,3343.0,271.0,0.9961,400,1.0,800,1.0,0.9956,175,no_gap
+ALT,Altadore,park|private,3343.0,271.0,0.9961,400,1.0,800,1.0,0.9956,175,no_gap
+AYB,Alyth/Bonnybrook,playground,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+AYB,Alyth/Bonnybrook,park,1.0,0.0,0.0,400,1.0,800,,0.0,678,too_few_homes
+AYB,Alyth/Bonnybrook,transit_stop,1.0,0.0,1.0,400,1.0,800,,1.0,71,too_few_homes
+AYB,Alyth/Bonnybrook,community_centre,1.0,0.0,0.0,800,1.0,1600,,0.0,1505,too_few_homes
+AYB,Alyth/Bonnybrook,rec_centre,1.0,0.0,0.0,2000,1.0,5000,,0.0,2065,too_few_homes
+AYB,Alyth/Bonnybrook,library,1.0,0.0,0.0,2000,1.0,5000,,0.0,3681,too_few_homes
+AYB,Alyth/Bonnybrook,playground|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+AYB,Alyth/Bonnybrook,playground|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+AYB,Alyth/Bonnybrook,park|city,1.0,0.0,0.0,400,1.0,800,,0.0,678,too_few_homes
+AYB,Alyth/Bonnybrook,park|private,1.0,0.0,0.0,400,1.0,800,,0.0,678,too_few_homes
+ABR,Ambleridge,playground,7.0,6.0,1.0,400,1.0,800,1.0,,288,too_few_homes
+ABR,Ambleridge,park,7.0,6.0,1.0,400,1.0,800,1.0,,251,too_few_homes
+ABR,Ambleridge,transit_stop,7.0,6.0,0.0,400,1.0,800,0.0,,660,too_few_homes
+ABR,Ambleridge,community_centre,7.0,6.0,0.0,800,0.0,1600,0.0,,>1600,too_few_homes
+ABR,Ambleridge,rec_centre,7.0,6.0,0.0,2000,1.0,5000,0.0,,4757,too_few_homes
+ABR,Ambleridge,library,7.0,6.0,0.0,2000,1.0,5000,0.0,,2677,too_few_homes
+ABR,Ambleridge,playground|city,7.0,6.0,1.0,400,1.0,800,1.0,,288,too_few_homes
+ABR,Ambleridge,playground|private,7.0,6.0,1.0,400,1.0,800,1.0,,288,too_few_homes
+ABR,Ambleridge,park|city,7.0,6.0,1.0,400,1.0,800,1.0,,251,too_few_homes
+ABR,Ambleridge,park|private,7.0,6.0,1.0,400,1.0,800,1.0,,251,too_few_homes
+APP,Applewood Park,playground,2124.0,1.0,0.9873,400,1.0,800,1.0,0.9873,191,no_gap
+APP,Applewood Park,park,2124.0,1.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+APP,Applewood Park,transit_stop,2124.0,1.0,1.0,400,1.0,800,1.0,1.0,147,no_gap
+APP,Applewood Park,community_centre,2124.0,1.0,0.0,800,0.9609,1600,0.0,0.0,1265,gap
+APP,Applewood Park,rec_centre,2124.0,1.0,0.0,2000,1.0,5000,0.0,0.0,2580,gap
+APP,Applewood Park,library,2124.0,1.0,0.0,2000,1.0,5000,0.0,0.0,2640,gap
+APP,Applewood Park,playground|city,2124.0,1.0,0.9873,400,1.0,800,1.0,0.9873,191,no_gap
+APP,Applewood Park,playground|private,2124.0,1.0,0.9873,400,1.0,800,1.0,0.9873,191,no_gap
+APP,Applewood Park,park|city,2124.0,1.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+APP,Applewood Park,park|private,2124.0,1.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+ARB,Arbour Lake,playground,4267.0,645.0,0.8526,400,1.0,800,1.0,0.8263,248,no_gap
+ARB,Arbour Lake,park,4267.0,645.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+ARB,Arbour Lake,transit_stop,4267.0,645.0,1.0,400,1.0,800,1.0,1.0,131,no_gap
+ARB,Arbour Lake,community_centre,4267.0,645.0,0.5135,800,1.0,1600,0.3721,0.5387,761,no_gap
+ARB,Arbour Lake,rec_centre,4267.0,645.0,1.0,2000,1.0,5000,1.0,1.0,1222,no_gap
+ARB,Arbour Lake,library,4267.0,645.0,0.9913,2000,1.0,5000,1.0,0.9898,1191,no_gap
+ARB,Arbour Lake,playground|city,4267.0,645.0,0.686,400,0.9988,800,1.0,0.63,334,no_gap
+ARB,Arbour Lake,playground|private,4267.0,645.0,0.8526,400,1.0,800,1.0,0.8263,248,no_gap
+ARB,Arbour Lake,park|city,4267.0,645.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+ARB,Arbour Lake,park|private,4267.0,645.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+ASP,Aspen Woods,playground,3262.0,171.0,0.9037,400,1.0,800,1.0,0.8984,225,no_gap
+ASP,Aspen Woods,park,3262.0,171.0,1.0,400,1.0,800,1.0,1.0,66,no_gap
+ASP,Aspen Woods,transit_stop,3262.0,171.0,0.9644,400,1.0,800,1.0,0.9625,150,no_gap
+ASP,Aspen Woods,community_centre,3262.0,171.0,0.0123,800,0.24,1600,0.1754,0.0032,>1600,gap
+ASP,Aspen Woods,rec_centre,3262.0,171.0,0.4224,2000,1.0,5000,0.9883,0.3911,2104,gap
+ASP,Aspen Woods,library,3262.0,171.0,0.0,2000,1.0,5000,0.0,0.0,3714,gap
+ASP,Aspen Woods,playground|city,3262.0,171.0,0.8663,400,1.0,800,0.9474,0.8619,245,no_gap
+ASP,Aspen Woods,playground|private,3262.0,171.0,0.9464,400,1.0,800,1.0,0.9434,214,no_gap
+ASP,Aspen Woods,park|city,3262.0,171.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+ASP,Aspen Woods,park|private,3262.0,171.0,1.0,400,1.0,800,1.0,1.0,66,no_gap
+AUB,Auburn Bay,playground,6563.0,30.0,0.9605,400,1.0,800,1.0,0.9604,223,no_gap
+AUB,Auburn Bay,park,6563.0,30.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+AUB,Auburn Bay,transit_stop,6563.0,30.0,0.9858,400,1.0,800,1.0,0.9858,133,no_gap
+AUB,Auburn Bay,community_centre,6563.0,30.0,0.0,800,0.0497,1600,0.0,0.0,>1600,gap
+AUB,Auburn Bay,rec_centre,6563.0,30.0,0.7302,2000,1.0,5000,0.8667,0.7295,1619,no_gap
+AUB,Auburn Bay,library,6563.0,30.0,0.7815,2000,1.0,5000,0.8667,0.7811,1524,no_gap
+AUB,Auburn Bay,playground|city,6563.0,30.0,0.8946,400,1.0,800,1.0,0.8941,247,no_gap
+AUB,Auburn Bay,playground|private,6563.0,30.0,0.9605,400,1.0,800,1.0,0.9604,223,no_gap
+AUB,Auburn Bay,park|city,6563.0,30.0,0.998,400,1.0,800,1.0,0.998,91,no_gap
+AUB,Auburn Bay,park|private,6563.0,30.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+BNF,Banff Trail,playground,1914.0,271.0,0.477,400,1.0,800,0.4723,0.4749,324,gap
+BNF,Banff Trail,park,1914.0,271.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+BNF,Banff Trail,transit_stop,1914.0,271.0,0.9525,400,1.0,800,0.9779,0.9479,158,no_gap
+BNF,Banff Trail,community_centre,1914.0,271.0,0.7868,800,1.0,1600,0.8303,0.7812,587,no_gap
+BNF,Banff Trail,rec_centre,1914.0,271.0,1.0,2000,1.0,5000,1.0,1.0,1019,no_gap
+BNF,Banff Trail,library,1914.0,271.0,0.9786,2000,1.0,5000,1.0,0.9749,1186,no_gap
+BNF,Banff Trail,playground|city,1914.0,271.0,0.2184,400,0.86,800,0.2804,0.2089,576,gap
+BNF,Banff Trail,playground|private,1914.0,271.0,0.477,400,1.0,800,0.4723,0.4749,324,gap
+BNF,Banff Trail,park|city,1914.0,271.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+BNF,Banff Trail,park|private,1914.0,271.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+BNK,Bankview,playground,3294.0,181.0,0.9092,400,1.0,800,1.0,0.9018,172,no_gap
+BNK,Bankview,park,3294.0,181.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+BNK,Bankview,transit_stop,3294.0,181.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+BNK,Bankview,community_centre,3294.0,181.0,1.0,800,1.0,1600,1.0,1.0,358,no_gap
+BNK,Bankview,rec_centre,3294.0,181.0,0.2146,2000,1.0,5000,0.0663,0.2279,2180,gap
+BNK,Bankview,library,3294.0,181.0,1.0,2000,1.0,5000,1.0,1.0,1037,no_gap
+BNK,Bankview,playground|city,3294.0,181.0,0.9092,400,1.0,800,1.0,0.9018,193,no_gap
+BNK,Bankview,playground|private,3294.0,181.0,0.9092,400,1.0,800,1.0,0.9018,172,no_gap
+BNK,Bankview,park|city,3294.0,181.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+BNK,Bankview,park|private,3294.0,181.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+BYV,Bayview,playground,248.0,1.0,0.8831,400,1.0,800,1.0,0.8821,236,no_gap
+BYV,Bayview,park,248.0,1.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+BYV,Bayview,transit_stop,248.0,1.0,0.8226,400,1.0,800,1.0,0.8211,181,no_gap
+BYV,Bayview,community_centre,248.0,1.0,0.75,800,1.0,1600,1.0,0.748,666,no_gap
+BYV,Bayview,rec_centre,248.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1337,no_gap
+BYV,Bayview,library,248.0,1.0,0.254,2000,1.0,5000,0.0,0.2561,2258,gap
+BYV,Bayview,playground|city,248.0,1.0,0.8831,400,1.0,800,1.0,0.8821,281,no_gap
+BYV,Bayview,playground|private,248.0,1.0,0.8831,400,1.0,800,1.0,0.8821,236,no_gap
+BYV,Bayview,park|city,248.0,1.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+BYV,Bayview,park|private,248.0,1.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+BED,Beddington Heights,playground,4124.0,1.0,0.9939,400,1.0,800,1.0,0.9939,162,no_gap
+BED,Beddington Heights,park,4124.0,1.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+BED,Beddington Heights,transit_stop,4124.0,1.0,0.9942,400,1.0,800,1.0,0.9942,132,no_gap
+BED,Beddington Heights,community_centre,4124.0,1.0,0.6625,800,1.0,1600,1.0,0.6624,670,no_gap
+BED,Beddington Heights,rec_centre,4124.0,1.0,0.3058,2000,1.0,5000,1.0,0.3056,2277,gap
+BED,Beddington Heights,library,4124.0,1.0,0.2274,2000,1.0,5000,0.0,0.2275,2391,gap
+BED,Beddington Heights,playground|city,4124.0,1.0,0.9144,400,1.0,800,1.0,0.9144,192,no_gap
+BED,Beddington Heights,playground|private,4124.0,1.0,0.9939,400,1.0,800,1.0,0.9939,162,no_gap
+BED,Beddington Heights,park|city,4124.0,1.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+BED,Beddington Heights,park|private,4124.0,1.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+BEL,Bel-Aire,playground,157.0,9.0,0.6242,400,1.0,800,0.6667,0.6216,351,no_gap
+BEL,Bel-Aire,park,157.0,9.0,1.0,400,1.0,800,1.0,1.0,102,no_gap
+BEL,Bel-Aire,transit_stop,157.0,9.0,0.4841,400,1.0,800,0.5556,0.4797,407,gap
+BEL,Bel-Aire,community_centre,157.0,9.0,0.4586,800,1.0,1600,0.5556,0.4527,815,gap
+BEL,Bel-Aire,rec_centre,157.0,9.0,1.0,2000,1.0,5000,1.0,1.0,1390,no_gap
+BEL,Bel-Aire,library,157.0,9.0,0.0,2000,1.0,5000,0.0,0.0,2959,gap
+BEL,Bel-Aire,playground|city,157.0,9.0,0.3949,400,1.0,800,0.5556,0.3851,423,gap
+BEL,Bel-Aire,playground|private,157.0,9.0,0.6242,400,1.0,800,0.6667,0.6216,351,no_gap
+BEL,Bel-Aire,park|city,157.0,9.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+BEL,Bel-Aire,park|private,157.0,9.0,1.0,400,1.0,800,1.0,1.0,102,no_gap
+BLM,Belmont,playground,2341.0,1808.0,0.437,400,1.0,800,0.3059,0.8641,426,gap_check
+BLM,Belmont,park,2341.0,1808.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+BLM,Belmont,transit_stop,2341.0,1808.0,0.6801,400,1.0,800,0.7533,0.3018,292,no_gap
+BLM,Belmont,community_centre,2341.0,1808.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+BLM,Belmont,rec_centre,2341.0,1808.0,0.0,2000,1.0,5000,0.0,0.0,3288,gap_check
+BLM,Belmont,library,2341.0,1808.0,0.0,2000,1.0,5000,0.0,0.0,3281,gap_check
+BLM,Belmont,playground|city,2341.0,1808.0,0.3806,400,0.9782,800,0.2854,0.8641,447,gap_check
+BLM,Belmont,playground|private,2341.0,1808.0,0.437,400,1.0,800,0.3059,0.8641,426,gap_check
+BLM,Belmont,park|city,2341.0,1808.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+BLM,Belmont,park|private,2341.0,1808.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+BLN,Beltline,playground,21765.0,798.0,0.6054,400,1.0,800,1.0,0.5958,349,no_gap
+BLN,Beltline,park,21765.0,798.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+BLN,Beltline,transit_stop,21765.0,798.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
+BLN,Beltline,community_centre,21765.0,798.0,0.7156,800,1.0,1600,1.0,0.7016,668,no_gap
+BLN,Beltline,rec_centre,21765.0,798.0,0.8561,2000,1.0,5000,0.8609,0.8544,1116,no_gap
+BLN,Beltline,library,21765.0,798.0,1.0,2000,1.0,5000,1.0,1.0,651,no_gap
+BLN,Beltline,playground|city,21765.0,798.0,0.2976,400,0.8395,800,1.0,0.2728,584,gap
+BLN,Beltline,playground|private,21765.0,798.0,0.7622,400,1.0,800,1.0,0.7603,255,no_gap
+BLN,Beltline,park|city,21765.0,798.0,0.9248,400,1.0,800,1.0,0.9211,146,no_gap
+BLN,Beltline,park|private,21765.0,798.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+BVD,Belvedere,playground,1345.0,1227.0,0.887,400,1.0,800,0.8802,0.9646,255,no_gap
+BVD,Belvedere,park,1345.0,1227.0,0.9985,400,1.0,800,1.0,0.9823,134,no_gap
+BVD,Belvedere,transit_stop,1345.0,1227.0,0.8766,400,0.9985,800,0.8818,0.8584,188,no_gap
+BVD,Belvedere,community_centre,1345.0,1227.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+BVD,Belvedere,rec_centre,1345.0,1227.0,0.0,2000,1.0,5000,0.0,0.0,3882,gap_check
+BVD,Belvedere,library,1345.0,1227.0,0.0,2000,1.0,5000,0.0,0.0,4039,gap_check
+BVD,Belvedere,playground|city,1345.0,1227.0,0.887,400,1.0,800,0.8802,0.9646,255,no_gap
+BVD,Belvedere,playground|private,1345.0,1227.0,0.887,400,1.0,800,0.8802,0.9646,255,no_gap
+BVD,Belvedere,park|city,1345.0,1227.0,0.9985,400,1.0,800,1.0,0.9823,134,no_gap
+BVD,Belvedere,park|private,1345.0,1227.0,0.9985,400,1.0,800,1.0,0.9823,134,no_gap
+BDO,Bonavista Downs,playground,367.0,0.0,0.9264,400,1.0,800,,0.9264,218,no_gap
+BDO,Bonavista Downs,park,367.0,0.0,1.0,400,1.0,800,,1.0,65,no_gap
+BDO,Bonavista Downs,transit_stop,367.0,0.0,1.0,400,1.0,800,,1.0,109,no_gap
+BDO,Bonavista Downs,community_centre,367.0,0.0,1.0,800,1.0,1600,,1.0,332,no_gap
+BDO,Bonavista Downs,rec_centre,367.0,0.0,0.1635,2000,1.0,5000,,0.1635,2177,gap
+BDO,Bonavista Downs,library,367.0,0.0,0.0872,2000,1.0,5000,,0.0872,2279,gap
+BDO,Bonavista Downs,playground|city,367.0,0.0,0.9264,400,1.0,800,,0.9264,218,no_gap
+BDO,Bonavista Downs,playground|private,367.0,0.0,0.9264,400,1.0,800,,0.9264,218,no_gap
+BDO,Bonavista Downs,park|city,367.0,0.0,1.0,400,1.0,800,,1.0,65,no_gap
+BDO,Bonavista Downs,park|private,367.0,0.0,1.0,400,1.0,800,,1.0,65,no_gap
+BOW,Bowness,playground,4732.0,379.0,0.9721,400,1.0,800,0.9842,0.9707,200,no_gap
+BOW,Bowness,park,4732.0,379.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+BOW,Bowness,transit_stop,4732.0,379.0,0.9778,400,0.9998,800,0.9842,0.977,134,no_gap
+BOW,Bowness,community_centre,4732.0,379.0,0.5038,800,0.9493,1600,0.5145,0.5048,797,no_gap
+BOW,Bowness,rec_centre,4732.0,379.0,0.4167,2000,1.0,5000,0.4274,0.414,2222,gap
+BOW,Bowness,library,4732.0,379.0,0.8882,2000,1.0,5000,0.8839,0.8893,1100,no_gap
+BOW,Bowness,playground|city,4732.0,379.0,0.6458,400,0.9915,800,0.6016,0.6511,325,no_gap
+BOW,Bowness,playground|private,4732.0,379.0,0.9721,400,1.0,800,0.9842,0.9707,193,no_gap
+BOW,Bowness,park|city,4732.0,379.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+BOW,Bowness,park|private,4732.0,379.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+BRA,Braeside,playground,2539.0,2.0,0.9705,400,1.0,800,1.0,0.9704,237,no_gap
+BRA,Braeside,park,2539.0,2.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
+BRA,Braeside,transit_stop,2539.0,2.0,0.9508,400,1.0,800,1.0,0.9507,139,no_gap
+BRA,Braeside,community_centre,2539.0,2.0,0.6432,800,1.0,1600,1.0,0.6429,652,no_gap
+BRA,Braeside,rec_centre,2539.0,2.0,1.0,2000,1.0,5000,1.0,1.0,827,no_gap
+BRA,Braeside,library,2539.0,2.0,0.6948,2000,1.0,5000,1.0,0.6945,1719,no_gap
+BRA,Braeside,playground|city,2539.0,2.0,0.7566,400,1.0,800,1.0,0.7564,264,no_gap
+BRA,Braeside,playground|private,2539.0,2.0,0.972,400,1.0,800,1.0,0.972,237,no_gap
+BRA,Braeside,park|city,2539.0,2.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+BRA,Braeside,park|private,2539.0,2.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
+BRE,Brentwood,playground,3535.0,290.0,0.701,400,1.0,800,0.0207,0.7618,242,no_gap
+BRE,Brentwood,park,3535.0,290.0,0.9938,400,1.0,800,1.0,0.9932,85,no_gap
+BRE,Brentwood,transit_stop,3535.0,290.0,0.918,400,1.0,800,1.0,0.9106,144,no_gap
+BRE,Brentwood,community_centre,3535.0,290.0,0.4636,800,1.0,1600,0.9931,0.4163,834,gap
+BRE,Brentwood,rec_centre,3535.0,290.0,1.0,2000,1.0,5000,1.0,1.0,623,no_gap
+BRE,Brentwood,library,3535.0,290.0,1.0,2000,1.0,5000,1.0,1.0,1021,no_gap
+BRE,Brentwood,playground|city,3535.0,290.0,0.5482,400,1.0,800,0.0103,0.5963,379,no_gap
+BRE,Brentwood,playground|private,3535.0,290.0,0.7672,400,1.0,800,0.0276,0.8333,237,no_gap
+BRE,Brentwood,park|city,3535.0,290.0,0.9935,400,1.0,800,1.0,0.9929,94,no_gap
+BRE,Brentwood,park|private,3535.0,290.0,0.9938,400,1.0,800,1.0,0.9932,85,no_gap
+BRD,Bridgeland/Riverside,playground,4308.0,193.0,0.9334,400,1.0,800,0.9845,0.9298,197,no_gap
+BRD,Bridgeland/Riverside,park,4308.0,193.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+BRD,Bridgeland/Riverside,transit_stop,4308.0,193.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+BRD,Bridgeland/Riverside,community_centre,4308.0,193.0,0.9995,800,1.0,1600,1.0,0.9995,445,no_gap
+BRD,Bridgeland/Riverside,rec_centre,4308.0,193.0,1.0,2000,1.0,5000,1.0,1.0,1340,no_gap
+BRD,Bridgeland/Riverside,library,4308.0,193.0,1.0,2000,1.0,5000,1.0,1.0,1215,no_gap
+BRD,Bridgeland/Riverside,playground|city,4308.0,193.0,0.7614,400,1.0,800,0.5907,0.7679,265,no_gap
+BRD,Bridgeland/Riverside,playground|private,4308.0,193.0,0.9441,400,1.0,800,1.0,0.9404,193,no_gap
+BRD,Bridgeland/Riverside,park|city,4308.0,193.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+BRD,Bridgeland/Riverside,park|private,4308.0,193.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+BRI,Bridlewood,playground,4229.0,0.0,0.8997,400,1.0,800,,0.8997,216,no_gap
+BRI,Bridlewood,park,4229.0,0.0,1.0,400,1.0,800,,1.0,100,no_gap
+BRI,Bridlewood,transit_stop,4229.0,0.0,0.9868,400,1.0,800,,0.9868,168,no_gap
+BRI,Bridlewood,community_centre,4229.0,0.0,0.0,800,0.0,1600,,0.0,>1600,gap
+BRI,Bridlewood,rec_centre,4229.0,0.0,0.0,2000,1.0,5000,,0.0,3261,gap
+BRI,Bridlewood,library,4229.0,0.0,0.0,2000,1.0,5000,,0.0,3304,gap
+BRI,Bridlewood,playground|city,4229.0,0.0,0.8863,400,1.0,800,,0.8863,234,no_gap
+BRI,Bridlewood,playground|private,4229.0,0.0,0.8997,400,1.0,800,,0.8997,216,no_gap
+BRI,Bridlewood,park|city,4229.0,0.0,1.0,400,1.0,800,,1.0,102,no_gap
+BRI,Bridlewood,park|private,4229.0,0.0,1.0,400,1.0,800,,1.0,100,no_gap
+BRT,Britannia,playground,309.0,16.0,0.7573,400,1.0,800,0.75,0.7577,285,no_gap
+BRT,Britannia,park,309.0,16.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+BRT,Britannia,transit_stop,309.0,16.0,0.8123,400,1.0,800,0.875,0.8089,240,no_gap
+BRT,Britannia,community_centre,309.0,16.0,0.6958,800,1.0,1600,0.6875,0.6962,717,no_gap
+BRT,Britannia,rec_centre,309.0,16.0,0.9515,2000,1.0,5000,0.9375,0.9522,1687,no_gap
+BRT,Britannia,library,309.0,16.0,1.0,2000,1.0,5000,1.0,1.0,1599,no_gap
+BRT,Britannia,playground|city,309.0,16.0,0.7346,400,1.0,800,0.75,0.7338,291,no_gap
+BRT,Britannia,playground|private,309.0,16.0,0.7573,400,1.0,800,0.75,0.7577,285,no_gap
+BRT,Britannia,park|city,309.0,16.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+BRT,Britannia,park|private,309.0,16.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+CAM,Cambrian Heights,playground,765.0,16.0,0.8758,400,1.0,800,0.375,0.8864,255,no_gap
+CAM,Cambrian Heights,park,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAM,Cambrian Heights,transit_stop,765.0,16.0,0.9699,400,1.0,800,1.0,0.9693,151,no_gap
+CAM,Cambrian Heights,community_centre,765.0,16.0,1.0,800,1.0,1600,1.0,1.0,374,no_gap
+CAM,Cambrian Heights,rec_centre,765.0,16.0,0.0,2000,1.0,5000,0.0,0.0,2912,gap
+CAM,Cambrian Heights,library,765.0,16.0,0.0039,2000,1.0,5000,0.0,0.004,2400,gap
+CAM,Cambrian Heights,playground|city,765.0,16.0,0.7948,400,1.0,800,0.3125,0.8048,283,no_gap
+CAM,Cambrian Heights,playground|private,765.0,16.0,0.8758,400,1.0,800,0.375,0.8864,255,no_gap
+CAM,Cambrian Heights,park|city,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAM,Cambrian Heights,park|private,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAN,Canyon Meadows,playground,3139.0,3.0,0.9086,400,1.0,800,0.3333,0.9091,280,no_gap
+CAN,Canyon Meadows,park,3139.0,3.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+CAN,Canyon Meadows,transit_stop,3139.0,3.0,0.9838,400,1.0,800,1.0,0.9837,148,no_gap
+CAN,Canyon Meadows,community_centre,3139.0,3.0,0.483,800,1.0,1600,0.3333,0.4831,821,gap
+CAN,Canyon Meadows,rec_centre,3139.0,3.0,0.9831,2000,1.0,5000,1.0,0.9831,1122,no_gap
+CAN,Canyon Meadows,library,3139.0,3.0,0.5852,2000,1.0,5000,0.3333,0.5855,1906,no_gap
+CAN,Canyon Meadows,playground|city,3139.0,3.0,0.5562,400,0.9857,800,0.3333,0.5564,346,no_gap
+CAN,Canyon Meadows,playground|private,3139.0,3.0,0.9086,400,1.0,800,0.3333,0.9091,280,no_gap
+CAN,Canyon Meadows,park|city,3139.0,3.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+CAN,Canyon Meadows,park|private,3139.0,3.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+CAP,Capitol Hill,playground,2159.0,296.0,0.7304,400,1.0,800,0.6554,0.7414,284,no_gap
+CAP,Capitol Hill,park,2159.0,296.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+CAP,Capitol Hill,transit_stop,2159.0,296.0,0.9986,400,1.0,800,1.0,0.9984,130,no_gap
+CAP,Capitol Hill,community_centre,2159.0,296.0,0.9912,800,1.0,1600,1.0,0.9897,400,no_gap
+CAP,Capitol Hill,rec_centre,2159.0,296.0,0.4006,2000,1.0,5000,0.4628,0.3882,2014,gap
+CAP,Capitol Hill,library,2159.0,296.0,1.0,2000,1.0,5000,1.0,1.0,1006,no_gap
+CAP,Capitol Hill,playground|city,2159.0,296.0,0.579,400,0.987,800,0.5574,0.5848,359,no_gap
+CAP,Capitol Hill,playground|private,2159.0,296.0,0.7304,400,1.0,800,0.6554,0.7414,284,no_gap
+CAP,Capitol Hill,park|city,2159.0,296.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+CAP,Capitol Hill,park|private,2159.0,296.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+CAR,Carrington,playground,3583.0,2338.0,0.5749,400,0.9997,800,0.4803,0.7563,354,no_gap
+CAR,Carrington,park,3583.0,2338.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CAR,Carrington,transit_stop,3583.0,2338.0,0.7611,400,1.0,800,0.7087,0.8636,317,no_gap
+CAR,Carrington,community_centre,3583.0,2338.0,0.1806,800,0.5437,1600,0.192,0.1598,1583,gap_check
+CAR,Carrington,rec_centre,3583.0,2338.0,0.0,2000,1.0,5000,0.0,0.0,2845,gap_check
+CAR,Carrington,library,3583.0,2338.0,0.0,2000,1.0,5000,0.0,0.0,3117,gap_check
+CAR,Carrington,playground|city,3583.0,2338.0,0.5749,400,0.9997,800,0.4803,0.7563,354,no_gap
+CAR,Carrington,playground|private,3583.0,2338.0,0.5749,400,0.9997,800,0.4803,0.7563,354,no_gap
+CAR,Carrington,park|city,3583.0,2338.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CAR,Carrington,park|private,3583.0,2338.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CAS,Castleridge,playground,1754.0,7.0,0.9926,400,1.0,800,0.8571,0.9931,175,no_gap
+CAS,Castleridge,park,1754.0,7.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+CAS,Castleridge,transit_stop,1754.0,7.0,1.0,400,1.0,800,1.0,1.0,131,no_gap
+CAS,Castleridge,community_centre,1754.0,7.0,0.3364,800,0.9892,1600,0.0,0.3373,1014,gap
+CAS,Castleridge,rec_centre,1754.0,7.0,0.7338,2000,1.0,5000,0.0,0.7365,1738,no_gap
+CAS,Castleridge,library,1754.0,7.0,0.7189,2000,1.0,5000,0.0,0.7216,1748,no_gap
+CAS,Castleridge,playground|city,1754.0,7.0,0.508,400,1.0,800,0.5714,0.5074,388,no_gap
+CAS,Castleridge,playground|private,1754.0,7.0,0.9926,400,1.0,800,0.8571,0.9931,175,no_gap
+CAS,Castleridge,park|city,1754.0,7.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+CAS,Castleridge,park|private,1754.0,7.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+CED,Cedarbrae,playground,2483.0,1.0,0.9964,400,1.0,800,1.0,0.9964,217,no_gap
+CED,Cedarbrae,park,2483.0,1.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CED,Cedarbrae,transit_stop,2483.0,1.0,0.9895,400,1.0,800,1.0,0.9895,156,no_gap
+CED,Cedarbrae,community_centre,2483.0,1.0,0.9001,800,1.0,1600,1.0,0.9001,501,no_gap
+CED,Cedarbrae,rec_centre,2483.0,1.0,0.7749,2000,1.0,5000,1.0,0.7748,1740,no_gap
+CED,Cedarbrae,library,2483.0,1.0,0.0,2000,1.0,5000,0.0,0.0,3195,gap
+CED,Cedarbrae,playground|city,2483.0,1.0,0.9299,400,1.0,800,1.0,0.9299,260,no_gap
+CED,Cedarbrae,playground|private,2483.0,1.0,0.9964,400,1.0,800,1.0,0.9964,217,no_gap
+CED,Cedarbrae,park|city,2483.0,1.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CED,Cedarbrae,park|private,2483.0,1.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+CHA,Chaparral,playground,4179.0,1.0,0.9818,400,1.0,800,1.0,0.9818,200,no_gap
+CHA,Chaparral,park,4179.0,1.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+CHA,Chaparral,transit_stop,4179.0,1.0,0.9856,400,1.0,800,1.0,0.9856,143,no_gap
+CHA,Chaparral,community_centre,4179.0,1.0,0.4183,800,0.9526,1600,1.0,0.4181,874,gap
+CHA,Chaparral,rec_centre,4179.0,1.0,0.1228,2000,1.0,5000,1.0,0.1225,2924,gap
+CHA,Chaparral,library,4179.0,1.0,0.1366,2000,1.0,5000,1.0,0.1364,2888,gap
+CHA,Chaparral,playground|city,4179.0,1.0,0.9237,400,1.0,800,1.0,0.9236,216,no_gap
+CHA,Chaparral,playground|private,4179.0,1.0,0.9818,400,1.0,800,1.0,0.9818,200,no_gap
+CHA,Chaparral,park|city,4179.0,1.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+CHA,Chaparral,park|private,4179.0,1.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+CHW,Charleswood,playground,1399.0,20.0,0.6626,400,0.9793,800,0.75,0.6611,297,no_gap
+CHW,Charleswood,park,1399.0,20.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+CHW,Charleswood,transit_stop,1399.0,20.0,0.852,400,1.0,800,0.85,0.8527,188,no_gap
+CHW,Charleswood,community_centre,1399.0,20.0,0.6583,800,1.0,1600,0.6,0.6597,655,no_gap
+CHW,Charleswood,rec_centre,1399.0,20.0,0.9979,2000,1.0,5000,1.0,0.9978,1256,no_gap
+CHW,Charleswood,library,1399.0,20.0,0.639,2000,1.0,5000,0.6,0.6393,1860,no_gap
+CHW,Charleswood,playground|city,1399.0,20.0,0.5154,400,0.9192,800,0.5,0.516,402,no_gap
+CHW,Charleswood,playground|private,1399.0,20.0,0.6626,400,0.98,800,0.75,0.6611,297,no_gap
+CHW,Charleswood,park|city,1399.0,20.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+CHW,Charleswood,park|private,1399.0,20.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+CHN,Chinatown,playground,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+CHN,Chinatown,park,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+CHN,Chinatown,transit_stop,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,269,no_gap
+CHN,Chinatown,community_centre,1698.0,51.0,0.0,800,1.0,1600,0.0,0.0,1014,gap
+CHN,Chinatown,rec_centre,1698.0,51.0,1.0,2000,1.0,5000,1.0,1.0,1936,no_gap
+CHN,Chinatown,library,1698.0,51.0,1.0,2000,1.0,5000,1.0,1.0,1115,no_gap
+CHN,Chinatown,playground|city,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+CHN,Chinatown,playground|private,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+CHN,Chinatown,park|city,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+CHN,Chinatown,park|private,1698.0,51.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+CHK,Chinook Park,playground,570.0,1.0,0.9596,400,1.0,800,1.0,0.9596,258,no_gap
+CHK,Chinook Park,park,570.0,1.0,1.0,400,1.0,800,1.0,1.0,118,no_gap
+CHK,Chinook Park,transit_stop,570.0,1.0,0.8632,400,1.0,800,1.0,0.8629,229,no_gap
+CHK,Chinook Park,community_centre,570.0,1.0,0.9474,800,1.0,1600,1.0,0.9473,626,no_gap
+CHK,Chinook Park,rec_centre,570.0,1.0,0.1649,2000,1.0,5000,0.0,0.1652,2234,gap
+CHK,Chinook Park,library,570.0,1.0,0.2491,2000,1.0,5000,0.0,0.2496,2153,gap
+CHK,Chinook Park,playground|city,570.0,1.0,0.9053,400,1.0,800,1.0,0.9051,306,no_gap
+CHK,Chinook Park,playground|private,570.0,1.0,0.9596,400,1.0,800,1.0,0.9596,258,no_gap
+CHK,Chinook Park,park|city,570.0,1.0,1.0,400,1.0,800,1.0,1.0,118,no_gap
+CHK,Chinook Park,park|private,570.0,1.0,1.0,400,1.0,800,1.0,1.0,118,no_gap
+CHR,Christie Park,playground,725.0,0.0,0.9655,400,1.0,800,,0.9655,244,no_gap
+CHR,Christie Park,park,725.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+CHR,Christie Park,transit_stop,725.0,0.0,1.0,400,1.0,800,,1.0,224,no_gap
+CHR,Christie Park,community_centre,725.0,0.0,0.2207,800,1.0,1600,,0.2207,915,gap
+CHR,Christie Park,rec_centre,725.0,0.0,1.0,2000,1.0,5000,,1.0,756,no_gap
+CHR,Christie Park,library,725.0,0.0,0.0,2000,1.0,5000,,0.0,2338,gap
+CHR,Christie Park,playground|city,725.0,0.0,0.9586,400,1.0,800,,0.9586,244,no_gap
+CHR,Christie Park,playground|private,725.0,0.0,0.9655,400,1.0,800,,0.9655,244,no_gap
+CHR,Christie Park,park|city,725.0,0.0,1.0,400,1.0,800,,1.0,85,no_gap
+CHR,Christie Park,park|private,725.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+CIT,Citadel,playground,3475.0,1.0,0.954,400,1.0,800,1.0,0.9539,176,no_gap
+CIT,Citadel,park,3475.0,1.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+CIT,Citadel,transit_stop,3475.0,1.0,0.994,400,1.0,800,1.0,0.994,151,no_gap
+CIT,Citadel,community_centre,3475.0,1.0,0.6262,800,0.9911,1600,1.0,0.6261,630,no_gap
+CIT,Citadel,rec_centre,3475.0,1.0,0.2671,2000,1.0,5000,0.0,0.2671,2199,gap
+CIT,Citadel,library,3475.0,1.0,0.6043,2000,1.0,5000,1.0,0.6042,1908,no_gap
+CIT,Citadel,playground|city,3475.0,1.0,0.9462,400,1.0,800,1.0,0.9462,197,no_gap
+CIT,Citadel,playground|private,3475.0,1.0,0.954,400,1.0,800,1.0,0.9539,176,no_gap
+CIT,Citadel,park|city,3475.0,1.0,1.0,400,1.0,800,1.0,1.0,73,no_gap
+CIT,Citadel,park|private,3475.0,1.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+CSC,Cityscape,playground,2888.0,1226.0,0.617,400,0.9065,800,0.2382,0.8976,359,no_gap
+CSC,Cityscape,park,2888.0,1226.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+CSC,Cityscape,transit_stop,2888.0,1226.0,0.6901,400,0.9654,800,0.4347,0.8795,252,no_gap
+CSC,Cityscape,community_centre,2888.0,1226.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+CSC,Cityscape,rec_centre,2888.0,1226.0,0.0,2000,1.0,5000,0.0,0.0,3138,gap_check
+CSC,Cityscape,library,2888.0,1226.0,0.0,2000,1.0,5000,0.0,0.0,3209,gap_check
+CSC,Cityscape,playground|city,2888.0,1226.0,0.617,400,0.9065,800,0.2382,0.8976,359,no_gap
+CSC,Cityscape,playground|private,2888.0,1226.0,0.617,400,0.9065,800,0.2382,0.8976,359,no_gap
+CSC,Cityscape,park|city,2888.0,1226.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+CSC,Cityscape,park|private,2888.0,1226.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+CLI,Cliff Bungalow,playground,1312.0,84.0,0.7866,400,1.0,800,1.0,0.9303,291,no_gap
+CLI,Cliff Bungalow,park,1312.0,84.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+CLI,Cliff Bungalow,transit_stop,1312.0,84.0,1.0,400,1.0,800,1.0,1.0,128,no_gap
+CLI,Cliff Bungalow,community_centre,1312.0,84.0,1.0,800,1.0,1600,1.0,1.0,310,no_gap
+CLI,Cliff Bungalow,rec_centre,1312.0,84.0,1.0,2000,1.0,5000,1.0,1.0,729,no_gap
+CLI,Cliff Bungalow,library,1312.0,84.0,1.0,2000,1.0,5000,1.0,1.0,699,no_gap
+CLI,Cliff Bungalow,playground|city,1312.0,84.0,0.5373,400,1.0,800,0.9881,0.6104,338,no_gap
+CLI,Cliff Bungalow,playground|private,1312.0,84.0,0.7866,400,1.0,800,1.0,0.9303,291,no_gap
+CLI,Cliff Bungalow,park|city,1312.0,84.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+CLI,Cliff Bungalow,park|private,1312.0,84.0,1.0,400,1.0,800,1.0,1.0,212,no_gap
+COA,Coach Hill,playground,1498.0,8.0,0.8291,400,1.0,800,1.0,0.8282,287,no_gap
+COA,Coach Hill,park,1498.0,8.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+COA,Coach Hill,transit_stop,1498.0,8.0,0.9973,400,1.0,800,1.0,0.9973,110,no_gap
+COA,Coach Hill,community_centre,1498.0,8.0,0.8451,800,1.0,1600,0.125,0.849,630,no_gap
+COA,Coach Hill,rec_centre,1498.0,8.0,0.8685,2000,1.0,5000,0.75,0.8691,1712,no_gap
+COA,Coach Hill,library,1498.0,8.0,0.0,2000,1.0,5000,0.0,0.0,3183,gap
+COA,Coach Hill,playground|city,1498.0,8.0,0.8198,400,1.0,800,1.0,0.8188,307,no_gap
+COA,Coach Hill,playground|private,1498.0,8.0,0.8291,400,1.0,800,1.0,0.8282,287,no_gap
+COA,Coach Hill,park|city,1498.0,8.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+COA,Coach Hill,park|private,1498.0,8.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+COL,Collingwood,playground,884.0,19.0,0.8744,400,1.0,800,0.8421,0.8751,311,no_gap
+COL,Collingwood,park,884.0,19.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+COL,Collingwood,transit_stop,884.0,19.0,0.9695,400,1.0,800,0.8947,0.9711,155,no_gap
+COL,Collingwood,community_centre,884.0,19.0,0.7229,800,1.0,1600,0.9474,0.7179,686,no_gap
+COL,Collingwood,rec_centre,884.0,19.0,0.3586,2000,1.0,5000,0.4211,0.3572,2090,gap
+COL,Collingwood,library,884.0,19.0,0.2692,2000,1.0,5000,0.0526,0.274,2306,gap
+COL,Collingwood,playground|city,884.0,19.0,0.2952,400,0.9321,800,0.3684,0.2936,488,gap
+COL,Collingwood,playground|private,884.0,19.0,0.8744,400,1.0,800,0.8421,0.8751,311,no_gap
+COL,Collingwood,park|city,884.0,19.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+COL,Collingwood,park|private,884.0,19.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+CPF,Copperfield,playground,5391.0,286.0,0.9681,400,1.0,800,0.5804,0.9898,188,no_gap
+CPF,Copperfield,park,5391.0,286.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+CPF,Copperfield,transit_stop,5391.0,286.0,0.9974,400,1.0,800,1.0,0.9973,153,no_gap
+CPF,Copperfield,community_centre,5391.0,286.0,0.4151,800,1.0,1600,1.0,0.3824,899,gap
+CPF,Copperfield,rec_centre,5391.0,286.0,0.0,2000,0.8084,5000,0.0,0.0,4332,gap
+CPF,Copperfield,library,5391.0,286.0,0.0,2000,0.9278,5000,0.0,0.0,4133,gap
+CPF,Copperfield,playground|city,5391.0,286.0,0.9681,400,1.0,800,0.5804,0.9898,188,no_gap
+CPF,Copperfield,playground|private,5391.0,286.0,0.9681,400,1.0,800,0.5804,0.9898,188,no_gap
+CPF,Copperfield,park|city,5391.0,286.0,1.0,400,1.0,800,1.0,1.0,72,no_gap
+CPF,Copperfield,park|private,5391.0,286.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+COR,Coral Springs,playground,1474.0,0.0,0.9769,400,1.0,800,,0.9769,190,no_gap
+COR,Coral Springs,park,1474.0,0.0,1.0,400,1.0,800,,1.0,70,no_gap
+COR,Coral Springs,transit_stop,1474.0,0.0,1.0,400,1.0,800,,1.0,133,no_gap
+COR,Coral Springs,community_centre,1474.0,0.0,0.0,800,0.9064,1600,,0.0,1296,gap
+COR,Coral Springs,rec_centre,1474.0,0.0,0.3433,2000,1.0,5000,,0.3433,2146,gap
+COR,Coral Springs,library,1474.0,0.0,0.346,2000,1.0,5000,,0.346,2143,gap
+COR,Coral Springs,playground|city,1474.0,0.0,0.7639,400,1.0,800,,0.7639,249,no_gap
+COR,Coral Springs,playground|private,1474.0,0.0,0.9769,400,1.0,800,,0.9769,190,no_gap
+COR,Coral Springs,park|city,1474.0,0.0,1.0,400,1.0,800,,1.0,70,no_gap
+COR,Coral Springs,park|private,1474.0,0.0,1.0,400,1.0,800,,1.0,70,no_gap
+CNS,Cornerstone,playground,5025.0,2998.0,0.6981,400,0.9664,800,0.6861,0.7186,303,no_gap
+CNS,Cornerstone,park,5025.0,2998.0,0.9329,400,0.9906,800,0.8906,1.0,113,no_gap
+CNS,Cornerstone,transit_stop,5025.0,2998.0,0.7385,400,0.9548,800,0.5694,0.994,210,no_gap
+CNS,Cornerstone,community_centre,5025.0,2998.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+CNS,Cornerstone,rec_centre,5025.0,2998.0,0.0,2000,0.759,5000,0.0,0.0,4552,gap_check
+CNS,Cornerstone,library,5025.0,2998.0,0.0,2000,0.752,5000,0.0,0.0,4572,gap_check
+CNS,Cornerstone,playground|city,5025.0,2998.0,0.6691,400,0.9664,800,0.6861,0.6462,315,no_gap
+CNS,Cornerstone,playground|private,5025.0,2998.0,0.6981,400,0.9664,800,0.6861,0.7186,303,no_gap
+CNS,Cornerstone,park|city,5025.0,2998.0,0.9329,400,0.9906,800,0.8906,1.0,113,no_gap
+CNS,Cornerstone,park|private,5025.0,2998.0,0.9329,400,0.9906,800,0.8906,1.0,113,no_gap
+CGR,Cougar Ridge,playground,2245.0,26.0,0.9394,400,1.0,800,1.0,0.9387,189,no_gap
+CGR,Cougar Ridge,park,2245.0,26.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CGR,Cougar Ridge,transit_stop,2245.0,26.0,0.9884,400,1.0,800,1.0,0.9883,166,no_gap
+CGR,Cougar Ridge,community_centre,2245.0,26.0,0.0,800,0.0708,1600,0.0,0.0,>1600,gap
+CGR,Cougar Ridge,rec_centre,2245.0,26.0,0.0713,2000,1.0,5000,0.8462,0.0622,2815,gap
+CGR,Cougar Ridge,library,2245.0,26.0,0.0,2000,1.0,5000,0.0,0.0,2700,gap
+CGR,Cougar Ridge,playground|city,2245.0,26.0,0.9158,400,1.0,800,1.0,0.9148,206,no_gap
+CGR,Cougar Ridge,playground|private,2245.0,26.0,0.9394,400,1.0,800,1.0,0.9387,189,no_gap
+CGR,Cougar Ridge,park|city,2245.0,26.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+CGR,Cougar Ridge,park|private,2245.0,26.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+COU,Country Hills,playground,1423.0,0.0,0.9902,400,1.0,800,,0.9902,177,no_gap
+COU,Country Hills,park,1423.0,0.0,1.0,400,1.0,800,,1.0,81,no_gap
+COU,Country Hills,transit_stop,1423.0,0.0,0.896,400,1.0,800,,0.896,107,no_gap
+COU,Country Hills,community_centre,1423.0,0.0,0.0,800,0.1701,1600,,0.0,>1600,gap
+COU,Country Hills,rec_centre,1423.0,0.0,0.8981,2000,1.0,5000,,0.8981,1586,no_gap
+COU,Country Hills,library,1423.0,0.0,0.8981,2000,1.0,5000,,0.8981,1334,no_gap
+COU,Country Hills,playground|city,1423.0,0.0,0.9642,400,1.0,800,,0.9642,177,no_gap
+COU,Country Hills,playground|private,1423.0,0.0,0.9902,400,1.0,800,,0.9902,177,no_gap
+COU,Country Hills,park|city,1423.0,0.0,1.0,400,1.0,800,,1.0,96,no_gap
+COU,Country Hills,park|private,1423.0,0.0,1.0,400,1.0,800,,1.0,81,no_gap
+CHV,Country Hills Village,playground,1350.0,0.0,0.88,400,1.0,800,,0.88,294,no_gap
+CHV,Country Hills Village,park,1350.0,0.0,1.0,400,1.0,800,,1.0,64,no_gap
+CHV,Country Hills Village,transit_stop,1350.0,0.0,1.0,400,1.0,800,,1.0,167,no_gap
+CHV,Country Hills Village,community_centre,1350.0,0.0,0.0,800,0.0,1600,,0.0,>1600,gap
+CHV,Country Hills Village,rec_centre,1350.0,0.0,1.0,2000,1.0,5000,,1.0,655,no_gap
+CHV,Country Hills Village,library,1350.0,0.0,1.0,2000,1.0,5000,,1.0,690,no_gap
+CHV,Country Hills Village,playground|city,1350.0,0.0,0.88,400,1.0,800,,0.88,294,no_gap
+CHV,Country Hills Village,playground|private,1350.0,0.0,0.88,400,1.0,800,,0.88,294,no_gap
+CHV,Country Hills Village,park|city,1350.0,0.0,1.0,400,1.0,800,,1.0,81,no_gap
+CHV,Country Hills Village,park|private,1350.0,0.0,1.0,400,1.0,800,,1.0,64,no_gap
+COV,Coventry Hills,playground,5513.0,1.0,0.9924,400,1.0,800,1.0,0.9924,196,no_gap
+COV,Coventry Hills,park,5513.0,1.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+COV,Coventry Hills,transit_stop,5513.0,1.0,0.9933,400,1.0,800,1.0,0.9933,157,no_gap
+COV,Coventry Hills,community_centre,5513.0,1.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+COV,Coventry Hills,rec_centre,5513.0,1.0,0.9048,2000,1.0,5000,1.0,0.9048,1417,no_gap
+COV,Coventry Hills,library,5513.0,1.0,0.8297,2000,1.0,5000,0.0,0.8298,1554,no_gap
+COV,Coventry Hills,playground|city,5513.0,1.0,0.9389,400,1.0,800,1.0,0.9389,238,no_gap
+COV,Coventry Hills,playground|private,5513.0,1.0,0.9924,400,1.0,800,1.0,0.9924,196,no_gap
+COV,Coventry Hills,park|city,5513.0,1.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+COV,Coventry Hills,park|private,5513.0,1.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+CRA,Cranston,playground,8165.0,667.0,0.9399,400,1.0,800,0.5742,0.9724,197,no_gap
+CRA,Cranston,park,8165.0,667.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+CRA,Cranston,transit_stop,8165.0,667.0,0.9271,400,0.9998,800,0.7601,0.942,173,no_gap
+CRA,Cranston,community_centre,8165.0,667.0,0.0,800,0.1088,1600,0.0,0.0,>1600,gap
+CRA,Cranston,rec_centre,8165.0,667.0,0.2225,2000,1.0,5000,0.0,0.2423,2574,gap
+CRA,Cranston,library,8165.0,667.0,0.1377,2000,1.0,5000,0.0,0.1499,2653,gap
+CRA,Cranston,playground|city,8165.0,667.0,0.898,400,1.0,800,0.5742,0.9268,226,no_gap
+CRA,Cranston,playground|private,8165.0,667.0,0.9399,400,1.0,800,0.5742,0.9724,197,no_gap
+CRA,Cranston,park|city,8165.0,667.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+CRA,Cranston,park|private,8165.0,667.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+CRE,Crescent Heights,playground,3762.0,125.0,0.5712,400,1.0,800,0.8,0.5648,373,no_gap
+CRE,Crescent Heights,park,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,194,no_gap
+CRE,Crescent Heights,transit_stop,3762.0,125.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+CRE,Crescent Heights,community_centre,3762.0,125.0,0.5032,800,1.0,1600,0.664,0.4961,798,no_gap
+CRE,Crescent Heights,rec_centre,3762.0,125.0,1.0,2000,1.0,5000,1.0,1.0,1241,no_gap
+CRE,Crescent Heights,library,3762.0,125.0,0.6895,2000,1.0,5000,0.584,0.6922,1413,no_gap
+CRE,Crescent Heights,playground|city,3762.0,125.0,0.3929,400,1.0,800,0.48,0.3908,435,gap
+CRE,Crescent Heights,playground|private,3762.0,125.0,0.5712,400,1.0,800,0.8,0.5648,373,no_gap
+CRE,Crescent Heights,park|city,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,227,no_gap
+CRE,Crescent Heights,park|private,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,194,no_gap
+CRM,Crestmont,playground,1012.0,150.0,0.9783,400,1.0,800,0.9533,0.9826,229,no_gap
+CRM,Crestmont,park,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,50,no_gap
+CRM,Crestmont,transit_stop,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,118,no_gap
+CRM,Crestmont,community_centre,1012.0,150.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+CRM,Crestmont,rec_centre,1012.0,150.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap
+CRM,Crestmont,library,1012.0,150.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap
+CRM,Crestmont,playground|city,1012.0,150.0,0.8636,400,1.0,800,0.9533,0.848,267,no_gap
+CRM,Crestmont,playground|private,1012.0,150.0,0.9783,400,1.0,800,0.9533,0.9826,229,no_gap
+CRM,Crestmont,park|city,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,50,no_gap
+CRM,Crestmont,park|private,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,50,no_gap
+CUR,Currie Barracks,playground,1166.0,375.0,1.0,400,1.0,800,1.0,1.0,272,no_gap
+CUR,Currie Barracks,park,1166.0,375.0,1.0,400,1.0,800,1.0,1.0,100,no_gap
+CUR,Currie Barracks,transit_stop,1166.0,375.0,0.9254,400,1.0,800,0.8187,0.976,203,no_gap
+CUR,Currie Barracks,community_centre,1166.0,375.0,0.8173,800,1.0,1600,0.432,1.0,466,no_gap
+CUR,Currie Barracks,rec_centre,1166.0,375.0,0.5352,2000,1.0,5000,0.944,0.3413,2021,no_gap
+CUR,Currie Barracks,library,1166.0,375.0,0.0,2000,1.0,5000,0.0,0.0,2425,gap_check
+CUR,Currie Barracks,playground|city,1166.0,375.0,0.994,400,1.0,800,0.9813,1.0,284,no_gap
+CUR,Currie Barracks,playground|private,1166.0,375.0,1.0,400,1.0,800,1.0,1.0,272,no_gap
+CUR,Currie Barracks,park|city,1166.0,375.0,1.0,400,1.0,800,1.0,1.0,104,no_gap
+CUR,Currie Barracks,park|private,1166.0,375.0,1.0,400,1.0,800,1.0,1.0,100,no_gap
+DAL,Dalhousie,playground,3959.0,7.0,0.9545,400,1.0,800,1.0,0.9545,193,no_gap
+DAL,Dalhousie,park,3959.0,7.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+DAL,Dalhousie,transit_stop,3959.0,7.0,0.9955,400,1.0,800,1.0,0.9954,99,no_gap
+DAL,Dalhousie,community_centre,3959.0,7.0,0.4339,800,1.0,1600,0.7143,0.4335,812,gap
+DAL,Dalhousie,rec_centre,3959.0,7.0,0.6418,2000,1.0,5000,0.1429,0.6427,1743,no_gap
+DAL,Dalhousie,library,3959.0,7.0,0.6663,2000,1.0,5000,0.1429,0.6673,1732,no_gap
+DAL,Dalhousie,playground|city,3959.0,7.0,0.3609,400,0.8101,800,0.1429,0.3613,469,gap
+DAL,Dalhousie,playground|private,3959.0,7.0,0.9545,400,1.0,800,1.0,0.9545,193,no_gap
+DAL,Dalhousie,park|city,3959.0,7.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+DAL,Dalhousie,park|private,3959.0,7.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+DRG,Deer Ridge,playground,1438.0,0.0,0.9993,400,1.0,800,,0.9993,212,no_gap
+DRG,Deer Ridge,park,1438.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
+DRG,Deer Ridge,transit_stop,1438.0,0.0,1.0,400,1.0,800,,1.0,132,no_gap
+DRG,Deer Ridge,community_centre,1438.0,0.0,0.3387,800,1.0,1600,,0.3387,922,gap
+DRG,Deer Ridge,rec_centre,1438.0,0.0,0.0,2000,1.0,5000,,0.0,3842,gap
+DRG,Deer Ridge,library,1438.0,0.0,0.0,2000,1.0,5000,,0.0,3864,gap
+DRG,Deer Ridge,playground|city,1438.0,0.0,0.9451,400,1.0,800,,0.9451,218,no_gap
+DRG,Deer Ridge,playground|private,1438.0,0.0,0.9993,400,1.0,800,,0.9993,212,no_gap
+DRG,Deer Ridge,park|city,1438.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
+DRG,Deer Ridge,park|private,1438.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
+DRN,Deer Run,playground,2099.0,0.0,0.8337,400,1.0,800,,0.8337,253,no_gap
+DRN,Deer Run,park,2099.0,0.0,1.0,400,1.0,800,,1.0,103,no_gap
+DRN,Deer Run,transit_stop,2099.0,0.0,0.9919,400,1.0,800,,0.9919,130,no_gap
+DRN,Deer Run,community_centre,2099.0,0.0,0.748,800,1.0,1600,,0.748,588,no_gap
+DRN,Deer Run,rec_centre,2099.0,0.0,0.0,2000,1.0,5000,,0.0,4236,gap
+DRN,Deer Run,library,2099.0,0.0,0.0,2000,1.0,5000,,0.0,4206,gap
+DRN,Deer Run,playground|city,2099.0,0.0,0.6284,400,0.9814,800,,0.6284,341,no_gap
+DRN,Deer Run,playground|private,2099.0,0.0,0.8337,400,1.0,800,,0.8337,253,no_gap
+DRN,Deer Run,park|city,2099.0,0.0,1.0,400,1.0,800,,1.0,104,no_gap
+DRN,Deer Run,park|private,2099.0,0.0,1.0,400,1.0,800,,1.0,103,no_gap
+DIA,Diamond Cove,playground,271.0,0.0,0.6827,400,1.0,800,,0.6827,300,no_gap
+DIA,Diamond Cove,park,271.0,0.0,1.0,400,1.0,800,,1.0,26,no_gap
+DIA,Diamond Cove,transit_stop,271.0,0.0,0.4613,400,1.0,800,,0.4613,418,gap
+DIA,Diamond Cove,community_centre,271.0,0.0,0.786,800,1.0,1600,,0.786,586,no_gap
+DIA,Diamond Cove,rec_centre,271.0,0.0,0.1587,2000,1.0,5000,,0.1587,2156,gap
+DIA,Diamond Cove,library,271.0,0.0,0.1845,2000,1.0,5000,,0.1845,2143,gap
+DIA,Diamond Cove,playground|city,271.0,0.0,0.6827,400,1.0,800,,0.6827,300,no_gap
+DIA,Diamond Cove,playground|private,271.0,0.0,0.6827,400,1.0,800,,0.6827,300,no_gap
+DIA,Diamond Cove,park|city,271.0,0.0,1.0,400,1.0,800,,1.0,26,no_gap
+DIA,Diamond Cove,park|private,271.0,0.0,1.0,400,1.0,800,,1.0,26,no_gap
+DIS,Discovery Ridge,playground,1733.0,57.0,0.9296,400,1.0,800,1.0,0.9272,184,no_gap
+DIS,Discovery Ridge,park,1733.0,57.0,1.0,400,1.0,800,1.0,1.0,61,no_gap
+DIS,Discovery Ridge,transit_stop,1733.0,57.0,0.9129,400,1.0,800,0.0,0.9439,251,no_gap
+DIS,Discovery Ridge,community_centre,1733.0,57.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+DIS,Discovery Ridge,rec_centre,1733.0,57.0,0.0,2000,1.0,5000,0.0,0.0,3153,gap
+DIS,Discovery Ridge,library,1733.0,57.0,0.1604,2000,1.0,5000,1.0,0.1319,2728,gap
+DIS,Discovery Ridge,playground|city,1733.0,57.0,0.9094,400,1.0,800,1.0,0.9063,187,no_gap
+DIS,Discovery Ridge,playground|private,1733.0,57.0,0.9296,400,1.0,800,1.0,0.9272,184,no_gap
+DIS,Discovery Ridge,park|city,1733.0,57.0,1.0,400,1.0,800,1.0,1.0,61,no_gap
+DIS,Discovery Ridge,park|private,1733.0,57.0,1.0,400,1.0,800,1.0,1.0,61,no_gap
+DDG,Douglasdale/Glen,playground,5772.0,226.0,0.8553,400,1.0,800,1.0,0.8435,218,no_gap
+DDG,Douglasdale/Glen,park,5772.0,226.0,0.996,400,1.0,800,1.0,0.9957,60,no_gap
+DDG,Douglasdale/Glen,transit_stop,5772.0,226.0,0.9856,400,1.0,800,0.9425,0.9869,142,no_gap
+DDG,Douglasdale/Glen,community_centre,5772.0,226.0,0.0,800,0.3685,1600,0.0,0.0,>1600,gap
+DDG,Douglasdale/Glen,rec_centre,5772.0,226.0,0.5908,2000,1.0,5000,0.9956,0.5574,1945,no_gap
+DDG,Douglasdale/Glen,library,5772.0,226.0,0.5963,2000,1.0,5000,0.9956,0.5634,1927,no_gap
+DDG,Douglasdale/Glen,playground|city,5772.0,226.0,0.8021,400,1.0,800,1.0,0.7859,238,no_gap
+DDG,Douglasdale/Glen,playground|private,5772.0,226.0,0.913,400,1.0,800,1.0,0.9059,218,no_gap
+DDG,Douglasdale/Glen,park|city,5772.0,226.0,0.996,400,1.0,800,1.0,0.9957,68,no_gap
+DDG,Douglasdale/Glen,park|private,5772.0,226.0,0.996,400,1.0,800,1.0,0.9957,60,no_gap
+DOV,Dover,playground,4339.0,36.0,0.9954,400,1.0,800,1.0,0.9954,183,no_gap
+DOV,Dover,park,4339.0,36.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+DOV,Dover,transit_stop,4339.0,36.0,1.0,400,1.0,800,1.0,1.0,130,no_gap
+DOV,Dover,community_centre,4339.0,36.0,0.699,800,1.0,1600,1.0,0.6965,645,no_gap
+DOV,Dover,rec_centre,4339.0,36.0,0.2392,2000,1.0,5000,0.0,0.2412,2542,gap
+DOV,Dover,library,4339.0,36.0,0.1192,2000,1.0,5000,0.0,0.1201,2792,gap
+DOV,Dover,playground|city,4339.0,36.0,0.8122,400,1.0,800,1.0,0.8106,273,no_gap
+DOV,Dover,playground|private,4339.0,36.0,0.9954,400,1.0,800,1.0,0.9954,183,no_gap
+DOV,Dover,park|city,4339.0,36.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
+DOV,Dover,park|private,4339.0,36.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+DNC,Downtown Commercial Core,playground,6132.0,0.0,0.1955,400,0.9454,800,,0.2045,678,gap
+DNC,Downtown Commercial Core,park,6132.0,0.0,1.0,400,1.0,800,,1.0,82,no_gap
+DNC,Downtown Commercial Core,transit_stop,6132.0,0.0,1.0,400,1.0,800,,1.0,53,no_gap
+DNC,Downtown Commercial Core,community_centre,6132.0,0.0,0.0316,800,1.0,1600,,0.0331,1195,gap
+DNC,Downtown Commercial Core,rec_centre,6132.0,0.0,0.721,2000,1.0,5000,,0.7081,2002,no_gap
+DNC,Downtown Commercial Core,library,6132.0,0.0,1.0,2000,1.0,5000,,1.0,1179,no_gap
+DNC,Downtown Commercial Core,playground|city,6132.0,0.0,0.1955,400,0.6086,800,,0.2045,>800,gap
+DNC,Downtown Commercial Core,playground|private,6132.0,0.0,0.2102,400,0.9454,800,,0.2199,678,gap
+DNC,Downtown Commercial Core,park|city,6132.0,0.0,1.0,400,1.0,800,,1.0,145,no_gap
+DNC,Downtown Commercial Core,park|private,6132.0,0.0,1.0,400,1.0,800,,1.0,82,no_gap
+DNE,Downtown East Village,playground,3013.0,48.0,0.5363,400,1.0,800,1.0,0.5288,289,no_gap
+DNE,Downtown East Village,park,3013.0,48.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+DNE,Downtown East Village,transit_stop,3013.0,48.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+DNE,Downtown East Village,community_centre,3013.0,48.0,0.0797,800,1.0,1600,1.0,0.0648,974,gap
+DNE,Downtown East Village,rec_centre,3013.0,48.0,1.0,2000,1.0,5000,1.0,1.0,1636,no_gap
+DNE,Downtown East Village,library,3013.0,48.0,1.0,2000,1.0,5000,1.0,1.0,381,no_gap
+DNE,Downtown East Village,playground|city,3013.0,48.0,0.5363,400,1.0,800,1.0,0.5288,289,no_gap
+DNE,Downtown East Village,playground|private,3013.0,48.0,0.5363,400,1.0,800,1.0,0.5288,289,no_gap
+DNE,Downtown East Village,park|city,3013.0,48.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+DNE,Downtown East Village,park|private,3013.0,48.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+DNW,Downtown West End,playground,2224.0,70.0,0.0,400,1.0,800,0.0,0.0,585,gap
+DNW,Downtown West End,park,2224.0,70.0,1.0,400,1.0,800,1.0,1.0,135,no_gap
+DNW,Downtown West End,transit_stop,2224.0,70.0,1.0,400,1.0,800,1.0,1.0,73,no_gap
+DNW,Downtown West End,community_centre,2224.0,70.0,0.1169,800,1.0,1600,0.0,0.1207,914,gap
+DNW,Downtown West End,rec_centre,2224.0,70.0,0.0,2000,1.0,5000,0.0,0.0,2179,gap
+DNW,Downtown West End,library,2224.0,70.0,1.0,2000,1.0,5000,1.0,1.0,1399,no_gap
+DNW,Downtown West End,playground|city,2224.0,70.0,0.0,400,0.1749,800,0.0,0.0,>800,gap
+DNW,Downtown West End,playground|private,2224.0,70.0,0.0,400,1.0,800,0.0,0.0,585,gap
+DNW,Downtown West End,park|city,2224.0,70.0,1.0,400,1.0,800,1.0,1.0,153,no_gap
+DNW,Downtown West End,park|private,2224.0,70.0,1.0,400,1.0,800,1.0,1.0,135,no_gap
+EAG,Eagle Ridge,playground,108.0,4.0,1.0,400,1.0,800,1.0,1.0,189,no_gap
+EAG,Eagle Ridge,park,108.0,4.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+EAG,Eagle Ridge,transit_stop,108.0,4.0,0.6759,400,1.0,800,0.75,0.6731,360,no_gap
+EAG,Eagle Ridge,community_centre,108.0,4.0,0.0926,800,1.0,1600,0.0,0.0962,988,gap
+EAG,Eagle Ridge,rec_centre,108.0,4.0,0.0,2000,1.0,5000,0.0,0.0,2389,gap
+EAG,Eagle Ridge,library,108.0,4.0,0.0,2000,1.0,5000,0.0,0.0,2570,gap
+EAG,Eagle Ridge,playground|city,108.0,4.0,1.0,400,1.0,800,1.0,1.0,189,no_gap
+EAG,Eagle Ridge,playground|private,108.0,4.0,1.0,400,1.0,800,1.0,1.0,189,no_gap
+EAG,Eagle Ridge,park|city,108.0,4.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+EAG,Eagle Ridge,park|private,108.0,4.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+EAU,Eau Claire,playground,1449.0,211.0,0.2298,400,1.0,800,0.0,0.269,466,gap
+EAU,Eau Claire,park,1449.0,211.0,1.0,400,1.0,800,1.0,1.0,48,no_gap
+EAU,Eau Claire,transit_stop,1449.0,211.0,1.0,400,1.0,800,1.0,1.0,175,no_gap
+EAU,Eau Claire,community_centre,1449.0,211.0,0.0,800,1.0,1600,0.0,0.0,1156,gap
+EAU,Eau Claire,rec_centre,1449.0,211.0,0.0,2000,1.0,5000,0.0,0.0,2166,gap
+EAU,Eau Claire,library,1449.0,211.0,1.0,2000,1.0,5000,1.0,1.0,1354,no_gap
+EAU,Eau Claire,playground|city,1449.0,211.0,0.2298,400,1.0,800,0.0,0.269,628,gap
+EAU,Eau Claire,playground|private,1449.0,211.0,0.2298,400,1.0,800,0.0,0.269,466,gap
+EAU,Eau Claire,park|city,1449.0,211.0,1.0,400,1.0,800,1.0,1.0,48,no_gap
+EAU,Eau Claire,park|private,1449.0,211.0,1.0,400,1.0,800,1.0,1.0,48,no_gap
+EDG,Edgemont,playground,5368.0,1.0,0.7839,400,1.0,800,1.0,0.7839,236,no_gap
+EDG,Edgemont,park,5368.0,1.0,1.0,400,1.0,800,1.0,1.0,59,no_gap
+EDG,Edgemont,transit_stop,5368.0,1.0,0.9844,400,1.0,800,1.0,0.9843,152,no_gap
+EDG,Edgemont,community_centre,5368.0,1.0,0.3826,800,0.9529,1600,1.0,0.3825,912,gap
+EDG,Edgemont,rec_centre,5368.0,1.0,0.0224,2000,1.0,5000,0.0,0.0224,3157,gap
+EDG,Edgemont,library,5368.0,1.0,0.0212,2000,1.0,5000,0.0,0.0212,3039,gap
+EDG,Edgemont,playground|city,5368.0,1.0,0.7504,400,0.997,800,1.0,0.7503,264,no_gap
+EDG,Edgemont,playground|private,5368.0,1.0,0.7839,400,1.0,800,1.0,0.7839,236,no_gap
+EDG,Edgemont,park|city,5368.0,1.0,1.0,400,1.0,800,1.0,1.0,59,no_gap
+EDG,Edgemont,park|private,5368.0,1.0,1.0,400,1.0,800,1.0,1.0,59,no_gap
+EPK,Elbow Park,playground,1186.0,43.0,0.9494,400,1.0,800,0.9302,0.9501,220,no_gap
+EPK,Elbow Park,park,1186.0,43.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+EPK,Elbow Park,transit_stop,1186.0,43.0,0.8052,400,1.0,800,0.7674,0.8066,220,no_gap
+EPK,Elbow Park,community_centre,1186.0,43.0,0.9275,800,1.0,1600,0.9302,0.9274,461,no_gap
+EPK,Elbow Park,rec_centre,1186.0,43.0,0.7572,2000,1.0,5000,0.5814,0.7638,1850,no_gap
+EPK,Elbow Park,library,1186.0,43.0,1.0,2000,1.0,5000,1.0,1.0,1077,no_gap
+EPK,Elbow Park,playground|city,1186.0,43.0,0.7909,400,1.0,800,0.7674,0.7918,271,no_gap
+EPK,Elbow Park,playground|private,1186.0,43.0,0.9494,400,1.0,800,0.9302,0.9501,220,no_gap
+EPK,Elbow Park,park|city,1186.0,43.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+EPK,Elbow Park,park|private,1186.0,43.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+EYA,Elboya,playground,717.0,27.0,0.6346,400,1.0,800,1.0,0.6203,294,no_gap
+EYA,Elboya,park,717.0,27.0,1.0,400,1.0,800,1.0,1.0,128,no_gap
+EYA,Elboya,transit_stop,717.0,27.0,0.8703,400,1.0,800,0.8148,0.8725,175,no_gap
+EYA,Elboya,community_centre,717.0,27.0,1.0,800,1.0,1600,1.0,1.0,513,no_gap
+EYA,Elboya,rec_centre,717.0,27.0,0.0725,2000,1.0,5000,0.037,0.0739,2371,gap
+EYA,Elboya,library,717.0,27.0,0.3068,2000,1.0,5000,0.5556,0.2971,2277,gap
+EYA,Elboya,playground|city,717.0,27.0,0.622,400,1.0,800,1.0,0.6072,327,no_gap
+EYA,Elboya,playground|private,717.0,27.0,0.6346,400,1.0,800,1.0,0.6203,294,no_gap
+EYA,Elboya,park|city,717.0,27.0,1.0,400,1.0,800,1.0,1.0,128,no_gap
+EYA,Elboya,park|private,717.0,27.0,1.0,400,1.0,800,1.0,1.0,128,no_gap
+ERI,Erin Woods,playground,2336.0,0.0,0.9148,400,1.0,800,,0.9148,226,no_gap
+ERI,Erin Woods,park,2336.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
+ERI,Erin Woods,transit_stop,2336.0,0.0,0.9944,400,1.0,800,,0.9944,149,no_gap
+ERI,Erin Woods,community_centre,2336.0,0.0,0.6597,800,1.0,1600,,0.6597,639,no_gap
+ERI,Erin Woods,rec_centre,2336.0,0.0,0.1627,2000,1.0,5000,,0.1627,2520,gap
+ERI,Erin Woods,library,2336.0,0.0,0.0,2000,1.0,5000,,0.0,2896,gap
+ERI,Erin Woods,playground|city,2336.0,0.0,0.631,400,1.0,800,,0.631,308,no_gap
+ERI,Erin Woods,playground|private,2336.0,0.0,0.9148,400,1.0,800,,0.9148,226,no_gap
+ERI,Erin Woods,park|city,2336.0,0.0,1.0,400,1.0,800,,1.0,86,no_gap
+ERI,Erin Woods,park|private,2336.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
+ERL,Erlton,playground,680.0,12.0,0.7809,400,1.0,800,0.9167,0.7784,317,no_gap
+ERL,Erlton,park,680.0,12.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+ERL,Erlton,transit_stop,680.0,12.0,1.0,400,1.0,800,1.0,1.0,180,no_gap
+ERL,Erlton,community_centre,680.0,12.0,0.7632,800,1.0,1600,0.1667,0.774,737,no_gap
+ERL,Erlton,rec_centre,680.0,12.0,1.0,2000,1.0,5000,1.0,1.0,360,no_gap
+ERL,Erlton,library,680.0,12.0,0.9559,2000,1.0,5000,1.0,0.9551,1185,no_gap
+ERL,Erlton,playground|city,680.0,12.0,0.7809,400,1.0,800,0.9167,0.7784,317,no_gap
+ERL,Erlton,playground|private,680.0,12.0,0.9309,400,1.0,800,0.9167,0.9311,307,no_gap
+ERL,Erlton,park|city,680.0,12.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+ERL,Erlton,park|private,680.0,12.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+EVN,Evanston,playground,6467.0,584.0,0.8814,400,1.0,800,0.8048,0.889,221,no_gap
+EVN,Evanston,park,6467.0,584.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+EVN,Evanston,transit_stop,6467.0,584.0,0.9844,400,1.0,800,0.9983,0.983,157,no_gap
+EVN,Evanston,community_centre,6467.0,584.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+EVN,Evanston,rec_centre,6467.0,584.0,0.0,2000,0.9988,5000,0.0,0.0,3777,gap
+EVN,Evanston,library,6467.0,584.0,0.1661,2000,1.0,5000,0.0034,0.1822,2442,gap
+EVN,Evanston,playground|city,6467.0,584.0,0.8814,400,1.0,800,0.8048,0.889,228,no_gap
+EVN,Evanston,playground|private,6467.0,584.0,0.8814,400,1.0,800,0.8048,0.889,221,no_gap
+EVN,Evanston,park|city,6467.0,584.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+EVN,Evanston,park|private,6467.0,584.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+EVE,Evergreen,playground,7225.0,1.0,0.9582,400,1.0,800,1.0,0.9582,200,no_gap
+EVE,Evergreen,park,7225.0,1.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+EVE,Evergreen,transit_stop,7225.0,1.0,0.9438,400,1.0,800,0.0,0.9439,176,no_gap
+EVE,Evergreen,community_centre,7225.0,1.0,0.0,800,0.0358,1600,0.0,0.0,>1600,gap
+EVE,Evergreen,rec_centre,7225.0,1.0,0.0046,2000,1.0,5000,0.0,0.0046,3589,gap
+EVE,Evergreen,library,7225.0,1.0,0.0,2000,0.9424,5000,0.0,0.0,3926,gap
+EVE,Evergreen,playground|city,7225.0,1.0,0.8663,400,1.0,800,1.0,0.8663,225,no_gap
+EVE,Evergreen,playground|private,7225.0,1.0,0.9582,400,1.0,800,1.0,0.9582,200,no_gap
+EVE,Evergreen,park|city,7225.0,1.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+EVE,Evergreen,park|private,7225.0,1.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+FAI,Fairview,playground,1481.0,0.0,1.0,400,1.0,800,,1.0,209,no_gap
+FAI,Fairview,park,1481.0,0.0,1.0,400,1.0,800,,1.0,92,no_gap
+FAI,Fairview,transit_stop,1481.0,0.0,0.9635,400,1.0,800,,0.9635,209,no_gap
+FAI,Fairview,community_centre,1481.0,0.0,0.9264,800,1.0,1600,,0.9264,447,no_gap
+FAI,Fairview,rec_centre,1481.0,0.0,1.0,2000,1.0,5000,,1.0,1271,no_gap
+FAI,Fairview,library,1481.0,0.0,0.0,2000,1.0,5000,,0.0,3032,gap
+FAI,Fairview,playground|city,1481.0,0.0,0.8677,400,1.0,800,,0.8677,264,no_gap
+FAI,Fairview,playground|private,1481.0,0.0,1.0,400,1.0,800,,1.0,209,no_gap
+FAI,Fairview,park|city,1481.0,0.0,1.0,400,1.0,800,,1.0,97,no_gap
+FAI,Fairview,park|private,1481.0,0.0,1.0,400,1.0,800,,1.0,92,no_gap
+FAL,Falconridge,playground,3113.0,3.0,0.9107,400,1.0,800,1.0,0.9106,238,no_gap
+FAL,Falconridge,park,3113.0,3.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+FAL,Falconridge,transit_stop,3113.0,3.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+FAL,Falconridge,community_centre,3113.0,3.0,0.7742,800,1.0,1600,1.0,0.774,643,no_gap
+FAL,Falconridge,rec_centre,3113.0,3.0,0.4735,2000,1.0,5000,0.6667,0.4733,2071,gap
+FAL,Falconridge,library,3113.0,3.0,0.4751,2000,1.0,5000,0.6667,0.4749,2068,gap
+FAL,Falconridge,playground|city,3113.0,3.0,0.6711,400,0.9984,800,1.0,0.6707,301,no_gap
+FAL,Falconridge,playground|private,3113.0,3.0,0.9107,400,1.0,800,1.0,0.9106,238,no_gap
+FAL,Falconridge,park|city,3113.0,3.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+FAL,Falconridge,park|private,3113.0,3.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+FHT,Forest Heights,playground,1952.0,0.0,0.9928,400,1.0,800,,0.9928,175,no_gap
+FHT,Forest Heights,park,1952.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+FHT,Forest Heights,transit_stop,1952.0,0.0,1.0,400,1.0,800,,1.0,164,no_gap
+FHT,Forest Heights,community_centre,1952.0,0.0,0.7141,800,1.0,1600,,0.7141,624,no_gap
+FHT,Forest Heights,rec_centre,1952.0,0.0,1.0,2000,1.0,5000,,1.0,1101,no_gap
+FHT,Forest Heights,library,1952.0,0.0,1.0,2000,1.0,5000,,1.0,761,no_gap
+FHT,Forest Heights,playground|city,1952.0,0.0,0.9836,400,1.0,800,,0.9836,181,no_gap
+FHT,Forest Heights,playground|private,1952.0,0.0,0.9928,400,1.0,800,,0.9928,175,no_gap
+FHT,Forest Heights,park|city,1952.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+FHT,Forest Heights,park|private,1952.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+FLN,Forest Lawn,playground,2409.0,43.0,0.8838,400,1.0,800,0.7907,0.8859,245,no_gap
+FLN,Forest Lawn,park,2409.0,43.0,0.9963,400,1.0,800,0.9767,0.9966,158,no_gap
+FLN,Forest Lawn,transit_stop,2409.0,43.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+FLN,Forest Lawn,community_centre,2409.0,43.0,0.4159,800,1.0,1600,0.814,0.4094,853,gap
+FLN,Forest Lawn,rec_centre,2409.0,43.0,1.0,2000,1.0,5000,1.0,1.0,958,no_gap
+FLN,Forest Lawn,library,2409.0,43.0,1.0,2000,1.0,5000,1.0,1.0,1108,no_gap
+FLN,Forest Lawn,playground|city,2409.0,43.0,0.6459,400,0.9954,800,0.6047,0.6513,313,no_gap
+FLN,Forest Lawn,playground|private,2409.0,43.0,0.8838,400,1.0,800,0.7907,0.8859,245,no_gap
+FLN,Forest Lawn,park|city,2409.0,43.0,0.9963,400,1.0,800,0.9767,0.9966,158,no_gap
+FLN,Forest Lawn,park|private,2409.0,43.0,0.9963,400,1.0,800,0.9767,0.9966,158,no_gap
+FLI,Forest Lawn Industrial,playground,27.0,0.0,0.0,400,1.0,800,,0.0,456,too_few_homes
+FLI,Forest Lawn Industrial,park,27.0,0.0,0.6296,400,1.0,800,,0.6296,422,too_few_homes
+FLI,Forest Lawn Industrial,transit_stop,27.0,0.0,1.0,400,1.0,800,,1.0,180,too_few_homes
+FLI,Forest Lawn Industrial,community_centre,27.0,0.0,0.0,800,1.0,1600,,0.0,1195,too_few_homes
+FLI,Forest Lawn Industrial,rec_centre,27.0,0.0,1.0,2000,1.0,5000,,1.0,694,too_few_homes
+FLI,Forest Lawn Industrial,library,27.0,0.0,1.0,2000,1.0,5000,,1.0,1094,too_few_homes
+FLI,Forest Lawn Industrial,playground|city,27.0,0.0,0.0,400,1.0,800,,0.0,456,too_few_homes
+FLI,Forest Lawn Industrial,playground|private,27.0,0.0,0.0,400,1.0,800,,0.0,456,too_few_homes
+FLI,Forest Lawn Industrial,park|city,27.0,0.0,0.6296,400,1.0,800,,0.6296,422,too_few_homes
+FLI,Forest Lawn Industrial,park|private,27.0,0.0,0.6296,400,1.0,800,,0.6296,422,too_few_homes
+GAG,Garrison Green,playground,717.0,0.0,1.0,400,1.0,800,,1.0,178,no_gap
+GAG,Garrison Green,park,717.0,0.0,1.0,400,1.0,800,,1.0,88,no_gap
+GAG,Garrison Green,transit_stop,717.0,0.0,0.3389,400,1.0,800,,0.3389,404,gap
+GAG,Garrison Green,community_centre,717.0,0.0,0.5105,800,1.0,1600,,0.5105,765,no_gap
+GAG,Garrison Green,rec_centre,717.0,0.0,1.0,2000,1.0,5000,,1.0,1569,no_gap
+GAG,Garrison Green,library,717.0,0.0,0.0,2000,1.0,5000,,0.0,3313,gap
+GAG,Garrison Green,playground|city,717.0,0.0,1.0,400,1.0,800,,1.0,178,no_gap
+GAG,Garrison Green,playground|private,717.0,0.0,1.0,400,1.0,800,,1.0,178,no_gap
+GAG,Garrison Green,park|city,717.0,0.0,1.0,400,1.0,800,,1.0,88,no_gap
+GAG,Garrison Green,park|private,717.0,0.0,1.0,400,1.0,800,,1.0,88,no_gap
+GAW,Garrison Woods,playground,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,154,no_gap
+GAW,Garrison Woods,park,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+GAW,Garrison Woods,transit_stop,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
+GAW,Garrison Woods,community_centre,1586.0,6.0,0.0,800,0.93,1600,0.0,0.0,1143,gap
+GAW,Garrison Woods,rec_centre,1586.0,6.0,1.0,2000,1.0,5000,1.0,1.0,1592,no_gap
+GAW,Garrison Woods,library,1586.0,6.0,0.9962,2000,1.0,5000,1.0,0.9962,1502,no_gap
+GAW,Garrison Woods,playground|city,1586.0,6.0,0.9893,400,1.0,800,1.0,0.9892,216,no_gap
+GAW,Garrison Woods,playground|private,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,154,no_gap
+GAW,Garrison Woods,park|city,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+GAW,Garrison Woods,park|private,1586.0,6.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+GLR,Glacier Ridge,playground,1386.0,1367.0,0.6948,400,0.9949,800,0.7008,1.0,308,no_gap
+GLR,Glacier Ridge,park,1386.0,1367.0,0.9459,400,1.0,800,0.9488,1.0,128,no_gap
+GLR,Glacier Ridge,transit_stop,1386.0,1367.0,0.044,400,0.4877,800,0.041,0.0,>800,gap_check
+GLR,Glacier Ridge,community_centre,1386.0,1367.0,0.9495,800,0.9495,1600,0.9532,1.0,466,no_gap
+GLR,Glacier Ridge,rec_centre,1386.0,1367.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+GLR,Glacier Ridge,library,1386.0,1367.0,0.1248,2000,1.0,5000,0.1222,0.0,2456,gap_check
+GLR,Glacier Ridge,playground|city,1386.0,1367.0,0.6948,400,0.9949,800,0.7008,1.0,308,no_gap
+GLR,Glacier Ridge,playground|private,1386.0,1367.0,0.6948,400,0.9949,800,0.7008,1.0,308,no_gap
+GLR,Glacier Ridge,park|city,1386.0,1367.0,0.9459,400,1.0,800,0.9488,1.0,128,no_gap
+GLR,Glacier Ridge,park|private,1386.0,1367.0,0.9459,400,1.0,800,0.9488,1.0,128,no_gap
+GLA,Glamorgan,playground,3198.0,265.0,0.8977,400,1.0,800,1.0,0.8885,251,no_gap
+GLA,Glamorgan,park,3198.0,265.0,0.9887,400,1.0,800,1.0,0.9877,97,no_gap
+GLA,Glamorgan,transit_stop,3198.0,265.0,1.0,400,1.0,800,1.0,1.0,152,no_gap
+GLA,Glamorgan,community_centre,3198.0,265.0,0.4262,800,1.0,1600,0.0189,0.463,776,gap
+GLA,Glamorgan,rec_centre,3198.0,265.0,0.0,2000,1.0,5000,0.0,0.0,2876,gap
+GLA,Glamorgan,library,3198.0,265.0,0.7614,2000,1.0,5000,0.9925,0.7405,1621,no_gap
+GLA,Glamorgan,playground|city,3198.0,265.0,0.7098,400,1.0,800,0.9774,0.6856,331,no_gap
+GLA,Glamorgan,playground|private,3198.0,265.0,0.8984,400,1.0,800,1.0,0.8892,250,no_gap
+GLA,Glamorgan,park|city,3198.0,265.0,0.9887,400,1.0,800,1.0,0.9877,97,no_gap
+GLA,Glamorgan,park|private,3198.0,265.0,0.9887,400,1.0,800,1.0,0.9877,97,no_gap
+GBK,Glenbrook,playground,2979.0,99.0,0.9695,400,1.0,800,0.8283,0.9742,185,no_gap
+GBK,Glenbrook,park,2979.0,99.0,0.9993,400,1.0,800,1.0,0.9993,102,no_gap
+GBK,Glenbrook,transit_stop,2979.0,99.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
+GBK,Glenbrook,community_centre,2979.0,99.0,0.8026,800,1.0,1600,1.0,0.7953,519,no_gap
+GBK,Glenbrook,rec_centre,2979.0,99.0,0.5133,2000,1.0,5000,0.7172,0.5066,1999,no_gap
+GBK,Glenbrook,library,2979.0,99.0,0.9789,2000,1.0,5000,0.899,0.9815,1581,no_gap
+GBK,Glenbrook,playground|city,2979.0,99.0,0.8523,400,1.0,800,0.8283,0.8527,253,no_gap
+GBK,Glenbrook,playground|private,2979.0,99.0,0.9695,400,1.0,800,0.8283,0.9742,185,no_gap
+GBK,Glenbrook,park|city,2979.0,99.0,0.9993,400,1.0,800,1.0,0.9993,115,no_gap
+GBK,Glenbrook,park|private,2979.0,99.0,0.9993,400,1.0,800,1.0,0.9993,102,no_gap
+GDL,Glendale,playground,1168.0,55.0,0.8502,400,1.0,800,0.8364,0.8343,252,no_gap
+GDL,Glendale,park,1168.0,55.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+GDL,Glendale,transit_stop,1168.0,55.0,1.0,400,1.0,800,1.0,1.0,161,no_gap
+GDL,Glendale,community_centre,1168.0,55.0,0.9298,800,1.0,1600,0.9273,0.9222,454,no_gap
+GDL,Glendale,rec_centre,1168.0,55.0,0.994,2000,1.0,5000,1.0,0.993,1470,no_gap
+GDL,Glendale,library,1168.0,55.0,0.9966,2000,1.0,5000,1.0,0.996,1298,no_gap
+GDL,Glendale,playground|city,1168.0,55.0,0.4307,400,1.0,800,0.5273,0.3673,453,gap
+GDL,Glendale,playground|private,1168.0,55.0,0.8502,400,1.0,800,0.8364,0.8343,252,no_gap
+GDL,Glendale,park|city,1168.0,55.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+GDL,Glendale,park|private,1168.0,55.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+GPK,Glenmore Park,playground,3.0,1.0,1.0,400,1.0,800,1.0,1.0,236,too_few_homes
+GPK,Glenmore Park,park,3.0,1.0,1.0,400,1.0,800,1.0,1.0,40,too_few_homes
+GPK,Glenmore Park,transit_stop,3.0,1.0,0.6667,400,1.0,800,0.0,1.0,381,too_few_homes
+GPK,Glenmore Park,community_centre,3.0,1.0,1.0,800,1.0,1600,1.0,1.0,612,too_few_homes
+GPK,Glenmore Park,rec_centre,3.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1320,too_few_homes
+GPK,Glenmore Park,library,3.0,1.0,0.0,2000,1.0,5000,0.0,0.0,2004,too_few_homes
+GPK,Glenmore Park,playground|city,3.0,1.0,1.0,400,1.0,800,1.0,1.0,236,too_few_homes
+GPK,Glenmore Park,playground|private,3.0,1.0,1.0,400,1.0,800,1.0,1.0,236,too_few_homes
+GPK,Glenmore Park,park|city,3.0,1.0,1.0,400,1.0,800,1.0,1.0,40,too_few_homes
+GPK,Glenmore Park,park|private,3.0,1.0,1.0,400,1.0,800,1.0,1.0,40,too_few_homes
+GRV,Greenview,playground,902.0,2.0,0.8769,400,1.0,800,0.0,0.8789,225,no_gap
+GRV,Greenview,park,902.0,2.0,1.0,400,1.0,800,1.0,1.0,51,no_gap
+GRV,Greenview,transit_stop,902.0,2.0,1.0,400,1.0,800,1.0,1.0,182,no_gap
+GRV,Greenview,community_centre,902.0,2.0,0.6718,800,1.0,1600,1.0,0.6711,589,no_gap
+GRV,Greenview,rec_centre,902.0,2.0,0.633,2000,1.0,5000,1.0,0.6322,1856,no_gap
+GRV,Greenview,library,902.0,2.0,0.6863,2000,1.0,5000,1.0,0.6856,1757,no_gap
+GRV,Greenview,playground|city,902.0,2.0,0.8769,400,1.0,800,0.0,0.8789,225,no_gap
+GRV,Greenview,playground|private,902.0,2.0,0.8769,400,1.0,800,0.0,0.8789,225,no_gap
+GRV,Greenview,park|city,902.0,2.0,1.0,400,1.0,800,1.0,1.0,51,no_gap
+GRV,Greenview,park|private,902.0,2.0,1.0,400,1.0,800,1.0,1.0,51,no_gap
+GRI,Greenview Industrial Park,playground,3.0,0.0,0.6667,400,1.0,800,,0.6667,307,too_few_homes
+GRI,Greenview Industrial Park,park,3.0,0.0,1.0,400,1.0,800,,1.0,48,too_few_homes
+GRI,Greenview Industrial Park,transit_stop,3.0,0.0,1.0,400,1.0,800,,1.0,205,too_few_homes
+GRI,Greenview Industrial Park,community_centre,3.0,0.0,0.6667,800,1.0,1600,,0.6667,485,too_few_homes
+GRI,Greenview Industrial Park,rec_centre,3.0,0.0,0.0,2000,1.0,5000,,0.0,2413,too_few_homes
+GRI,Greenview Industrial Park,library,3.0,0.0,0.0,2000,1.0,5000,,0.0,3075,too_few_homes
+GRI,Greenview Industrial Park,playground|city,3.0,0.0,0.0,400,1.0,800,,0.0,429,too_few_homes
+GRI,Greenview Industrial Park,playground|private,3.0,0.0,0.6667,400,1.0,800,,0.6667,307,too_few_homes
+GRI,Greenview Industrial Park,park|city,3.0,0.0,0.3333,400,1.0,800,,0.3333,401,too_few_homes
+GRI,Greenview Industrial Park,park|private,3.0,0.0,1.0,400,1.0,800,,1.0,48,too_few_homes
+GRE,Greenwood/Greenbriar,playground,752.0,186.0,1.0,400,1.0,800,1.0,1.0,194,no_gap
+GRE,Greenwood/Greenbriar,park,752.0,186.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+GRE,Greenwood/Greenbriar,transit_stop,752.0,186.0,0.8856,400,1.0,800,0.6613,1.0,136,no_gap
+GRE,Greenwood/Greenbriar,community_centre,752.0,186.0,0.0,800,0.6051,1600,0.0,0.0,1144,gap
+GRE,Greenwood/Greenbriar,rec_centre,752.0,186.0,0.0,2000,1.0,5000,0.0,0.0,3286,gap
+GRE,Greenwood/Greenbriar,library,752.0,186.0,0.0,2000,1.0,5000,0.0,0.0,2299,gap
+GRE,Greenwood/Greenbriar,playground|city,752.0,186.0,1.0,400,1.0,800,1.0,1.0,194,no_gap
+GRE,Greenwood/Greenbriar,playground|private,752.0,186.0,1.0,400,1.0,800,1.0,1.0,194,no_gap
+GRE,Greenwood/Greenbriar,park|city,752.0,186.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+GRE,Greenwood/Greenbriar,park|private,752.0,186.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+HAM,Hamptons,playground,2541.0,39.0,0.5262,400,0.9728,800,0.0256,0.534,390,no_gap
+HAM,Hamptons,park,2541.0,39.0,0.9768,400,1.0,800,1.0,0.9764,76,no_gap
+HAM,Hamptons,transit_stop,2541.0,39.0,0.9512,400,1.0,800,1.0,0.9504,146,no_gap
+HAM,Hamptons,community_centre,2541.0,39.0,0.0275,800,0.6006,1600,0.0,0.028,1475,gap
+HAM,Hamptons,rec_centre,2541.0,39.0,0.0,2000,1.0,5000,0.0,0.0,3785,gap
+HAM,Hamptons,library,2541.0,39.0,0.0,2000,1.0,5000,0.0,0.0,2755,gap
+HAM,Hamptons,playground|city,2541.0,39.0,0.3676,400,0.8292,800,0.0256,0.3729,500,gap
+HAM,Hamptons,playground|private,2541.0,39.0,0.5262,400,0.9728,800,0.0256,0.534,390,no_gap
+HAM,Hamptons,park|city,2541.0,39.0,0.9768,400,1.0,800,1.0,0.9764,77,no_gap
+HAM,Hamptons,park|private,2541.0,39.0,0.9768,400,1.0,800,1.0,0.9764,76,no_gap
+HAR,Harvest Hills,playground,3281.0,208.0,0.9077,400,1.0,800,0.9183,0.9069,228,no_gap
+HAR,Harvest Hills,park,3281.0,208.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+HAR,Harvest Hills,transit_stop,3281.0,208.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+HAR,Harvest Hills,community_centre,3281.0,208.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+HAR,Harvest Hills,rec_centre,3281.0,208.0,0.872,2000,1.0,5000,0.9904,0.864,1700,no_gap
+HAR,Harvest Hills,library,3281.0,208.0,1.0,2000,1.0,5000,1.0,1.0,1446,no_gap
+HAR,Harvest Hills,playground|city,3281.0,208.0,0.7159,400,0.9692,800,0.8317,0.7081,276,no_gap
+HAR,Harvest Hills,playground|private,3281.0,208.0,0.9077,400,1.0,800,0.9183,0.9069,228,no_gap
+HAR,Harvest Hills,park|city,3281.0,208.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+HAR,Harvest Hills,park|private,3281.0,208.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+HSN,Haskayne,playground,1390.0,1244.0,0.6849,400,0.9993,800,0.6736,0.7917,274,no_gap
+HSN,Haskayne,park,1390.0,1244.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+HSN,Haskayne,transit_stop,1390.0,1244.0,0.4309,400,0.7669,800,0.3706,0.9583,460,gap_check
+HSN,Haskayne,community_centre,1390.0,1244.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+HSN,Haskayne,rec_centre,1390.0,1244.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+HSN,Haskayne,library,1390.0,1244.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+HSN,Haskayne,playground|city,1390.0,1244.0,0.6849,400,0.9993,800,0.6736,0.7917,274,no_gap
+HSN,Haskayne,playground|private,1390.0,1244.0,0.6849,400,0.9993,800,0.6736,0.7917,274,no_gap
+HSN,Haskayne,park|city,1390.0,1244.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+HSN,Haskayne,park|private,1390.0,1244.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+HAW,Hawkwood,playground,3325.0,1.0,0.9931,400,1.0,800,1.0,0.9931,180,no_gap
+HAW,Hawkwood,park,3325.0,1.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+HAW,Hawkwood,transit_stop,3325.0,1.0,0.9994,400,1.0,800,1.0,0.9994,153,no_gap
+HAW,Hawkwood,community_centre,3325.0,1.0,0.083,800,1.0,1600,1.0,0.0827,1110,gap
+HAW,Hawkwood,rec_centre,3325.0,1.0,0.7898,2000,1.0,5000,1.0,0.7897,1544,no_gap
+HAW,Hawkwood,library,3325.0,1.0,0.9101,2000,1.0,5000,1.0,0.91,1278,no_gap
+HAW,Hawkwood,playground|city,3325.0,1.0,0.8244,400,1.0,800,1.0,0.8243,209,no_gap
+HAW,Hawkwood,playground|private,3325.0,1.0,0.9931,400,1.0,800,1.0,0.9931,180,no_gap
+HAW,Hawkwood,park|city,3325.0,1.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+HAW,Hawkwood,park|private,3325.0,1.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+HAY,Haysboro,playground,3493.0,1.0,0.9324,400,1.0,800,1.0,0.9323,278,no_gap
+HAY,Haysboro,park,3493.0,1.0,1.0,400,1.0,800,1.0,1.0,159,no_gap
+HAY,Haysboro,transit_stop,3493.0,1.0,0.945,400,1.0,800,1.0,0.945,178,no_gap
+HAY,Haysboro,community_centre,3493.0,1.0,0.7598,800,1.0,1600,0.0,0.7597,629,no_gap
+HAY,Haysboro,rec_centre,3493.0,1.0,0.9568,2000,1.0,5000,1.0,0.9567,1504,no_gap
+HAY,Haysboro,library,3493.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1173,no_gap
+HAY,Haysboro,playground|city,3493.0,1.0,0.3046,400,0.8291,800,1.0,0.3048,610,gap
+HAY,Haysboro,playground|private,3493.0,1.0,0.9324,400,1.0,800,1.0,0.9323,278,no_gap
+HAY,Haysboro,park|city,3493.0,1.0,0.7776,400,1.0,800,1.0,0.7784,212,no_gap
+HAY,Haysboro,park|private,3493.0,1.0,1.0,400,1.0,800,1.0,1.0,159,no_gap
+HID,Hidden Valley,playground,3846.0,0.0,0.9555,400,1.0,800,,0.9555,198,no_gap
+HID,Hidden Valley,park,3846.0,0.0,1.0,400,1.0,800,,1.0,68,no_gap
+HID,Hidden Valley,transit_stop,3846.0,0.0,0.9847,400,1.0,800,,0.9847,133,no_gap
+HID,Hidden Valley,community_centre,3846.0,0.0,0.0,800,0.0088,1600,,0.0,>1600,gap
+HID,Hidden Valley,rec_centre,3846.0,0.0,0.0,2000,1.0,5000,,0.0,3275,gap
+HID,Hidden Valley,library,3846.0,0.0,0.0,2000,1.0,5000,,0.0,2825,gap
+HID,Hidden Valley,playground|city,3846.0,0.0,0.9555,400,1.0,800,,0.9555,198,no_gap
+HID,Hidden Valley,playground|private,3846.0,0.0,0.9555,400,1.0,800,,0.9555,198,no_gap
+HID,Hidden Valley,park|city,3846.0,0.0,1.0,400,1.0,800,,1.0,68,no_gap
+HID,Hidden Valley,park|private,3846.0,0.0,1.0,400,1.0,800,,1.0,68,no_gap
+HPK,Highland Park,playground,1814.0,117.0,0.7883,400,1.0,800,0.5641,0.79,274,no_gap
+HPK,Highland Park,park,1814.0,117.0,1.0,400,1.0,800,1.0,1.0,145,no_gap
+HPK,Highland Park,transit_stop,1814.0,117.0,1.0,400,1.0,800,1.0,1.0,158,no_gap
+HPK,Highland Park,community_centre,1814.0,117.0,0.9702,800,1.0,1600,0.9915,0.966,408,no_gap
+HPK,Highland Park,rec_centre,1814.0,117.0,0.0022,2000,1.0,5000,0.0,0.0026,2501,gap
+HPK,Highland Park,library,1814.0,117.0,0.0044,2000,1.0,5000,0.0,0.0051,2877,gap
+HPK,Highland Park,playground|city,1814.0,117.0,0.7431,400,1.0,800,0.5641,0.7399,316,no_gap
+HPK,Highland Park,playground|private,1814.0,117.0,0.7883,400,1.0,800,0.5641,0.79,274,no_gap
+HPK,Highland Park,park|city,1814.0,117.0,0.9796,400,1.0,800,0.8974,0.9839,187,no_gap
+HPK,Highland Park,park|private,1814.0,117.0,1.0,400,1.0,800,1.0,1.0,145,no_gap
+HIW,Highwood,playground,858.0,37.0,0.9814,400,1.0,800,1.0,0.9805,241,no_gap
+HIW,Highwood,park,858.0,37.0,1.0,400,1.0,800,1.0,1.0,95,no_gap
+HIW,Highwood,transit_stop,858.0,37.0,1.0,400,1.0,800,1.0,1.0,147,no_gap
+HIW,Highwood,community_centre,858.0,37.0,1.0,800,1.0,1600,1.0,1.0,410,no_gap
+HIW,Highwood,rec_centre,858.0,37.0,0.0082,2000,1.0,5000,0.0,0.0085,2511,gap
+HIW,Highwood,library,858.0,37.0,0.0256,2000,1.0,5000,0.0,0.0268,2478,gap
+HIW,Highwood,playground|city,858.0,37.0,0.4068,400,0.9779,800,0.2432,0.4141,452,gap
+HIW,Highwood,playground|private,858.0,37.0,0.9814,400,1.0,800,1.0,0.9805,241,no_gap
+HIW,Highwood,park|city,858.0,37.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+HIW,Highwood,park|private,858.0,37.0,1.0,400,1.0,800,1.0,1.0,95,no_gap
+HIL,Hillhurst,playground,3062.0,103.0,0.9899,400,1.0,800,1.0,0.9895,209,no_gap
+HIL,Hillhurst,park,3062.0,103.0,0.9886,400,1.0,800,0.9515,0.9899,119,no_gap
+HIL,Hillhurst,transit_stop,3062.0,103.0,1.0,400,1.0,800,1.0,1.0,97,no_gap
+HIL,Hillhurst,community_centre,3062.0,103.0,0.9961,800,1.0,1600,0.9903,0.9963,461,no_gap
+HIL,Hillhurst,rec_centre,3062.0,103.0,0.0,2000,1.0,5000,0.0,0.0,2819,gap
+HIL,Hillhurst,library,3062.0,103.0,1.0,2000,1.0,5000,1.0,1.0,1499,no_gap
+HIL,Hillhurst,playground|city,3062.0,103.0,0.6545,400,1.0,800,0.6117,0.656,363,no_gap
+HIL,Hillhurst,playground|private,3062.0,103.0,0.9899,400,1.0,800,1.0,0.9895,209,no_gap
+HIL,Hillhurst,park|city,3062.0,103.0,0.9886,400,1.0,800,0.9515,0.9899,122,no_gap
+HIL,Hillhurst,park|private,3062.0,103.0,0.9886,400,1.0,800,0.9515,0.9899,119,no_gap
+HSD,Homestead,playground,911.0,890.0,0.674,400,1.0,800,0.6742,1.0,302,no_gap
+HSD,Homestead,park,911.0,890.0,0.7991,400,1.0,800,0.7978,1.0,152,no_gap
+HSD,Homestead,transit_stop,911.0,890.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
+HSD,Homestead,community_centre,911.0,890.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+HSD,Homestead,rec_centre,911.0,890.0,0.0,2000,1.0,5000,0.0,0.0,2269,gap_check
+HSD,Homestead,library,911.0,890.0,0.0,2000,1.0,5000,0.0,0.0,2268,gap_check
+HSD,Homestead,playground|city,911.0,890.0,0.674,400,1.0,800,0.6742,1.0,302,no_gap
+HSD,Homestead,playground|private,911.0,890.0,0.674,400,1.0,800,0.6742,1.0,302,no_gap
+HSD,Homestead,park|city,911.0,890.0,0.7991,400,1.0,800,0.7978,1.0,152,no_gap
+HSD,Homestead,park|private,911.0,890.0,0.7991,400,1.0,800,0.7978,1.0,152,no_gap
+HOR,Horizon,playground,90.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+HOR,Horizon,park,90.0,0.0,1.0,400,1.0,800,,1.0,307,too_few_homes
+HOR,Horizon,transit_stop,90.0,0.0,1.0,400,1.0,800,,1.0,267,too_few_homes
+HOR,Horizon,community_centre,90.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+HOR,Horizon,rec_centre,90.0,0.0,0.0,2000,1.0,5000,,0.0,3400,too_few_homes
+HOR,Horizon,library,90.0,0.0,0.0,2000,1.0,5000,,0.0,3423,too_few_homes
+HOR,Horizon,playground|city,90.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+HOR,Horizon,playground|private,90.0,0.0,1.0,400,1.0,800,,1.0,239,too_few_homes
+HOR,Horizon,park|city,90.0,0.0,1.0,400,1.0,800,,1.0,307,too_few_homes
+HOR,Horizon,park|private,90.0,0.0,1.0,400,1.0,800,,1.0,307,too_few_homes
+HKS,Hotchkiss,playground,765.0,748.0,0.7869,400,1.0,800,0.8008,0.5,256,no_gap
+HKS,Hotchkiss,park,765.0,748.0,0.9686,400,1.0,800,0.9733,0.5,123,no_gap
+HKS,Hotchkiss,transit_stop,765.0,748.0,0.0,400,0.0013,800,0.0,0.0,>800,gap_check
+HKS,Hotchkiss,community_centre,765.0,748.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+HKS,Hotchkiss,rec_centre,765.0,748.0,0.0,2000,0.0758,5000,0.0,0.0,>5000,gap_check
+HKS,Hotchkiss,library,765.0,748.0,0.0,2000,0.3046,5000,0.0,0.0,>5000,gap_check
+HKS,Hotchkiss,playground|city,765.0,748.0,0.7869,400,1.0,800,0.8008,0.5,256,no_gap
+HKS,Hotchkiss,playground|private,765.0,748.0,0.7869,400,1.0,800,0.8008,0.5,256,no_gap
+HKS,Hotchkiss,park|city,765.0,748.0,0.9686,400,1.0,800,0.9733,0.5,146,no_gap
+HKS,Hotchkiss,park|private,765.0,748.0,0.9686,400,1.0,800,0.9733,0.5,123,no_gap
+HOU,Hounsfield Heights/Briar Hill,playground,1131.0,43.0,0.9478,400,1.0,800,0.8837,0.9473,247,no_gap
+HOU,Hounsfield Heights/Briar Hill,park,1131.0,43.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+HOU,Hounsfield Heights/Briar Hill,transit_stop,1131.0,43.0,1.0,400,1.0,800,1.0,1.0,107,no_gap
+HOU,Hounsfield Heights/Briar Hill,community_centre,1131.0,43.0,1.0,800,1.0,1600,1.0,1.0,440,no_gap
+HOU,Hounsfield Heights/Briar Hill,rec_centre,1131.0,43.0,0.6065,2000,1.0,5000,0.8605,0.6312,1918,no_gap
+HOU,Hounsfield Heights/Briar Hill,library,1131.0,43.0,1.0,2000,1.0,5000,1.0,1.0,546,no_gap
+HOU,Hounsfield Heights/Briar Hill,playground|city,1131.0,43.0,0.9142,400,1.0,800,0.7674,0.9151,280,no_gap
+HOU,Hounsfield Heights/Briar Hill,playground|private,1131.0,43.0,0.9478,400,1.0,800,0.8837,0.9473,247,no_gap
+HOU,Hounsfield Heights/Briar Hill,park|city,1131.0,43.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+HOU,Hounsfield Heights/Briar Hill,park|private,1131.0,43.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+HUN,Huntington Hills,playground,4867.0,4.0,0.9897,400,1.0,800,1.0,0.9897,181,no_gap
+HUN,Huntington Hills,park,4867.0,4.0,1.0,400,1.0,800,1.0,1.0,73,no_gap
+HUN,Huntington Hills,transit_stop,4867.0,4.0,0.9807,400,1.0,800,1.0,0.9807,142,no_gap
+HUN,Huntington Hills,community_centre,4867.0,4.0,0.279,800,0.9616,1600,0.0,0.2793,1044,gap
+HUN,Huntington Hills,rec_centre,4867.0,4.0,0.9848,2000,1.0,5000,0.75,0.985,1047,no_gap
+HUN,Huntington Hills,library,4867.0,4.0,0.9675,2000,1.0,5000,0.75,0.9677,1127,no_gap
+HUN,Huntington Hills,playground|city,4867.0,4.0,0.8938,400,1.0,800,1.0,0.8937,233,no_gap
+HUN,Huntington Hills,playground|private,4867.0,4.0,0.9897,400,1.0,800,1.0,0.9897,181,no_gap
+HUN,Huntington Hills,park|city,4867.0,4.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+HUN,Huntington Hills,park|private,4867.0,4.0,1.0,400,1.0,800,1.0,1.0,73,no_gap
+HUX,Huxley,playground,201.0,130.0,0.6816,400,0.6915,800,0.5385,0.9846,313,no_gap
+HUX,Huxley,park,201.0,130.0,0.0597,400,0.6915,800,0.0769,0.0154,601,gap_check
+HUX,Huxley,transit_stop,201.0,130.0,0.3184,400,0.3234,800,0.0,0.9846,>800,gap_check
+HUX,Huxley,community_centre,201.0,130.0,0.0,800,0.393,1600,0.0,0.0,>1600,gap_check
+HUX,Huxley,rec_centre,201.0,130.0,0.0,2000,0.8657,5000,0.0,0.0,4135,gap_check
+HUX,Huxley,library,201.0,130.0,0.0,2000,0.8905,5000,0.0,0.0,4109,gap_check
+HUX,Huxley,playground|city,201.0,130.0,0.3632,400,0.3731,800,0.5385,0.0,318,gap_check
+HUX,Huxley,playground|private,201.0,130.0,0.6816,400,0.6915,800,0.5385,0.9846,313,no_gap
+HUX,Huxley,park|city,201.0,130.0,0.0597,400,0.6915,800,0.0769,0.0154,601,gap_check
+HUX,Huxley,park|private,201.0,130.0,0.0597,400,0.6915,800,0.0769,0.0154,601,gap_check
+ING,Inglewood,playground,2330.0,168.0,0.6172,400,1.0,800,0.375,0.6351,313,no_gap
+ING,Inglewood,park,2330.0,168.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+ING,Inglewood,transit_stop,2330.0,168.0,0.7648,400,1.0,800,1.0,0.7459,267,no_gap
+ING,Inglewood,community_centre,2330.0,168.0,0.5026,800,1.0,1600,0.7857,0.4817,779,no_gap
+ING,Inglewood,rec_centre,2330.0,168.0,1.0,2000,1.0,5000,1.0,1.0,723,no_gap
+ING,Inglewood,library,2330.0,168.0,0.2897,2000,1.0,5000,0.1548,0.2986,2517,gap
+ING,Inglewood,playground|city,2330.0,168.0,0.5837,400,1.0,800,0.369,0.5994,356,no_gap
+ING,Inglewood,playground|private,2330.0,168.0,0.6326,400,1.0,800,0.375,0.6518,308,no_gap
+ING,Inglewood,park|city,2330.0,168.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+ING,Inglewood,park|private,2330.0,168.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+KEL,Kelvin Grove,playground,751.0,5.0,0.8176,400,1.0,800,0.8,0.8177,311,no_gap
+KEL,Kelvin Grove,park,751.0,5.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+KEL,Kelvin Grove,transit_stop,751.0,5.0,0.9294,400,1.0,800,0.8,0.9303,281,no_gap
+KEL,Kelvin Grove,community_centre,751.0,5.0,0.9774,800,1.0,1600,1.0,0.9772,475,no_gap
+KEL,Kelvin Grove,rec_centre,751.0,5.0,0.1651,2000,1.0,5000,0.2,0.1649,2179,gap
+KEL,Kelvin Grove,library,751.0,5.0,0.0,2000,1.0,5000,0.0,0.0,3020,gap
+KEL,Kelvin Grove,playground|city,751.0,5.0,0.7111,400,1.0,800,0.6,0.7118,332,no_gap
+KEL,Kelvin Grove,playground|private,751.0,5.0,0.9827,400,1.0,800,1.0,0.9826,249,no_gap
+KEL,Kelvin Grove,park|city,751.0,5.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+KEL,Kelvin Grove,park|private,751.0,5.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+KSH,Keystone Hills,playground,34.0,33.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+KSH,Keystone Hills,park,34.0,33.0,0.0294,400,1.0,800,0.0,,591,too_few_homes
+KSH,Keystone Hills,transit_stop,34.0,33.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+KSH,Keystone Hills,community_centre,34.0,33.0,0.0,800,0.0,1600,0.0,,>1600,too_few_homes
+KSH,Keystone Hills,rec_centre,34.0,33.0,0.0,2000,1.0,5000,0.0,,3994,too_few_homes
+KSH,Keystone Hills,library,34.0,33.0,0.0,2000,1.0,5000,0.0,,4141,too_few_homes
+KSH,Keystone Hills,playground|city,34.0,33.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+KSH,Keystone Hills,playground|private,34.0,33.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+KSH,Keystone Hills,park|city,34.0,33.0,0.0294,400,1.0,800,0.0,,591,too_few_homes
+KSH,Keystone Hills,park|private,34.0,33.0,0.0294,400,1.0,800,0.0,,591,too_few_homes
+KIL,Killarney/Glengarry,playground,3704.0,346.0,0.8016,400,1.0,800,0.8092,0.8194,257,no_gap
+KIL,Killarney/Glengarry,park,3704.0,346.0,0.9798,400,1.0,800,0.9827,0.9782,147,no_gap
+KIL,Killarney/Glengarry,transit_stop,3704.0,346.0,0.9633,400,1.0,800,0.9827,0.959,162,no_gap
+KIL,Killarney/Glengarry,community_centre,3704.0,346.0,0.8035,800,1.0,1600,0.7312,0.7998,630,no_gap
+KIL,Killarney/Glengarry,rec_centre,3704.0,346.0,1.0,2000,1.0,5000,1.0,1.0,674,no_gap
+KIL,Killarney/Glengarry,library,3704.0,346.0,1.0,2000,1.0,5000,1.0,1.0,1001,no_gap
+KIL,Killarney/Glengarry,playground|city,3704.0,346.0,0.6461,400,1.0,800,0.6618,0.6542,342,no_gap
+KIL,Killarney/Glengarry,playground|private,3704.0,346.0,0.8016,400,1.0,800,0.8092,0.8194,257,no_gap
+KIL,Killarney/Glengarry,park|city,3704.0,346.0,0.9798,400,1.0,800,0.9827,0.9782,147,no_gap
+KIL,Killarney/Glengarry,park|private,3704.0,346.0,0.9798,400,1.0,800,0.9827,0.9782,147,no_gap
+KCA,Kincora,playground,2718.0,147.0,0.8528,400,1.0,800,0.0,0.9016,260,no_gap
+KCA,Kincora,park,2718.0,147.0,1.0,400,1.0,800,1.0,1.0,57,no_gap
+KCA,Kincora,transit_stop,2718.0,147.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
+KCA,Kincora,community_centre,2718.0,147.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+KCA,Kincora,rec_centre,2718.0,147.0,0.0,2000,0.3823,5000,0.0,0.0,>5000,gap
+KCA,Kincora,library,2718.0,147.0,0.9581,2000,1.0,5000,1.0,0.9557,984,no_gap
+KCA,Kincora,playground|city,2718.0,147.0,0.8528,400,1.0,800,0.0,0.9016,260,no_gap
+KCA,Kincora,playground|private,2718.0,147.0,0.8528,400,1.0,800,0.0,0.9016,260,no_gap
+KCA,Kincora,park|city,2718.0,147.0,1.0,400,1.0,800,1.0,1.0,57,no_gap
+KCA,Kincora,park|private,2718.0,147.0,1.0,400,1.0,800,1.0,1.0,57,no_gap
+KIN,Kingsland,playground,2870.0,400.0,0.9425,400,1.0,800,0.6625,0.9865,199,no_gap
+KIN,Kingsland,park,2870.0,400.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+KIN,Kingsland,transit_stop,2870.0,400.0,1.0,400,1.0,800,1.0,1.0,146,no_gap
+KIN,Kingsland,community_centre,2870.0,400.0,0.7359,800,1.0,1600,0.0025,0.8383,486,no_gap
+KIN,Kingsland,rec_centre,2870.0,400.0,0.4812,2000,1.0,5000,0.0025,0.5194,1996,gap
+KIN,Kingsland,library,2870.0,400.0,0.0254,2000,1.0,5000,0.0,0.0329,2781,gap
+KIN,Kingsland,playground|city,2870.0,400.0,0.808,400,1.0,800,0.6625,0.9144,235,no_gap
+KIN,Kingsland,playground|private,2870.0,400.0,0.9425,400,1.0,800,0.6625,0.9865,199,no_gap
+KIN,Kingsland,park|city,2870.0,400.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+KIN,Kingsland,park|private,2870.0,400.0,1.0,400,1.0,800,1.0,1.0,110,no_gap
+LKB,Lake Bonavista,playground,4086.0,6.0,0.7509,400,0.9985,800,1.0,0.7505,288,no_gap
+LKB,Lake Bonavista,park,4086.0,6.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+LKB,Lake Bonavista,transit_stop,4086.0,6.0,0.9951,400,1.0,800,1.0,0.9951,120,no_gap
+LKB,Lake Bonavista,community_centre,4086.0,6.0,0.5781,800,1.0,1600,0.1667,0.5787,747,no_gap
+LKB,Lake Bonavista,rec_centre,4086.0,6.0,0.7154,2000,1.0,5000,0.8333,0.7152,1552,no_gap
+LKB,Lake Bonavista,library,4086.0,6.0,0.71,2000,1.0,5000,0.8333,0.7098,1543,no_gap
+LKB,Lake Bonavista,playground|city,4086.0,6.0,0.4635,400,0.9917,800,0.6667,0.4632,417,gap
+LKB,Lake Bonavista,playground|private,4086.0,6.0,0.7509,400,0.9985,800,1.0,0.7505,288,no_gap
+LKB,Lake Bonavista,park|city,4086.0,6.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+LKB,Lake Bonavista,park|private,4086.0,6.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+LKV,Lakeview,playground,2243.0,57.0,0.9599,400,1.0,800,0.8947,0.962,244,no_gap
+LKV,Lakeview,park,2243.0,57.0,1.0,400,1.0,800,1.0,1.0,120,no_gap
+LKV,Lakeview,transit_stop,2243.0,57.0,0.9795,400,1.0,800,0.9825,0.9794,148,no_gap
+LKV,Lakeview,community_centre,2243.0,57.0,0.7521,800,1.0,1600,0.7368,0.7527,595,no_gap
+LKV,Lakeview,rec_centre,2243.0,57.0,0.3754,2000,1.0,5000,0.4561,0.3732,2121,gap
+LKV,Lakeview,library,2243.0,57.0,0.0,2000,1.0,5000,0.0,0.0,3666,gap
+LKV,Lakeview,playground|city,2243.0,57.0,0.8698,400,1.0,800,0.7544,0.8732,292,no_gap
+LKV,Lakeview,playground|private,2243.0,57.0,0.9599,400,1.0,800,0.8947,0.962,244,no_gap
+LKV,Lakeview,park|city,2243.0,57.0,1.0,400,1.0,800,1.0,1.0,154,no_gap
+LKV,Lakeview,park|private,2243.0,57.0,1.0,400,1.0,800,1.0,1.0,120,no_gap
+LEG,Legacy,playground,5624.0,1760.0,0.761,400,1.0,800,0.6989,0.8664,258,no_gap
+LEG,Legacy,park,5624.0,1760.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+LEG,Legacy,transit_stop,5624.0,1760.0,0.9685,400,0.9998,800,0.9085,0.9957,138,no_gap
+LEG,Legacy,community_centre,5624.0,1760.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+LEG,Legacy,rec_centre,5624.0,1760.0,0.0,2000,0.4611,5000,0.0,0.0,>5000,gap
+LEG,Legacy,library,5624.0,1760.0,0.0,2000,0.5219,5000,0.0,0.0,>5000,gap
+LEG,Legacy,playground|city,5624.0,1760.0,0.7582,400,1.0,800,0.6989,0.8618,258,no_gap
+LEG,Legacy,playground|private,5624.0,1760.0,0.761,400,1.0,800,0.6989,0.8664,258,no_gap
+LEG,Legacy,park|city,5624.0,1760.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+LEG,Legacy,park|private,5624.0,1760.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+LEB,Lewisburg,playground,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
+LEB,Lewisburg,park,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
+LEB,Lewisburg,transit_stop,284.0,278.0,0.0,400,0.2782,800,0.0,,>800,gap_check
+LEB,Lewisburg,community_centre,284.0,278.0,0.0,800,0.3204,1600,0.0,,>1600,gap_check
+LEB,Lewisburg,rec_centre,284.0,278.0,0.0,2000,1.0,5000,0.0,,3329,gap_check
+LEB,Lewisburg,library,284.0,278.0,0.0,2000,1.0,5000,0.0,,3562,gap_check
+LEB,Lewisburg,playground|city,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
+LEB,Lewisburg,playground|private,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
+LEB,Lewisburg,park|city,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
+LEB,Lewisburg,park|private,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
+LPK,Lincoln Park,playground,1148.0,0.0,1.0,400,1.0,800,,1.0,232,no_gap
+LPK,Lincoln Park,park,1148.0,0.0,1.0,400,1.0,800,,1.0,199,no_gap
+LPK,Lincoln Park,transit_stop,1148.0,0.0,1.0,400,1.0,800,,1.0,202,no_gap
+LPK,Lincoln Park,community_centre,1148.0,0.0,0.3998,800,1.0,1600,,0.3998,1012,gap
+LPK,Lincoln Park,rec_centre,1148.0,0.0,0.5453,2000,1.0,5000,,0.5453,1934,no_gap
+LPK,Lincoln Park,library,1148.0,0.0,0.0,2000,1.0,5000,,0.0,3174,gap
+LPK,Lincoln Park,playground|city,1148.0,0.0,0.9085,400,1.0,800,,0.9085,232,no_gap
+LPK,Lincoln Park,playground|private,1148.0,0.0,1.0,400,1.0,800,,1.0,232,no_gap
+LPK,Lincoln Park,park|city,1148.0,0.0,1.0,400,1.0,800,,1.0,199,no_gap
+LPK,Lincoln Park,park|private,1148.0,0.0,1.0,400,1.0,800,,1.0,199,no_gap
+LIV,Livingston,playground,4531.0,2451.0,0.7952,400,1.0,800,0.7597,0.9414,247,no_gap
+LIV,Livingston,park,4531.0,2451.0,0.9991,400,1.0,800,0.9984,1.0,106,no_gap
+LIV,Livingston,transit_stop,4531.0,2451.0,0.7043,400,0.9252,800,0.4684,0.9832,280,no_gap
+LIV,Livingston,community_centre,4531.0,2451.0,0.5646,800,0.9949,1600,0.2652,0.91,798,no_gap
+LIV,Livingston,rec_centre,4531.0,2451.0,0.0,2000,1.0,5000,0.0,0.0,3193,gap_check
+LIV,Livingston,library,4531.0,2451.0,0.0,2000,1.0,5000,0.0,0.0,3475,gap_check
+LIV,Livingston,playground|city,4531.0,2451.0,0.6504,400,1.0,800,0.6728,0.7012,287,no_gap
+LIV,Livingston,playground|private,4531.0,2451.0,0.7952,400,1.0,800,0.7597,0.9414,247,no_gap
+LIV,Livingston,park|city,4531.0,2451.0,0.9991,400,1.0,800,0.9984,1.0,115,no_gap
+LIV,Livingston,park|private,4531.0,2451.0,0.9991,400,1.0,800,0.9984,1.0,106,no_gap
+LMR,Lower Mount Royal,playground,2262.0,70.0,0.0429,400,1.0,800,0.0,0.0443,510,gap
+LMR,Lower Mount Royal,park,2262.0,70.0,1.0,400,1.0,800,1.0,1.0,149,no_gap
+LMR,Lower Mount Royal,transit_stop,2262.0,70.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+LMR,Lower Mount Royal,community_centre,2262.0,70.0,1.0,800,1.0,1600,1.0,1.0,540,no_gap
+LMR,Lower Mount Royal,rec_centre,2262.0,70.0,0.855,2000,1.0,5000,1.0,0.8504,1453,no_gap
+LMR,Lower Mount Royal,library,2262.0,70.0,1.0,2000,1.0,5000,1.0,1.0,1178,no_gap
+LMR,Lower Mount Royal,playground|city,2262.0,70.0,0.0429,400,1.0,800,0.0,0.0443,533,gap
+LMR,Lower Mount Royal,playground|private,2262.0,70.0,0.0429,400,1.0,800,0.0,0.0443,510,gap
+LMR,Lower Mount Royal,park|city,2262.0,70.0,1.0,400,1.0,800,1.0,1.0,149,no_gap
+LMR,Lower Mount Royal,park|private,2262.0,70.0,1.0,400,1.0,800,1.0,1.0,149,no_gap
+MAC,Macewan Glen,playground,1739.0,0.0,0.8781,400,1.0,800,,0.8781,223,no_gap
+MAC,Macewan Glen,park,1739.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
+MAC,Macewan Glen,transit_stop,1739.0,0.0,0.9896,400,1.0,800,,0.9896,176,no_gap
+MAC,Macewan Glen,community_centre,1739.0,0.0,0.0,800,0.0219,1600,,0.0,>1600,gap
+MAC,Macewan Glen,rec_centre,1739.0,0.0,0.0,2000,1.0,5000,,0.0,4090,gap
+MAC,Macewan Glen,library,1739.0,0.0,0.0,2000,1.0,5000,,0.0,3965,gap
+MAC,Macewan Glen,playground|city,1739.0,0.0,0.8729,400,1.0,800,,0.8729,225,no_gap
+MAC,Macewan Glen,playground|private,1739.0,0.0,0.8781,400,1.0,800,,0.8781,223,no_gap
+MAC,Macewan Glen,park|city,1739.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
+MAC,Macewan Glen,park|private,1739.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
+MAH,Mahogany,playground,7819.0,2248.0,0.9235,400,1.0,800,0.8977,0.933,218,no_gap
+MAH,Mahogany,park,7819.0,2248.0,0.9996,400,1.0,800,1.0,0.9994,87,no_gap
+MAH,Mahogany,transit_stop,7819.0,2248.0,0.8451,400,0.9954,800,0.5952,0.9459,237,no_gap
+MAH,Mahogany,community_centre,7819.0,2248.0,0.0,800,0.1453,1600,0.0,0.0,>1600,gap
+MAH,Mahogany,rec_centre,7819.0,2248.0,0.2042,2000,1.0,5000,0.3585,0.1161,2526,gap
+MAH,Mahogany,library,7819.0,2248.0,0.3442,2000,1.0,5000,0.4284,0.2892,2339,gap
+MAH,Mahogany,playground|city,7819.0,2248.0,0.7668,400,0.9958,800,0.8536,0.7245,275,no_gap
+MAH,Mahogany,playground|private,7819.0,2248.0,0.9235,400,1.0,800,0.8977,0.933,218,no_gap
+MAH,Mahogany,park|city,7819.0,2248.0,0.9996,400,1.0,800,1.0,0.9994,93,no_gap
+MAH,Mahogany,park|private,7819.0,2248.0,0.9996,400,1.0,800,1.0,0.9994,87,no_gap
+MAN,Manchester,playground,1077.0,0.0,0.9898,400,1.0,800,,0.9883,140,no_gap
+MAN,Manchester,park,1077.0,0.0,1.0,400,1.0,800,,1.0,106,no_gap
+MAN,Manchester,transit_stop,1077.0,0.0,1.0,400,1.0,800,,1.0,100,no_gap
+MAN,Manchester,community_centre,1077.0,0.0,0.9954,800,1.0,1600,,0.9947,630,no_gap
+MAN,Manchester,rec_centre,1077.0,0.0,0.0,2000,1.0,5000,,0.0,2585,gap
+MAN,Manchester,library,1077.0,0.0,0.0,2000,1.0,5000,,0.0,3180,gap
+MAN,Manchester,playground|city,1077.0,0.0,0.9898,400,1.0,800,,0.9883,140,no_gap
+MAN,Manchester,playground|private,1077.0,0.0,0.9898,400,1.0,800,,0.9883,140,no_gap
+MAN,Manchester,park|city,1077.0,0.0,1.0,400,1.0,800,,1.0,106,no_gap
+MAN,Manchester,park|private,1077.0,0.0,1.0,400,1.0,800,,1.0,106,no_gap
+MPL,Maple Ridge,playground,806.0,1.0,0.8486,400,1.0,800,1.0,0.8484,285,no_gap
+MPL,Maple Ridge,park,806.0,1.0,0.9988,400,1.0,800,1.0,0.9988,119,no_gap
+MPL,Maple Ridge,transit_stop,806.0,1.0,0.8251,400,1.0,800,1.0,0.8248,260,no_gap
+MPL,Maple Ridge,community_centre,806.0,1.0,0.8337,800,1.0,1600,1.0,0.8335,497,no_gap
+MPL,Maple Ridge,rec_centre,806.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1623,no_gap
+MPL,Maple Ridge,library,806.0,1.0,0.9367,2000,1.0,5000,1.0,0.9366,1772,no_gap
+MPL,Maple Ridge,playground|city,806.0,1.0,0.4417,400,1.0,800,0.0,0.4422,432,gap
+MPL,Maple Ridge,playground|private,806.0,1.0,0.8486,400,1.0,800,1.0,0.8484,285,no_gap
+MPL,Maple Ridge,park|city,806.0,1.0,0.9988,400,1.0,800,1.0,0.9988,119,no_gap
+MPL,Maple Ridge,park|private,806.0,1.0,0.9988,400,1.0,800,1.0,0.9988,119,no_gap
+MRL,Marlborough,playground,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,183,no_gap
+MRL,Marlborough,park,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+MRL,Marlborough,transit_stop,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,151,no_gap
+MRL,Marlborough,community_centre,2586.0,1.0,0.71,800,1.0,1600,1.0,0.7099,636,no_gap
+MRL,Marlborough,rec_centre,2586.0,1.0,0.7873,2000,1.0,5000,1.0,0.7872,1780,no_gap
+MRL,Marlborough,library,2586.0,1.0,0.8983,2000,1.0,5000,1.0,0.8983,1552,no_gap
+MRL,Marlborough,playground|city,2586.0,1.0,0.8399,400,1.0,800,1.0,0.8398,219,no_gap
+MRL,Marlborough,playground|private,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,183,no_gap
+MRL,Marlborough,park|city,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+MRL,Marlborough,park|private,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+MPK,Marlborough Park,playground,2818.0,0.0,0.9698,400,1.0,800,,0.9698,199,no_gap
+MPK,Marlborough Park,park,2818.0,0.0,1.0,400,1.0,800,,1.0,98,no_gap
+MPK,Marlborough Park,transit_stop,2818.0,0.0,0.9961,400,1.0,800,,0.9961,162,no_gap
+MPK,Marlborough Park,community_centre,2818.0,0.0,0.7704,800,1.0,1600,,0.7704,605,no_gap
+MPK,Marlborough Park,rec_centre,2818.0,0.0,0.7012,2000,1.0,5000,,0.7012,1791,no_gap
+MPK,Marlborough Park,library,2818.0,0.0,0.7917,2000,1.0,5000,,0.7917,1710,no_gap
+MPK,Marlborough Park,playground|city,2818.0,0.0,0.8524,400,1.0,800,,0.8524,287,no_gap
+MPK,Marlborough Park,playground|private,2818.0,0.0,0.9698,400,1.0,800,,0.9698,199,no_gap
+MPK,Marlborough Park,park|city,2818.0,0.0,1.0,400,1.0,800,,1.0,98,no_gap
+MPK,Marlborough Park,park|private,2818.0,0.0,1.0,400,1.0,800,,1.0,98,no_gap
+MRT,Martindale,playground,3875.0,50.0,0.9868,400,1.0,800,1.0,0.9867,189,no_gap
+MRT,Martindale,park,3875.0,50.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+MRT,Martindale,transit_stop,3875.0,50.0,0.9948,400,1.0,800,1.0,0.9948,138,no_gap
+MRT,Martindale,community_centre,3875.0,50.0,0.2155,800,0.9907,1600,0.0,0.2183,1054,gap
+MRT,Martindale,rec_centre,3875.0,50.0,1.0,2000,1.0,5000,1.0,1.0,904,no_gap
+MRT,Martindale,library,3875.0,50.0,1.0,2000,1.0,5000,1.0,1.0,962,no_gap
+MRT,Martindale,playground|city,3875.0,50.0,0.9801,400,1.0,800,1.0,0.9799,197,no_gap
+MRT,Martindale,playground|private,3875.0,50.0,0.9868,400,1.0,800,1.0,0.9867,189,no_gap
+MRT,Martindale,park|city,3875.0,50.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+MRT,Martindale,park|private,3875.0,50.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+MAF,Mayfair,playground,155.0,5.0,0.9484,400,1.0,800,0.8,0.9533,169,no_gap
+MAF,Mayfair,park,155.0,5.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+MAF,Mayfair,transit_stop,155.0,5.0,0.7548,400,1.0,800,0.8,0.7533,265,no_gap
+MAF,Mayfair,community_centre,155.0,5.0,0.2452,800,1.0,1600,0.2,0.2467,907,gap
+MAF,Mayfair,rec_centre,155.0,5.0,1.0,2000,1.0,5000,1.0,1.0,1608,no_gap
+MAF,Mayfair,library,155.0,5.0,0.0,2000,1.0,5000,0.0,0.0,3282,gap
+MAF,Mayfair,playground|city,155.0,5.0,0.9484,400,1.0,800,0.8,0.9533,215,no_gap
+MAF,Mayfair,playground|private,155.0,5.0,0.9871,400,1.0,800,1.0,0.9867,167,no_gap
+MAF,Mayfair,park|city,155.0,5.0,1.0,400,1.0,800,1.0,1.0,113,no_gap
+MAF,Mayfair,park|private,155.0,5.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+MAL,Mayland Heights,playground,2274.0,0.0,0.8201,400,1.0,800,,0.8201,279,no_gap
+MAL,Mayland Heights,park,2274.0,0.0,1.0,400,1.0,800,,1.0,83,no_gap
+MAL,Mayland Heights,transit_stop,2274.0,0.0,0.9595,400,1.0,800,,0.9595,136,no_gap
+MAL,Mayland Heights,community_centre,2274.0,0.0,0.4855,800,1.0,1600,,0.4855,924,gap
+MAL,Mayland Heights,rec_centre,2274.0,0.0,0.1359,2000,1.0,5000,,0.1359,2506,gap
+MAL,Mayland Heights,library,2274.0,0.0,0.0026,2000,1.0,5000,,0.0026,3343,gap
+MAL,Mayland Heights,playground|city,2274.0,0.0,0.2098,400,0.8663,800,,0.2098,603,gap
+MAL,Mayland Heights,playground|private,2274.0,0.0,0.8201,400,1.0,800,,0.8201,279,no_gap
+MAL,Mayland Heights,park|city,2274.0,0.0,1.0,400,1.0,800,,1.0,83,no_gap
+MAL,Mayland Heights,park|private,2274.0,0.0,1.0,400,1.0,800,,1.0,83,no_gap
+MCK,McKenzie Lake,playground,4619.0,0.0,0.9338,400,1.0,800,,0.9338,202,no_gap
+MCK,McKenzie Lake,park,4619.0,0.0,0.9996,400,1.0,800,,0.9996,78,no_gap
+MCK,McKenzie Lake,transit_stop,4619.0,0.0,0.9957,400,1.0,800,,0.9957,164,no_gap
+MCK,McKenzie Lake,community_centre,4619.0,0.0,0.3494,800,0.6867,1600,,0.3494,1043,gap
+MCK,McKenzie Lake,rec_centre,4619.0,0.0,0.0,2000,0.9574,5000,,0.0,4369,gap
+MCK,McKenzie Lake,library,4619.0,0.0,0.0,2000,0.9866,5000,,0.0,4339,gap
+MCK,McKenzie Lake,playground|city,4619.0,0.0,0.8727,400,1.0,800,,0.8727,221,no_gap
+MCK,McKenzie Lake,playground|private,4619.0,0.0,0.9338,400,1.0,800,,0.9338,202,no_gap
+MCK,McKenzie Lake,park|city,4619.0,0.0,0.9981,400,1.0,800,,0.9981,82,no_gap
+MCK,McKenzie Lake,park|private,4619.0,0.0,0.9996,400,1.0,800,,0.9996,78,no_gap
+MCT,McKenzie Towne,playground,7046.0,0.0,0.8997,400,1.0,800,,0.8997,203,no_gap
+MCT,McKenzie Towne,park,7046.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
+MCT,McKenzie Towne,transit_stop,7046.0,0.0,0.9821,400,1.0,800,,0.9821,164,no_gap
+MCT,McKenzie Towne,community_centre,7046.0,0.0,0.019,800,0.329,1600,,0.019,>1600,gap
+MCT,McKenzie Towne,rec_centre,7046.0,0.0,0.0,2000,0.9222,5000,,0.0,4278,gap
+MCT,McKenzie Towne,library,7046.0,0.0,0.0,2000,0.971,5000,,0.0,4172,gap
+MCT,McKenzie Towne,playground|city,7046.0,0.0,0.7817,400,1.0,800,,0.7817,240,no_gap
+MCT,McKenzie Towne,playground|private,7046.0,0.0,0.8997,400,1.0,800,,0.8997,203,no_gap
+MCT,McKenzie Towne,park|city,7046.0,0.0,1.0,400,1.0,800,,1.0,79,no_gap
+MCT,McKenzie Towne,park|private,7046.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
+MEA,Meadowlark Park,playground,281.0,5.0,0.8754,400,1.0,800,1.0,0.8732,262,no_gap
+MEA,Meadowlark Park,park,281.0,5.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+MEA,Meadowlark Park,transit_stop,281.0,5.0,0.9893,400,1.0,800,1.0,0.9891,191,no_gap
+MEA,Meadowlark Park,community_centre,281.0,5.0,1.0,800,1.0,1600,1.0,1.0,354,no_gap
+MEA,Meadowlark Park,rec_centre,281.0,5.0,0.4199,2000,1.0,5000,0.4,0.4203,2034,gap
+MEA,Meadowlark Park,library,281.0,5.0,0.0,2000,1.0,5000,0.0,0.0,3227,gap
+MEA,Meadowlark Park,playground|city,281.0,5.0,0.7082,400,1.0,800,0.6,0.7101,336,no_gap
+MEA,Meadowlark Park,playground|private,281.0,5.0,0.8754,400,1.0,800,1.0,0.8732,262,no_gap
+MEA,Meadowlark Park,park|city,281.0,5.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+MEA,Meadowlark Park,park|private,281.0,5.0,1.0,400,1.0,800,1.0,1.0,67,no_gap
+MDH,Medicine Hill,playground,2074.0,1262.0,0.6099,400,1.0,800,0.4842,0.7047,177,no_gap
+MDH,Medicine Hill,park,2074.0,1262.0,1.0,400,1.0,800,1.0,1.0,33,no_gap
+MDH,Medicine Hill,transit_stop,2074.0,1262.0,1.0,400,1.0,800,1.0,1.0,113,no_gap
+MDH,Medicine Hill,community_centre,2074.0,1262.0,0.0,800,1.0,1600,0.0,0.0,1298,gap_check
+MDH,Medicine Hill,rec_centre,2074.0,1262.0,0.474,2000,1.0,5000,0.4017,0.8897,2129,gap_check
+MDH,Medicine Hill,library,2074.0,1262.0,0.8153,2000,1.0,5000,0.6965,1.0,1549,no_gap
+MDH,Medicine Hill,playground|city,2074.0,1262.0,0.6099,400,1.0,800,0.4842,0.7047,177,no_gap
+MDH,Medicine Hill,playground|private,2074.0,1262.0,0.6099,400,1.0,800,0.4842,0.7047,177,no_gap
+MDH,Medicine Hill,park|city,2074.0,1262.0,1.0,400,1.0,800,1.0,1.0,36,no_gap
+MDH,Medicine Hill,park|private,2074.0,1262.0,1.0,400,1.0,800,1.0,1.0,33,no_gap
+MID,Midnapore,playground,2605.0,1.0,0.9858,400,1.0,800,1.0,0.9858,213,no_gap
+MID,Midnapore,park,2605.0,1.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+MID,Midnapore,transit_stop,2605.0,1.0,0.9942,400,1.0,800,1.0,0.9942,114,no_gap
+MID,Midnapore,community_centre,2605.0,1.0,0.7724,800,1.0,1600,0.0,0.7727,607,no_gap
+MID,Midnapore,rec_centre,2605.0,1.0,0.3355,2000,1.0,5000,0.0,0.3356,2079,gap
+MID,Midnapore,library,2605.0,1.0,0.339,2000,1.0,5000,0.0,0.3391,2091,gap
+MID,Midnapore,playground|city,2605.0,1.0,0.5658,400,0.9593,800,1.0,0.5657,389,no_gap
+MID,Midnapore,playground|private,2605.0,1.0,0.9858,400,1.0,800,1.0,0.9858,213,no_gap
+MID,Midnapore,park|city,2605.0,1.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+MID,Midnapore,park|private,2605.0,1.0,1.0,400,1.0,800,1.0,1.0,81,no_gap
+MLR,Millrise,playground,2615.0,0.0,0.9954,400,1.0,800,,0.9954,196,no_gap
+MLR,Millrise,park,2615.0,0.0,1.0,400,1.0,800,,1.0,108,no_gap
+MLR,Millrise,transit_stop,2615.0,0.0,1.0,400,1.0,800,,1.0,144,no_gap
+MLR,Millrise,community_centre,2615.0,0.0,0.0107,800,0.6998,1600,,0.0107,1359,gap
+MLR,Millrise,rec_centre,2615.0,0.0,0.0287,2000,1.0,5000,,0.0287,2560,gap
+MLR,Millrise,library,2615.0,0.0,0.0229,2000,1.0,5000,,0.0229,2580,gap
+MLR,Millrise,playground|city,2615.0,0.0,0.9943,400,1.0,800,,0.9943,220,no_gap
+MLR,Millrise,playground|private,2615.0,0.0,0.9954,400,1.0,800,,0.9954,196,no_gap
+MLR,Millrise,park|city,2615.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
+MLR,Millrise,park|private,2615.0,0.0,1.0,400,1.0,800,,1.0,108,no_gap
+MIS,Mission,playground,3274.0,69.0,0.9627,400,1.0,800,1.0,0.9853,176,no_gap
+MIS,Mission,park,3274.0,69.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+MIS,Mission,transit_stop,3274.0,69.0,1.0,400,1.0,800,1.0,1.0,124,no_gap
+MIS,Mission,community_centre,3274.0,69.0,0.8375,800,1.0,1600,1.0,0.83,510,no_gap
+MIS,Mission,rec_centre,3274.0,69.0,1.0,2000,1.0,5000,1.0,1.0,489,no_gap
+MIS,Mission,library,3274.0,69.0,1.0,2000,1.0,5000,1.0,1.0,1041,no_gap
+MIS,Mission,playground|city,3274.0,69.0,0.8311,400,1.0,800,0.029,0.869,225,no_gap
+MIS,Mission,playground|private,3274.0,69.0,0.9768,400,1.0,800,1.0,1.0,162,no_gap
+MIS,Mission,park|city,3274.0,69.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+MIS,Mission,park|private,3274.0,69.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+MOR,Monterey Park,playground,2831.0,2.0,0.8389,400,1.0,800,0.5,0.8392,186,no_gap
+MOR,Monterey Park,park,2831.0,2.0,1.0,400,1.0,800,1.0,1.0,55,no_gap
+MOR,Monterey Park,transit_stop,2831.0,2.0,1.0,400,1.0,800,1.0,1.0,130,no_gap
+MOR,Monterey Park,community_centre,2831.0,2.0,0.4846,800,1.0,1600,1.0,0.4843,815,gap
+MOR,Monterey Park,rec_centre,2831.0,2.0,0.4878,2000,1.0,5000,0.5,0.4878,2029,gap
+MOR,Monterey Park,library,2831.0,2.0,0.4659,2000,1.0,5000,0.5,0.4659,2050,gap
+MOR,Monterey Park,playground|city,2831.0,2.0,0.8085,400,1.0,800,0.5,0.8088,202,no_gap
+MOR,Monterey Park,playground|private,2831.0,2.0,0.8389,400,1.0,800,0.5,0.8392,181,no_gap
+MOR,Monterey Park,park|city,2831.0,2.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
+MOR,Monterey Park,park|private,2831.0,2.0,1.0,400,1.0,800,1.0,1.0,55,no_gap
+MON,Montgomery,playground,2119.0,164.0,0.9363,400,1.0,800,0.8963,0.9354,240,no_gap
+MON,Montgomery,park,2119.0,164.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+MON,Montgomery,transit_stop,2119.0,164.0,0.9972,400,1.0,800,0.9939,0.9971,122,no_gap
+MON,Montgomery,community_centre,2119.0,164.0,0.7277,800,1.0,1600,0.7073,0.6991,701,no_gap
+MON,Montgomery,rec_centre,2119.0,164.0,1.0,2000,1.0,5000,1.0,1.0,823,no_gap
+MON,Montgomery,library,2119.0,164.0,0.2978,2000,1.0,5000,0.4024,0.3152,2168,gap
+MON,Montgomery,playground|city,2119.0,164.0,0.5375,400,1.0,800,0.4207,0.603,370,no_gap
+MON,Montgomery,playground|private,2119.0,164.0,0.9368,400,1.0,800,0.8963,0.9359,240,no_gap
+MON,Montgomery,park|city,2119.0,164.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+MON,Montgomery,park|private,2119.0,164.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+MRN,Moraine,playground,1045.0,1033.0,0.9617,400,1.0,800,0.9613,,179,no_gap
+MRN,Moraine,park,1045.0,1033.0,1.0,400,1.0,800,1.0,,82,no_gap
+MRN,Moraine,transit_stop,1045.0,1033.0,0.0278,400,0.7445,800,0.0261,,635,gap_check
+MRN,Moraine,community_centre,1045.0,1033.0,0.0,800,0.0,1600,0.0,,>1600,gap_check
+MRN,Moraine,rec_centre,1045.0,1033.0,0.0,2000,1.0,5000,0.0,,4410,gap_check
+MRN,Moraine,library,1045.0,1033.0,0.0,2000,1.0,5000,0.0,,3105,gap_check
+MRN,Moraine,playground|city,1045.0,1033.0,0.9617,400,1.0,800,0.9613,,179,no_gap
+MRN,Moraine,playground|private,1045.0,1033.0,0.9617,400,1.0,800,0.9613,,179,no_gap
+MRN,Moraine,park|city,1045.0,1033.0,1.0,400,1.0,800,1.0,,82,no_gap
+MRN,Moraine,park|private,1045.0,1033.0,1.0,400,1.0,800,1.0,,82,no_gap
+MOP,Mount Pleasant,playground,2893.0,250.0,0.6616,400,1.0,800,0.956,0.6349,308,no_gap
+MOP,Mount Pleasant,park,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+MOP,Mount Pleasant,transit_stop,2893.0,250.0,0.9972,400,1.0,800,1.0,0.9969,139,no_gap
+MOP,Mount Pleasant,community_centre,2893.0,250.0,0.9945,800,1.0,1600,0.984,0.9954,496,no_gap
+MOP,Mount Pleasant,rec_centre,2893.0,250.0,0.1815,2000,1.0,5000,0.14,0.1789,2375,gap
+MOP,Mount Pleasant,library,2893.0,250.0,0.3311,2000,1.0,5000,0.324,0.3385,2286,gap
+MOP,Mount Pleasant,playground|city,2893.0,250.0,0.5496,400,1.0,800,0.856,0.5193,339,no_gap
+MOP,Mount Pleasant,playground|private,2893.0,250.0,0.6616,400,1.0,800,0.956,0.6349,308,no_gap
+MOP,Mount Pleasant,park|city,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+MOP,Mount Pleasant,park|private,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NEB,New Brighton,playground,4303.0,0.0,0.9916,400,1.0,800,,0.9916,227,no_gap
+NEB,New Brighton,park,4303.0,0.0,1.0,400,1.0,800,,1.0,119,no_gap
+NEB,New Brighton,transit_stop,4303.0,0.0,0.9951,400,1.0,800,,0.9951,135,no_gap
+NEB,New Brighton,community_centre,4303.0,0.0,0.2884,800,0.7595,1600,,0.2884,1256,gap
+NEB,New Brighton,rec_centre,4303.0,0.0,0.0,2000,0.792,5000,,0.0,4573,gap
+NEB,New Brighton,library,4303.0,0.0,0.0,2000,0.9091,5000,,0.0,4402,gap
+NEB,New Brighton,playground|city,4303.0,0.0,0.9603,400,1.0,800,,0.9603,237,no_gap
+NEB,New Brighton,playground|private,4303.0,0.0,0.9916,400,1.0,800,,0.9916,227,no_gap
+NEB,New Brighton,park|city,4303.0,0.0,1.0,400,1.0,800,,1.0,119,no_gap
+NEB,New Brighton,park|private,4303.0,0.0,1.0,400,1.0,800,,1.0,119,no_gap
+NOL,Nolan Hill,playground,3015.0,237.0,0.743,400,1.0,800,0.0127,0.8053,217,no_gap
+NOL,Nolan Hill,park,3015.0,237.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
+NOL,Nolan Hill,transit_stop,3015.0,237.0,0.9221,400,1.0,800,0.9958,0.9158,136,no_gap
+NOL,Nolan Hill,community_centre,3015.0,237.0,0.0531,800,0.524,1600,0.0,0.0576,1426,gap
+NOL,Nolan Hill,rec_centre,3015.0,237.0,0.0,2000,0.4043,5000,0.0,0.0,>5000,gap
+NOL,Nolan Hill,library,3015.0,237.0,0.7526,2000,1.0,5000,0.9873,0.7325,1706,no_gap
+NOL,Nolan Hill,playground|city,3015.0,237.0,0.743,400,1.0,800,0.0127,0.8053,217,no_gap
+NOL,Nolan Hill,playground|private,3015.0,237.0,0.743,400,1.0,800,0.0127,0.8053,217,no_gap
+NOL,Nolan Hill,park|city,3015.0,237.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+NOL,Nolan Hill,park|private,3015.0,237.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
+NGM,North Glenmore Park,playground,992.0,111.0,0.9073,400,1.0,800,0.9009,0.9101,239,no_gap
+NGM,North Glenmore Park,park,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NGM,North Glenmore Park,transit_stop,992.0,111.0,0.875,400,1.0,800,0.964,0.8635,153,no_gap
+NGM,North Glenmore Park,community_centre,992.0,111.0,0.6673,800,1.0,1600,0.3964,0.7019,600,no_gap
+NGM,North Glenmore Park,rec_centre,992.0,111.0,1.0,2000,1.0,5000,1.0,1.0,675,no_gap
+NGM,North Glenmore Park,library,992.0,111.0,0.0,2000,1.0,5000,0.0,0.0,2745,gap
+NGM,North Glenmore Park,playground|city,992.0,111.0,0.8296,400,1.0,800,0.8468,0.8294,292,no_gap
+NGM,North Glenmore Park,playground|private,992.0,111.0,0.9073,400,1.0,800,0.9009,0.9101,239,no_gap
+NGM,North Glenmore Park,park|city,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NGM,North Glenmore Park,park|private,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NHV,North Haven,playground,883.0,0.0,0.7973,400,1.0,800,,0.7973,252,no_gap
+NHV,North Haven,park,883.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
+NHV,North Haven,transit_stop,883.0,0.0,0.9921,400,1.0,800,,0.9921,130,no_gap
+NHV,North Haven,community_centre,883.0,0.0,0.9841,800,1.0,1600,,0.9841,404,no_gap
+NHV,North Haven,rec_centre,883.0,0.0,0.1212,2000,1.0,5000,,0.1212,2460,gap
+NHV,North Haven,library,883.0,0.0,0.111,2000,1.0,5000,,0.111,2471,gap
+NHV,North Haven,playground|city,883.0,0.0,0.7656,400,1.0,800,,0.7656,291,no_gap
+NHV,North Haven,playground|private,883.0,0.0,0.7973,400,1.0,800,,0.7973,252,no_gap
+NHV,North Haven,park|city,883.0,0.0,1.0,400,1.0,800,,1.0,95,no_gap
+NHV,North Haven,park|private,883.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
+NHU,North Haven Upper,playground,245.0,0.0,0.9592,400,1.0,800,,0.9592,275,no_gap
+NHU,North Haven Upper,park,245.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+NHU,North Haven Upper,transit_stop,245.0,0.0,1.0,400,1.0,800,,1.0,127,no_gap
+NHU,North Haven Upper,community_centre,245.0,0.0,0.9469,800,1.0,1600,,0.9469,482,no_gap
+NHU,North Haven Upper,rec_centre,245.0,0.0,0.9347,2000,1.0,5000,,0.9347,1723,no_gap
+NHU,North Haven Upper,library,245.0,0.0,0.898,2000,1.0,5000,,0.898,1756,no_gap
+NHU,North Haven Upper,playground|city,245.0,0.0,0.9592,400,1.0,800,,0.9592,275,no_gap
+NHU,North Haven Upper,playground|private,245.0,0.0,0.9592,400,1.0,800,,0.9592,275,no_gap
+NHU,North Haven Upper,park|city,245.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+NHU,North Haven Upper,park|private,245.0,0.0,1.0,400,1.0,800,,1.0,77,no_gap
+OAK,Oakridge,playground,2275.0,0.0,0.8853,400,1.0,800,,0.8853,232,no_gap
+OAK,Oakridge,park,2275.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+OAK,Oakridge,transit_stop,2275.0,0.0,0.9925,400,1.0,800,,0.9925,135,no_gap
+OAK,Oakridge,community_centre,2275.0,0.0,0.9064,800,1.0,1600,,0.9064,549,no_gap
+OAK,Oakridge,rec_centre,2275.0,0.0,0.7446,2000,1.0,5000,,0.7446,1564,no_gap
+OAK,Oakridge,library,2275.0,0.0,0.0,2000,1.0,5000,,0.0,3013,gap
+OAK,Oakridge,playground|city,2275.0,0.0,0.7811,400,1.0,800,,0.7811,301,no_gap
+OAK,Oakridge,playground|private,2275.0,0.0,0.9459,400,1.0,800,,0.9459,195,no_gap
+OAK,Oakridge,park|city,2275.0,0.0,1.0,400,1.0,800,,1.0,74,no_gap
+OAK,Oakridge,park|private,2275.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+OGD,Ogden,playground,3386.0,31.0,0.9445,400,1.0,800,0.871,0.945,226,no_gap
+OGD,Ogden,park,3386.0,31.0,1.0,400,1.0,800,1.0,1.0,62,no_gap
+OGD,Ogden,transit_stop,3386.0,31.0,0.9737,400,1.0,800,0.9677,0.9737,146,no_gap
+OGD,Ogden,community_centre,3386.0,31.0,0.4758,800,1.0,1600,0.5806,0.4736,790,gap
+OGD,Ogden,rec_centre,3386.0,31.0,0.0,2000,1.0,5000,0.0,0.0,2813,gap
+OGD,Ogden,library,3386.0,31.0,0.0,2000,1.0,5000,0.0,0.0,2922,gap
+OGD,Ogden,playground|city,3386.0,31.0,0.9011,400,1.0,800,0.871,0.9011,267,no_gap
+OGD,Ogden,playground|private,3386.0,31.0,0.9445,400,1.0,800,0.871,0.945,226,no_gap
+OGD,Ogden,park|city,3386.0,31.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+OGD,Ogden,park|private,3386.0,31.0,1.0,400,1.0,800,1.0,1.0,62,no_gap
+OPH,Osprey Hill,playground,9.0,8.0,1.0,400,1.0,800,1.0,,109,too_few_homes
+OPH,Osprey Hill,park,9.0,8.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+OPH,Osprey Hill,transit_stop,9.0,8.0,0.0,400,1.0,800,0.0,,625,too_few_homes
+OPH,Osprey Hill,community_centre,9.0,8.0,0.0,800,0.0,1600,0.0,,>1600,too_few_homes
+OPH,Osprey Hill,rec_centre,9.0,8.0,0.0,2000,1.0,5000,0.0,,4597,too_few_homes
+OPH,Osprey Hill,library,9.0,8.0,0.0,2000,1.0,5000,0.0,,3812,too_few_homes
+OPH,Osprey Hill,playground|city,9.0,8.0,1.0,400,1.0,800,1.0,,109,too_few_homes
+OPH,Osprey Hill,playground|private,9.0,8.0,1.0,400,1.0,800,1.0,,109,too_few_homes
+OPH,Osprey Hill,park|city,9.0,8.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+OPH,Osprey Hill,park|private,9.0,8.0,0.0,400,0.0,800,0.0,,>800,too_few_homes
+PAL,Palliser,playground,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,207,no_gap
+PAL,Palliser,park,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
+PAL,Palliser,transit_stop,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,137,no_gap
+PAL,Palliser,community_centre,1456.0,3.0,1.0,800,1.0,1600,1.0,1.0,447,no_gap
+PAL,Palliser,rec_centre,1456.0,3.0,1.0,2000,1.0,5000,1.0,1.0,615,no_gap
+PAL,Palliser,library,1456.0,3.0,0.6511,2000,1.0,5000,0.6667,0.6511,1927,no_gap
+PAL,Palliser,playground|city,1456.0,3.0,0.5055,400,1.0,800,0.6667,0.5052,400,no_gap
+PAL,Palliser,playground|private,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,198,no_gap
+PAL,Palliser,park|city,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+PAL,Palliser,park|private,1456.0,3.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
+PAN,Panorama Hills,playground,8109.0,3.0,0.8637,400,1.0,800,1.0,0.8637,219,no_gap
+PAN,Panorama Hills,park,8109.0,3.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+PAN,Panorama Hills,transit_stop,8109.0,3.0,0.9715,400,1.0,800,1.0,0.9715,150,no_gap
+PAN,Panorama Hills,community_centre,8109.0,3.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+PAN,Panorama Hills,rec_centre,8109.0,3.0,0.7984,2000,1.0,5000,0.0,0.7986,1612,no_gap
+PAN,Panorama Hills,library,8109.0,3.0,0.7104,2000,1.0,5000,0.0,0.7107,1698,no_gap
+PAN,Panorama Hills,playground|city,8109.0,3.0,0.8513,400,1.0,800,1.0,0.8512,235,no_gap
+PAN,Panorama Hills,playground|private,8109.0,3.0,0.8637,400,1.0,800,1.0,0.8637,219,no_gap
+PAN,Panorama Hills,park|city,8109.0,3.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+PAN,Panorama Hills,park|private,8109.0,3.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+PKD,Parkdale,playground,1083.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
+PKD,Parkdale,park,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,91,no_gap
+PKD,Parkdale,transit_stop,1083.0,132.0,0.9991,400,1.0,800,1.0,0.9989,131,no_gap
+PKD,Parkdale,community_centre,1083.0,132.0,0.9917,800,1.0,1600,1.0,0.9905,350,no_gap
+PKD,Parkdale,rec_centre,1083.0,132.0,0.8264,2000,1.0,5000,0.9394,0.8099,1825,no_gap
+PKD,Parkdale,library,1083.0,132.0,0.4321,2000,1.0,5000,0.2045,0.4646,2025,gap
+PKD,Parkdale,playground|city,1083.0,132.0,0.8744,400,1.0,800,0.8712,0.8754,297,no_gap
+PKD,Parkdale,playground|private,1083.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
+PKD,Parkdale,park|city,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,134,no_gap
+PKD,Parkdale,park|private,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,91,no_gap
+PKH,Parkhill,playground,881.0,90.0,0.7469,400,1.0,800,0.1667,0.8129,321,no_gap
+PKH,Parkhill,park,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+PKH,Parkhill,transit_stop,881.0,90.0,1.0,400,1.0,800,1.0,1.0,148,no_gap
+PKH,Parkhill,community_centre,881.0,90.0,1.0,800,1.0,1600,1.0,1.0,366,no_gap
+PKH,Parkhill,rec_centre,881.0,90.0,0.8627,2000,1.0,5000,0.9556,0.8521,1505,no_gap
+PKH,Parkhill,library,881.0,90.0,0.151,2000,1.0,5000,0.0667,0.1606,2165,gap
+PKH,Parkhill,playground|city,881.0,90.0,0.7333,400,1.0,800,0.1556,0.799,322,no_gap
+PKH,Parkhill,playground|private,881.0,90.0,0.7469,400,1.0,800,0.1667,0.8129,321,no_gap
+PKH,Parkhill,park|city,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+PKH,Parkhill,park|private,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+PKL,Parkland,playground,1447.0,0.0,0.8618,400,1.0,800,,0.8618,206,no_gap
+PKL,Parkland,park,1447.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+PKL,Parkland,transit_stop,1447.0,0.0,0.8645,400,1.0,800,,0.8645,220,no_gap
+PKL,Parkland,community_centre,1447.0,0.0,0.6289,800,1.0,1600,,0.6289,624,no_gap
+PKL,Parkland,rec_centre,1447.0,0.0,0.0,2000,1.0,5000,,0.0,3407,gap
+PKL,Parkland,library,1447.0,0.0,0.0,2000,1.0,5000,,0.0,3393,gap
+PKL,Parkland,playground|city,1447.0,0.0,0.6379,400,0.9502,800,,0.6379,291,no_gap
+PKL,Parkland,playground|private,1447.0,0.0,0.8618,400,1.0,800,,0.8618,206,no_gap
+PKL,Parkland,park|city,1447.0,0.0,1.0,400,1.0,800,,1.0,74,no_gap
+PKL,Parkland,park|private,1447.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+PAT,Patterson,playground,2086.0,17.0,0.5594,400,1.0,800,0.1176,0.5631,376,no_gap
+PAT,Patterson,park,2086.0,17.0,1.0,400,1.0,800,1.0,1.0,60,no_gap
+PAT,Patterson,transit_stop,2086.0,17.0,0.9156,400,1.0,800,0.2941,0.9207,175,no_gap
+PAT,Patterson,community_centre,2086.0,17.0,0.7598,800,0.999,1600,0.2941,0.7637,544,no_gap
+PAT,Patterson,rec_centre,2086.0,17.0,1.0,2000,1.0,5000,1.0,1.0,1326,no_gap
+PAT,Patterson,library,2086.0,17.0,0.046,2000,1.0,5000,0.7059,0.0406,2852,gap
+PAT,Patterson,playground|city,2086.0,17.0,0.5594,400,1.0,800,0.1176,0.5631,376,no_gap
+PAT,Patterson,playground|private,2086.0,17.0,0.5594,400,1.0,800,0.1176,0.5631,376,no_gap
+PAT,Patterson,park|city,2086.0,17.0,1.0,400,1.0,800,1.0,1.0,60,no_gap
+PAT,Patterson,park|private,2086.0,17.0,1.0,400,1.0,800,1.0,1.0,60,no_gap
+PEN,Penbrooke Meadows,playground,2792.0,4.0,0.9473,400,1.0,800,1.0,0.9473,205,no_gap
+PEN,Penbrooke Meadows,park,2792.0,4.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+PEN,Penbrooke Meadows,transit_stop,2792.0,4.0,0.9943,400,1.0,800,1.0,0.9943,158,no_gap
+PEN,Penbrooke Meadows,community_centre,2792.0,4.0,0.7894,800,1.0,1600,1.0,0.7891,608,no_gap
+PEN,Penbrooke Meadows,rec_centre,2792.0,4.0,0.9416,2000,1.0,5000,1.0,0.9415,1279,no_gap
+PEN,Penbrooke Meadows,library,2792.0,4.0,0.9567,2000,1.0,5000,1.0,0.9566,1210,no_gap
+PEN,Penbrooke Meadows,playground|city,2792.0,4.0,0.8367,400,1.0,800,0.0,0.8379,237,no_gap
+PEN,Penbrooke Meadows,playground|private,2792.0,4.0,0.9473,400,1.0,800,1.0,0.9473,205,no_gap
+PEN,Penbrooke Meadows,park|city,2792.0,4.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
+PEN,Penbrooke Meadows,park|private,2792.0,4.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+PCK,Pine Creek,playground,1756.0,1598.0,0.9413,400,1.0,800,0.9368,0.9934,183,no_gap
+PCK,Pine Creek,park,1756.0,1598.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+PCK,Pine Creek,transit_stop,1756.0,1598.0,0.0,400,0.0,800,0.0,0.0,>800,gap_check
+PCK,Pine Creek,community_centre,1756.0,1598.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+PCK,Pine Creek,rec_centre,1756.0,1598.0,0.0,2000,0.9505,5000,0.0,0.0,4243,gap_check
+PCK,Pine Creek,library,1756.0,1598.0,0.0,2000,0.9618,5000,0.0,0.0,4240,gap_check
+PCK,Pine Creek,playground|city,1756.0,1598.0,0.9413,400,1.0,800,0.9368,0.9934,183,no_gap
+PCK,Pine Creek,playground|private,1756.0,1598.0,0.9413,400,1.0,800,0.9368,0.9934,183,no_gap
+PCK,Pine Creek,park|city,1756.0,1598.0,0.8855,400,0.9937,800,0.8761,1.0,120,no_gap
+PCK,Pine Creek,park|private,1756.0,1598.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+PIN,Pineridge,playground,3636.0,22.0,0.8905,400,1.0,800,1.0,0.8899,216,no_gap
+PIN,Pineridge,park,3636.0,22.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+PIN,Pineridge,transit_stop,3636.0,22.0,0.9865,400,1.0,800,1.0,0.9864,165,no_gap
+PIN,Pineridge,community_centre,3636.0,22.0,0.8949,800,1.0,1600,1.0,0.8943,559,no_gap
+PIN,Pineridge,rec_centre,3636.0,22.0,1.0,2000,1.0,5000,1.0,1.0,862,no_gap
+PIN,Pineridge,library,3636.0,22.0,1.0,2000,1.0,5000,1.0,1.0,860,no_gap
+PIN,Pineridge,playground|city,3636.0,22.0,0.6262,400,1.0,800,1.0,0.624,336,no_gap
+PIN,Pineridge,playground|private,3636.0,22.0,0.8905,400,1.0,800,1.0,0.8899,216,no_gap
+PIN,Pineridge,park|city,3636.0,22.0,1.0,400,1.0,800,1.0,1.0,96,no_gap
+PIN,Pineridge,park|private,3636.0,22.0,1.0,400,1.0,800,1.0,1.0,86,no_gap
+POI,Point McKay,playground,848.0,0.0,0.4705,400,1.0,800,,0.4705,417,gap
+POI,Point McKay,park,848.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
+POI,Point McKay,transit_stop,848.0,0.0,1.0,400,1.0,800,,1.0,132,no_gap
+POI,Point McKay,community_centre,848.0,0.0,0.7995,800,1.0,1600,,0.7995,711,no_gap
+POI,Point McKay,rec_centre,848.0,0.0,0.4953,2000,1.0,5000,,0.4953,2014,gap
+POI,Point McKay,library,848.0,0.0,0.0035,2000,1.0,5000,,0.0035,2408,gap
+POI,Point McKay,playground|city,848.0,0.0,0.013,400,1.0,800,,0.013,532,gap
+POI,Point McKay,playground|private,848.0,0.0,0.4705,400,1.0,800,,0.4705,417,gap
+POI,Point McKay,park|city,848.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
+POI,Point McKay,park|private,848.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
+PUM,Pump Hill,playground,522.0,1.0,0.3199,400,1.0,800,0.0,0.3205,465,gap
+PUM,Pump Hill,park,522.0,1.0,1.0,400,1.0,800,1.0,1.0,55,no_gap
+PUM,Pump Hill,transit_stop,522.0,1.0,0.931,400,1.0,800,1.0,0.9309,196,no_gap
+PUM,Pump Hill,community_centre,522.0,1.0,0.5153,800,1.0,1600,0.0,0.5163,863,no_gap
+PUM,Pump Hill,rec_centre,522.0,1.0,1.0,2000,1.0,5000,1.0,1.0,770,no_gap
+PUM,Pump Hill,library,522.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1142,no_gap
+PUM,Pump Hill,playground|city,522.0,1.0,0.2471,400,0.9195,800,0.0,0.2476,507,gap
+PUM,Pump Hill,playground|private,522.0,1.0,0.3199,400,1.0,800,0.0,0.3205,465,gap
+PUM,Pump Hill,park|city,522.0,1.0,1.0,400,1.0,800,1.0,1.0,57,no_gap
+PUM,Pump Hill,park|private,522.0,1.0,1.0,400,1.0,800,1.0,1.0,53,no_gap
+QPK,Queens Park Village,playground,74.0,0.0,1.0,400,1.0,800,,1.0,314,too_few_homes
+QPK,Queens Park Village,park,74.0,0.0,1.0,400,1.0,800,,1.0,304,too_few_homes
+QPK,Queens Park Village,transit_stop,74.0,0.0,1.0,400,1.0,800,,1.0,101,too_few_homes
+QPK,Queens Park Village,community_centre,74.0,0.0,1.0,800,1.0,1600,,1.0,505,too_few_homes
+QPK,Queens Park Village,rec_centre,74.0,0.0,0.0,2000,1.0,5000,,0.0,2929,too_few_homes
+QPK,Queens Park Village,library,74.0,0.0,0.0,2000,1.0,5000,,0.0,2873,too_few_homes
+QPK,Queens Park Village,playground|city,74.0,0.0,1.0,400,1.0,800,,1.0,314,too_few_homes
+QPK,Queens Park Village,playground|private,74.0,0.0,1.0,400,1.0,800,,1.0,314,too_few_homes
+QPK,Queens Park Village,park|city,74.0,0.0,1.0,400,1.0,800,,1.0,304,too_few_homes
+QPK,Queens Park Village,park|private,74.0,0.0,1.0,400,1.0,800,,1.0,304,too_few_homes
+QLD,Queensland,playground,1802.0,1.0,0.6398,400,1.0,800,1.0,0.6396,339,no_gap
+QLD,Queensland,park,1802.0,1.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+QLD,Queensland,transit_stop,1802.0,1.0,0.9789,400,1.0,800,1.0,0.9789,127,no_gap
+QLD,Queensland,community_centre,1802.0,1.0,0.8246,800,1.0,1600,1.0,0.8245,524,no_gap
+QLD,Queensland,rec_centre,1802.0,1.0,0.0,2000,1.0,5000,0.0,0.0,2891,gap
+QLD,Queensland,library,1802.0,1.0,0.0,2000,1.0,5000,0.0,0.0,2906,gap
+QLD,Queensland,playground|city,1802.0,1.0,0.4967,400,1.0,800,1.0,0.4964,398,gap
+QLD,Queensland,playground|private,1802.0,1.0,0.6398,400,1.0,800,1.0,0.6396,339,no_gap
+QLD,Queensland,park|city,1802.0,1.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+QLD,Queensland,park|private,1802.0,1.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+RAM,Ramsay,playground,991.0,129.0,0.9455,400,1.0,800,1.0,0.9374,223,no_gap
+RAM,Ramsay,park,991.0,129.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+RAM,Ramsay,transit_stop,991.0,129.0,1.0,400,1.0,800,1.0,1.0,85,no_gap
+RAM,Ramsay,community_centre,991.0,129.0,0.8718,800,1.0,1600,0.3023,0.9571,455,no_gap
+RAM,Ramsay,rec_centre,991.0,129.0,1.0,2000,1.0,5000,1.0,1.0,983,no_gap
+RAM,Ramsay,library,991.0,129.0,1.0,2000,1.0,5000,1.0,1.0,1430,no_gap
+RAM,Ramsay,playground|city,991.0,129.0,0.8042,400,1.0,800,0.9922,0.7761,291,no_gap
+RAM,Ramsay,playground|private,991.0,129.0,0.9455,400,1.0,800,1.0,0.9374,223,no_gap
+RAM,Ramsay,park|city,991.0,129.0,0.9919,400,1.0,800,1.0,0.9907,112,no_gap
+RAM,Ramsay,park|private,991.0,129.0,1.0,400,1.0,800,1.0,1.0,94,no_gap
+RAN,Ranchlands,playground,2878.0,0.0,1.0,400,1.0,800,,1.0,172,no_gap
+RAN,Ranchlands,park,2878.0,0.0,1.0,400,1.0,800,,1.0,82,no_gap
+RAN,Ranchlands,transit_stop,2878.0,0.0,0.9847,400,1.0,800,,0.9847,125,no_gap
+RAN,Ranchlands,community_centre,2878.0,0.0,0.7533,800,1.0,1600,,0.7533,570,no_gap
+RAN,Ranchlands,rec_centre,2878.0,0.0,0.9124,2000,1.0,5000,,0.9124,1435,no_gap
+RAN,Ranchlands,library,2878.0,0.0,0.8172,2000,1.0,5000,,0.8172,1515,no_gap
+RAN,Ranchlands,playground|city,2878.0,0.0,0.9083,400,1.0,800,,0.9083,249,no_gap
+RAN,Ranchlands,playground|private,2878.0,0.0,1.0,400,1.0,800,,1.0,167,no_gap
+RAN,Ranchlands,park|city,2878.0,0.0,1.0,400,1.0,800,,1.0,83,no_gap
+RAN,Ranchlands,park|private,2878.0,0.0,1.0,400,1.0,800,,1.0,82,no_gap
+RVW,Rangeview,playground,1930.0,1355.0,0.4275,400,0.9373,800,0.5705,1.0,315,gap_check
+RVW,Rangeview,park,1930.0,1355.0,0.7093,400,1.0,800,0.9122,1.0,110,no_gap
+RVW,Rangeview,transit_stop,1930.0,1355.0,0.0,400,0.0016,800,0.0,0.0,>800,gap_check
+RVW,Rangeview,community_centre,1930.0,1355.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+RVW,Rangeview,rec_centre,1930.0,1355.0,0.8337,2000,1.0,5000,0.7993,0.0,1824,no_gap
+RVW,Rangeview,library,1930.0,1355.0,0.8959,2000,1.0,5000,0.8546,0.9184,1771,no_gap
+RVW,Rangeview,playground|city,1930.0,1355.0,0.4275,400,0.9373,800,0.5705,1.0,315,gap_check
+RVW,Rangeview,playground|private,1930.0,1355.0,0.4275,400,0.9373,800,0.5705,1.0,315,gap_check
+RVW,Rangeview,park|city,1930.0,1355.0,0.6036,400,1.0,800,0.7624,1.0,150,no_gap
+RVW,Rangeview,park|private,1930.0,1355.0,0.7093,400,1.0,800,0.9122,1.0,110,no_gap
+RED,Red Carpet,playground,478.0,1.0,1.0,400,1.0,800,1.0,1.0,334,no_gap
+RED,Red Carpet,park,478.0,1.0,1.0,400,1.0,800,1.0,1.0,169,no_gap
+RED,Red Carpet,transit_stop,478.0,1.0,1.0,400,1.0,800,1.0,1.0,29,no_gap
+RED,Red Carpet,community_centre,478.0,1.0,0.0021,800,1.0,1600,1.0,0.0,875,gap
+RED,Red Carpet,rec_centre,478.0,1.0,1.0,2000,1.0,5000,1.0,1.0,1464,no_gap
+RED,Red Carpet,library,478.0,1.0,0.864,2000,1.0,5000,0.0,0.8621,1683,no_gap
+RED,Red Carpet,playground|city,478.0,1.0,1.0,400,1.0,800,1.0,1.0,334,no_gap
+RED,Red Carpet,playground|private,478.0,1.0,1.0,400,1.0,800,1.0,1.0,334,no_gap
+RED,Red Carpet,park|city,478.0,1.0,1.0,400,1.0,800,1.0,1.0,312,no_gap
+RED,Red Carpet,park|private,478.0,1.0,1.0,400,1.0,800,1.0,1.0,169,no_gap
+RSN,Redstone,playground,2876.0,545.0,0.8206,400,1.0,800,0.7156,0.8451,254,no_gap
+RSN,Redstone,park,2876.0,545.0,1.0,400,1.0,800,1.0,1.0,99,no_gap
+RSN,Redstone,transit_stop,2876.0,545.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+RSN,Redstone,community_centre,2876.0,545.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+RSN,Redstone,rec_centre,2876.0,545.0,0.0,2000,0.0056,5000,0.0,0.0,>5000,gap
+RSN,Redstone,library,2876.0,545.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap
+RSN,Redstone,playground|city,2876.0,545.0,0.7034,400,1.0,800,0.7156,0.7006,326,no_gap
+RSN,Redstone,playground|private,2876.0,545.0,0.8206,400,1.0,800,0.7156,0.8451,254,no_gap
+RSN,Redstone,park|city,2876.0,545.0,1.0,400,1.0,800,1.0,1.0,99,no_gap
+RSN,Redstone,park|private,2876.0,545.0,1.0,400,1.0,800,1.0,1.0,99,no_gap
+REN,Renfrew,playground,3176.0,171.0,0.8404,400,1.0,800,0.9064,0.837,243,no_gap
+REN,Renfrew,park,3176.0,171.0,0.9946,400,1.0,800,1.0,0.9943,88,no_gap
+REN,Renfrew,transit_stop,3176.0,171.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+REN,Renfrew,community_centre,3176.0,171.0,0.8208,800,1.0,1600,0.7544,0.831,585,no_gap
+REN,Renfrew,rec_centre,3176.0,171.0,1.0,2000,1.0,5000,1.0,1.0,716,no_gap
+REN,Renfrew,library,3176.0,171.0,0.5409,2000,1.0,5000,0.4152,0.5523,1965,no_gap
+REN,Renfrew,playground|city,3176.0,171.0,0.7497,400,1.0,800,0.6959,0.7525,294,no_gap
+REN,Renfrew,playground|private,3176.0,171.0,0.841,400,1.0,800,0.9064,0.8377,241,no_gap
+REN,Renfrew,park|city,3176.0,171.0,0.9946,400,1.0,800,1.0,0.9943,88,no_gap
+REN,Renfrew,park|private,3176.0,171.0,0.9946,400,1.0,800,1.0,0.9943,88,no_gap
+RRC,Ricardo Ranch,playground,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
+RRC,Ricardo Ranch,park,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
+RRC,Ricardo Ranch,transit_stop,292.0,286.0,0.2192,400,1.0,800,0.2098,,478,gap_check
+RRC,Ricardo Ranch,community_centre,292.0,286.0,0.0,800,0.0,1600,0.0,,>1600,gap_check
+RRC,Ricardo Ranch,rec_centre,292.0,286.0,0.0205,2000,1.0,5000,0.0105,,2169,gap_check
+RRC,Ricardo Ranch,library,292.0,286.0,0.0,2000,1.0,5000,0.0,,2353,gap_check
+RRC,Ricardo Ranch,playground|city,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
+RRC,Ricardo Ranch,playground|private,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
+RRC,Ricardo Ranch,park|city,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
+RRC,Ricardo Ranch,park|private,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
+RIC,Richmond,playground,2476.0,171.0,0.9919,400,1.0,800,1.0,0.9912,193,no_gap
+RIC,Richmond,park,2476.0,171.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+RIC,Richmond,transit_stop,2476.0,171.0,0.9943,400,1.0,800,1.0,0.9939,174,no_gap
+RIC,Richmond,community_centre,2476.0,171.0,1.0,800,1.0,1600,1.0,1.0,431,no_gap
+RIC,Richmond,rec_centre,2476.0,171.0,0.9984,2000,1.0,5000,0.9883,0.9991,1342,no_gap
+RIC,Richmond,library,2476.0,171.0,1.0,2000,1.0,5000,1.0,1.0,1342,no_gap
+RIC,Richmond,playground|city,2476.0,171.0,0.7746,400,1.0,800,0.8655,0.7752,274,no_gap
+RIC,Richmond,playground|private,2476.0,171.0,0.9919,400,1.0,800,1.0,0.9912,193,no_gap
+RIC,Richmond,park|city,2476.0,171.0,1.0,400,1.0,800,1.0,1.0,126,no_gap
+RIC,Richmond,park|private,2476.0,171.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+RID,Rideau Park,playground,371.0,4.0,0.9973,400,1.0,800,1.0,0.9973,207,no_gap
+RID,Rideau Park,park,371.0,4.0,1.0,400,1.0,800,1.0,1.0,49,no_gap
+RID,Rideau Park,transit_stop,371.0,4.0,1.0,400,1.0,800,1.0,1.0,233,no_gap
+RID,Rideau Park,community_centre,371.0,4.0,1.0,800,1.0,1600,1.0,1.0,691,no_gap
+RID,Rideau Park,rec_centre,371.0,4.0,1.0,2000,1.0,5000,1.0,1.0,1259,no_gap
+RID,Rideau Park,library,371.0,4.0,1.0,2000,1.0,5000,1.0,1.0,1567,no_gap
+RID,Rideau Park,playground|city,371.0,4.0,0.3288,400,1.0,800,0.75,0.3243,432,gap
+RID,Rideau Park,playground|private,371.0,4.0,0.9973,400,1.0,800,1.0,0.9973,207,no_gap
+RID,Rideau Park,park|city,371.0,4.0,1.0,400,1.0,800,1.0,1.0,49,no_gap
+RID,Rideau Park,park|private,371.0,4.0,1.0,400,1.0,800,1.0,1.0,49,no_gap
+RIV,Riverbend,playground,3461.0,1.0,0.9619,400,1.0,800,1.0,0.9618,201,no_gap
+RIV,Riverbend,park,3461.0,1.0,1.0,400,1.0,800,1.0,1.0,62,no_gap
+RIV,Riverbend,transit_stop,3461.0,1.0,0.9945,400,1.0,800,1.0,0.9945,158,no_gap
+RIV,Riverbend,community_centre,3461.0,1.0,0.6559,800,1.0,1600,0.0,0.6561,675,no_gap
+RIV,Riverbend,rec_centre,3461.0,1.0,0.7625,2000,1.0,5000,1.0,0.7624,1593,no_gap
+RIV,Riverbend,library,3461.0,1.0,0.7573,2000,1.0,5000,1.0,0.7572,1608,no_gap
+RIV,Riverbend,playground|city,3461.0,1.0,0.8688,400,1.0,800,1.0,0.8688,238,no_gap
+RIV,Riverbend,playground|private,3461.0,1.0,0.9619,400,1.0,800,1.0,0.9618,201,no_gap
+RIV,Riverbend,park|city,3461.0,1.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+RIV,Riverbend,park|private,3461.0,1.0,1.0,400,1.0,800,1.0,1.0,62,no_gap
+ROC,Rocky Ridge,playground,3317.0,113.0,0.8342,400,1.0,800,0.2478,0.8549,267,no_gap
+ROC,Rocky Ridge,park,3317.0,113.0,1.0,400,1.0,800,1.0,1.0,33,no_gap
+ROC,Rocky Ridge,transit_stop,3317.0,113.0,0.9629,400,1.0,800,0.6372,0.9744,140,no_gap
+ROC,Rocky Ridge,community_centre,3317.0,113.0,0.0,800,0.0247,1600,0.0,0.0,>1600,gap
+ROC,Rocky Ridge,rec_centre,3317.0,113.0,0.675,2000,1.0,5000,0.9912,0.6639,1806,no_gap
+ROC,Rocky Ridge,library,3317.0,113.0,0.6762,2000,1.0,5000,0.9912,0.6651,1810,no_gap
+ROC,Rocky Ridge,playground|city,3317.0,113.0,0.7956,400,1.0,800,0.2478,0.8149,280,no_gap
+ROC,Rocky Ridge,playground|private,3317.0,113.0,0.8342,400,1.0,800,0.2478,0.8549,267,no_gap
+ROC,Rocky Ridge,park|city,3317.0,113.0,1.0,400,1.0,800,1.0,1.0,42,no_gap
+ROC,Rocky Ridge,park|private,3317.0,113.0,1.0,400,1.0,800,1.0,1.0,33,no_gap
+RDL,Rosedale,playground,610.0,23.0,0.7557,400,1.0,800,0.8696,0.7526,289,no_gap
+RDL,Rosedale,park,610.0,23.0,0.9197,400,1.0,800,1.0,0.9181,159,no_gap
+RDL,Rosedale,transit_stop,610.0,23.0,0.9525,400,1.0,800,0.913,0.9539,177,no_gap
+RDL,Rosedale,community_centre,610.0,23.0,1.0,800,1.0,1600,1.0,1.0,384,no_gap
+RDL,Rosedale,rec_centre,610.0,23.0,0.2344,2000,1.0,5000,0.087,0.2406,2287,gap
+RDL,Rosedale,library,610.0,23.0,0.6607,2000,1.0,5000,0.7391,0.657,1837,no_gap
+RDL,Rosedale,playground|city,610.0,23.0,0.5377,400,1.0,800,0.6957,0.5324,373,no_gap
+RDL,Rosedale,playground|private,610.0,23.0,0.7557,400,1.0,800,0.8696,0.7526,289,no_gap
+RDL,Rosedale,park|city,610.0,23.0,0.9082,400,1.0,800,0.9565,0.9078,171,no_gap
+RDL,Rosedale,park|private,610.0,23.0,0.9197,400,1.0,800,1.0,0.9181,159,no_gap
+RMT,Rosemont,playground,451.0,14.0,0.9534,400,1.0,800,1.0,0.9519,242,no_gap
+RMT,Rosemont,park,451.0,14.0,1.0,400,1.0,800,1.0,1.0,112,no_gap
+RMT,Rosemont,transit_stop,451.0,14.0,1.0,400,1.0,800,1.0,1.0,155,no_gap
+RMT,Rosemont,community_centre,451.0,14.0,1.0,800,1.0,1600,1.0,1.0,403,no_gap
+RMT,Rosemont,rec_centre,451.0,14.0,0.0,2000,1.0,5000,0.0,0.0,2486,gap
+RMT,Rosemont,library,451.0,14.0,0.9534,2000,1.0,5000,1.0,0.9519,1742,no_gap
+RMT,Rosemont,playground|city,451.0,14.0,0.0,400,0.929,800,0.0,0.0,650,gap
+RMT,Rosemont,playground|private,451.0,14.0,0.9534,400,1.0,800,1.0,0.9519,242,no_gap
+RMT,Rosemont,park|city,451.0,14.0,1.0,400,1.0,800,1.0,1.0,112,no_gap
+RMT,Rosemont,park|private,451.0,14.0,1.0,400,1.0,800,1.0,1.0,112,no_gap
+RCK,Rosscarrock,playground,1242.0,116.0,0.8929,400,1.0,800,0.9483,0.887,231,no_gap
+RCK,Rosscarrock,park,1242.0,116.0,0.8551,400,1.0,800,0.9569,0.8443,156,no_gap
+RCK,Rosscarrock,transit_stop,1242.0,116.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
+RCK,Rosscarrock,community_centre,1242.0,116.0,0.9871,800,1.0,1600,1.0,0.9858,419,no_gap
+RCK,Rosscarrock,rec_centre,1242.0,116.0,1.0,2000,1.0,5000,1.0,1.0,1317,no_gap
+RCK,Rosscarrock,library,1242.0,116.0,1.0,2000,1.0,5000,1.0,1.0,849,no_gap
+RCK,Rosscarrock,playground|city,1242.0,116.0,0.4589,400,1.0,800,0.5862,0.4457,393,gap
+RCK,Rosscarrock,playground|private,1242.0,116.0,0.8929,400,1.0,800,0.9483,0.887,231,no_gap
+RCK,Rosscarrock,park|city,1242.0,116.0,0.8551,400,1.0,800,0.9569,0.8443,156,no_gap
+RCK,Rosscarrock,park|private,1242.0,116.0,0.8551,400,1.0,800,0.9569,0.8443,156,no_gap
+ROX,Roxboro,playground,155.0,6.0,0.9742,400,1.0,800,1.0,0.9732,249,no_gap
+ROX,Roxboro,park,155.0,6.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+ROX,Roxboro,transit_stop,155.0,6.0,1.0,400,1.0,800,1.0,1.0,210,no_gap
+ROX,Roxboro,community_centre,155.0,6.0,0.3032,800,1.0,1600,0.1667,0.3087,843,gap
+ROX,Roxboro,rec_centre,155.0,6.0,1.0,2000,1.0,5000,1.0,1.0,926,no_gap
+ROX,Roxboro,library,155.0,6.0,1.0,2000,1.0,5000,1.0,1.0,1571,no_gap
+ROX,Roxboro,playground|city,155.0,6.0,0.9548,400,1.0,800,1.0,0.953,249,no_gap
+ROX,Roxboro,playground|private,155.0,6.0,0.9742,400,1.0,800,1.0,0.9732,249,no_gap
+ROX,Roxboro,park|city,155.0,6.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+ROX,Roxboro,park|private,155.0,6.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+ROY,Royal Oak,playground,4171.0,76.0,0.9791,400,1.0,800,1.0,0.9788,210,no_gap
+ROY,Royal Oak,park,4171.0,76.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+ROY,Royal Oak,transit_stop,4171.0,76.0,0.9672,400,1.0,800,0.7632,0.9709,134,no_gap
+ROY,Royal Oak,community_centre,4171.0,76.0,0.0,800,0.1604,1600,0.0,0.0,>1600,gap
+ROY,Royal Oak,rec_centre,4171.0,76.0,0.8878,2000,1.0,5000,1.0,0.8857,1427,no_gap
+ROY,Royal Oak,library,4171.0,76.0,0.8936,2000,1.0,5000,1.0,0.8916,1404,no_gap
+ROY,Royal Oak,playground|city,4171.0,76.0,0.7694,400,0.9875,800,0.9342,0.7663,272,no_gap
+ROY,Royal Oak,playground|private,4171.0,76.0,0.9791,400,1.0,800,1.0,0.9788,210,no_gap
+ROY,Royal Oak,park|city,4171.0,76.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+ROY,Royal Oak,park|private,4171.0,76.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
+RUN,Rundle,playground,3333.0,135.0,0.97,400,1.0,800,1.0,0.9687,177,no_gap
+RUN,Rundle,park,3333.0,135.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+RUN,Rundle,transit_stop,3333.0,135.0,0.9991,400,1.0,800,1.0,0.9991,161,no_gap
+RUN,Rundle,community_centre,3333.0,135.0,0.4995,800,1.0,1600,1.0,0.4784,781,gap
+RUN,Rundle,rec_centre,3333.0,135.0,1.0,2000,1.0,5000,1.0,1.0,1251,no_gap
+RUN,Rundle,library,3333.0,135.0,1.0,2000,1.0,5000,1.0,1.0,1232,no_gap
+RUN,Rundle,playground|city,3333.0,135.0,0.3999,400,0.9961,800,1.0,0.3746,477,gap
+RUN,Rundle,playground|private,3333.0,135.0,0.97,400,1.0,800,1.0,0.9687,177,no_gap
+RUN,Rundle,park|city,3333.0,135.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+RUN,Rundle,park|private,3333.0,135.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+RUT,Rutland Park,playground,789.0,15.0,0.8238,400,1.0,800,0.7333,0.8254,268,no_gap
+RUT,Rutland Park,park,789.0,15.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+RUT,Rutland Park,transit_stop,789.0,15.0,1.0,400,1.0,800,1.0,1.0,131,no_gap
+RUT,Rutland Park,community_centre,789.0,15.0,1.0,800,1.0,1600,1.0,1.0,469,no_gap
+RUT,Rutland Park,rec_centre,789.0,15.0,0.493,2000,1.0,5000,0.9333,0.4838,1797,gap
+RUT,Rutland Park,library,789.0,15.0,0.1977,2000,1.0,5000,0.4667,0.1928,2082,gap
+RUT,Rutland Park,playground|city,789.0,15.0,0.4778,400,1.0,800,0.0,0.4877,483,gap
+RUT,Rutland Park,playground|private,789.0,15.0,0.8695,400,1.0,800,1.0,0.8668,234,no_gap
+RUT,Rutland Park,park|city,789.0,15.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+RUT,Rutland Park,park|private,789.0,15.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+SAD,Saddle Ridge,playground,7656.0,1433.0,0.97,400,1.0,800,0.9826,0.9667,192,no_gap
+SAD,Saddle Ridge,park,7656.0,1433.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+SAD,Saddle Ridge,transit_stop,7656.0,1433.0,0.994,400,1.0,800,0.9707,0.9994,129,no_gap
+SAD,Saddle Ridge,community_centre,7656.0,1433.0,0.0,800,0.0973,1600,0.0,0.0,>1600,gap
+SAD,Saddle Ridge,rec_centre,7656.0,1433.0,0.8149,2000,1.0,5000,0.7879,0.8193,1584,no_gap
+SAD,Saddle Ridge,library,7656.0,1433.0,0.7764,2000,1.0,5000,0.6734,0.7981,1624,no_gap
+SAD,Saddle Ridge,playground|city,7656.0,1433.0,0.8949,400,1.0,800,0.8207,0.9112,226,no_gap
+SAD,Saddle Ridge,playground|private,7656.0,1433.0,0.97,400,1.0,800,0.9826,0.9667,192,no_gap
+SAD,Saddle Ridge,park|city,7656.0,1433.0,0.9979,400,1.0,800,0.9951,0.9985,84,no_gap
+SAD,Saddle Ridge,park|private,7656.0,1433.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
+SRI,Saddle Ridge Industrial,playground,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+SRI,Saddle Ridge Industrial,park,3.0,0.0,0.6667,400,1.0,800,,0.6667,387,too_few_homes
+SRI,Saddle Ridge Industrial,transit_stop,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+SRI,Saddle Ridge Industrial,community_centre,3.0,0.0,1.0,800,1.0,1600,,1.0,623,too_few_homes
+SRI,Saddle Ridge Industrial,rec_centre,3.0,0.0,0.0,2000,1.0,5000,,0.0,2201,too_few_homes
+SRI,Saddle Ridge Industrial,library,3.0,0.0,0.0,2000,1.0,5000,,0.0,2302,too_few_homes
+SRI,Saddle Ridge Industrial,playground|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+SRI,Saddle Ridge Industrial,playground|private,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+SRI,Saddle Ridge Industrial,park|city,3.0,0.0,0.6667,400,1.0,800,,0.6667,387,too_few_homes
+SRI,Saddle Ridge Industrial,park|private,3.0,0.0,0.6667,400,1.0,800,,0.6667,387,too_few_homes
+SGH,Sage Hill,playground,6897.0,2445.0,0.7392,400,1.0,800,0.7558,0.7403,309,no_gap
+SGH,Sage Hill,park,6897.0,2445.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+SGH,Sage Hill,transit_stop,6897.0,2445.0,0.8253,400,1.0,800,0.8033,0.8265,173,no_gap
+SGH,Sage Hill,community_centre,6897.0,2445.0,0.0001,800,0.1251,1600,0.0,0.0002,>1600,gap_check
+SGH,Sage Hill,rec_centre,6897.0,2445.0,0.0001,2000,0.0963,5000,0.0,0.0002,>5000,gap_check
+SGH,Sage Hill,library,6897.0,2445.0,1.0,2000,1.0,5000,1.0,1.0,1143,no_gap
+SGH,Sage Hill,playground|city,6897.0,2445.0,0.6826,400,0.9999,800,0.7153,0.6708,361,no_gap
+SGH,Sage Hill,playground|private,6897.0,2445.0,0.7392,400,1.0,800,0.7558,0.7403,309,no_gap
+SGH,Sage Hill,park|city,6897.0,2445.0,1.0,400,1.0,800,1.0,1.0,72,no_gap
+SGH,Sage Hill,park|private,6897.0,2445.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+SAN,Sandstone Valley,playground,2107.0,1.0,0.9915,400,1.0,800,1.0,0.9915,202,no_gap
+SAN,Sandstone Valley,park,2107.0,1.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+SAN,Sandstone Valley,transit_stop,2107.0,1.0,0.9991,400,1.0,800,1.0,0.9991,167,no_gap
+SAN,Sandstone Valley,community_centre,2107.0,1.0,0.2292,800,0.9108,1600,1.0,0.2289,1118,gap
+SAN,Sandstone Valley,rec_centre,2107.0,1.0,0.0,2000,1.0,5000,0.0,0.0,3194,gap
+SAN,Sandstone Valley,library,2107.0,1.0,0.0,2000,1.0,5000,0.0,0.0,3136,gap
+SAN,Sandstone Valley,playground|city,2107.0,1.0,0.954,400,1.0,800,1.0,0.9539,210,no_gap
+SAN,Sandstone Valley,playground|private,2107.0,1.0,0.9915,400,1.0,800,1.0,0.9915,202,no_gap
+SAN,Sandstone Valley,park|city,2107.0,1.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
+SAN,Sandstone Valley,park|private,2107.0,1.0,1.0,400,1.0,800,1.0,1.0,75,no_gap
+SCA,Scarboro,playground,386.0,9.0,0.9845,400,1.0,800,1.0,0.9841,223,no_gap
+SCA,Scarboro,park,386.0,9.0,1.0,400,1.0,800,1.0,1.0,43,no_gap
+SCA,Scarboro,transit_stop,386.0,9.0,1.0,400,1.0,800,1.0,1.0,155,no_gap
+SCA,Scarboro,community_centre,386.0,9.0,1.0,800,1.0,1600,1.0,1.0,364,no_gap
+SCA,Scarboro,rec_centre,386.0,9.0,0.8083,2000,1.0,5000,1.0,0.8037,1740,no_gap
+SCA,Scarboro,library,386.0,9.0,0.9845,2000,1.0,5000,0.8889,0.9867,1741,no_gap
+SCA,Scarboro,playground|city,386.0,9.0,0.6762,400,1.0,800,0.6667,0.6764,275,no_gap
+SCA,Scarboro,playground|private,386.0,9.0,0.9845,400,1.0,800,1.0,0.9841,223,no_gap
+SCA,Scarboro,park|city,386.0,9.0,1.0,400,1.0,800,1.0,1.0,43,no_gap
+SCA,Scarboro,park|private,386.0,9.0,1.0,400,1.0,800,1.0,1.0,43,no_gap
+SSW,Scarboro/Sunalta West,playground,162.0,6.0,0.5617,400,1.0,800,0.3333,0.5705,385,no_gap
+SSW,Scarboro/Sunalta West,park,162.0,6.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+SSW,Scarboro/Sunalta West,transit_stop,162.0,6.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
+SSW,Scarboro/Sunalta West,community_centre,162.0,6.0,1.0,800,1.0,1600,1.0,1.0,294,no_gap
+SSW,Scarboro/Sunalta West,rec_centre,162.0,6.0,1.0,2000,1.0,5000,1.0,1.0,1093,no_gap
+SSW,Scarboro/Sunalta West,library,162.0,6.0,1.0,2000,1.0,5000,1.0,1.0,1408,no_gap
+SSW,Scarboro/Sunalta West,playground|city,162.0,6.0,0.2407,400,1.0,800,0.0,0.25,485,gap
+SSW,Scarboro/Sunalta West,playground|private,162.0,6.0,0.5617,400,1.0,800,0.3333,0.5705,385,no_gap
+SSW,Scarboro/Sunalta West,park|city,162.0,6.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+SSW,Scarboro/Sunalta West,park|private,162.0,6.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+SCE,Scenic Acres,playground,2904.0,0.0,0.9566,400,1.0,800,,0.9566,213,no_gap
+SCE,Scenic Acres,park,2904.0,0.0,1.0,400,1.0,800,,1.0,58,no_gap
+SCE,Scenic Acres,transit_stop,2904.0,0.0,0.9935,400,1.0,800,,0.9935,146,no_gap
+SCE,Scenic Acres,community_centre,2904.0,0.0,0.551,800,0.9659,1600,,0.551,757,no_gap
+SCE,Scenic Acres,rec_centre,2904.0,0.0,0.4356,2000,1.0,5000,,0.4356,2084,gap
+SCE,Scenic Acres,library,2904.0,0.0,0.2118,2000,1.0,5000,,0.2118,2382,gap
+SCE,Scenic Acres,playground|city,2904.0,0.0,0.918,400,1.0,800,,0.918,226,no_gap
+SCE,Scenic Acres,playground|private,2904.0,0.0,0.9566,400,1.0,800,,0.9566,213,no_gap
+SCE,Scenic Acres,park|city,2904.0,0.0,1.0,400,1.0,800,,1.0,58,no_gap
+SCE,Scenic Acres,park|private,2904.0,0.0,1.0,400,1.0,800,,1.0,58,no_gap
+SET,Seton,playground,5545.0,2657.0,0.4301,400,0.7084,800,0.6349,0.2464,363,gap_check
+SET,Seton,park,5545.0,2657.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+SET,Seton,transit_stop,5545.0,2657.0,0.8514,400,0.9735,800,0.7219,0.9712,154,no_gap
+SET,Seton,community_centre,5545.0,2657.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+SET,Seton,rec_centre,5545.0,2657.0,1.0,2000,1.0,5000,1.0,1.0,1266,no_gap
+SET,Seton,library,5545.0,2657.0,0.9913,2000,1.0,5000,0.9902,0.9922,1437,no_gap
+SET,Seton,playground|city,5545.0,2657.0,0.3729,400,0.708,800,0.5518,0.2123,410,gap_check
+SET,Seton,playground|private,5545.0,2657.0,0.4301,400,0.7084,800,0.6349,0.2464,363,gap_check
+SET,Seton,park|city,5545.0,2657.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+SET,Seton,park|private,5545.0,2657.0,1.0,400,1.0,800,1.0,1.0,98,no_gap
+SHG,Shaganappi,playground,1225.0,267.0,1.0,400,1.0,800,1.0,1.0,223,no_gap
+SHG,Shaganappi,park,1225.0,267.0,0.9927,400,1.0,800,1.0,0.9894,219,no_gap
+SHG,Shaganappi,transit_stop,1225.0,267.0,1.0,400,1.0,800,1.0,1.0,123,no_gap
+SHG,Shaganappi,community_centre,1225.0,267.0,0.7576,800,1.0,1600,0.3708,0.8533,520,no_gap
+SHG,Shaganappi,rec_centre,1225.0,267.0,1.0,2000,1.0,5000,1.0,1.0,398,no_gap
+SHG,Shaganappi,library,1225.0,267.0,1.0,2000,1.0,5000,1.0,1.0,698,no_gap
+SHG,Shaganappi,playground|city,1225.0,267.0,0.7339,400,1.0,800,0.3371,0.831,316,no_gap
+SHG,Shaganappi,playground|private,1225.0,267.0,1.0,400,1.0,800,1.0,1.0,223,no_gap
+SHG,Shaganappi,park|city,1225.0,267.0,0.9927,400,1.0,800,1.0,0.9894,219,no_gap
+SHG,Shaganappi,park|private,1225.0,267.0,0.9927,400,1.0,800,1.0,0.9894,219,no_gap
+SHS,Shawnee Slopes,playground,1489.0,257.0,0.953,400,1.0,800,1.0,0.932,177,no_gap
+SHS,Shawnee Slopes,park,1489.0,257.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+SHS,Shawnee Slopes,transit_stop,1489.0,257.0,1.0,400,1.0,800,1.0,1.0,146,no_gap
+SHS,Shawnee Slopes,community_centre,1489.0,257.0,0.0,800,0.0866,1600,0.0,0.0,>1600,gap
+SHS,Shawnee Slopes,rec_centre,1489.0,257.0,0.002,2000,1.0,5000,0.0,0.0029,2791,gap
+SHS,Shawnee Slopes,library,1489.0,257.0,0.0,2000,1.0,5000,0.0,0.0,3103,gap
+SHS,Shawnee Slopes,playground|city,1489.0,257.0,0.9261,400,1.0,800,1.0,0.8932,180,no_gap
+SHS,Shawnee Slopes,playground|private,1489.0,257.0,0.953,400,1.0,800,1.0,0.932,177,no_gap
+SHS,Shawnee Slopes,park|city,1489.0,257.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+SHS,Shawnee Slopes,park|private,1489.0,257.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+SHN,Shawnessy,playground,3361.0,119.0,0.989,400,1.0,800,1.0,0.9886,199,no_gap
+SHN,Shawnessy,park,3361.0,119.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+SHN,Shawnessy,transit_stop,3361.0,119.0,1.0,400,1.0,800,1.0,1.0,128,no_gap
+SHN,Shawnessy,community_centre,3361.0,119.0,0.4871,800,0.928,1600,1.0,0.4682,824,gap
+SHN,Shawnessy,rec_centre,3361.0,119.0,0.6141,2000,1.0,5000,1.0,0.5999,1787,no_gap
+SHN,Shawnessy,library,3361.0,119.0,0.5954,2000,1.0,5000,1.0,0.5805,1822,no_gap
+SHN,Shawnessy,playground|city,3361.0,119.0,0.7843,400,1.0,800,0.0,0.8131,254,no_gap
+SHN,Shawnessy,playground|private,3361.0,119.0,0.989,400,1.0,800,1.0,0.9886,199,no_gap
+SHN,Shawnessy,park|city,3361.0,119.0,1.0,400,1.0,800,1.0,1.0,72,no_gap
+SHN,Shawnessy,park|private,3361.0,119.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+SHI,Shepard Industrial,playground,175.0,0.0,1.0,400,1.0,800,,,290,no_gap
+SHI,Shepard Industrial,park,175.0,0.0,1.0,400,1.0,800,,,163,no_gap
+SHI,Shepard Industrial,transit_stop,175.0,0.0,0.92,400,1.0,800,,,457,no_gap
+SHI,Shepard Industrial,community_centre,175.0,0.0,0.0,800,1.0,1600,,,1389,gap
+SHI,Shepard Industrial,rec_centre,175.0,0.0,1.0,2000,1.0,5000,,,1379,no_gap
+SHI,Shepard Industrial,library,175.0,0.0,1.0,2000,1.0,5000,,,1393,no_gap
+SHI,Shepard Industrial,playground|city,175.0,0.0,0.08,400,1.0,800,,,431,gap
+SHI,Shepard Industrial,playground|private,175.0,0.0,1.0,400,1.0,800,,,290,no_gap
+SHI,Shepard Industrial,park|city,175.0,0.0,1.0,400,1.0,800,,,163,no_gap
+SHI,Shepard Industrial,park|private,175.0,0.0,1.0,400,1.0,800,,,163,no_gap
+SHW,Sherwood,playground,2179.0,24.0,0.7008,400,1.0,800,1.0,0.6974,323,no_gap
+SHW,Sherwood,park,2179.0,24.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+SHW,Sherwood,transit_stop,2179.0,24.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+SHW,Sherwood,community_centre,2179.0,24.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+SHW,Sherwood,rec_centre,2179.0,24.0,0.0,2000,0.8059,5000,0.0,0.0,4786,gap
+SHW,Sherwood,library,2179.0,24.0,1.0,2000,1.0,5000,1.0,1.0,959,no_gap
+SHW,Sherwood,playground|city,2179.0,24.0,0.7008,400,1.0,800,1.0,0.6974,323,no_gap
+SHW,Sherwood,playground|private,2179.0,24.0,0.7008,400,1.0,800,1.0,0.6974,323,no_gap
+SHW,Sherwood,park|city,2179.0,24.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+SHW,Sherwood,park|private,2179.0,24.0,1.0,400,1.0,800,1.0,1.0,58,no_gap
+SIG,Signal Hill,playground,5290.0,0.0,0.9225,400,1.0,800,,0.9225,228,no_gap
+SIG,Signal Hill,park,5290.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+SIG,Signal Hill,transit_stop,5290.0,0.0,1.0,400,1.0,800,,1.0,114,no_gap
+SIG,Signal Hill,community_centre,5290.0,0.0,0.0,800,0.3371,1600,,0.0,>1600,gap
+SIG,Signal Hill,rec_centre,5290.0,0.0,0.7102,2000,1.0,5000,,0.7102,1452,no_gap
+SIG,Signal Hill,library,5290.0,0.0,0.9486,2000,1.0,5000,,0.9486,974,no_gap
+SIG,Signal Hill,playground|city,5290.0,0.0,0.6957,400,1.0,800,,0.6957,300,no_gap
+SIG,Signal Hill,playground|private,5290.0,0.0,0.9225,400,1.0,800,,0.9225,228,no_gap
+SIG,Signal Hill,park|city,5290.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+SIG,Signal Hill,park|private,5290.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
+SIL,Silver Springs,playground,3521.0,2.0,0.889,400,1.0,800,1.0,0.8889,221,no_gap
+SIL,Silver Springs,park,3521.0,2.0,1.0,400,1.0,800,1.0,1.0,81,no_gap
+SIL,Silver Springs,transit_stop,3521.0,2.0,0.9523,400,1.0,800,0.5,0.9525,134,no_gap
+SIL,Silver Springs,community_centre,3521.0,2.0,0.4127,800,1.0,1600,0.5,0.4126,887,gap
+SIL,Silver Springs,rec_centre,3521.0,2.0,0.3431,2000,1.0,5000,0.0,0.3433,2255,gap
+SIL,Silver Springs,library,3521.0,2.0,0.3738,2000,1.0,5000,0.5,0.3737,2115,gap
+SIL,Silver Springs,playground|city,3521.0,2.0,0.6001,400,0.9722,800,0.5,0.6002,373,no_gap
+SIL,Silver Springs,playground|private,3521.0,2.0,0.889,400,1.0,800,1.0,0.8889,221,no_gap
+SIL,Silver Springs,park|city,3521.0,2.0,1.0,400,1.0,800,1.0,1.0,81,no_gap
+SIL,Silver Springs,park|private,3521.0,2.0,1.0,400,1.0,800,1.0,1.0,81,no_gap
+SVO,Silverado,playground,3371.0,397.0,0.8882,400,1.0,800,0.9975,0.9985,191,no_gap
+SVO,Silverado,park,3371.0,397.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+SVO,Silverado,transit_stop,3371.0,397.0,0.8312,400,1.0,800,0.6902,0.9715,189,no_gap
+SVO,Silverado,community_centre,3371.0,397.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+SVO,Silverado,rec_centre,3371.0,397.0,0.426,2000,1.0,5000,0.4181,0.4877,2017,gap
+SVO,Silverado,library,3371.0,397.0,0.4112,2000,1.0,5000,0.4181,0.4685,2031,gap
+SVO,Silverado,playground|city,3371.0,397.0,0.6903,400,0.8253,800,0.4232,0.8296,269,no_gap
+SVO,Silverado,playground|private,3371.0,397.0,0.8882,400,1.0,800,0.9975,0.9985,191,no_gap
+SVO,Silverado,park|city,3371.0,397.0,0.9985,400,1.0,800,1.0,0.9981,86,no_gap
+SVO,Silverado,park|private,3371.0,397.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
+SKR,Skyview Ranch,playground,6657.0,936.0,0.97,400,1.0,800,0.9893,0.9663,185,no_gap
+SKR,Skyview Ranch,park,6657.0,936.0,1.0,400,1.0,800,1.0,1.0,66,no_gap
+SKR,Skyview Ranch,transit_stop,6657.0,936.0,0.9986,400,1.0,800,0.9904,1.0,125,no_gap
+SKR,Skyview Ranch,community_centre,6657.0,936.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+SKR,Skyview Ranch,rec_centre,6657.0,936.0,0.0,2000,0.9835,5000,0.0,0.0,4737,gap
+SKR,Skyview Ranch,library,6657.0,936.0,0.0,2000,0.8876,5000,0.0,0.0,4794,gap
+SKR,Skyview Ranch,playground|city,6657.0,936.0,0.8313,400,1.0,800,0.9893,0.8024,267,no_gap
+SKR,Skyview Ranch,playground|private,6657.0,936.0,0.97,400,1.0,800,0.9893,0.9663,185,no_gap
+SKR,Skyview Ranch,park|city,6657.0,936.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+SKR,Skyview Ranch,park|private,6657.0,936.0,1.0,400,1.0,800,1.0,1.0,66,no_gap
+SOM,Somerset,playground,3127.0,0.0,0.9978,400,1.0,800,,0.9978,203,no_gap
+SOM,Somerset,park,3127.0,0.0,1.0,400,1.0,800,,1.0,69,no_gap
+SOM,Somerset,transit_stop,3127.0,0.0,1.0,400,1.0,800,,1.0,152,no_gap
+SOM,Somerset,community_centre,3127.0,0.0,0.1346,800,0.9891,1600,,0.1346,1182,gap
+SOM,Somerset,rec_centre,3127.0,0.0,0.9063,2000,1.0,5000,,0.9063,1109,no_gap
+SOM,Somerset,library,3127.0,0.0,0.89,2000,1.0,5000,,0.89,1149,no_gap
+SOM,Somerset,playground|city,3127.0,0.0,0.9942,400,1.0,800,,0.9942,216,no_gap
+SOM,Somerset,playground|private,3127.0,0.0,0.9978,400,1.0,800,,0.9978,203,no_gap
+SOM,Somerset,park|city,3127.0,0.0,1.0,400,1.0,800,,1.0,69,no_gap
+SOM,Somerset,park|private,3127.0,0.0,1.0,400,1.0,800,,1.0,69,no_gap
+SOC,South Calgary,playground,2834.0,457.0,0.807,400,1.0,800,0.5514,0.8552,307,no_gap
+SOC,South Calgary,park,2834.0,457.0,0.9016,400,1.0,800,0.709,0.9382,207,no_gap
+SOC,South Calgary,transit_stop,2834.0,457.0,1.0,400,1.0,800,1.0,1.0,137,no_gap
+SOC,South Calgary,community_centre,2834.0,457.0,0.9817,800,1.0,1600,1.0,0.978,381,no_gap
+SOC,South Calgary,rec_centre,2834.0,457.0,0.265,2000,1.0,5000,0.0875,0.2972,2101,gap
+SOC,South Calgary,library,2834.0,457.0,1.0,2000,1.0,5000,1.0,1.0,580,no_gap
+SOC,South Calgary,playground|city,2834.0,457.0,0.807,400,1.0,800,0.5514,0.8552,307,no_gap
+SOC,South Calgary,playground|private,2834.0,457.0,0.807,400,1.0,800,0.5514,0.8552,307,no_gap
+SOC,South Calgary,park|city,2834.0,457.0,0.9016,400,1.0,800,0.709,0.9382,207,no_gap
+SOC,South Calgary,park|private,2834.0,457.0,0.9016,400,1.0,800,0.709,0.9382,207,no_gap
+SOV,Southview,playground,645.0,0.0,0.9318,400,1.0,800,,0.9318,177,no_gap
+SOV,Southview,park,645.0,0.0,0.9752,400,1.0,800,,0.9752,100,no_gap
+SOV,Southview,transit_stop,645.0,0.0,0.9907,400,1.0,800,,0.9907,209,no_gap
+SOV,Southview,community_centre,645.0,0.0,1.0,800,1.0,1600,,1.0,309,no_gap
+SOV,Southview,rec_centre,645.0,0.0,0.5876,2000,1.0,5000,,0.5876,1883,no_gap
+SOV,Southview,library,645.0,0.0,0.4574,2000,1.0,5000,,0.4574,2023,gap
+SOV,Southview,playground|city,645.0,0.0,0.4868,400,1.0,800,,0.4868,415,gap
+SOV,Southview,playground|private,645.0,0.0,0.9318,400,1.0,800,,0.9318,177,no_gap
+SOV,Southview,park|city,645.0,0.0,0.9752,400,1.0,800,,0.9752,124,no_gap
+SOV,Southview,park|private,645.0,0.0,0.9752,400,1.0,800,,0.9752,100,no_gap
+SOW,Southwood,playground,2355.0,0.0,0.9554,400,1.0,800,,0.9548,211,no_gap
+SOW,Southwood,park,2355.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
+SOW,Southwood,transit_stop,2355.0,0.0,0.9002,400,1.0,800,,0.8989,214,no_gap
+SOW,Southwood,community_centre,2355.0,0.0,0.8981,800,1.0,1600,,0.8968,567,no_gap
+SOW,Southwood,rec_centre,2355.0,0.0,1.0,2000,1.0,5000,,1.0,1057,no_gap
+SOW,Southwood,library,2355.0,0.0,1.0,2000,1.0,5000,,1.0,980,no_gap
+SOW,Southwood,playground|city,2355.0,0.0,0.7189,400,1.0,800,,0.7153,322,no_gap
+SOW,Southwood,playground|private,2355.0,0.0,0.9554,400,1.0,800,,0.9548,205,no_gap
+SOW,Southwood,park|city,2355.0,0.0,1.0,400,1.0,800,,1.0,125,no_gap
+SOW,Southwood,park|private,2355.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
+SPH,Springbank Hill,playground,5944.0,1613.0,0.8239,400,0.9976,800,0.597,0.8861,230,no_gap
+SPH,Springbank Hill,park,5944.0,1613.0,0.9951,400,1.0,800,1.0,0.9917,73,no_gap
+SPH,Springbank Hill,transit_stop,5944.0,1613.0,0.89,400,0.9963,800,0.8363,0.8881,182,no_gap
+SPH,Springbank Hill,community_centre,5944.0,1613.0,0.0,800,0.0222,1600,0.0,0.0,>1600,gap
+SPH,Springbank Hill,rec_centre,5944.0,1613.0,0.7665,2000,1.0,5000,0.9944,0.6043,1759,no_gap
+SPH,Springbank Hill,library,5944.0,1613.0,0.2791,2000,1.0,5000,0.0446,0.4554,2260,gap
+SPH,Springbank Hill,playground|city,5944.0,1613.0,0.5833,400,0.9968,800,0.3422,0.8364,252,no_gap
+SPH,Springbank Hill,playground|private,5944.0,1613.0,0.8239,400,0.9976,800,0.597,0.8861,230,no_gap
+SPH,Springbank Hill,park|city,5944.0,1613.0,0.9951,400,1.0,800,1.0,0.9917,74,no_gap
+SPH,Springbank Hill,park|private,5944.0,1613.0,0.9951,400,1.0,800,1.0,0.9917,73,no_gap
+SPR,Spruce Cliff,playground,2101.0,68.0,0.8144,400,1.0,800,1.0,0.8082,260,no_gap
+SPR,Spruce Cliff,park,2101.0,68.0,1.0,400,1.0,800,1.0,1.0,179,no_gap
+SPR,Spruce Cliff,transit_stop,2101.0,68.0,1.0,400,1.0,800,1.0,1.0,161,no_gap
+SPR,Spruce Cliff,community_centre,2101.0,68.0,1.0,800,1.0,1600,1.0,1.0,431,no_gap
+SPR,Spruce Cliff,rec_centre,2101.0,68.0,1.0,2000,1.0,5000,1.0,1.0,1070,no_gap
+SPR,Spruce Cliff,library,2101.0,68.0,1.0,2000,1.0,5000,1.0,1.0,814,no_gap
+SPR,Spruce Cliff,playground|city,2101.0,68.0,0.5012,400,1.0,800,0.8529,0.4894,421,no_gap
+SPR,Spruce Cliff,playground|private,2101.0,68.0,0.8144,400,1.0,800,1.0,0.8082,260,no_gap
+SPR,Spruce Cliff,park|city,2101.0,68.0,1.0,400,1.0,800,1.0,1.0,179,no_gap
+SPR,Spruce Cliff,park|private,2101.0,68.0,1.0,400,1.0,800,1.0,1.0,179,no_gap
+STA,St. Andrews Heights,playground,589.0,19.0,0.6112,400,1.0,800,0.8421,0.6035,291,no_gap
+STA,St. Andrews Heights,park,589.0,19.0,1.0,400,1.0,800,1.0,1.0,97,no_gap
+STA,St. Andrews Heights,transit_stop,589.0,19.0,0.9643,400,1.0,800,1.0,0.9632,195,no_gap
+STA,St. Andrews Heights,community_centre,589.0,19.0,1.0,800,1.0,1600,1.0,1.0,429,no_gap
+STA,St. Andrews Heights,rec_centre,589.0,19.0,1.0,2000,1.0,5000,1.0,1.0,1165,no_gap
+STA,St. Andrews Heights,library,589.0,19.0,1.0,2000,1.0,5000,1.0,1.0,1578,no_gap
+STA,St. Andrews Heights,playground|city,589.0,19.0,0.6044,400,1.0,800,0.8421,0.5965,318,no_gap
+STA,St. Andrews Heights,playground|private,589.0,19.0,0.6163,400,1.0,800,0.8947,0.607,291,no_gap
+STA,St. Andrews Heights,park|city,589.0,19.0,1.0,400,1.0,800,1.0,1.0,97,no_gap
+STA,St. Andrews Heights,park|private,589.0,19.0,1.0,400,1.0,800,1.0,1.0,97,no_gap
+ST4,Stoney 4,playground,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,park,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,transit_stop,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,community_centre,1.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+ST4,Stoney 4,rec_centre,1.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+ST4,Stoney 4,library,1.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+ST4,Stoney 4,playground|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,playground|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,park|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+ST4,Stoney 4,park|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+STR,Strathcona Park,playground,2434.0,10.0,0.963,400,1.0,800,1.0,0.9629,196,no_gap
+STR,Strathcona Park,park,2434.0,10.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+STR,Strathcona Park,transit_stop,2434.0,10.0,1.0,400,1.0,800,1.0,1.0,141,no_gap
+STR,Strathcona Park,community_centre,2434.0,10.0,0.6927,800,0.8969,1600,1.0,0.6914,673,no_gap
+STR,Strathcona Park,rec_centre,2434.0,10.0,0.8369,2000,1.0,5000,1.0,0.8362,1676,no_gap
+STR,Strathcona Park,library,2434.0,10.0,0.0,2000,1.0,5000,0.0,0.0,2976,gap
+STR,Strathcona Park,playground|city,2434.0,10.0,0.8073,400,1.0,800,1.0,0.8065,256,no_gap
+STR,Strathcona Park,playground|private,2434.0,10.0,0.963,400,1.0,800,1.0,0.9629,196,no_gap
+STR,Strathcona Park,park|city,2434.0,10.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+STR,Strathcona Park,park|private,2434.0,10.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+SNA,Sunalta,playground,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,196,no_gap
+SNA,Sunalta,park,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,108,no_gap
+SNA,Sunalta,transit_stop,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,114,no_gap
+SNA,Sunalta,community_centre,2084.0,41.0,1.0,800,1.0,1600,1.0,1.0,263,no_gap
+SNA,Sunalta,rec_centre,2084.0,41.0,0.2116,2000,1.0,5000,0.0,0.2143,2245,gap
+SNA,Sunalta,library,2084.0,41.0,0.6963,2000,1.0,5000,1.0,0.6896,1932,no_gap
+SNA,Sunalta,playground|city,2084.0,41.0,0.7922,400,1.0,800,0.0,0.8097,260,no_gap
+SNA,Sunalta,playground|private,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,196,no_gap
+SNA,Sunalta,park|city,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,110,no_gap
+SNA,Sunalta,park|private,2084.0,41.0,1.0,400,1.0,800,1.0,1.0,108,no_gap
+SDC,Sundance,playground,3344.0,0.0,0.7344,400,1.0,800,,0.7344,302,no_gap
+SDC,Sundance,park,3344.0,0.0,1.0,400,1.0,800,,1.0,87,no_gap
+SDC,Sundance,transit_stop,3344.0,0.0,0.948,400,1.0,800,,0.948,179,no_gap
+SDC,Sundance,community_centre,3344.0,0.0,0.0,800,0.7431,1600,,0.0,1453,gap
+SDC,Sundance,rec_centre,3344.0,0.0,0.5984,2000,1.0,5000,,0.5984,1851,no_gap
+SDC,Sundance,library,3344.0,0.0,0.6244,2000,1.0,5000,,0.6244,1815,no_gap
+SDC,Sundance,playground|city,3344.0,0.0,0.4312,400,0.8134,800,,0.4312,440,gap
+SDC,Sundance,playground|private,3344.0,0.0,0.7344,400,1.0,800,,0.7344,302,no_gap
+SDC,Sundance,park|city,3344.0,0.0,1.0,400,1.0,800,,1.0,92,no_gap
+SDC,Sundance,park|private,3344.0,0.0,1.0,400,1.0,800,,1.0,87,no_gap
+SSD,Sunnyside,playground,2747.0,153.0,0.9458,400,1.0,800,0.085,0.9963,173,no_gap
+SSD,Sunnyside,park,2747.0,153.0,1.0,400,1.0,800,1.0,1.0,45,no_gap
+SSD,Sunnyside,transit_stop,2747.0,153.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+SSD,Sunnyside,community_centre,2747.0,153.0,0.9381,800,1.0,1600,0.9608,0.9327,596,no_gap
+SSD,Sunnyside,rec_centre,2747.0,153.0,0.0375,2000,1.0,5000,0.0,0.0423,2576,gap
+SSD,Sunnyside,library,2747.0,153.0,0.9236,2000,1.0,5000,1.0,0.9138,1794,no_gap
+SSD,Sunnyside,playground|city,2747.0,153.0,0.4303,400,0.9916,800,0.0,0.4852,415,gap
+SSD,Sunnyside,playground|private,2747.0,153.0,0.9458,400,1.0,800,0.085,0.9963,173,no_gap
+SSD,Sunnyside,park|city,2747.0,153.0,1.0,400,1.0,800,1.0,1.0,63,no_gap
+SSD,Sunnyside,park|private,2747.0,153.0,1.0,400,1.0,800,1.0,1.0,45,no_gap
+TAR,Taradale,playground,4496.0,0.0,0.9902,400,1.0,800,,0.9899,203,no_gap
+TAR,Taradale,park,4496.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
+TAR,Taradale,transit_stop,4496.0,0.0,1.0,400,1.0,800,,1.0,134,no_gap
+TAR,Taradale,community_centre,4496.0,0.0,0.0096,800,0.3459,1600,,0.0099,>1600,gap
+TAR,Taradale,rec_centre,4496.0,0.0,1.0,2000,1.0,5000,,1.0,1085,no_gap
+TAR,Taradale,library,4496.0,0.0,1.0,2000,1.0,5000,,1.0,1083,no_gap
+TAR,Taradale,playground|city,4496.0,0.0,0.8768,400,1.0,800,,0.8729,233,no_gap
+TAR,Taradale,playground|private,4496.0,0.0,0.9902,400,1.0,800,,0.9899,203,no_gap
+TAR,Taradale,park|city,4496.0,0.0,1.0,400,1.0,800,,1.0,76,no_gap
+TAR,Taradale,park|private,4496.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
+TEM,Temple,playground,3559.0,1.0,0.9969,400,1.0,800,1.0,0.9969,194,no_gap
+TEM,Temple,park,3559.0,1.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+TEM,Temple,transit_stop,3559.0,1.0,0.9966,400,1.0,800,1.0,0.9966,156,no_gap
+TEM,Temple,community_centre,3559.0,1.0,0.787,800,1.0,1600,0.0,0.7875,602,no_gap
+TEM,Temple,rec_centre,3559.0,1.0,0.8427,2000,1.0,5000,0.0,0.8431,1617,no_gap
+TEM,Temple,library,3559.0,1.0,0.7828,2000,1.0,5000,0.0,0.7832,1681,no_gap
+TEM,Temple,playground|city,3559.0,1.0,0.3984,400,0.9522,800,0.0,0.3987,487,gap
+TEM,Temple,playground|private,3559.0,1.0,0.9969,400,1.0,800,1.0,0.9969,194,no_gap
+TEM,Temple,park|city,3559.0,1.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+TEM,Temple,park|private,3559.0,1.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+THO,Thorncliffe,playground,3322.0,5.0,0.6358,400,1.0,800,1.0,0.6348,353,no_gap
+THO,Thorncliffe,park,3322.0,5.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+THO,Thorncliffe,transit_stop,3322.0,5.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+THO,Thorncliffe,community_centre,3322.0,5.0,0.4503,800,1.0,1600,0.8,0.4491,794,gap
+THO,Thorncliffe,rec_centre,3322.0,5.0,0.9967,2000,1.0,5000,1.0,0.9967,993,no_gap
+THO,Thorncliffe,library,3322.0,5.0,0.9976,2000,1.0,5000,1.0,0.9976,953,no_gap
+THO,Thorncliffe,playground|city,3322.0,5.0,0.4551,400,0.9735,800,0.6,0.4555,424,gap
+THO,Thorncliffe,playground|private,3322.0,5.0,0.6358,400,1.0,800,1.0,0.6348,353,no_gap
+THO,Thorncliffe,park|city,3322.0,5.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+THO,Thorncliffe,park|private,3322.0,5.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+TUS,Tuscany,playground,6812.0,146.0,0.989,400,1.0,800,1.0,0.9887,195,no_gap
+TUS,Tuscany,park,6812.0,146.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+TUS,Tuscany,transit_stop,6812.0,146.0,0.9811,400,1.0,800,0.9521,0.9817,140,no_gap
+TUS,Tuscany,community_centre,6812.0,146.0,0.4027,800,0.9087,1600,0.0,0.4115,914,gap
+TUS,Tuscany,rec_centre,6812.0,146.0,0.0,2000,1.0,5000,0.0,0.0,3325,gap
+TUS,Tuscany,library,6812.0,146.0,0.0,2000,0.9984,5000,0.0,0.0,3510,gap
+TUS,Tuscany,playground|city,6812.0,146.0,0.9436,400,1.0,800,1.0,0.9424,215,no_gap
+TUS,Tuscany,playground|private,6812.0,146.0,0.989,400,1.0,800,1.0,0.9887,195,no_gap
+TUS,Tuscany,park|city,6812.0,146.0,1.0,400,1.0,800,1.0,1.0,65,no_gap
+TUS,Tuscany,park|private,6812.0,146.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+TUX,Tuxedo Park,playground,2461.0,213.0,0.5173,400,1.0,800,0.723,0.4955,403,no_gap
+TUX,Tuxedo Park,park,2461.0,213.0,0.8757,400,1.0,800,0.9296,0.8706,225,no_gap
+TUX,Tuxedo Park,transit_stop,2461.0,213.0,1.0,400,1.0,800,1.0,1.0,149,no_gap
+TUX,Tuxedo Park,community_centre,2461.0,213.0,0.7379,800,1.0,1600,0.493,0.7605,572,no_gap
+TUX,Tuxedo Park,rec_centre,2461.0,213.0,0.8472,2000,1.0,5000,0.9061,0.8411,1601,no_gap
+TUX,Tuxedo Park,library,2461.0,213.0,0.0,2000,1.0,5000,0.0,0.0,3016,gap
+TUX,Tuxedo Park,playground|city,2461.0,213.0,0.4197,400,0.9984,800,0.6808,0.3921,458,gap
+TUX,Tuxedo Park,playground|private,2461.0,213.0,0.5173,400,1.0,800,0.723,0.4955,403,no_gap
+TUX,Tuxedo Park,park|city,2461.0,213.0,0.8757,400,1.0,800,0.9296,0.8706,225,no_gap
+TUX,Tuxedo Park,park|private,2461.0,213.0,0.8757,400,1.0,800,0.9296,0.8706,225,no_gap
+THS,Twinhills,playground,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,park,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,transit_stop,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,community_centre,1.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+THS,Twinhills,rec_centre,1.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+THS,Twinhills,library,1.0,0.0,0.0,2000,0.0,5000,,0.0,>5000,too_few_homes
+THS,Twinhills,playground|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,playground|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,park|city,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+THS,Twinhills,park|private,1.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+UND,University District,playground,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,140,no_gap
+UND,University District,park,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,61,no_gap
+UND,University District,transit_stop,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
+UND,University District,community_centre,2654.0,602.0,0.0,800,1.0,1600,0.0,0.0,1382,gap
+UND,University District,rec_centre,2654.0,602.0,1.0,2000,1.0,5000,1.0,1.0,1016,no_gap
+UND,University District,library,2654.0,602.0,0.3203,2000,1.0,5000,0.103,0.5225,1986,gap
+UND,University District,playground|city,2654.0,602.0,0.8414,400,1.0,800,1.0,0.7208,181,no_gap
+UND,University District,playground|private,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,140,no_gap
+UND,University District,park|city,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,73,no_gap
+UND,University District,park|private,2654.0,602.0,1.0,400,1.0,800,1.0,1.0,61,no_gap
+UNI,University Heights,playground,1357.0,6.0,0.2889,400,1.0,800,0.1667,0.2894,456,gap
+UNI,University Heights,park,1357.0,6.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+UNI,University Heights,transit_stop,1357.0,6.0,0.9786,400,1.0,800,0.8333,0.9793,195,no_gap
+UNI,University Heights,community_centre,1357.0,6.0,0.35,800,1.0,1600,0.0,0.3516,1134,gap
+UNI,University Heights,rec_centre,1357.0,6.0,1.0,2000,1.0,5000,1.0,1.0,766,no_gap
+UNI,University Heights,library,1357.0,6.0,0.7185,2000,1.0,5000,0.1667,0.7209,2264,no_gap
+UNI,University Heights,playground|city,1357.0,6.0,0.2756,400,1.0,800,0.1667,0.2761,470,gap
+UNI,University Heights,playground|private,1357.0,6.0,0.8489,400,1.0,800,0.6667,0.8497,358,no_gap
+UNI,University Heights,park|city,1357.0,6.0,1.0,400,1.0,800,1.0,1.0,97,no_gap
+UNI,University Heights,park|private,1357.0,6.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+UMR,Upper Mount Royal,playground,1054.0,89.0,0.8017,400,1.0,800,0.9101,0.7915,333,no_gap
+UMR,Upper Mount Royal,park,1054.0,89.0,1.0,400,1.0,800,1.0,1.0,108,no_gap
+UMR,Upper Mount Royal,transit_stop,1054.0,89.0,0.9981,400,1.0,800,1.0,0.9979,127,no_gap
+UMR,Upper Mount Royal,community_centre,1054.0,89.0,1.0,800,1.0,1600,1.0,1.0,371,no_gap
+UMR,Upper Mount Royal,rec_centre,1054.0,89.0,0.6461,2000,1.0,5000,0.8315,0.6297,1854,no_gap
+UMR,Upper Mount Royal,library,1054.0,89.0,1.0,2000,1.0,5000,1.0,1.0,864,no_gap
+UMR,Upper Mount Royal,playground|city,1054.0,89.0,0.7457,400,1.0,800,0.8876,0.7324,348,no_gap
+UMR,Upper Mount Royal,playground|private,1054.0,89.0,0.8017,400,1.0,800,0.9101,0.7915,333,no_gap
+UMR,Upper Mount Royal,park|city,1054.0,89.0,1.0,400,1.0,800,1.0,1.0,108,no_gap
+UMR,Upper Mount Royal,park|private,1054.0,89.0,1.0,400,1.0,800,1.0,1.0,108,no_gap
+VAL,Valley Ridge,playground,1939.0,2.0,0.7963,400,0.9556,800,1.0,0.7961,226,no_gap
+VAL,Valley Ridge,park,1939.0,2.0,1.0,400,1.0,800,1.0,1.0,63,no_gap
+VAL,Valley Ridge,transit_stop,1939.0,2.0,0.8066,400,0.9453,800,1.0,0.8064,199,no_gap
+VAL,Valley Ridge,community_centre,1939.0,2.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
+VAL,Valley Ridge,rec_centre,1939.0,2.0,0.0,2000,0.1243,5000,0.0,0.0,>5000,gap
+VAL,Valley Ridge,library,1939.0,2.0,0.0,2000,0.41,5000,0.0,0.0,>5000,gap
+VAL,Valley Ridge,playground|city,1939.0,2.0,0.7437,400,0.9551,800,1.0,0.7434,242,no_gap
+VAL,Valley Ridge,playground|private,1939.0,2.0,0.7963,400,0.9556,800,1.0,0.7961,226,no_gap
+VAL,Valley Ridge,park|city,1939.0,2.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
+VAL,Valley Ridge,park|private,1939.0,2.0,1.0,400,1.0,800,1.0,1.0,63,no_gap
+VAF,Valleyfield,playground,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+VAF,Valleyfield,park,3.0,0.0,0.0,400,1.0,800,,0.0,657,too_few_homes
+VAF,Valleyfield,transit_stop,3.0,0.0,1.0,400,1.0,800,,1.0,116,too_few_homes
+VAF,Valleyfield,community_centre,3.0,0.0,0.0,800,0.0,1600,,0.0,>1600,too_few_homes
+VAF,Valleyfield,rec_centre,3.0,0.0,0.0,2000,1.0,5000,,0.0,3330,too_few_homes
+VAF,Valleyfield,library,3.0,0.0,0.0,2000,1.0,5000,,0.0,4610,too_few_homes
+VAF,Valleyfield,playground|city,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+VAF,Valleyfield,playground|private,3.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
+VAF,Valleyfield,park|city,3.0,0.0,0.0,400,1.0,800,,0.0,657,too_few_homes
+VAF,Valleyfield,park|private,3.0,0.0,0.0,400,1.0,800,,0.0,657,too_few_homes
+VAR,Varsity,playground,5474.0,24.0,0.8146,400,1.0,800,0.9167,0.814,253,no_gap
+VAR,Varsity,park,5474.0,24.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+VAR,Varsity,transit_stop,5474.0,24.0,0.9898,400,1.0,800,1.0,0.9897,125,no_gap
+VAR,Varsity,community_centre,5474.0,24.0,0.3575,800,0.9868,1600,0.3333,0.3571,979,gap
+VAR,Varsity,rec_centre,5474.0,24.0,0.8763,2000,1.0,5000,0.5833,0.8775,1324,no_gap
+VAR,Varsity,library,5474.0,24.0,0.945,2000,1.0,5000,0.9167,0.9451,1487,no_gap
+VAR,Varsity,playground|city,5474.0,24.0,0.4872,400,1.0,800,0.875,0.4851,367,gap
+VAR,Varsity,playground|private,5474.0,24.0,0.8146,400,1.0,800,0.9167,0.814,253,no_gap
+VAR,Varsity,park|city,5474.0,24.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+VAR,Varsity,park|private,5474.0,24.0,1.0,400,1.0,800,1.0,1.0,77,no_gap
+VIS,Vista Heights,playground,768.0,0.0,1.0,400,1.0,800,,1.0,158,no_gap
+VIS,Vista Heights,park,768.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
+VIS,Vista Heights,transit_stop,768.0,0.0,0.8568,400,1.0,800,,0.8568,182,no_gap
+VIS,Vista Heights,community_centre,768.0,0.0,0.4023,800,1.0,1600,,0.4023,865,gap
+VIS,Vista Heights,rec_centre,768.0,0.0,0.1615,2000,1.0,5000,,0.1615,2298,gap
+VIS,Vista Heights,library,768.0,0.0,0.0,2000,1.0,5000,,0.0,4017,gap
+VIS,Vista Heights,playground|city,768.0,0.0,1.0,400,1.0,800,,1.0,211,no_gap
+VIS,Vista Heights,playground|private,768.0,0.0,1.0,400,1.0,800,,1.0,158,no_gap
+VIS,Vista Heights,park|city,768.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
+VIS,Vista Heights,park|private,768.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
+WAL,Walden,playground,3595.0,645.0,0.8946,400,1.0,800,0.9876,0.8742,207,no_gap
+WAL,Walden,park,3595.0,645.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+WAL,Walden,transit_stop,3595.0,645.0,0.8843,400,1.0,800,0.4946,0.9698,136,no_gap
+WAL,Walden,community_centre,3595.0,645.0,0.0,800,0.2114,1600,0.0,0.0,>1600,gap
+WAL,Walden,rec_centre,3595.0,645.0,0.0,2000,0.9522,5000,0.0,0.0,4403,gap
+WAL,Walden,library,3595.0,645.0,0.0,2000,0.9038,5000,0.0,0.0,4370,gap
+WAL,Walden,playground|city,3595.0,645.0,0.8932,400,1.0,800,0.9876,0.8725,228,no_gap
+WAL,Walden,playground|private,3595.0,645.0,0.8946,400,1.0,800,0.9876,0.8742,207,no_gap
+WAL,Walden,park|city,3595.0,645.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+WAL,Walden,park|private,3595.0,645.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+WHL,West Hillhurst,playground,3103.0,452.0,0.9372,400,1.0,800,0.9602,0.9328,241,no_gap
+WHL,West Hillhurst,park,3103.0,452.0,0.9948,400,1.0,800,0.9956,0.9947,135,no_gap
+WHL,West Hillhurst,transit_stop,3103.0,452.0,0.9974,400,1.0,800,1.0,0.997,129,no_gap
+WHL,West Hillhurst,community_centre,3103.0,452.0,0.6468,800,1.0,1600,0.8296,0.6136,663,no_gap
+WHL,West Hillhurst,rec_centre,3103.0,452.0,0.3348,2000,1.0,5000,0.1704,0.3651,2113,gap
+WHL,West Hillhurst,library,3103.0,452.0,1.0,2000,1.0,5000,1.0,1.0,1397,no_gap
+WHL,West Hillhurst,playground|city,3103.0,452.0,0.7512,400,1.0,800,0.3584,0.8172,288,no_gap
+WHL,West Hillhurst,playground|private,3103.0,452.0,0.9372,400,1.0,800,0.9602,0.9328,241,no_gap
+WHL,West Hillhurst,park|city,3103.0,452.0,0.9948,400,1.0,800,0.9956,0.9947,140,no_gap
+WHL,West Hillhurst,park|private,3103.0,452.0,0.9948,400,1.0,800,0.9956,0.9947,135,no_gap
+WSP,West Springs,playground,5677.0,1024.0,0.9785,400,1.0,800,1.0,0.9712,214,no_gap
+WSP,West Springs,park,5677.0,1024.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+WSP,West Springs,transit_stop,5677.0,1024.0,0.9694,400,1.0,800,0.999,0.9591,161,no_gap
+WSP,West Springs,community_centre,5677.0,1024.0,0.0146,800,0.34,1600,0.0,0.0196,>1600,gap
+WSP,West Springs,rec_centre,5677.0,1024.0,0.1119,2000,1.0,5000,0.0225,0.1447,2629,gap
+WSP,West Springs,library,5677.0,1024.0,0.0,2000,1.0,5000,0.0,0.0,3421,gap
+WSP,West Springs,playground|city,5677.0,1024.0,0.8508,400,1.0,800,1.0,0.8161,278,no_gap
+WSP,West Springs,playground|private,5677.0,1024.0,0.9785,400,1.0,800,1.0,0.9712,214,no_gap
+WSP,West Springs,park|city,5677.0,1024.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+WSP,West Springs,park|private,5677.0,1024.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
+WGT,Westgate,playground,1258.0,5.0,0.8903,400,1.0,800,0.2,0.8931,270,no_gap
+WGT,Westgate,park,1258.0,5.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+WGT,Westgate,transit_stop,1258.0,5.0,0.845,400,1.0,800,1.0,0.8444,219,no_gap
+WGT,Westgate,community_centre,1258.0,5.0,0.9841,800,1.0,1600,1.0,0.984,438,no_gap
+WGT,Westgate,rec_centre,1258.0,5.0,0.601,2000,1.0,5000,1.0,0.5994,1947,no_gap
+WGT,Westgate,library,1258.0,5.0,0.8887,2000,1.0,5000,1.0,0.8883,1718,no_gap
+WGT,Westgate,playground|city,1258.0,5.0,0.7933,400,1.0,800,0.0,0.7965,302,no_gap
+WGT,Westgate,playground|private,1258.0,5.0,0.8903,400,1.0,800,0.2,0.8931,270,no_gap
+WGT,Westgate,park|city,1258.0,5.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+WGT,Westgate,park|private,1258.0,5.0,1.0,400,1.0,800,1.0,1.0,129,no_gap
+WHI,Whitehorn,playground,3303.0,1.0,0.9927,400,1.0,800,1.0,0.9927,180,no_gap
+WHI,Whitehorn,park,3303.0,1.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+WHI,Whitehorn,transit_stop,3303.0,1.0,0.9973,400,1.0,800,1.0,0.9973,160,no_gap
+WHI,Whitehorn,community_centre,3303.0,1.0,0.7048,800,1.0,1600,0.0,0.705,668,no_gap
+WHI,Whitehorn,rec_centre,3303.0,1.0,0.5671,2000,1.0,5000,1.0,0.5669,1928,no_gap
+WHI,Whitehorn,library,3303.0,1.0,0.5235,2000,1.0,5000,1.0,0.5233,1972,no_gap
+WHI,Whitehorn,playground|city,3303.0,1.0,0.901,400,1.0,800,1.0,0.901,220,no_gap
+WHI,Whitehorn,playground|private,3303.0,1.0,0.9927,400,1.0,800,1.0,0.9927,178,no_gap
+WHI,Whitehorn,park|city,3303.0,1.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+WHI,Whitehorn,park|private,3303.0,1.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+WLD,Wildwood,playground,1085.0,24.0,0.6857,400,1.0,800,0.7083,0.6856,303,no_gap
+WLD,Wildwood,park,1085.0,24.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+WLD,Wildwood,transit_stop,1085.0,24.0,0.894,400,1.0,800,0.8333,0.8952,168,no_gap
+WLD,Wildwood,community_centre,1085.0,24.0,0.988,800,1.0,1600,1.0,0.9877,421,no_gap
+WLD,Wildwood,rec_centre,1085.0,24.0,0.4516,2000,1.0,5000,0.3333,0.4533,2057,gap
+WLD,Wildwood,library,1085.0,24.0,0.7548,2000,1.0,5000,0.6667,0.7564,1741,no_gap
+WLD,Wildwood,playground|city,1085.0,24.0,0.6848,400,1.0,800,0.7083,0.6846,312,no_gap
+WLD,Wildwood,playground|private,1085.0,24.0,0.6857,400,1.0,800,0.7083,0.6856,303,no_gap
+WLD,Wildwood,park|city,1085.0,24.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+WLD,Wildwood,park|private,1085.0,24.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
+WIL,Willow Park,playground,2201.0,8.0,0.9128,400,1.0,800,0.75,0.9134,215,no_gap
+WIL,Willow Park,park,2201.0,8.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+WIL,Willow Park,transit_stop,2201.0,8.0,0.9741,400,1.0,800,0.75,0.9749,150,no_gap
+WIL,Willow Park,community_centre,2201.0,8.0,0.2222,800,1.0,1600,0.625,0.2207,1106,gap
+WIL,Willow Park,rec_centre,2201.0,8.0,1.0,2000,1.0,5000,1.0,1.0,938,no_gap
+WIL,Willow Park,library,2201.0,8.0,1.0,2000,1.0,5000,1.0,1.0,1007,no_gap
+WIL,Willow Park,playground|city,2201.0,8.0,0.7892,400,0.9991,800,0.75,0.7893,280,no_gap
+WIL,Willow Park,playground|private,2201.0,8.0,0.9128,400,1.0,800,0.75,0.9134,215,no_gap
+WIL,Willow Park,park|city,2201.0,8.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+WIL,Willow Park,park|private,2201.0,8.0,1.0,400,1.0,800,1.0,1.0,106,no_gap
+WND,Windsor Park,playground,2494.0,324.0,0.9767,400,1.0,800,1.0,0.9733,214,no_gap
+WND,Windsor Park,park,2494.0,324.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+WND,Windsor Park,transit_stop,2494.0,324.0,0.9771,400,1.0,800,0.9907,0.9751,180,no_gap
+WND,Windsor Park,community_centre,2494.0,324.0,1.0,800,1.0,1600,1.0,1.0,271,no_gap
+WND,Windsor Park,rec_centre,2494.0,324.0,0.5349,2000,1.0,5000,0.9383,0.4747,2019,no_gap
+WND,Windsor Park,library,2494.0,324.0,0.0,2000,1.0,5000,0.0,0.0,2766,gap
+WND,Windsor Park,playground|city,2494.0,324.0,0.8665,400,1.0,800,0.9907,0.8479,265,no_gap
+WND,Windsor Park,playground|private,2494.0,324.0,0.9767,400,1.0,800,1.0,0.9733,214,no_gap
+WND,Windsor Park,park|city,2494.0,324.0,1.0,400,1.0,800,1.0,1.0,162,no_gap
+WND,Windsor Park,park|private,2494.0,324.0,1.0,400,1.0,800,1.0,1.0,139,no_gap
+WIN,Winston Heights/Mountview,playground,1550.0,144.0,0.9548,400,1.0,800,0.9722,0.953,205,no_gap
+WIN,Winston Heights/Mountview,park,1550.0,144.0,0.971,400,1.0,800,0.9792,0.9701,130,no_gap
+WIN,Winston Heights/Mountview,transit_stop,1550.0,144.0,0.8284,400,1.0,800,0.8125,0.8299,250,no_gap
+WIN,Winston Heights/Mountview,community_centre,1550.0,144.0,0.7548,800,1.0,1600,0.8194,0.7488,542,no_gap
+WIN,Winston Heights/Mountview,rec_centre,1550.0,144.0,0.9458,2000,1.0,5000,0.9722,0.9431,1102,no_gap
+WIN,Winston Heights/Mountview,library,1550.0,144.0,0.0,2000,1.0,5000,0.0,0.0,3132,gap
+WIN,Winston Heights/Mountview,playground|city,1550.0,144.0,0.8277,400,1.0,800,0.9444,0.8157,251,no_gap
+WIN,Winston Heights/Mountview,playground|private,1550.0,144.0,0.9548,400,1.0,800,0.9722,0.953,205,no_gap
+WIN,Winston Heights/Mountview,park|city,1550.0,144.0,0.971,400,1.0,800,0.9792,0.9701,130,no_gap
+WIN,Winston Heights/Mountview,park|private,1550.0,144.0,0.971,400,1.0,800,0.9792,0.9701,130,no_gap
+WWO,Wolf Willow,playground,1808.0,1261.0,0.8623,400,0.9823,800,0.8097,0.989,250,no_gap
+WWO,Wolf Willow,park,1808.0,1261.0,0.9735,400,1.0,800,0.9619,1.0,136,no_gap
+WWO,Wolf Willow,transit_stop,1808.0,1261.0,0.87,400,0.9674,800,0.8216,0.9871,234,no_gap
+WWO,Wolf Willow,community_centre,1808.0,1261.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+WWO,Wolf Willow,rec_centre,1808.0,1261.0,0.0,2000,1.0,5000,0.0,0.0,4169,gap_check
+WWO,Wolf Willow,library,1808.0,1261.0,0.0,2000,1.0,5000,0.0,0.0,4308,gap_check
+WWO,Wolf Willow,playground|city,1808.0,1261.0,0.8623,400,0.9823,800,0.8097,0.989,250,no_gap
+WWO,Wolf Willow,playground|private,1808.0,1261.0,0.8623,400,0.9823,800,0.8097,0.989,250,no_gap
+WWO,Wolf Willow,park|city,1808.0,1261.0,0.9735,400,1.0,800,0.9619,1.0,136,no_gap
+WWO,Wolf Willow,park|private,1808.0,1261.0,0.9735,400,1.0,800,0.9619,1.0,136,no_gap
+WBN,Woodbine,playground,3348.0,3.0,0.954,400,1.0,800,1.0,0.954,186,no_gap
+WBN,Woodbine,park,3348.0,3.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+WBN,Woodbine,transit_stop,3348.0,3.0,0.9662,400,1.0,800,1.0,0.9662,175,no_gap
+WBN,Woodbine,community_centre,3348.0,3.0,0.0998,800,0.7679,1600,0.0,0.0999,1283,gap
+WBN,Woodbine,rec_centre,3348.0,3.0,0.0929,2000,1.0,5000,0.0,0.093,2617,gap
+WBN,Woodbine,library,3348.0,3.0,0.0,2000,1.0,5000,0.0,0.0,3860,gap
+WBN,Woodbine,playground|city,3348.0,3.0,0.8686,400,0.9973,800,1.0,0.8685,219,no_gap
+WBN,Woodbine,playground|private,3348.0,3.0,0.954,400,1.0,800,1.0,0.954,186,no_gap
+WBN,Woodbine,park|city,3348.0,3.0,0.9979,400,1.0,800,1.0,0.9979,90,no_gap
+WBN,Woodbine,park|private,3348.0,3.0,1.0,400,1.0,800,1.0,1.0,84,no_gap
+WOO,Woodlands,playground,2262.0,1.0,0.9222,400,1.0,800,1.0,0.9222,207,no_gap
+WOO,Woodlands,park,2262.0,1.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+WOO,Woodlands,transit_stop,2262.0,1.0,0.8714,400,1.0,800,0.0,0.8717,186,no_gap
+WOO,Woodlands,community_centre,2262.0,1.0,0.7025,800,1.0,1600,1.0,0.7023,638,no_gap
+WOO,Woodlands,rec_centre,2262.0,1.0,0.7255,2000,1.0,5000,1.0,0.7253,1751,no_gap
+WOO,Woodlands,library,2262.0,1.0,0.0,2000,1.0,5000,0.0,0.0,3068,gap
+WOO,Woodlands,playground|city,2262.0,1.0,0.6273,400,1.0,800,1.0,0.6272,350,no_gap
+WOO,Woodlands,playground|private,2262.0,1.0,0.9222,400,1.0,800,1.0,0.9222,207,no_gap
+WOO,Woodlands,park|city,2262.0,1.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
+WOO,Woodlands,park|private,2262.0,1.0,1.0,400,1.0,800,1.0,1.0,71,no_gap
+YKV,Yorkville,playground,1418.0,631.0,0.9288,400,1.0,800,0.9556,0.9066,199,no_gap
+YKV,Yorkville,park,1418.0,631.0,1.0,400,1.0,800,1.0,1.0,81,no_gap
+YKV,Yorkville,transit_stop,1418.0,631.0,0.6467,400,0.9993,800,0.4437,0.8133,414,no_gap
+YKV,Yorkville,community_centre,1418.0,631.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+YKV,Yorkville,rec_centre,1418.0,631.0,0.0,2000,1.0,5000,0.0,0.0,2736,gap_check
+YKV,Yorkville,library,1418.0,631.0,0.0,2000,1.0,5000,0.0,0.0,2742,gap_check
+YKV,Yorkville,playground|city,1418.0,631.0,0.9288,400,1.0,800,0.9556,0.9066,199,no_gap
+YKV,Yorkville,playground|private,1418.0,631.0,0.9288,400,1.0,800,0.9556,0.9066,199,no_gap
+YKV,Yorkville,park|city,1418.0,631.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+YKV,Yorkville,park|private,1418.0,631.0,1.0,400,1.0,800,1.0,1.0,81,no_gap

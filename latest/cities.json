@@ -9,7 +9,7 @@
     "lat": 51.045,
     "lon": -114.06
    },
-   "built_at": "2026-11-07T17:29:31Z",
+   "built_at": "2026-11-08T17:38:26Z",
    "readiness": {
     "data_availability": "high",
     "data_quality": "high",
@@ -31,7 +31,7 @@
     "lat": 53.546,
     "lon": -113.494
    },
-   "built_at": "2026-11-07T17:36:22Z",
+   "built_at": "2026-11-08T17:44:26Z",
    "readiness": {
     "data_availability": "High for this module: neighbourhoods, wards, every residential property with location and year built, playgrounds, parks, transit stops, community league halls, recreation centres, libraries, 2021 Census by neighbourhood (age included). Also published: 311 requests, building and development permits, schools.",
     "data_quality": "High. Apartment buildings are one account each, so their homes are estimated from floor area (Calgary uses building permits). About 7,600 homes have no neighbourhood code on the roll and are placed by location. Four 2021 Census neighbourhoods have since been renamed or renumbered; their residents are placed by the census-day boundary.",

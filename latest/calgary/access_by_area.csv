@@ -459,16 +459,16 @@ BRT,Britannia,playground|city,309.0,16.0,0.7346,400,1.0,800,0.75,0.7338,291,no_g
 BRT,Britannia,playground|private,309.0,16.0,0.7573,400,1.0,800,0.75,0.7577,285,no_gap
 BRT,Britannia,park|city,309.0,16.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
 BRT,Britannia,park|private,309.0,16.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
-CAM,Cambrian Heights,playground,766.0,16.0,0.8747,400,1.0,800,0.375,0.8852,255,no_gap
-CAM,Cambrian Heights,park,766.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
-CAM,Cambrian Heights,transit_stop,766.0,16.0,0.97,400,1.0,800,1.0,0.9693,151,no_gap
-CAM,Cambrian Heights,community_centre,766.0,16.0,1.0,800,1.0,1600,1.0,1.0,374,no_gap
-CAM,Cambrian Heights,rec_centre,766.0,16.0,0.0,2000,1.0,5000,0.0,0.0,2912,gap
-CAM,Cambrian Heights,library,766.0,16.0,0.0039,2000,1.0,5000,0.0,0.004,2399,gap
-CAM,Cambrian Heights,playground|city,766.0,16.0,0.7937,400,1.0,800,0.3125,0.8037,283,no_gap
-CAM,Cambrian Heights,playground|private,766.0,16.0,0.8747,400,1.0,800,0.375,0.8852,255,no_gap
-CAM,Cambrian Heights,park|city,766.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
-CAM,Cambrian Heights,park|private,766.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAM,Cambrian Heights,playground,765.0,16.0,0.8758,400,1.0,800,0.375,0.8864,255,no_gap
+CAM,Cambrian Heights,park,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAM,Cambrian Heights,transit_stop,765.0,16.0,0.9699,400,1.0,800,1.0,0.9693,151,no_gap
+CAM,Cambrian Heights,community_centre,765.0,16.0,1.0,800,1.0,1600,1.0,1.0,374,no_gap
+CAM,Cambrian Heights,rec_centre,765.0,16.0,0.0,2000,1.0,5000,0.0,0.0,2912,gap
+CAM,Cambrian Heights,library,765.0,16.0,0.0039,2000,1.0,5000,0.0,0.004,2400,gap
+CAM,Cambrian Heights,playground|city,765.0,16.0,0.7948,400,1.0,800,0.3125,0.8048,283,no_gap
+CAM,Cambrian Heights,playground|private,765.0,16.0,0.8758,400,1.0,800,0.375,0.8864,255,no_gap
+CAM,Cambrian Heights,park|city,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
+CAM,Cambrian Heights,park|private,765.0,16.0,1.0,400,1.0,800,1.0,1.0,69,no_gap
 CAN,Canyon Meadows,playground,3139.0,3.0,0.9086,400,1.0,800,0.3333,0.9091,280,no_gap
 CAN,Canyon Meadows,park,3139.0,3.0,1.0,400,1.0,800,1.0,1.0,78,no_gap
 CAN,Canyon Meadows,transit_stop,3139.0,3.0,0.9838,400,1.0,800,1.0,0.9837,148,no_gap
@@ -699,16 +699,16 @@ CRA,Cranston,playground|city,8165.0,667.0,0.898,400,1.0,800,0.5742,0.9268,226,no
 CRA,Cranston,playground|private,8165.0,667.0,0.9399,400,1.0,800,0.5742,0.9724,197,no_gap
 CRA,Cranston,park|city,8165.0,667.0,1.0,400,1.0,800,1.0,1.0,68,no_gap
 CRA,Cranston,park|private,8165.0,667.0,1.0,400,1.0,800,1.0,1.0,64,no_gap
-CRE,Crescent Heights,playground,3763.0,125.0,0.5711,400,1.0,800,0.8,0.5647,373,no_gap
-CRE,Crescent Heights,park,3763.0,125.0,0.9022,400,1.0,800,0.896,0.9021,194,no_gap
-CRE,Crescent Heights,transit_stop,3763.0,125.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
-CRE,Crescent Heights,community_centre,3763.0,125.0,0.5033,800,1.0,1600,0.664,0.4963,798,no_gap
-CRE,Crescent Heights,rec_centre,3763.0,125.0,1.0,2000,1.0,5000,1.0,1.0,1241,no_gap
-CRE,Crescent Heights,library,3763.0,125.0,0.6896,2000,1.0,5000,0.584,0.6923,1413,no_gap
-CRE,Crescent Heights,playground|city,3763.0,125.0,0.3928,400,1.0,800,0.48,0.3907,435,gap
-CRE,Crescent Heights,playground|private,3763.0,125.0,0.5711,400,1.0,800,0.8,0.5647,373,no_gap
-CRE,Crescent Heights,park|city,3763.0,125.0,0.9022,400,1.0,800,0.896,0.9021,227,no_gap
-CRE,Crescent Heights,park|private,3763.0,125.0,0.9022,400,1.0,800,0.896,0.9021,194,no_gap
+CRE,Crescent Heights,playground,3762.0,125.0,0.5712,400,1.0,800,0.8,0.5648,373,no_gap
+CRE,Crescent Heights,park,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,194,no_gap
+CRE,Crescent Heights,transit_stop,3762.0,125.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+CRE,Crescent Heights,community_centre,3762.0,125.0,0.5032,800,1.0,1600,0.664,0.4961,798,no_gap
+CRE,Crescent Heights,rec_centre,3762.0,125.0,1.0,2000,1.0,5000,1.0,1.0,1241,no_gap
+CRE,Crescent Heights,library,3762.0,125.0,0.6895,2000,1.0,5000,0.584,0.6922,1413,no_gap
+CRE,Crescent Heights,playground|city,3762.0,125.0,0.3929,400,1.0,800,0.48,0.3908,435,gap
+CRE,Crescent Heights,playground|private,3762.0,125.0,0.5712,400,1.0,800,0.8,0.5648,373,no_gap
+CRE,Crescent Heights,park|city,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,227,no_gap
+CRE,Crescent Heights,park|private,3762.0,125.0,0.9024,400,1.0,800,0.896,0.9024,194,no_gap
 CRM,Crestmont,playground,1012.0,150.0,0.9783,400,1.0,800,0.9533,0.9826,229,no_gap
 CRM,Crestmont,park,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,50,no_gap
 CRM,Crestmont,transit_stop,1012.0,150.0,1.0,400,1.0,800,1.0,1.0,118,no_gap
@@ -1539,16 +1539,16 @@ MRN,Moraine,playground|city,1045.0,1033.0,0.9617,400,1.0,800,0.9613,,179,no_gap
 MRN,Moraine,playground|private,1045.0,1033.0,0.9617,400,1.0,800,0.9613,,179,no_gap
 MRN,Moraine,park|city,1045.0,1033.0,1.0,400,1.0,800,1.0,,82,no_gap
 MRN,Moraine,park|private,1045.0,1033.0,1.0,400,1.0,800,1.0,,82,no_gap
-MOP,Mount Pleasant,playground,2894.0,250.0,0.6617,400,1.0,800,0.956,0.635,308,no_gap
-MOP,Mount Pleasant,park,2894.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
-MOP,Mount Pleasant,transit_stop,2894.0,250.0,0.9972,400,1.0,800,1.0,0.9969,139,no_gap
-MOP,Mount Pleasant,community_centre,2894.0,250.0,0.9945,800,1.0,1600,0.984,0.9954,496,no_gap
-MOP,Mount Pleasant,rec_centre,2894.0,250.0,0.1814,2000,1.0,5000,0.14,0.1788,2375,gap
-MOP,Mount Pleasant,library,2894.0,250.0,0.331,2000,1.0,5000,0.324,0.3384,2286,gap
-MOP,Mount Pleasant,playground|city,2894.0,250.0,0.5498,400,1.0,800,0.856,0.5195,339,no_gap
-MOP,Mount Pleasant,playground|private,2894.0,250.0,0.6617,400,1.0,800,0.956,0.635,308,no_gap
-MOP,Mount Pleasant,park|city,2894.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
-MOP,Mount Pleasant,park|private,2894.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+MOP,Mount Pleasant,playground,2893.0,250.0,0.6616,400,1.0,800,0.956,0.6349,308,no_gap
+MOP,Mount Pleasant,park,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+MOP,Mount Pleasant,transit_stop,2893.0,250.0,0.9972,400,1.0,800,1.0,0.9969,139,no_gap
+MOP,Mount Pleasant,community_centre,2893.0,250.0,0.9945,800,1.0,1600,0.984,0.9954,496,no_gap
+MOP,Mount Pleasant,rec_centre,2893.0,250.0,0.1815,2000,1.0,5000,0.14,0.1789,2375,gap
+MOP,Mount Pleasant,library,2893.0,250.0,0.3311,2000,1.0,5000,0.324,0.3385,2286,gap
+MOP,Mount Pleasant,playground|city,2893.0,250.0,0.5496,400,1.0,800,0.856,0.5193,339,no_gap
+MOP,Mount Pleasant,playground|private,2893.0,250.0,0.6616,400,1.0,800,0.956,0.6349,308,no_gap
+MOP,Mount Pleasant,park|city,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+MOP,Mount Pleasant,park|private,2893.0,250.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
 NEB,New Brighton,playground,4303.0,0.0,0.9916,400,1.0,800,,0.9916,227,no_gap
 NEB,New Brighton,park,4303.0,0.0,1.0,400,1.0,800,,1.0,119,no_gap
 NEB,New Brighton,transit_stop,4303.0,0.0,0.9951,400,1.0,800,,0.9951,135,no_gap
@@ -1569,16 +1569,16 @@ NOL,Nolan Hill,playground|city,3015.0,237.0,0.743,400,1.0,800,0.0127,0.8053,217,
 NOL,Nolan Hill,playground|private,3015.0,237.0,0.743,400,1.0,800,0.0127,0.8053,217,no_gap
 NOL,Nolan Hill,park|city,3015.0,237.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
 NOL,Nolan Hill,park|private,3015.0,237.0,1.0,400,1.0,800,1.0,1.0,76,no_gap
-NGM,North Glenmore Park,playground,993.0,112.0,0.9074,400,1.0,800,0.9018,0.9101,240,no_gap
-NGM,North Glenmore Park,park,993.0,112.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
-NGM,North Glenmore Park,transit_stop,993.0,112.0,0.8751,400,1.0,800,0.9643,0.8635,154,no_gap
-NGM,North Glenmore Park,community_centre,993.0,112.0,0.6677,800,1.0,1600,0.4018,0.7019,600,no_gap
-NGM,North Glenmore Park,rec_centre,993.0,112.0,1.0,2000,1.0,5000,1.0,1.0,674,no_gap
-NGM,North Glenmore Park,library,993.0,112.0,0.0,2000,1.0,5000,0.0,0.0,2744,gap
-NGM,North Glenmore Park,playground|city,993.0,112.0,0.8298,400,1.0,800,0.8482,0.8294,292,no_gap
-NGM,North Glenmore Park,playground|private,993.0,112.0,0.9074,400,1.0,800,0.9018,0.9101,240,no_gap
-NGM,North Glenmore Park,park|city,993.0,112.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
-NGM,North Glenmore Park,park|private,993.0,112.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NGM,North Glenmore Park,playground,992.0,111.0,0.9073,400,1.0,800,0.9009,0.9101,239,no_gap
+NGM,North Glenmore Park,park,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NGM,North Glenmore Park,transit_stop,992.0,111.0,0.875,400,1.0,800,0.964,0.8635,153,no_gap
+NGM,North Glenmore Park,community_centre,992.0,111.0,0.6673,800,1.0,1600,0.3964,0.7019,600,no_gap
+NGM,North Glenmore Park,rec_centre,992.0,111.0,1.0,2000,1.0,5000,1.0,1.0,675,no_gap
+NGM,North Glenmore Park,library,992.0,111.0,0.0,2000,1.0,5000,0.0,0.0,2745,gap
+NGM,North Glenmore Park,playground|city,992.0,111.0,0.8296,400,1.0,800,0.8468,0.8294,292,no_gap
+NGM,North Glenmore Park,playground|private,992.0,111.0,0.9073,400,1.0,800,0.9009,0.9101,239,no_gap
+NGM,North Glenmore Park,park|city,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
+NGM,North Glenmore Park,park|private,992.0,111.0,1.0,400,1.0,800,1.0,1.0,125,no_gap
 NHV,North Haven,playground,883.0,0.0,0.7973,400,1.0,800,,0.7973,252,no_gap
 NHV,North Haven,park,883.0,0.0,1.0,400,1.0,800,,1.0,90,no_gap
 NHV,North Haven,transit_stop,883.0,0.0,0.9921,400,1.0,800,,0.9921,130,no_gap
@@ -1649,26 +1649,26 @@ PAN,Panorama Hills,playground|city,8109.0,3.0,0.8513,400,1.0,800,1.0,0.8512,235,
 PAN,Panorama Hills,playground|private,8109.0,3.0,0.8637,400,1.0,800,1.0,0.8637,219,no_gap
 PAN,Panorama Hills,park|city,8109.0,3.0,1.0,400,1.0,800,1.0,1.0,79,no_gap
 PAN,Panorama Hills,park|private,8109.0,3.0,1.0,400,1.0,800,1.0,1.0,70,no_gap
-PKD,Parkdale,playground,1084.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
-PKD,Parkdale,park,1084.0,132.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
-PKD,Parkdale,transit_stop,1084.0,132.0,0.9991,400,1.0,800,1.0,0.9989,131,no_gap
-PKD,Parkdale,community_centre,1084.0,132.0,0.9917,800,1.0,1600,1.0,0.9905,350,no_gap
-PKD,Parkdale,rec_centre,1084.0,132.0,0.8266,2000,1.0,5000,0.9394,0.8101,1824,no_gap
-PKD,Parkdale,library,1084.0,132.0,0.4317,2000,1.0,5000,0.2045,0.4641,2025,gap
-PKD,Parkdale,playground|city,1084.0,132.0,0.8736,400,1.0,800,0.8712,0.8745,298,no_gap
-PKD,Parkdale,playground|private,1084.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
-PKD,Parkdale,park|city,1084.0,132.0,1.0,400,1.0,800,1.0,1.0,134,no_gap
-PKD,Parkdale,park|private,1084.0,132.0,1.0,400,1.0,800,1.0,1.0,92,no_gap
-PKH,Parkhill,playground,884.0,90.0,0.7477,400,1.0,800,0.1667,0.8136,320,no_gap
-PKH,Parkhill,park,884.0,90.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
-PKH,Parkhill,transit_stop,884.0,90.0,1.0,400,1.0,800,1.0,1.0,149,no_gap
-PKH,Parkhill,community_centre,884.0,90.0,1.0,800,1.0,1600,1.0,1.0,365,no_gap
-PKH,Parkhill,rec_centre,884.0,90.0,0.8631,2000,1.0,5000,0.9556,0.8526,1507,no_gap
-PKH,Parkhill,library,884.0,90.0,0.1505,2000,1.0,5000,0.0667,0.1599,2165,gap
-PKH,Parkhill,playground|city,884.0,90.0,0.7342,400,1.0,800,0.1556,0.7997,321,no_gap
-PKH,Parkhill,playground|private,884.0,90.0,0.7477,400,1.0,800,0.1667,0.8136,320,no_gap
-PKH,Parkhill,park|city,884.0,90.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
-PKH,Parkhill,park|private,884.0,90.0,1.0,400,1.0,800,1.0,1.0,82,no_gap
+PKD,Parkdale,playground,1083.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
+PKD,Parkdale,park,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,91,no_gap
+PKD,Parkdale,transit_stop,1083.0,132.0,0.9991,400,1.0,800,1.0,0.9989,131,no_gap
+PKD,Parkdale,community_centre,1083.0,132.0,0.9917,800,1.0,1600,1.0,0.9905,350,no_gap
+PKD,Parkdale,rec_centre,1083.0,132.0,0.8264,2000,1.0,5000,0.9394,0.8099,1825,no_gap
+PKD,Parkdale,library,1083.0,132.0,0.4321,2000,1.0,5000,0.2045,0.4646,2025,gap
+PKD,Parkdale,playground|city,1083.0,132.0,0.8744,400,1.0,800,0.8712,0.8754,297,no_gap
+PKD,Parkdale,playground|private,1083.0,132.0,0.9935,400,1.0,800,1.0,0.9926,213,no_gap
+PKD,Parkdale,park|city,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,134,no_gap
+PKD,Parkdale,park|private,1083.0,132.0,1.0,400,1.0,800,1.0,1.0,91,no_gap
+PKH,Parkhill,playground,881.0,90.0,0.7469,400,1.0,800,0.1667,0.8129,321,no_gap
+PKH,Parkhill,park,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+PKH,Parkhill,transit_stop,881.0,90.0,1.0,400,1.0,800,1.0,1.0,148,no_gap
+PKH,Parkhill,community_centre,881.0,90.0,1.0,800,1.0,1600,1.0,1.0,366,no_gap
+PKH,Parkhill,rec_centre,881.0,90.0,0.8627,2000,1.0,5000,0.9556,0.8521,1505,no_gap
+PKH,Parkhill,library,881.0,90.0,0.151,2000,1.0,5000,0.0667,0.1606,2165,gap
+PKH,Parkhill,playground|city,881.0,90.0,0.7333,400,1.0,800,0.1556,0.799,322,no_gap
+PKH,Parkhill,playground|private,881.0,90.0,0.7469,400,1.0,800,0.1667,0.8129,321,no_gap
+PKH,Parkhill,park|city,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
+PKH,Parkhill,park|private,881.0,90.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
 PKL,Parkland,playground,1447.0,0.0,0.8618,400,1.0,800,,0.8618,206,no_gap
 PKL,Parkland,park,1447.0,0.0,1.0,400,1.0,800,,1.0,73,no_gap
 PKL,Parkland,transit_stop,1447.0,0.0,0.8645,400,1.0,800,,0.8645,220,no_gap
@@ -2139,16 +2139,16 @@ SOV,Southview,playground|city,645.0,0.0,0.4868,400,1.0,800,,0.4868,415,gap
 SOV,Southview,playground|private,645.0,0.0,0.9318,400,1.0,800,,0.9318,177,no_gap
 SOV,Southview,park|city,645.0,0.0,0.9752,400,1.0,800,,0.9752,124,no_gap
 SOV,Southview,park|private,645.0,0.0,0.9752,400,1.0,800,,0.9752,100,no_gap
-SOW,Southwood,playground,2356.0,0.0,0.9554,400,1.0,800,,0.9549,211,no_gap
-SOW,Southwood,park,2356.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
-SOW,Southwood,transit_stop,2356.0,0.0,0.9003,400,1.0,800,,0.899,213,no_gap
-SOW,Southwood,community_centre,2356.0,0.0,0.8981,800,1.0,1600,,0.8968,567,no_gap
-SOW,Southwood,rec_centre,2356.0,0.0,1.0,2000,1.0,5000,,1.0,1057,no_gap
-SOW,Southwood,library,2356.0,0.0,1.0,2000,1.0,5000,,1.0,982,no_gap
-SOW,Southwood,playground|city,2356.0,0.0,0.7186,400,1.0,800,,0.715,322,no_gap
-SOW,Southwood,playground|private,2356.0,0.0,0.9554,400,1.0,800,,0.9549,204,no_gap
-SOW,Southwood,park|city,2356.0,0.0,1.0,400,1.0,800,,1.0,125,no_gap
-SOW,Southwood,park|private,2356.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
+SOW,Southwood,playground,2355.0,0.0,0.9554,400,1.0,800,,0.9548,211,no_gap
+SOW,Southwood,park,2355.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
+SOW,Southwood,transit_stop,2355.0,0.0,0.9002,400,1.0,800,,0.8989,214,no_gap
+SOW,Southwood,community_centre,2355.0,0.0,0.8981,800,1.0,1600,,0.8968,567,no_gap
+SOW,Southwood,rec_centre,2355.0,0.0,1.0,2000,1.0,5000,,1.0,1057,no_gap
+SOW,Southwood,library,2355.0,0.0,1.0,2000,1.0,5000,,1.0,980,no_gap
+SOW,Southwood,playground|city,2355.0,0.0,0.7189,400,1.0,800,,0.7153,322,no_gap
+SOW,Southwood,playground|private,2355.0,0.0,0.9554,400,1.0,800,,0.9548,205,no_gap
+SOW,Southwood,park|city,2355.0,0.0,1.0,400,1.0,800,,1.0,125,no_gap
+SOW,Southwood,park|private,2355.0,0.0,1.0,400,1.0,800,,1.0,124,no_gap
 SPH,Springbank Hill,playground,5944.0,1613.0,0.8239,400,0.9976,800,0.597,0.8861,230,no_gap
 SPH,Springbank Hill,park,5944.0,1613.0,0.9951,400,1.0,800,1.0,0.9917,73,no_gap
 SPH,Springbank Hill,transit_stop,5944.0,1613.0,0.89,400,0.9963,800,0.8363,0.8881,182,no_gap
