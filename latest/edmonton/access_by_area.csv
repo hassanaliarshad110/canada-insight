@@ -440,7 +440,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5090,Brookside,park|city,700.0,6.0,1.0,400,1.0,800,1.0,1.0,101,no_gap
 5090,Brookside,park|private,700.0,6.0,1.0,400,1.0,800,1.0,1.0,90,no_gap
 5100,Bulyea Heights,playground,1281.0,0.0,0.3115,400,0.8993,800,,0.3115,500,gap
-5100,Bulyea Heights,park,1281.0,0.0,1.0,400,1.0,800,,1.0,135,no_gap
+5100,Bulyea Heights,park,1281.0,0.0,1.0,400,1.0,800,,1.0,107,no_gap
 5100,Bulyea Heights,transit_stop,1281.0,0.0,0.9563,400,1.0,800,,0.9563,143,no_gap
 5100,Bulyea Heights,community_centre,1281.0,0.0,0.3208,800,1.0,1600,,0.3208,921,gap
 5100,Bulyea Heights,rec_centre,1281.0,0.0,0.4957,2000,1.0,5000,,0.4957,2010,gap
@@ -448,7 +448,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5100,Bulyea Heights,playground|city,1281.0,0.0,0.3115,400,0.7892,800,,0.3115,525,gap
 5100,Bulyea Heights,playground|private,1281.0,0.0,0.3115,400,0.8993,800,,0.3115,500,gap
 5100,Bulyea Heights,park|city,1281.0,0.0,0.9555,400,1.0,800,,0.9555,168,no_gap
-5100,Bulyea Heights,park|private,1281.0,0.0,1.0,400,1.0,800,,1.0,135,no_gap
+5100,Bulyea Heights,park|private,1281.0,0.0,1.0,400,1.0,800,,1.0,107,no_gap
 6110,CPR Irvine,playground,89.0,0.0,0.0,400,1.0,800,,0.0,469,too_few_homes
 6110,CPR Irvine,park,89.0,0.0,1.0,400,1.0,800,,1.0,56,too_few_homes
 6110,CPR Irvine,transit_stop,89.0,0.0,1.0,400,1.0,800,,1.0,97,too_few_homes
