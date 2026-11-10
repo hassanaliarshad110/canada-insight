@@ -1,0 +1,447 @@
+{
+ "city": "edmonton",
+ "built_at": "2026-11-10T19:19:05Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "source": "edmonton.areas",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 400)",
+   "value": 1,
+   "threshold": 400
+  },
+  {
+   "source": "edmonton.areas",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.areas",
+   "check": "missing_geometry",
+   "status": "pass",
+   "detail": "0 of 407 rows (0.00%) have no geometry",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.areas",
+   "check": "duplicate_neighbourhood_number",
+   "status": "pass",
+   "detail": "0 repeated neighbourhood_number values in 407 rows",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.areas",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "407 rows against 407 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.wards",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 1500)",
+   "value": 1,
+   "threshold": 1500
+  },
+  {
+   "source": "edmonton.wards",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.wards",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "12 rows against 12 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.homes_info",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 400)",
+   "value": 1,
+   "threshold": 400
+  },
+  {
+   "source": "edmonton.homes_info",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "420,751 rows against 420,751 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 400)",
+   "value": 1,
+   "threshold": 400
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "missing_geometry",
+   "status": "pass",
+   "detail": "0 of 370,957 records have no location (left out)",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "duplicate_account_number",
+   "status": "pass",
+   "detail": "0 repeated records left out",
+   "value": 0,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 362,816 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "invalid_area_code",
+   "status": "pass",
+   "detail": "0 records carry a community code with no boundary, 0 have none (0.00%)",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "year_out_of_range",
+   "status": "pass",
+   "detail": "0 years outside 1850 to 2027; 0 unknown",
+   "value": 0.0,
+   "threshold": 0.01
+  },
+  {
+   "source": "edmonton.homes",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "370,957 rows against 370,957 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.playground",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 45)",
+   "value": 1,
+   "threshold": 45
+  },
+  {
+   "source": "edmonton.amenity.playground",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.playground",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 661 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.playground",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "661 rows against 661 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.playground",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 661 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.amenity.park",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 45)",
+   "value": 1,
+   "threshold": 45
+  },
+  {
+   "source": "edmonton.amenity.park",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.park",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 1,121 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.park",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "1,121 rows against 1,121 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.park",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 1,121 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.amenity.transit_stop",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-10-30 (11 days ago; expected within 120)",
+   "value": 11,
+   "threshold": 120
+  },
+  {
+   "source": "edmonton.amenity.transit_stop",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.transit_stop",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 6,587 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.transit_stop",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "6,587 rows against 6,587 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.transit_stop",
+   "check": "outside_city_extent",
+   "status": "warn",
+   "detail": "93 of 6,587 locations fall outside the city extent",
+   "value": 0.01412,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.amenity.community_centre",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-09 (1 days ago; expected within 45)",
+   "value": 1,
+   "threshold": 45
+  },
+  {
+   "source": "edmonton.amenity.community_centre",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.community_centre",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 141 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.community_centre",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "141 rows against 141 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.community_centre",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 141 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.amenity.rec_centre",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-10 (0 days ago; expected within 45)",
+   "value": 0,
+   "threshold": 45
+  },
+  {
+   "source": "edmonton.amenity.rec_centre",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.rec_centre",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 19 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.rec_centre",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "19 rows against 19 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.rec_centre",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 19 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.amenity.library",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-04 (6 days ago; expected within 45)",
+   "value": 6,
+   "threshold": 45
+  },
+  {
+   "source": "edmonton.amenity.library",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.amenity.library",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 22 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "edmonton.amenity.library",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "22 rows against 22 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.amenity.library",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 22 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "edmonton.wards",
+   "check": "homes_outside_wards",
+   "status": "pass",
+   "detail": "0 of 362,816 homes fall outside every ward",
+   "value": 0,
+   "threshold": null
+  },
+  {
+   "source": "edmonton.osm",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "2,086 rows against 2,086 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "edmonton.people.census2021",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2023-09-27 (1140 days ago; expected within 2000)",
+   "value": 1140,
+   "threshold": 2000
+  },
+  {
+   "source": "edmonton.people.census_boundaries",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2023-06-23 (1236 days ago; expected within 2000)",
+   "value": 1236,
+   "threshold": 2000
+  },
+  {
+   "source": "edmonton.people.census2021",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "98.7% of dwelling units are in areas with a census count",
+   "value": 0.9874,
+   "threshold": 0.9
+  },
+  {
+   "source": "edmonton.people.census2021",
+   "check": "residents_without_homes",
+   "status": "pass",
+   "detail": "0 census residents are in areas with no homes on the roll (boundaries changed since the census, or the area code did not match)",
+   "value": 0,
+   "threshold": 5053
+  },
+  {
+   "source": "edmonton.people.census2021",
+   "check": "total",
+   "status": "pass",
+   "detail": "1,010,595 residents against the published 1,010,595",
+   "value": 0.0,
+   "threshold": 0.005
+  }
+ ]
+}
