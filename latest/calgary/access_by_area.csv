@@ -1310,15 +1310,15 @@ LEG,Legacy,playground|private,5624.0,1760.0,0.761,400,1.0,800,0.6989,0.8664,258,
 LEG,Legacy,park|city,5624.0,1760.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
 LEG,Legacy,park|private,5624.0,1760.0,1.0,400,1.0,800,1.0,1.0,80,no_gap
 LEB,Lewisburg,playground,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
-LEB,Lewisburg,park,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
+LEB,Lewisburg,park,284.0,278.0,1.0,400,1.0,800,1.0,,127,no_gap
 LEB,Lewisburg,transit_stop,284.0,278.0,0.0,400,0.2782,800,0.0,,>800,gap_check
 LEB,Lewisburg,community_centre,284.0,278.0,0.0,800,0.3204,1600,0.0,,>1600,gap_check
 LEB,Lewisburg,rec_centre,284.0,278.0,0.0,2000,1.0,5000,0.0,,3329,gap_check
 LEB,Lewisburg,library,284.0,278.0,0.0,2000,1.0,5000,0.0,,3562,gap_check
 LEB,Lewisburg,playground|city,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
 LEB,Lewisburg,playground|private,284.0,278.0,0.7254,400,1.0,800,0.7266,,234,no_gap
-LEB,Lewisburg,park|city,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
-LEB,Lewisburg,park|private,284.0,278.0,1.0,400,1.0,800,1.0,,126,no_gap
+LEB,Lewisburg,park|city,284.0,278.0,1.0,400,1.0,800,1.0,,127,no_gap
+LEB,Lewisburg,park|private,284.0,278.0,1.0,400,1.0,800,1.0,,127,no_gap
 LPK,Lincoln Park,playground,1148.0,0.0,1.0,400,1.0,800,,1.0,232,no_gap
 LPK,Lincoln Park,park,1148.0,0.0,1.0,400,1.0,800,,1.0,199,no_gap
 LPK,Lincoln Park,transit_stop,1148.0,0.0,1.0,400,1.0,800,,1.0,202,no_gap
@@ -1820,15 +1820,15 @@ REN,Renfrew,playground|private,3176.0,171.0,0.841,400,1.0,800,0.9064,0.8377,241,
 REN,Renfrew,park|city,3176.0,171.0,0.9946,400,1.0,800,1.0,0.9943,88,no_gap
 REN,Renfrew,park|private,3176.0,171.0,0.9946,400,1.0,800,1.0,0.9943,88,no_gap
 RRC,Ricardo Ranch,playground,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
-RRC,Ricardo Ranch,park,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
+RRC,Ricardo Ranch,park,292.0,286.0,0.8151,400,1.0,800,0.8182,,168,no_gap
 RRC,Ricardo Ranch,transit_stop,292.0,286.0,0.2192,400,1.0,800,0.2098,,478,gap_check
 RRC,Ricardo Ranch,community_centre,292.0,286.0,0.0,800,0.0,1600,0.0,,>1600,gap_check
 RRC,Ricardo Ranch,rec_centre,292.0,286.0,0.0205,2000,1.0,5000,0.0105,,2169,gap_check
 RRC,Ricardo Ranch,library,292.0,286.0,0.0,2000,1.0,5000,0.0,,2353,gap_check
 RRC,Ricardo Ranch,playground|city,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
 RRC,Ricardo Ranch,playground|private,292.0,286.0,1.0,400,1.0,800,1.0,,177,no_gap
-RRC,Ricardo Ranch,park|city,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
-RRC,Ricardo Ranch,park|private,292.0,286.0,0.0034,400,0.911,800,0.0035,,627,gap_check
+RRC,Ricardo Ranch,park|city,292.0,286.0,0.8151,400,1.0,800,0.8182,,168,no_gap
+RRC,Ricardo Ranch,park|private,292.0,286.0,0.8151,400,1.0,800,0.8182,,168,no_gap
 RIC,Richmond,playground,2476.0,171.0,0.9919,400,1.0,800,1.0,0.9912,193,no_gap
 RIC,Richmond,park,2476.0,171.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
 RIC,Richmond,transit_stop,2476.0,171.0,0.9943,400,1.0,800,1.0,0.9939,174,no_gap

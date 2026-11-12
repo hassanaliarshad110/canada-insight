@@ -1,0 +1,43 @@
+{
+ "city": "calgary",
+ "built_at": "2026-11-12T19:34:53Z",
+ "version": "0.5.0",
+ "files": [
+  "access.json",
+  "access_by_area.csv",
+  "amenities/community_centre.geojson",
+  "amenities/library.geojson",
+  "amenities/park-city.geojson",
+  "amenities/park-private.geojson",
+  "amenities/park.geojson",
+  "amenities/playground-city.geojson",
+  "amenities/playground-private.geojson",
+  "amenities/playground.geojson",
+  "amenities/rec_centre.geojson",
+  "amenities/transit_stop.geojson",
+  "areas.geojson",
+  "osm_features.json",
+  "quality.json",
+  "sources.json",
+  "wards.geojson"
+ ],
+ "sha256": {
+  "access.json": "77971fe50780c0c1a5df2c591920bd293461a32acf4a70a4677f07ef719ac14b",
+  "access_by_area.csv": "5e2ae06f2ab9f9e27c143da684207d8fedf5d6621fff96b9e5be68c54ea24666",
+  "amenities/community_centre.geojson": "4622874c89276dbb7f7ecb29dd63d7a42ce803f7596b75979160e90fed676596",
+  "amenities/library.geojson": "83dba4b9219b1568fd17becd1ac85527a539e18261d6eef100ed1d0340b93c4f",
+  "amenities/park-city.geojson": "3a2cc105c9f129bcc77932cd8f6d77716b9c307000338d33c1ae061d0461a84c",
+  "amenities/park-private.geojson": "954abc87df0b853cbdce43d2d5a18f5100d6ceca1df3b07f2a8e4ab007f5ed68",
+  "amenities/park.geojson": "41d9a308c6432963cc6098d98f6ea6510cc65fea27338e1f5dd1a5ff05e344c8",
+  "amenities/playground-city.geojson": "89705bd4c8560bf978fba7326582a16bd2424fefd0b93a2e2c56efd6c421f7cf",
+  "amenities/playground-private.geojson": "9600a9320c6c1bf93638cb55609da7d7c8c29719d59718d54409f3b54ec00ea7",
+  "amenities/playground.geojson": "0ac4a4a5248fcd6903fb46589c1996d888ffedb8b0c138cd64c459f3ee80bcff",
+  "amenities/rec_centre.geojson": "74a2121ec6c0a6ae46c0136de6ccd32b59951f8e13c9be3fbe53394bb70784aa",
+  "amenities/transit_stop.geojson": "18fe8ff117aba210932c14eda82a6a488f8f316d80f87d43e64665729aca505c",
+  "areas.geojson": "5774814aa8b165236cd3be322edeaf0d2313505378abef9bb6b9d7fd2f2d2027",
+  "osm_features.json": "7c37373dc94e4de06665d7da65eeddf8549ad0eb9e43fb34e2243ab4279c9b9d",
+  "quality.json": "86dc4a43b69ed31fa3b0d9a2a242a4bd241c939827e7f995b9d6398297544ce1",
+  "sources.json": "41b785eddc7974c7c7c158116e1334d9b8033c121d3e09ee889a1be55d43fd2d",
+  "wards.geojson": "25c4cdf1f21213aaba80933f5b066a2c5e5f3f2865f2e878f056a60395b122bf"
+ }
+}

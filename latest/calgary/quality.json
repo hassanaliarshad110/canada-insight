@@ -1,14 +1,14 @@
 {
  "city": "calgary",
- "built_at": "2026-11-11T19:20:40Z",
+ "built_at": "2026-11-12T19:34:53Z",
  "overall": "warn",
  "checks": [
   {
    "source": "calgary.areas",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (10 days ago; expected within 400)",
-   "value": 10,
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 400)",
+   "value": 11,
    "threshold": 400
   },
   {
@@ -47,8 +47,8 @@
    "source": "calgary.wards",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (10 days ago; expected within 45)",
-   "value": 10,
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
    "threshold": 45
   },
   {
@@ -71,8 +71,8 @@
    "source": "calgary.homes",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (3 days ago; expected within 400)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 400)",
+   "value": 4,
    "threshold": 400
   },
   {
@@ -135,8 +135,8 @@
    "source": "calgary.amenity.playground",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (3 days ago; expected within 45)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 45)",
+   "value": 4,
    "threshold": 45
   },
   {
@@ -175,8 +175,8 @@
    "source": "calgary.amenity.park",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-05 (6 days ago; expected within 45)",
-   "value": 6,
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 45)",
+   "value": 0,
    "threshold": 45
   },
   {
@@ -191,7 +191,7 @@
    "source": "calgary.amenity.park",
    "check": "missing_location",
    "status": "pass",
-   "detail": "0 of 2,955 rows (0.00%) have no location",
+   "detail": "0 of 2,956 rows (0.00%) have no location",
    "value": 0.0,
    "threshold": 0.0
   },
@@ -199,15 +199,15 @@
    "source": "calgary.amenity.park",
    "check": "count_change",
    "status": "pass",
-   "detail": "2,955 rows against 2,955 in the previous build (+0.0%)",
-   "value": 0.0,
+   "detail": "2,956 rows against 2,955 in the previous build (+0.0%)",
+   "value": 0.0003,
    "threshold": 0.05
   },
   {
    "source": "calgary.amenity.park",
    "check": "outside_city_extent",
    "status": "pass",
-   "detail": "0 of 2,955 locations fall outside the city extent",
+   "detail": "0 of 2,956 locations fall outside the city extent",
    "value": 0.0,
    "threshold": 0.001
   },
@@ -215,8 +215,8 @@
    "source": "calgary.amenity.transit_stop",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-09-30 (42 days ago; expected within 120)",
-   "value": 42,
+   "detail": "last updated by the publisher 2026-09-30 (43 days ago; expected within 120)",
+   "value": 43,
    "threshold": 120
   },
   {
@@ -255,8 +255,8 @@
    "source": "calgary.amenity.community_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (10 days ago; expected within 45)",
-   "value": 10,
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
    "threshold": 45
   },
   {
@@ -295,8 +295,8 @@
    "source": "calgary.amenity.rec_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (3 days ago; expected within 45)",
-   "value": 3,
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 45)",
+   "value": 4,
    "threshold": 45
   },
   {
@@ -335,8 +335,8 @@
    "source": "calgary.amenity.library",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (10 days ago; expected within 45)",
-   "value": 10,
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
    "threshold": 45
   },
   {
@@ -399,7 +399,7 @@
    "source": "calgary.people.city_actual",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-11 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -415,7 +415,7 @@
    "source": "calgary.people.city_pace",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-11 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -431,7 +431,7 @@
    "source": "calgary.people.model",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-11 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -447,7 +447,7 @@
    "source": "calgary.people.census2021",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-11 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   }

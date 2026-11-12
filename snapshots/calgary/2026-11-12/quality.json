@@ -1,0 +1,455 @@
+{
+ "city": "calgary",
+ "built_at": "2026-11-12T19:34:53Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "source": "calgary.areas",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 400)",
+   "value": 11,
+   "threshold": 400
+  },
+  {
+   "source": "calgary.areas",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.areas",
+   "check": "missing_geometry",
+   "status": "pass",
+   "detail": "0 of 313 rows (0.00%) have no geometry",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.areas",
+   "check": "duplicate_comm_code",
+   "status": "pass",
+   "detail": "0 repeated comm_code values in 313 rows",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.areas",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "313 rows against 313 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.wards",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.wards",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.wards",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "14 rows against 14 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.homes",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 400)",
+   "value": 4,
+   "threshold": 400
+  },
+  {
+   "source": "calgary.homes",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.homes",
+   "check": "missing_geometry",
+   "status": "pass",
+   "detail": "0 of 501,999 records have no location (left out)",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.homes",
+   "check": "duplicate_roll_number",
+   "status": "warn",
+   "detail": "2,544 repeated records left out",
+   "value": 2544,
+   "threshold": null
+  },
+  {
+   "source": "calgary.homes",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 500,019 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.homes",
+   "check": "invalid_area_code",
+   "status": "pass",
+   "detail": "0 records carry a community code with no boundary, 0 have none (0.00%)",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.homes",
+   "check": "year_out_of_range",
+   "status": "pass",
+   "detail": "1,154 years outside 1850 to 2027; 424 unknown",
+   "value": 0.00231,
+   "threshold": 0.01
+  },
+  {
+   "source": "calgary.homes",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "502,619 rows against 502,619 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.playground",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 45)",
+   "value": 4,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.amenity.playground",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.playground",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 1,115 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.playground",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "1,115 rows against 1,115 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.playground",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 1,115 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.amenity.park",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 45)",
+   "value": 0,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.amenity.park",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.park",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 2,956 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.park",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "2,956 rows against 2,955 in the previous build (+0.0%)",
+   "value": 0.0003,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.park",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 2,956 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.amenity.transit_stop",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-09-30 (43 days ago; expected within 120)",
+   "value": 43,
+   "threshold": 120
+  },
+  {
+   "source": "calgary.amenity.transit_stop",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.transit_stop",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 6,213 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.transit_stop",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "6,213 rows against 6,213 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.transit_stop",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 6,213 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.amenity.community_centre",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.amenity.community_centre",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.community_centre",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 109 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.community_centre",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "109 rows against 109 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.community_centre",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 109 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.amenity.rec_centre",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-08 (4 days ago; expected within 45)",
+   "value": 4,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.amenity.rec_centre",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.rec_centre",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 27 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.rec_centre",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "27 rows against 27 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.rec_centre",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 27 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.amenity.library",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-01 (11 days ago; expected within 45)",
+   "value": 11,
+   "threshold": 45
+  },
+  {
+   "source": "calgary.amenity.library",
+   "check": "schema",
+   "status": "pass",
+   "detail": "all expected fields present",
+   "value": null,
+   "threshold": null
+  },
+  {
+   "source": "calgary.amenity.library",
+   "check": "missing_location",
+   "status": "pass",
+   "detail": "0 of 21 rows (0.00%) have no location",
+   "value": 0.0,
+   "threshold": 0.0
+  },
+  {
+   "source": "calgary.amenity.library",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "21 rows against 21 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.amenity.library",
+   "check": "outside_city_extent",
+   "status": "pass",
+   "detail": "0 of 21 locations fall outside the city extent",
+   "value": 0.0,
+   "threshold": 0.001
+  },
+  {
+   "source": "calgary.wards",
+   "check": "homes_outside_wards",
+   "status": "pass",
+   "detail": "0 of 500,019 homes fall outside every ward",
+   "value": 0,
+   "threshold": null
+  },
+  {
+   "source": "calgary.osm",
+   "check": "count_change",
+   "status": "pass",
+   "detail": "4,383 rows against 4,383 in the previous build (+0.0%)",
+   "value": 0.0,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.city_pace",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.city_pace",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.model",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.model",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.census2021",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "97.7% of dwelling units are in areas with an estimate",
+   "value": 0.9768,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.census2021",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-12 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  }
+ ]
+}
