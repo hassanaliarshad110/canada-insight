@@ -1,6 +1,6 @@
 {
  "city": "edmonton",
- "built_at": "2026-11-12T19:42:34Z",
+ "built_at": "2026-11-13T19:24:39Z",
  "sources": [
   {
    "id": "edmonton.areas",
@@ -14,7 +14,7 @@
    "unit": "one neighbourhood boundary",
    "limitations": [],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:34:58Z",
+   "fetched_at": "2026-11-13T19:16:42Z",
    "rows": 407,
    "query": null,
    "sha256": "2eee88cc0102a89a51576051bc057118dd557530954449ddb408e975c65bf8a9",
@@ -34,7 +34,7 @@
    "unit": "one ward boundary",
    "limitations": [],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:35:00Z",
+   "fetched_at": "2026-11-13T19:16:51Z",
    "rows": 12,
    "query": null,
    "sha256": "216a26b3282247c812fb4f7e280a9da8bf2d1b48a6f498b0eea782084b6ddd00",
@@ -50,11 +50,11 @@
    "api": "https://data.edmonton.ca/resource/dkk9-cj3x.json",
    "licence": "City of Edmonton Open Data Terms of Use",
    "coverage": "whole city",
-   "period": "current roll (read 2026-11-12)",
+   "period": "current roll (read 2026-11-13)",
    "unit": "one property",
    "limitations": [],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:35:04Z",
+   "fetched_at": "2026-11-13T19:16:52Z",
    "rows": 420751,
    "query": "year_built IS NOT NULL",
    "sha256": "1033bdb6b95beded2d5275321d95976ac320e8753e1bb619fc3b2176d33e5004",
@@ -70,14 +70,14 @@
    "api": "https://data.edmonton.ca/resource/q7d6-ambg.json",
    "licence": "City of Edmonton Open Data Terms of Use",
    "coverage": "whole city",
-   "period": "current roll (read 2026-11-12)",
+   "period": "current roll (read 2026-11-13)",
    "unit": "one assessed residential property (a house, a townhouse, a condominium unit or an apartment building)",
    "limitations": [
     "Apartment buildings are one account each; their homes are estimated from gross floor area at 185 m\u00b2 per home, calibrated on 2021 Census households (checked in apartment neighbourhoods such as Downtown and W\u00eehkw\u00eant\u00f4win).",
     "Properties assessed under $40,000 are left out (mostly parking stalls and storage units)."
    ],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:35:46Z",
+   "fetched_at": "2026-11-13T19:17:15Z",
    "rows": 370957,
    "query": "tax_class in('Residential','Other Residential') AND assessed_value >= 40000",
    "sha256": "7f66fe617f5a23aff52a98334a7460e487cba1534a5465cdaec36e7aed5efaed",
@@ -103,7 +103,7 @@
     "City-maintained playgrounds; school and other playgrounds come from OpenStreetMap where mapped."
    ],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:36:26Z",
+   "fetched_at": "2026-11-13T19:18:05Z",
    "rows": 661,
    "query": null,
    "sha256": "b801871844cd6e7255e4f868937ebb57173e9c2409dc09242c6948f4eab0ae41",
@@ -125,7 +125,7 @@
     "Active parks of every class, from pocket parks to natural areas and river valley parks."
    ],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:36:28Z",
+   "fetched_at": "2026-11-13T19:18:07Z",
    "rows": 1121,
    "query": "status='Active' AND class not in('PUL','Unknown','Other Land Type')",
    "sha256": "a9b5b204efd783208ddf07b65cd711b689a95ca6d5319c70794b50af6628aafc",
@@ -146,11 +146,11 @@
    "limitations": [
     "Bus and LRT stops in the current timetable; how often they are served is not measured yet."
    ],
-   "publisher_updated": "2026-10-30",
-   "fetched_at": "2026-11-12T19:36:40Z",
-   "rows": 6587,
+   "publisher_updated": "2026-11-13",
+   "fetched_at": "2026-11-13T19:18:11Z",
+   "rows": 6645,
    "query": "location_type = 0",
-   "sha256": "541f180f2a8b4b7d1706272faf9dcf1c0d05446e91d7495cce0447cd6a18219b",
+   "sha256": "e964697588acebcbaea3adcde5a37733d8050226c72f78e4c58368f44fd586fc",
    "transformations": [
     "distance to the nearest one from every home"
    ]
@@ -169,7 +169,7 @@
     "Community league halls as listed by the City; programs and opening hours are not measured."
    ],
    "publisher_updated": "2026-11-09",
-   "fetched_at": "2026-11-12T19:36:45Z",
+   "fetched_at": "2026-11-13T19:18:14Z",
    "rows": 141,
    "query": null,
    "sha256": "a7424c6dada0993e5a1425edc92cadd79b4c3ea51b206664ceb99d63c76ac678",
@@ -190,8 +190,8 @@
    "limitations": [
     "City recreation, leisure and fitness centres (19); arenas, outdoor pools and sports fields are left out."
    ],
-   "publisher_updated": "2026-11-12",
-   "fetched_at": "2026-11-12T19:36:48Z",
+   "publisher_updated": "2026-11-13",
+   "fetched_at": "2026-11-13T19:18:14Z",
    "rows": 19,
    "query": "facility_type='Recreation Centre'",
    "sha256": "e5073e8ec7e8f425374aabf8e5cc1947b8512e605121698b181c09d0451102fa",
@@ -213,7 +213,7 @@
     "Edmonton Public Library branches."
    ],
    "publisher_updated": "2026-11-11",
-   "fetched_at": "2026-11-12T19:36:51Z",
+   "fetched_at": "2026-11-13T19:18:17Z",
    "rows": 22,
    "query": null,
    "sha256": "6081059fff1fbc5cd05b1083427f8cb6234d402caffa969ad070acb8a0951cc2",
@@ -235,8 +235,8 @@
     "Volunteer-mapped: coverage is uneven, and a missing feature means nobody has mapped it.",
     "Only features not already in the city's inventory are added (matching rules in the method)."
    ],
-   "publisher_updated": "2026-11-12",
-   "fetched_at": "2026-11-12T19:36:53Z",
+   "publisher_updated": "2026-11-13",
+   "fetched_at": "2026-11-13T19:18:20Z",
    "rows": 2086,
    "query": null,
    "sha256": "637b8ca19258bb9905dde958f136c6d734702a79d06c8d8be1c2c923ac02ec7b",
@@ -260,7 +260,7 @@
     "Neighbourhoods renamed, renumbered or split since the census (for example Oliver, now W\u00eehkw\u00eant\u00f4win) are matched by the census-day boundary: their residents go to today's neighbourhoods in proportion to the homes inside it that were built before 2021."
    ],
    "publisher_updated": "2023-09-27",
-   "fetched_at": "2026-11-12T19:40:58Z",
+   "fetched_at": "2026-11-13T19:22:33Z",
    "rows": 557,
    "query": null,
    "sha256": "d2892441b1393f518b6ffe301e559f57d2a290b3a77906bbc97c0050169e9493",
@@ -285,7 +285,7 @@
    "unit": "one neighbourhood",
    "limitations": [],
    "publisher_updated": "2023-06-23",
-   "fetched_at": "2026-11-12T19:41:07Z",
+   "fetched_at": "2026-11-13T19:22:43Z",
    "rows": 403,
    "query": null,
    "sha256": null,
@@ -307,7 +307,7 @@
     "An estimate: no population figure between Censuses is published by neighbourhood."
    ],
    "publisher_updated": null,
-   "fetched_at": "2026-11-12T19:41:07Z",
+   "fetched_at": "2026-11-13T19:22:44Z",
    "rows": 326,
    "query": null,
    "sha256": null,

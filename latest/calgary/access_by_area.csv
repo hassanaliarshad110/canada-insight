@@ -1389,14 +1389,14 @@ MPL,Maple Ridge,playground|city,806.0,1.0,0.4417,400,1.0,800,0.0,0.4422,432,gap
 MPL,Maple Ridge,playground|private,806.0,1.0,0.8486,400,1.0,800,1.0,0.8484,285,no_gap
 MPL,Maple Ridge,park|city,806.0,1.0,0.9988,400,1.0,800,1.0,0.9988,119,no_gap
 MPL,Maple Ridge,park|private,806.0,1.0,0.9988,400,1.0,800,1.0,0.9988,119,no_gap
-MRL,Marlborough,playground,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,183,no_gap
+MRL,Marlborough,playground,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,179,no_gap
 MRL,Marlborough,park,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
 MRL,Marlborough,transit_stop,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,151,no_gap
 MRL,Marlborough,community_centre,2586.0,1.0,0.71,800,1.0,1600,1.0,0.7099,636,no_gap
 MRL,Marlborough,rec_centre,2586.0,1.0,0.7873,2000,1.0,5000,1.0,0.7872,1780,no_gap
 MRL,Marlborough,library,2586.0,1.0,0.8983,2000,1.0,5000,1.0,0.8983,1552,no_gap
 MRL,Marlborough,playground|city,2586.0,1.0,0.8399,400,1.0,800,1.0,0.8398,219,no_gap
-MRL,Marlborough,playground|private,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,183,no_gap
+MRL,Marlborough,playground|private,2586.0,1.0,0.9977,400,1.0,800,1.0,0.9977,179,no_gap
 MRL,Marlborough,park|city,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
 MRL,Marlborough,park|private,2586.0,1.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
 MPK,Marlborough Park,playground,2818.0,0.0,0.9698,400,1.0,800,,0.9698,199,no_gap

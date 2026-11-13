@@ -71,7 +71,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5010,Allendale,park|private,1088.0,76.0,0.9963,400,1.0,800,1.0,0.996,189,no_gap
 5505,Ambleside,playground,2740.0,41.0,0.7785,400,1.0,800,0.6341,0.7807,293,no_gap
 5505,Ambleside,park,2740.0,41.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
-5505,Ambleside,transit_stop,2740.0,41.0,0.9876,400,1.0,800,1.0,0.9874,168,no_gap
+5505,Ambleside,transit_stop,2740.0,41.0,0.988,400,1.0,800,1.0,0.9878,167,no_gap
 5505,Ambleside,community_centre,2740.0,41.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
 5505,Ambleside,rec_centre,2740.0,41.0,0.0,2000,1.0,5000,0.0,0.0,3457,gap
 5505,Ambleside,library,2740.0,41.0,0.0,2000,0.9164,5000,0.0,0.0,4424,gap
@@ -131,7 +131,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6445,Aster,park|private,932.0,923.0,0.9592,400,1.0,800,0.9621,0.6667,144,no_gap
 3010,Athlone,playground,1236.0,32.0,0.4159,400,0.9021,800,0.5312,0.4128,494,gap
 3010,Athlone,park,1236.0,32.0,0.9992,400,1.0,800,1.0,0.9992,83,no_gap
-3010,Athlone,transit_stop,1236.0,32.0,0.8608,400,1.0,800,1.0,0.8571,173,no_gap
+3010,Athlone,transit_stop,1236.0,32.0,0.8633,400,1.0,800,1.0,0.8596,171,no_gap
 3010,Athlone,community_centre,1236.0,32.0,0.7395,800,1.0,1600,1.0,0.7326,572,no_gap
 3010,Athlone,rec_centre,1236.0,32.0,0.0307,2000,1.0,5000,0.0,0.0316,2648,gap
 3010,Athlone,library,1236.0,32.0,1.0,2000,1.0,5000,1.0,1.0,713,no_gap
@@ -151,7 +151,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6020,Avonmore,park|private,925.0,16.0,1.0,400,1.0,800,1.0,1.0,112,no_gap
 2020,Balwin,playground,1476.0,14.0,0.8523,400,1.0,800,1.0,0.8509,222,no_gap
 2020,Balwin,park,1476.0,14.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
-2020,Balwin,transit_stop,1476.0,14.0,0.9851,400,1.0,800,1.0,0.985,156,no_gap
+2020,Balwin,transit_stop,1476.0,14.0,0.9851,400,1.0,800,1.0,0.985,149,no_gap
 2020,Balwin,community_centre,1476.0,14.0,0.9424,800,1.0,1600,0.9286,0.9425,464,no_gap
 2020,Balwin,rec_centre,1476.0,14.0,0.8896,2000,1.0,5000,0.9286,0.8892,1505,no_gap
 2020,Balwin,library,1476.0,14.0,0.8449,2000,1.0,5000,1.0,0.8434,1775,no_gap
@@ -271,7 +271,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2070,Belmont,park|private,1898.0,0.0,1.0,400,1.0,800,,1.0,137,no_gap
 2080,Belvedere,playground,2183.0,8.0,0.8878,400,1.0,800,1.0,0.8874,265,no_gap
 2080,Belvedere,park,2183.0,8.0,1.0,400,1.0,800,1.0,1.0,121,no_gap
-2080,Belvedere,transit_stop,2183.0,8.0,0.9913,400,1.0,800,1.0,0.9913,136,no_gap
+2080,Belvedere,transit_stop,2183.0,8.0,0.9913,400,1.0,800,1.0,0.9913,135,no_gap
 2080,Belvedere,community_centre,2183.0,8.0,0.8612,800,1.0,1600,1.0,0.8607,419,no_gap
 2080,Belvedere,rec_centre,2183.0,8.0,0.6619,2000,1.0,5000,1.0,0.6607,1690,no_gap
 2080,Belvedere,library,2183.0,8.0,1.0,2000,1.0,5000,1.0,1.0,1387,no_gap
@@ -471,7 +471,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3060,Caernarvon,park|private,1593.0,0.0,0.9994,400,1.0,800,,0.9994,123,no_gap
 3070,Calder,playground,1539.0,65.0,0.8343,400,1.0,800,0.8615,0.8331,238,no_gap
 3070,Calder,park,1539.0,65.0,1.0,400,1.0,800,1.0,1.0,141,no_gap
-3070,Calder,transit_stop,1539.0,65.0,0.9831,400,1.0,800,1.0,0.9824,160,no_gap
+3070,Calder,transit_stop,1539.0,65.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
 3070,Calder,community_centre,1539.0,65.0,1.0,800,1.0,1600,1.0,1.0,481,no_gap
 3070,Calder,rec_centre,1539.0,65.0,1.0,2000,1.0,5000,1.0,1.0,1166,no_gap
 3070,Calder,library,1539.0,65.0,1.0,2000,1.0,5000,1.0,1.0,930,no_gap
@@ -601,7 +601,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5466,Cashman,park|private,1.0,1.0,1.0,400,1.0,800,1.0,,46,too_few_homes
 2130,Casselman,playground,1337.0,0.0,0.362,400,1.0,800,,0.362,468,gap
 2130,Casselman,park,1337.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
-2130,Casselman,transit_stop,1337.0,0.0,1.0,400,1.0,800,,1.0,106,no_gap
+2130,Casselman,transit_stop,1337.0,0.0,1.0,400,1.0,800,,1.0,108,no_gap
 2130,Casselman,community_centre,1337.0,0.0,0.8145,800,1.0,1600,,0.8145,529,no_gap
 2130,Casselman,rec_centre,1337.0,0.0,1.0,2000,1.0,5000,,1.0,1342,no_gap
 2130,Casselman,library,1337.0,0.0,1.0,2000,1.0,5000,,1.0,1562,no_gap
@@ -811,7 +811,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 1080,Delton,park|private,771.0,14.0,0.9909,400,1.0,800,1.0,0.9908,164,no_gap
 2230,Delwood,playground,1333.0,8.0,0.5229,400,0.988,800,0.75,0.5215,388,no_gap
 2230,Delwood,park,1333.0,8.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
-2230,Delwood,transit_stop,1333.0,8.0,1.0,400,1.0,800,1.0,1.0,124,no_gap
+2230,Delwood,transit_stop,1333.0,8.0,1.0,400,1.0,800,1.0,1.0,115,no_gap
 2230,Delwood,community_centre,1333.0,8.0,0.9827,800,1.0,1600,1.0,0.9826,490,no_gap
 2230,Delwood,rec_centre,1333.0,8.0,1.0,2000,1.0,5000,1.0,1.0,1187,no_gap
 2230,Delwood,library,1333.0,8.0,1.0,2000,1.0,5000,1.0,1.0,1120,no_gap
@@ -871,7 +871,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5160,Duggan,park|private,1528.0,2.0,0.9771,400,1.0,800,1.0,0.9771,168,no_gap
 3180,Dunluce,playground,2221.0,5.0,0.4831,400,0.9428,800,1.0,0.4819,426,gap
 3180,Dunluce,park,2221.0,5.0,0.9478,400,1.0,800,1.0,0.9477,138,no_gap
-3180,Dunluce,transit_stop,2221.0,5.0,1.0,400,1.0,800,1.0,1.0,158,no_gap
+3180,Dunluce,transit_stop,2221.0,5.0,1.0,400,1.0,800,1.0,1.0,104,no_gap
 3180,Dunluce,community_centre,2221.0,5.0,0.8064,800,1.0,1600,0.0,0.8082,638,no_gap
 3180,Dunluce,rec_centre,2221.0,5.0,0.0,2000,1.0,5000,0.0,0.0,4032,gap
 3180,Dunluce,library,2221.0,5.0,0.9874,2000,1.0,5000,1.0,0.9874,1346,no_gap
@@ -1081,7 +1081,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6230,Forest Heights,park|private,1663.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
 2280,Fraser,playground,1696.0,279.0,0.4729,400,0.9021,800,0.0036,0.5653,402,gap
 2280,Fraser,park,1696.0,279.0,0.9965,400,1.0,800,0.9928,0.9972,106,no_gap
-2280,Fraser,transit_stop,1696.0,279.0,0.9965,400,1.0,800,1.0,0.9958,127,no_gap
+2280,Fraser,transit_stop,1696.0,279.0,0.9965,400,1.0,800,1.0,0.9958,125,no_gap
 2280,Fraser,community_centre,1696.0,279.0,0.8933,800,1.0,1600,0.6057,0.9499,421,no_gap
 2280,Fraser,rec_centre,1696.0,279.0,0.2282,2000,1.0,5000,0.0036,0.2724,2316,gap
 2280,Fraser,library,1696.0,279.0,0.2718,2000,1.0,5000,0.0036,0.3246,2281,gap
@@ -1131,7 +1131,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4720,Glastonbury,park|private,2807.0,332.0,0.9323,400,1.0,800,1.0,0.9232,164,no_gap
 2290,Glengarry,playground,1221.0,0.0,0.6364,400,1.0,800,,0.6364,334,no_gap
 2290,Glengarry,park,1221.0,0.0,1.0,400,1.0,800,,1.0,99,no_gap
-2290,Glengarry,transit_stop,1221.0,0.0,1.0,400,1.0,800,,1.0,113,no_gap
+2290,Glengarry,transit_stop,1221.0,0.0,1.0,400,1.0,800,,1.0,107,no_gap
 2290,Glengarry,community_centre,1221.0,0.0,0.8165,800,1.0,1600,,0.8165,488,no_gap
 2290,Glengarry,rec_centre,1221.0,0.0,1.0,2000,1.0,5000,,1.0,577,no_gap
 2290,Glengarry,library,1221.0,0.0,0.2998,2000,1.0,5000,,0.2998,2379,gap
@@ -1141,7 +1141,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2290,Glengarry,park|private,1221.0,0.0,1.0,400,1.0,800,,1.0,99,no_gap
 3200,Glenora,playground,1551.0,83.0,0.6099,400,0.9987,800,0.8554,0.596,348,no_gap
 3200,Glenora,park,1551.0,83.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
-3200,Glenora,transit_stop,1551.0,83.0,0.6505,400,0.9632,800,0.5663,0.6553,256,no_gap
+3200,Glenora,transit_stop,1551.0,83.0,0.9691,400,1.0,800,0.9157,0.9721,162,no_gap
 3200,Glenora,community_centre,1551.0,83.0,0.94,800,1.0,1600,0.9277,0.9407,443,no_gap
 3200,Glenora,rec_centre,1551.0,83.0,0.7299,2000,1.0,5000,0.7952,0.7262,1921,no_gap
 3200,Glenora,library,1551.0,83.0,0.3146,2000,1.0,5000,0.4458,0.3072,2237,gap
@@ -1151,7 +1151,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3200,Glenora,park|private,1551.0,83.0,1.0,400,1.0,800,1.0,1.0,105,no_gap
 5578,Glenridding Heights,playground,1881.0,371.0,0.4833,400,0.9357,800,0.1779,0.5583,400,gap
 5578,Glenridding Heights,park,1881.0,371.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
-5578,Glenridding Heights,transit_stop,1881.0,371.0,0.924,400,1.0,800,0.8464,0.943,171,no_gap
+5578,Glenridding Heights,transit_stop,1881.0,371.0,0.9447,400,1.0,800,0.8464,0.9689,168,no_gap
 5578,Glenridding Heights,community_centre,1881.0,371.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap
 5578,Glenridding Heights,rec_centre,1881.0,371.0,0.0,2000,1.0,5000,0.0,0.0,4179,gap
 5578,Glenridding Heights,library,1881.0,371.0,0.0,2000,0.9107,5000,0.0,0.0,4527,gap
@@ -1421,7 +1421,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6310,Holyrood,park|private,1602.0,370.0,0.9831,400,1.0,800,0.9973,0.9789,141,no_gap
 2350,Homesteader,playground,1293.0,7.0,0.6721,400,1.0,800,1.0,0.6703,341,no_gap
 2350,Homesteader,park,1293.0,7.0,1.0,400,1.0,800,1.0,1.0,83,no_gap
-2350,Homesteader,transit_stop,1293.0,7.0,0.976,400,1.0,800,1.0,0.9759,181,no_gap
+2350,Homesteader,transit_stop,1293.0,7.0,0.9799,400,1.0,800,1.0,0.9798,170,no_gap
 2350,Homesteader,community_centre,1293.0,7.0,0.9234,800,1.0,1600,1.0,0.923,430,no_gap
 2350,Homesteader,rec_centre,1293.0,7.0,0.7718,2000,1.0,5000,0.0,0.776,1780,no_gap
 2350,Homesteader,library,1293.0,7.0,0.9258,2000,1.0,5000,1.0,0.9253,1591,no_gap
@@ -1501,7 +1501,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4230,Jasper Park,park|private,744.0,34.0,1.0,400,1.0,800,1.0,1.0,143,no_gap
 6340,Kameyosek,playground,912.0,0.0,0.6678,400,1.0,800,,0.6678,333,no_gap
 6340,Kameyosek,park,912.0,0.0,0.9923,400,1.0,800,,0.9923,121,no_gap
-6340,Kameyosek,transit_stop,912.0,0.0,1.0,400,1.0,800,,1.0,152,no_gap
+6340,Kameyosek,transit_stop,912.0,0.0,1.0,400,1.0,800,,1.0,151,no_gap
 6340,Kameyosek,community_centre,912.0,0.0,1.0,800,1.0,1600,,1.0,311,no_gap
 6340,Kameyosek,rec_centre,912.0,0.0,1.0,2000,1.0,5000,,1.0,667,no_gap
 6340,Kameyosek,library,912.0,0.0,1.0,2000,1.0,5000,,1.0,941,no_gap
@@ -1551,7 +1551,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2380,Kennedale Industrial,park|private,55.0,0.0,0.4727,400,1.0,800,,0.4727,523,too_few_homes
 3250,Kensington,playground,1409.0,11.0,0.5039,400,1.0,800,0.5455,0.5036,394,no_gap
 3250,Kensington,park,1409.0,11.0,0.9723,400,1.0,800,1.0,0.9721,151,no_gap
-3250,Kensington,transit_stop,1409.0,11.0,1.0,400,1.0,800,1.0,1.0,138,no_gap
+3250,Kensington,transit_stop,1409.0,11.0,1.0,400,1.0,800,1.0,1.0,121,no_gap
 3250,Kensington,community_centre,1409.0,11.0,1.0,800,1.0,1600,1.0,1.0,470,no_gap
 3250,Kensington,rec_centre,1409.0,11.0,0.9681,2000,1.0,5000,1.0,0.9678,1346,no_gap
 3250,Kensington,library,1409.0,11.0,1.0,2000,1.0,5000,1.0,1.0,1108,no_gap
@@ -1601,7 +1601,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2410,Kilkenny,park|private,2026.0,0.0,0.9951,400,1.0,800,,0.9951,137,no_gap
 2420,Killarney,playground,1294.0,22.0,0.5711,400,1.0,800,0.9545,0.5645,315,no_gap
 2420,Killarney,park,1294.0,22.0,0.9034,400,1.0,800,1.0,0.9017,157,no_gap
-2420,Killarney,transit_stop,1294.0,22.0,0.8918,400,1.0,800,0.9545,0.8907,224,no_gap
+2420,Killarney,transit_stop,1294.0,22.0,0.8918,400,1.0,800,0.9545,0.8907,215,no_gap
 2420,Killarney,community_centre,1294.0,22.0,0.8037,800,1.0,1600,1.0,0.8003,506,no_gap
 2420,Killarney,rec_centre,1294.0,22.0,1.0,2000,1.0,5000,1.0,1.0,730,no_gap
 2420,Killarney,library,1294.0,22.0,0.024,2000,1.0,5000,0.0,0.0244,2348,gap
@@ -1991,7 +1991,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2530,McLeod,park|private,870.0,1.0,0.9943,400,1.0,800,1.0,0.9942,174,no_gap
 3300,McQueen,playground,605.0,6.0,0.8727,400,1.0,800,1.0,0.8715,304,no_gap
 3300,McQueen,park,605.0,6.0,1.0,400,1.0,800,1.0,1.0,137,no_gap
-3300,McQueen,transit_stop,605.0,6.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
+3300,McQueen,transit_stop,605.0,6.0,1.0,400,1.0,800,1.0,1.0,131,no_gap
 3300,McQueen,community_centre,605.0,6.0,1.0,800,1.0,1600,1.0,1.0,384,no_gap
 3300,McQueen,rec_centre,605.0,6.0,1.0,2000,1.0,5000,1.0,1.0,1154,no_gap
 3300,McQueen,library,605.0,6.0,0.9785,2000,1.0,5000,1.0,0.9783,1671,no_gap
@@ -2081,7 +2081,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6492,Mill Creek Ravine South,park|private,12.0,12.0,1.0,400,1.0,800,1.0,,23,too_few_homes
 6520,Mill Woods Town Centre,playground,687.0,0.0,0.0,400,1.0,800,,0.0,604,gap
 6520,Mill Woods Town Centre,park,687.0,0.0,1.0,400,1.0,800,,1.0,37,no_gap
-6520,Mill Woods Town Centre,transit_stop,687.0,0.0,1.0,400,1.0,800,,1.0,137,no_gap
+6520,Mill Woods Town Centre,transit_stop,687.0,0.0,1.0,400,1.0,800,,1.0,139,no_gap
 6520,Mill Woods Town Centre,community_centre,687.0,0.0,0.1951,800,1.0,1600,,0.1951,959,gap
 6520,Mill Woods Town Centre,rec_centre,687.0,0.0,1.0,2000,1.0,5000,,1.0,1423,no_gap
 6520,Mill Woods Town Centre,library,687.0,0.0,1.0,2000,1.0,5000,,1.0,767,no_gap
@@ -2201,7 +2201,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6550,Ottewell,park|private,2394.0,8.0,0.9419,400,1.0,800,0.875,0.9422,133,no_gap
 2590,Overlanders,playground,928.0,0.0,0.5269,400,1.0,800,,0.5269,391,no_gap
 2590,Overlanders,park,928.0,0.0,1.0,400,1.0,800,,1.0,87,no_gap
-2590,Overlanders,transit_stop,928.0,0.0,0.93,400,1.0,800,,0.93,150,no_gap
+2590,Overlanders,transit_stop,928.0,0.0,1.0,400,1.0,800,,1.0,133,no_gap
 2590,Overlanders,community_centre,928.0,0.0,0.0032,800,0.9881,1600,,0.0032,1153,gap
 2590,Overlanders,rec_centre,928.0,0.0,0.1175,2000,1.0,5000,,0.1175,2373,gap
 2590,Overlanders,library,928.0,0.0,1.0,2000,1.0,5000,,1.0,1254,no_gap
@@ -2301,7 +2301,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4478,Pintail Landing,park|private,3.0,0.0,1.0,400,1.0,800,,1.0,104,too_few_homes
 5320,Pleasantview,playground,1816.0,65.0,0.7731,400,1.0,800,0.9385,0.767,258,no_gap
 5320,Pleasantview,park,1816.0,65.0,0.8811,400,1.0,800,1.0,0.8766,96,no_gap
-5320,Pleasantview,transit_stop,1816.0,65.0,0.9983,400,1.0,800,1.0,0.9983,186,no_gap
+5320,Pleasantview,transit_stop,1816.0,65.0,0.9983,400,1.0,800,1.0,0.9983,188,no_gap
 5320,Pleasantview,community_centre,1816.0,65.0,0.9862,800,1.0,1600,0.9692,0.9869,442,no_gap
 5320,Pleasantview,rec_centre,1816.0,65.0,0.8309,2000,1.0,5000,0.8462,0.8304,1743,no_gap
 5320,Pleasantview,library,1816.0,65.0,0.9449,2000,1.0,5000,0.8615,0.948,1595,no_gap
@@ -2421,7 +2421,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3370,Rapperswill,park|private,1118.0,6.0,0.9982,400,1.0,800,1.0,0.9982,120,no_gap
 5350,Rhatigan Ridge,playground,1126.0,0.0,0.7176,400,1.0,800,,0.7176,320,no_gap
 5350,Rhatigan Ridge,park,1126.0,0.0,1.0,400,1.0,800,,1.0,137,no_gap
-5350,Rhatigan Ridge,transit_stop,1126.0,0.0,0.9192,400,1.0,800,,0.9192,210,no_gap
+5350,Rhatigan Ridge,transit_stop,1126.0,0.0,0.9174,400,1.0,800,,0.9174,210,no_gap
 5350,Rhatigan Ridge,community_centre,1126.0,0.0,0.8099,800,1.0,1600,,0.8099,511,no_gap
 5350,Rhatigan Ridge,rec_centre,1126.0,0.0,0.5826,2000,1.0,5000,,0.5826,1912,no_gap
 5350,Rhatigan Ridge,library,1126.0,0.0,1.0,2000,1.0,5000,,1.0,887,no_gap
@@ -3081,7 +3081,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4570,Wedgewood Heights,park|private,516.0,0.0,1.0,400,1.0,800,,1.0,103,no_gap
 6770,Weinlos,playground,1139.0,4.0,0.439,400,1.0,800,0.5,0.4388,441,gap
 6770,Weinlos,park,1139.0,4.0,1.0,400,1.0,800,1.0,1.0,137,no_gap
-6770,Weinlos,transit_stop,1139.0,4.0,1.0,400,1.0,800,1.0,1.0,103,no_gap
+6770,Weinlos,transit_stop,1139.0,4.0,1.0,400,1.0,800,1.0,1.0,104,no_gap
 6770,Weinlos,community_centre,1139.0,4.0,0.2371,800,1.0,1600,0.25,0.237,1070,gap
 6770,Weinlos,rec_centre,1139.0,4.0,0.3301,2000,1.0,5000,0.75,0.3286,2193,gap
 6770,Weinlos,library,1139.0,4.0,0.9939,2000,1.0,5000,1.0,0.9938,1588,no_gap
@@ -3101,7 +3101,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6780,Weir Industrial,park|private,1.0,0.0,0.0,400,1.0,800,,0.0,630,too_few_homes
 3430,Wellington,playground,1172.0,0.0,0.7022,400,1.0,800,,0.7022,322,no_gap
 3430,Wellington,park,1172.0,0.0,1.0,400,1.0,800,,1.0,95,no_gap
-3430,Wellington,transit_stop,1172.0,0.0,1.0,400,1.0,800,,1.0,135,no_gap
+3430,Wellington,transit_stop,1172.0,0.0,1.0,400,1.0,800,,1.0,128,no_gap
 3430,Wellington,community_centre,1172.0,0.0,0.7961,800,1.0,1600,,0.7961,415,no_gap
 3430,Wellington,rec_centre,1172.0,0.0,0.0017,2000,1.0,5000,,0.0017,2724,gap
 3430,Wellington,library,1172.0,0.0,1.0,2000,1.0,5000,,1.0,908,no_gap
@@ -3141,7 +3141,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5540,Westbrook Estates,park|private,405.0,23.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
 3440,Westmount,playground,3464.0,208.0,0.595,400,0.9247,800,0.8413,0.5792,313,no_gap
 3440,Westmount,park,3464.0,208.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
-3440,Westmount,transit_stop,3464.0,208.0,0.9922,400,1.0,800,0.976,0.9932,146,no_gap
+3440,Westmount,transit_stop,3464.0,208.0,0.9922,400,1.0,800,0.976,0.9932,140,no_gap
 3440,Westmount,community_centre,3464.0,208.0,0.8227,800,1.0,1600,0.9375,0.8154,564,no_gap
 3440,Westmount,rec_centre,3464.0,208.0,0.8617,2000,1.0,5000,0.9135,0.8584,1576,no_gap
 3440,Westmount,library,3464.0,208.0,0.5782,2000,1.0,5000,0.524,0.5817,1680,no_gap
@@ -3241,7 +3241,7 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3450,Woodcroft,park|private,885.0,12.0,1.0,400,1.0,800,1.0,1.0,135,no_gap
 1151,Wîhkwêntôwin,playground,12664.0,737.0,0.6565,400,0.9953,800,0.5916,0.6605,308,no_gap
 1151,Wîhkwêntôwin,park,12664.0,737.0,1.0,400,1.0,800,1.0,1.0,99,no_gap
-1151,Wîhkwêntôwin,transit_stop,12664.0,737.0,1.0,400,1.0,800,1.0,1.0,114,no_gap
+1151,Wîhkwêntôwin,transit_stop,12664.0,737.0,1.0,400,1.0,800,1.0,1.0,113,no_gap
 1151,Wîhkwêntôwin,community_centre,12664.0,737.0,0.6792,800,1.0,1600,0.7205,0.6767,667,no_gap
 1151,Wîhkwêntôwin,rec_centre,12664.0,737.0,0.7333,2000,1.0,5000,0.5916,0.7421,1803,no_gap
 1151,Wîhkwêntôwin,library,12664.0,737.0,0.4525,2000,1.0,5000,0.365,0.4579,2009,gap
