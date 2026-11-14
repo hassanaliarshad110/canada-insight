@@ -1449,14 +1449,14 @@ MCK,McKenzie Lake,playground|city,4619.0,0.0,0.8727,400,1.0,800,,0.8727,221,no_g
 MCK,McKenzie Lake,playground|private,4619.0,0.0,0.9338,400,1.0,800,,0.9338,202,no_gap
 MCK,McKenzie Lake,park|city,4619.0,0.0,0.9981,400,1.0,800,,0.9981,82,no_gap
 MCK,McKenzie Lake,park|private,4619.0,0.0,0.9996,400,1.0,800,,0.9996,78,no_gap
-MCT,McKenzie Towne,playground,7046.0,0.0,0.8997,400,1.0,800,,0.8997,203,no_gap
+MCT,McKenzie Towne,playground,7046.0,0.0,0.8997,400,1.0,800,,0.8997,201,no_gap
 MCT,McKenzie Towne,park,7046.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
 MCT,McKenzie Towne,transit_stop,7046.0,0.0,0.9821,400,1.0,800,,0.9821,164,no_gap
 MCT,McKenzie Towne,community_centre,7046.0,0.0,0.019,800,0.329,1600,,0.019,>1600,gap
 MCT,McKenzie Towne,rec_centre,7046.0,0.0,0.0,2000,0.9222,5000,,0.0,4278,gap
 MCT,McKenzie Towne,library,7046.0,0.0,0.0,2000,0.971,5000,,0.0,4172,gap
 MCT,McKenzie Towne,playground|city,7046.0,0.0,0.7817,400,1.0,800,,0.7817,240,no_gap
-MCT,McKenzie Towne,playground|private,7046.0,0.0,0.8997,400,1.0,800,,0.8997,203,no_gap
+MCT,McKenzie Towne,playground|private,7046.0,0.0,0.8997,400,1.0,800,,0.8997,201,no_gap
 MCT,McKenzie Towne,park|city,7046.0,0.0,1.0,400,1.0,800,,1.0,79,no_gap
 MCT,McKenzie Towne,park|private,7046.0,0.0,1.0,400,1.0,800,,1.0,78,no_gap
 MEA,Meadowlark Park,playground,281.0,5.0,0.8754,400,1.0,800,1.0,0.8732,262,no_gap
