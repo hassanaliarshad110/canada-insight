@@ -1,14 +1,14 @@
 {
  "city": "calgary",
- "built_at": "2026-11-14T17:45:53Z",
+ "built_at": "2026-11-15T18:30:39Z",
  "overall": "warn",
  "checks": [
   {
    "source": "calgary.areas",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (13 days ago; expected within 400)",
-   "value": 13,
+   "detail": "last updated by the publisher 2026-11-01 (14 days ago; expected within 400)",
+   "value": 14,
    "threshold": 400
   },
   {
@@ -47,8 +47,8 @@
    "source": "calgary.wards",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (13 days ago; expected within 45)",
-   "value": 13,
+   "detail": "last updated by the publisher 2026-11-01 (14 days ago; expected within 45)",
+   "value": 14,
    "threshold": 45
   },
   {
@@ -71,8 +71,8 @@
    "source": "calgary.homes",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (6 days ago; expected within 400)",
-   "value": 6,
+   "detail": "last updated by the publisher 2026-11-15 (0 days ago; expected within 400)",
+   "value": 0,
    "threshold": 400
   },
   {
@@ -87,7 +87,7 @@
    "source": "calgary.homes",
    "check": "missing_geometry",
    "status": "pass",
-   "detail": "0 of 501,999 records have no location (left out)",
+   "detail": "0 of 501,918 records have no location (left out)",
    "value": 0.0,
    "threshold": 0.0
   },
@@ -103,7 +103,7 @@
    "source": "calgary.homes",
    "check": "outside_city_extent",
    "status": "pass",
-   "detail": "0 of 500,019 locations fall outside the city extent",
+   "detail": "0 of 499,930 locations fall outside the city extent",
    "value": 0.0,
    "threshold": 0.001
   },
@@ -119,24 +119,24 @@
    "source": "calgary.homes",
    "check": "year_out_of_range",
    "status": "pass",
-   "detail": "1,154 years outside 1850 to 2027; 424 unknown",
-   "value": 0.00231,
+   "detail": "1,125 years outside 1850 to 2027; 419 unknown",
+   "value": 0.00225,
    "threshold": 0.01
   },
   {
    "source": "calgary.homes",
    "check": "count_change",
    "status": "pass",
-   "detail": "502,619 rows against 502,619 in the previous build (+0.0%)",
-   "value": 0.0,
+   "detail": "502,530 rows against 502,619 in the previous build (-0.0%)",
+   "value": -0.0002,
    "threshold": 0.05
   },
   {
    "source": "calgary.amenity.playground",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (6 days ago; expected within 45)",
-   "value": 6,
+   "detail": "last updated by the publisher 2026-11-08 (7 days ago; expected within 45)",
+   "value": 7,
    "threshold": 45
   },
   {
@@ -175,8 +175,8 @@
    "source": "calgary.amenity.park",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-12 (2 days ago; expected within 45)",
-   "value": 2,
+   "detail": "last updated by the publisher 2026-11-12 (3 days ago; expected within 45)",
+   "value": 3,
    "threshold": 45
   },
   {
@@ -215,8 +215,8 @@
    "source": "calgary.amenity.transit_stop",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-09-30 (45 days ago; expected within 120)",
-   "value": 45,
+   "detail": "last updated by the publisher 2026-09-30 (46 days ago; expected within 120)",
+   "value": 46,
    "threshold": 120
   },
   {
@@ -255,8 +255,8 @@
    "source": "calgary.amenity.community_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (13 days ago; expected within 45)",
-   "value": 13,
+   "detail": "last updated by the publisher 2026-11-01 (14 days ago; expected within 45)",
+   "value": 14,
    "threshold": 45
   },
   {
@@ -295,8 +295,8 @@
    "source": "calgary.amenity.rec_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-08 (6 days ago; expected within 45)",
-   "value": 6,
+   "detail": "last updated by the publisher 2026-11-08 (7 days ago; expected within 45)",
+   "value": 7,
    "threshold": 45
   },
   {
@@ -335,8 +335,8 @@
    "source": "calgary.amenity.library",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (13 days ago; expected within 45)",
-   "value": 13,
+   "detail": "last updated by the publisher 2026-11-01 (14 days ago; expected within 45)",
+   "value": 14,
    "threshold": 45
   },
   {
@@ -375,7 +375,7 @@
    "source": "calgary.wards",
    "check": "homes_outside_wards",
    "status": "pass",
-   "detail": "0 of 500,019 homes fall outside every ward",
+   "detail": "0 of 499,930 homes fall outside every ward",
    "value": 0,
    "threshold": null
   },
@@ -383,8 +383,8 @@
    "source": "calgary.osm",
    "check": "count_change",
    "status": "pass",
-   "detail": "4,385 rows against 4,384 in the previous build (+0.0%)",
-   "value": 0.0002,
+   "detail": "4,385 rows against 4,385 in the previous build (+0.0%)",
+   "value": 0.0,
    "threshold": 0.05
   },
   {
@@ -399,7 +399,7 @@
    "source": "calgary.people.city_actual",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-14 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-15 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -415,7 +415,7 @@
    "source": "calgary.people.city_pace",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-14 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-15 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -431,7 +431,7 @@
    "source": "calgary.people.model",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-14 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-15 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -447,7 +447,7 @@
    "source": "calgary.people.census2021",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-14 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-15 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   }
