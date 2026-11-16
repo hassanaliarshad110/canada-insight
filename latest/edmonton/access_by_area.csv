@@ -59,16 +59,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5458,Allard,playground|private,3017.0,211.0,0.3364,400,0.8919,800,0.1517,0.3503,438,gap
 5458,Allard,park|city,3017.0,211.0,1.0,400,1.0,800,1.0,1.0,104,no_gap
 5458,Allard,park|private,3017.0,211.0,1.0,400,1.0,800,1.0,1.0,104,no_gap
-5010,Allendale,playground,1088.0,76.0,0.5607,400,1.0,800,0.5263,0.5632,379,no_gap
-5010,Allendale,park,1088.0,76.0,0.9963,400,1.0,800,1.0,0.996,189,no_gap
-5010,Allendale,transit_stop,1088.0,76.0,1.0,400,1.0,800,1.0,1.0,144,no_gap
-5010,Allendale,community_centre,1088.0,76.0,1.0,800,1.0,1600,1.0,1.0,418,no_gap
-5010,Allendale,rec_centre,1088.0,76.0,0.0,2000,1.0,5000,0.0,0.0,2440,gap
-5010,Allendale,library,1088.0,76.0,0.6195,2000,1.0,5000,0.6316,0.6186,1916,no_gap
-5010,Allendale,playground|city,1088.0,76.0,0.5607,400,1.0,800,0.5263,0.5632,379,no_gap
-5010,Allendale,playground|private,1088.0,76.0,0.5607,400,1.0,800,0.5263,0.5632,379,no_gap
-5010,Allendale,park|city,1088.0,76.0,0.9963,400,1.0,800,1.0,0.996,189,no_gap
-5010,Allendale,park|private,1088.0,76.0,0.9963,400,1.0,800,1.0,0.996,189,no_gap
+5010,Allendale,playground,1086.0,75.0,0.5617,400,1.0,800,0.5333,0.5638,378,no_gap
+5010,Allendale,park,1086.0,75.0,0.9963,400,1.0,800,1.0,0.996,188,no_gap
+5010,Allendale,transit_stop,1086.0,75.0,1.0,400,1.0,800,1.0,1.0,144,no_gap
+5010,Allendale,community_centre,1086.0,75.0,1.0,800,1.0,1600,1.0,1.0,417,no_gap
+5010,Allendale,rec_centre,1086.0,75.0,0.0,2000,1.0,5000,0.0,0.0,2441,gap
+5010,Allendale,library,1086.0,75.0,0.6197,2000,1.0,5000,0.6267,0.6192,1916,no_gap
+5010,Allendale,playground|city,1086.0,75.0,0.5617,400,1.0,800,0.5333,0.5638,378,no_gap
+5010,Allendale,playground|private,1086.0,75.0,0.5617,400,1.0,800,0.5333,0.5638,378,no_gap
+5010,Allendale,park|city,1086.0,75.0,0.9963,400,1.0,800,1.0,0.996,189,no_gap
+5010,Allendale,park|private,1086.0,75.0,0.9963,400,1.0,800,1.0,0.996,188,no_gap
 5505,Ambleside,playground,2740.0,41.0,0.7785,400,1.0,800,0.6341,0.7807,293,no_gap
 5505,Ambleside,park,2740.0,41.0,1.0,400,1.0,800,1.0,1.0,74,no_gap
 5505,Ambleside,transit_stop,2740.0,41.0,0.988,400,1.0,800,1.0,0.9878,167,no_gap
@@ -129,16 +129,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6445,Aster,playground|private,932.0,923.0,0.7049,400,0.9914,800,0.7086,0.3333,291,no_gap
 6445,Aster,park|city,932.0,923.0,0.9592,400,1.0,800,0.9621,0.6667,149,no_gap
 6445,Aster,park|private,932.0,923.0,0.9592,400,1.0,800,0.9621,0.6667,144,no_gap
-3010,Athlone,playground,1236.0,32.0,0.4159,400,0.9021,800,0.5312,0.4128,494,gap
-3010,Athlone,park,1236.0,32.0,0.9992,400,1.0,800,1.0,0.9992,83,no_gap
-3010,Athlone,transit_stop,1236.0,32.0,0.8633,400,1.0,800,1.0,0.8596,171,no_gap
-3010,Athlone,community_centre,1236.0,32.0,0.7395,800,1.0,1600,1.0,0.7326,572,no_gap
-3010,Athlone,rec_centre,1236.0,32.0,0.0307,2000,1.0,5000,0.0,0.0316,2648,gap
-3010,Athlone,library,1236.0,32.0,1.0,2000,1.0,5000,1.0,1.0,713,no_gap
-3010,Athlone,playground|city,1236.0,32.0,0.4159,400,0.9021,800,0.5312,0.4128,494,gap
-3010,Athlone,playground|private,1236.0,32.0,0.4159,400,0.9021,800,0.5312,0.4128,494,gap
-3010,Athlone,park|city,1236.0,32.0,0.9903,400,1.0,800,1.0,0.99,92,no_gap
-3010,Athlone,park|private,1236.0,32.0,0.9992,400,1.0,800,1.0,0.9992,83,no_gap
+3010,Athlone,playground,1224.0,20.0,0.4199,400,0.9011,800,0.85,0.4128,494,gap
+3010,Athlone,park,1224.0,20.0,0.9992,400,1.0,800,1.0,0.9992,83,no_gap
+3010,Athlone,transit_stop,1224.0,20.0,0.8619,400,1.0,800,1.0,0.8596,171,no_gap
+3010,Athlone,community_centre,1224.0,20.0,0.7369,800,1.0,1600,1.0,0.7326,572,no_gap
+3010,Athlone,rec_centre,1224.0,20.0,0.031,2000,1.0,5000,0.0,0.0316,2648,gap
+3010,Athlone,library,1224.0,20.0,1.0,2000,1.0,5000,1.0,1.0,713,no_gap
+3010,Athlone,playground|city,1224.0,20.0,0.4199,400,0.9011,800,0.85,0.4128,494,gap
+3010,Athlone,playground|private,1224.0,20.0,0.4199,400,0.9011,800,0.85,0.4128,494,gap
+3010,Athlone,park|city,1224.0,20.0,0.9902,400,1.0,800,1.0,0.99,92,no_gap
+3010,Athlone,park|private,1224.0,20.0,0.9992,400,1.0,800,1.0,0.9992,83,no_gap
 6020,Avonmore,playground,925.0,16.0,0.7157,400,1.0,800,0.875,0.7129,294,no_gap
 6020,Avonmore,park,925.0,16.0,1.0,400,1.0,800,1.0,1.0,112,no_gap
 6020,Avonmore,transit_stop,925.0,16.0,1.0,400,1.0,800,1.0,1.0,169,no_gap
@@ -189,16 +189,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3030,Baturyn,playground|private,1675.0,0.0,0.3821,400,0.9964,800,,0.3821,469,gap
 3030,Baturyn,park|city,1675.0,0.0,0.9266,400,1.0,800,,0.9266,165,no_gap
 3030,Baturyn,park|private,1675.0,0.0,0.9272,400,1.0,800,,0.9272,160,no_gap
-2040,Beacon Heights,playground,1217.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
-2040,Beacon Heights,park,1217.0,44.0,0.9992,400,1.0,800,1.0,0.9991,137,no_gap
-2040,Beacon Heights,transit_stop,1217.0,44.0,1.0,400,1.0,800,1.0,1.0,122,no_gap
-2040,Beacon Heights,community_centre,1217.0,44.0,0.9417,800,1.0,1600,1.0,0.9395,483,no_gap
-2040,Beacon Heights,rec_centre,1217.0,44.0,0.2317,2000,1.0,5000,0.4545,0.2234,2191,gap
-2040,Beacon Heights,library,1217.0,44.0,1.0,2000,1.0,5000,1.0,1.0,1066,no_gap
-2040,Beacon Heights,playground|city,1217.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
-2040,Beacon Heights,playground|private,1217.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
-2040,Beacon Heights,park|city,1217.0,44.0,0.9992,400,1.0,800,1.0,0.9991,139,no_gap
-2040,Beacon Heights,park|private,1217.0,44.0,0.9992,400,1.0,800,1.0,0.9991,137,no_gap
+2040,Beacon Heights,playground,1216.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
+2040,Beacon Heights,park,1216.0,44.0,0.9992,400,1.0,800,1.0,0.9991,137,no_gap
+2040,Beacon Heights,transit_stop,1216.0,44.0,1.0,400,1.0,800,1.0,1.0,122,no_gap
+2040,Beacon Heights,community_centre,1216.0,44.0,0.9416,800,1.0,1600,1.0,0.9394,482,no_gap
+2040,Beacon Heights,rec_centre,1216.0,44.0,0.2319,2000,1.0,5000,0.4545,0.2235,2191,gap
+2040,Beacon Heights,library,1216.0,44.0,1.0,2000,1.0,5000,1.0,1.0,1065,no_gap
+2040,Beacon Heights,playground|city,1216.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
+2040,Beacon Heights,playground|private,1216.0,44.0,0.9515,400,1.0,800,1.0,0.9497,225,no_gap
+2040,Beacon Heights,park|city,1216.0,44.0,0.9992,400,1.0,800,1.0,0.9991,139,no_gap
+2040,Beacon Heights,park|private,1216.0,44.0,0.9992,400,1.0,800,1.0,0.9991,137,no_gap
 5030,Bearspaw,playground,876.0,0.0,0.1518,400,0.6895,800,,0.1518,708,gap
 5030,Bearspaw,park,876.0,0.0,0.9954,400,1.0,800,,0.9954,86,no_gap
 5030,Bearspaw,transit_stop,876.0,0.0,1.0,400,1.0,800,,1.0,141,no_gap
@@ -589,16 +589,6 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5130,Carter Crest,playground|private,616.0,0.0,0.8393,400,1.0,800,,0.8393,289,no_gap
 5130,Carter Crest,park|city,616.0,0.0,1.0,400,1.0,800,,1.0,131,no_gap
 5130,Carter Crest,park|private,616.0,0.0,1.0,400,1.0,800,,1.0,119,no_gap
-5466,Cashman,playground,1.0,1.0,1.0,400,1.0,800,1.0,,349,too_few_homes
-5466,Cashman,park,1.0,1.0,1.0,400,1.0,800,1.0,,46,too_few_homes
-5466,Cashman,transit_stop,1.0,1.0,1.0,400,1.0,800,1.0,,309,too_few_homes
-5466,Cashman,community_centre,1.0,1.0,0.0,800,0.0,1600,0.0,,>1600,too_few_homes
-5466,Cashman,rec_centre,1.0,1.0,0.0,2000,1.0,5000,0.0,,3653,too_few_homes
-5466,Cashman,library,1.0,1.0,0.0,2000,1.0,5000,0.0,,2860,too_few_homes
-5466,Cashman,playground|city,1.0,1.0,0.0,400,1.0,800,0.0,,711,too_few_homes
-5466,Cashman,playground|private,1.0,1.0,1.0,400,1.0,800,1.0,,349,too_few_homes
-5466,Cashman,park|city,1.0,1.0,1.0,400,1.0,800,1.0,,46,too_few_homes
-5466,Cashman,park|private,1.0,1.0,1.0,400,1.0,800,1.0,,46,too_few_homes
 2130,Casselman,playground,1337.0,0.0,0.362,400,1.0,800,,0.362,468,gap
 2130,Casselman,park,1337.0,0.0,1.0,400,1.0,800,,1.0,80,no_gap
 2130,Casselman,transit_stop,1337.0,0.0,1.0,400,1.0,800,,1.0,108,no_gap
@@ -659,16 +649,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6661,Charlesworth,playground|private,3227.0,665.0,0.5507,400,0.9861,800,0.5729,0.5449,326,no_gap
 6661,Charlesworth,park|city,3227.0,665.0,0.9991,400,1.0,800,1.0,0.9988,166,no_gap
 6661,Charlesworth,park|private,3227.0,665.0,0.9991,400,1.0,800,1.0,0.9988,166,no_gap
-2145,Clareview Town Centre,playground,2055.0,401.0,0.5333,400,1.0,800,0.5436,0.5308,280,no_gap
-2145,Clareview Town Centre,park,2055.0,401.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
-2145,Clareview Town Centre,transit_stop,2055.0,401.0,1.0,400,1.0,800,1.0,1.0,136,no_gap
-2145,Clareview Town Centre,community_centre,2055.0,401.0,0.2959,800,1.0,1600,0.2544,0.3059,1255,gap
-2145,Clareview Town Centre,rec_centre,2055.0,401.0,1.0,2000,1.0,5000,1.0,1.0,467,no_gap
-2145,Clareview Town Centre,library,2055.0,401.0,1.0,2000,1.0,5000,1.0,1.0,525,no_gap
-2145,Clareview Town Centre,playground|city,2055.0,401.0,0.4234,400,1.0,800,0.5436,0.3942,458,gap
-2145,Clareview Town Centre,playground|private,2055.0,401.0,0.5333,400,1.0,800,0.5436,0.5308,280,no_gap
-2145,Clareview Town Centre,park|city,2055.0,401.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
-2145,Clareview Town Centre,park|private,2055.0,401.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
+2145,Clareview Town Centre,playground,1877.0,223.0,0.5839,400,1.0,800,0.9776,0.5308,280,no_gap
+2145,Clareview Town Centre,park,1877.0,223.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
+2145,Clareview Town Centre,transit_stop,1877.0,223.0,1.0,400,1.0,800,1.0,1.0,136,no_gap
+2145,Clareview Town Centre,community_centre,1877.0,223.0,0.3239,800,1.0,1600,0.4574,0.3059,1255,gap
+2145,Clareview Town Centre,rec_centre,1877.0,223.0,1.0,2000,1.0,5000,1.0,1.0,467,no_gap
+2145,Clareview Town Centre,library,1877.0,223.0,1.0,2000,1.0,5000,1.0,1.0,525,no_gap
+2145,Clareview Town Centre,playground|city,1877.0,223.0,0.4635,400,1.0,800,0.9776,0.3942,458,gap
+2145,Clareview Town Centre,playground|private,1877.0,223.0,0.5839,400,1.0,800,0.9776,0.5308,280,no_gap
+2145,Clareview Town Centre,park|city,1877.0,223.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
+2145,Clareview Town Centre,park|private,1877.0,223.0,1.0,400,1.0,800,1.0,1.0,174,no_gap
 2160,Clover Bar Area,playground,5.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
 2160,Clover Bar Area,park,5.0,0.0,1.0,400,1.0,800,,1.0,96,too_few_homes
 2160,Clover Bar Area,transit_stop,5.0,0.0,0.0,400,0.0,800,,0.0,>800,too_few_homes
@@ -699,14 +689,14 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 6140,Crawford Plains,playground|private,1428.0,5.0,0.4314,400,0.979,800,0.2,0.4322,428,gap
 6140,Crawford Plains,park|city,1428.0,5.0,0.7458,400,1.0,800,0.8,0.7456,282,no_gap
 6140,Crawford Plains,park|private,1428.0,5.0,0.7731,400,1.0,800,0.8,0.773,278,no_gap
-3140,Crestwood,playground,893.0,71.0,0.8163,400,0.9966,800,0.8169,0.8163,276,no_gap
+3140,Crestwood,playground,893.0,71.0,0.8152,400,0.9966,800,0.8028,0.8163,276,no_gap
 3140,Crestwood,park,893.0,71.0,1.0,400,1.0,800,1.0,1.0,93,no_gap
 3140,Crestwood,transit_stop,893.0,71.0,0.9642,400,1.0,800,0.9718,0.9635,208,no_gap
 3140,Crestwood,community_centre,893.0,71.0,0.972,800,1.0,1600,0.9014,0.9781,427,no_gap
 3140,Crestwood,rec_centre,893.0,71.0,0.2038,2000,1.0,5000,0.169,0.2068,2309,gap
 3140,Crestwood,library,893.0,71.0,0.6159,2000,1.0,5000,0.5352,0.6229,1916,no_gap
-3140,Crestwood,playground|city,893.0,71.0,0.7032,400,0.991,800,0.7042,0.7032,329,no_gap
-3140,Crestwood,playground|private,893.0,71.0,0.8163,400,0.9966,800,0.8169,0.8163,276,no_gap
+3140,Crestwood,playground|city,893.0,71.0,0.7021,400,0.991,800,0.6901,0.7032,329,no_gap
+3140,Crestwood,playground|private,893.0,71.0,0.8152,400,0.9966,800,0.8028,0.8163,276,no_gap
 3140,Crestwood,park|city,893.0,71.0,1.0,400,1.0,800,1.0,1.0,93,no_gap
 3140,Crestwood,park|private,893.0,71.0,1.0,400,1.0,800,1.0,1.0,93,no_gap
 1070,Cromdale,playground,909.0,6.0,0.8889,400,1.0,800,1.0,0.8882,277,no_gap
@@ -999,16 +989,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4140,Elmwood,playground|private,1092.0,135.0,0.5403,400,1.0,800,0.0074,0.6155,352,no_gap
 4140,Elmwood,park|city,1092.0,135.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
 4140,Elmwood,park|private,1092.0,135.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
-1130,Elmwood Park,playground,491.0,10.0,0.8778,400,1.0,800,1.0,0.8753,305,no_gap
-1130,Elmwood Park,park,491.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
-1130,Elmwood Park,transit_stop,491.0,10.0,0.9939,400,1.0,800,1.0,0.9938,180,no_gap
-1130,Elmwood Park,community_centre,491.0,10.0,1.0,800,1.0,1600,1.0,1.0,520,no_gap
-1130,Elmwood Park,rec_centre,491.0,10.0,1.0,2000,1.0,5000,1.0,1.0,1660,no_gap
-1130,Elmwood Park,library,491.0,10.0,1.0,2000,1.0,5000,1.0,1.0,1543,no_gap
-1130,Elmwood Park,playground|city,491.0,10.0,0.5988,400,1.0,800,0.4,0.6029,377,no_gap
-1130,Elmwood Park,playground|private,491.0,10.0,0.8778,400,1.0,800,1.0,0.8753,305,no_gap
-1130,Elmwood Park,park|city,491.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
-1130,Elmwood Park,park|private,491.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
+1130,Elmwood Park,playground,490.0,10.0,0.8776,400,1.0,800,1.0,0.875,306,no_gap
+1130,Elmwood Park,park,490.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
+1130,Elmwood Park,transit_stop,490.0,10.0,0.9939,400,1.0,800,1.0,0.9938,181,no_gap
+1130,Elmwood Park,community_centre,490.0,10.0,1.0,800,1.0,1600,1.0,1.0,520,no_gap
+1130,Elmwood Park,rec_centre,490.0,10.0,1.0,2000,1.0,5000,1.0,1.0,1661,no_gap
+1130,Elmwood Park,library,490.0,10.0,1.0,2000,1.0,5000,1.0,1.0,1542,no_gap
+1130,Elmwood Park,playground|city,490.0,10.0,0.6,400,1.0,800,0.4,0.6042,376,no_gap
+1130,Elmwood Park,playground|private,490.0,10.0,0.8776,400,1.0,800,1.0,0.875,306,no_gap
+1130,Elmwood Park,park|city,490.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
+1130,Elmwood Park,park|private,490.0,10.0,1.0,400,1.0,800,1.0,1.0,191,no_gap
 3190,Elsinore,playground,1049.0,99.0,0.1954,400,0.98,800,0.0,0.2158,535,gap
 3190,Elsinore,park,1049.0,99.0,0.9943,400,1.0,800,0.9596,0.9979,121,no_gap
 3190,Elsinore,transit_stop,1049.0,99.0,1.0,400,1.0,800,1.0,1.0,132,no_gap
@@ -1069,16 +1059,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5190,Falconer Heights,playground|private,753.0,0.0,0.5445,400,1.0,800,,0.5445,345,no_gap
 5190,Falconer Heights,park|city,753.0,0.0,1.0,400,1.0,800,,1.0,202,no_gap
 5190,Falconer Heights,park|private,753.0,0.0,1.0,400,1.0,800,,1.0,194,no_gap
-6230,Forest Heights,playground,1663.0,74.0,0.6218,400,1.0,800,0.7027,0.618,339,no_gap
-6230,Forest Heights,park,1663.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
-6230,Forest Heights,transit_stop,1663.0,74.0,0.9952,400,1.0,800,1.0,0.995,134,no_gap
-6230,Forest Heights,community_centre,1663.0,74.0,0.7637,800,1.0,1600,0.8649,0.759,528,no_gap
-6230,Forest Heights,rec_centre,1663.0,74.0,1.0,2000,1.0,5000,1.0,1.0,1389,no_gap
-6230,Forest Heights,library,1663.0,74.0,1.0,2000,1.0,5000,1.0,1.0,1394,no_gap
-6230,Forest Heights,playground|city,1663.0,74.0,0.5857,400,1.0,800,0.6622,0.5821,364,no_gap
-6230,Forest Heights,playground|private,1663.0,74.0,0.6218,400,1.0,800,0.7027,0.618,339,no_gap
-6230,Forest Heights,park|city,1663.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
-6230,Forest Heights,park|private,1663.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+6230,Forest Heights,playground,1662.0,74.0,0.6215,400,1.0,800,0.7027,0.6178,339,no_gap
+6230,Forest Heights,park,1662.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+6230,Forest Heights,transit_stop,1662.0,74.0,0.9952,400,1.0,800,1.0,0.995,134,no_gap
+6230,Forest Heights,community_centre,1662.0,74.0,0.7635,800,1.0,1600,0.8649,0.7588,528,no_gap
+6230,Forest Heights,rec_centre,1662.0,74.0,1.0,2000,1.0,5000,1.0,1.0,1388,no_gap
+6230,Forest Heights,library,1662.0,74.0,1.0,2000,1.0,5000,1.0,1.0,1393,no_gap
+6230,Forest Heights,playground|city,1662.0,74.0,0.5854,400,1.0,800,0.6622,0.5819,364,no_gap
+6230,Forest Heights,playground|private,1662.0,74.0,0.6215,400,1.0,800,0.7027,0.6178,339,no_gap
+6230,Forest Heights,park|city,1662.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
+6230,Forest Heights,park|private,1662.0,74.0,1.0,400,1.0,800,1.0,1.0,89,no_gap
 2280,Fraser,playground,1696.0,279.0,0.4729,400,0.9021,800,0.0036,0.5653,402,gap
 2280,Fraser,park,1696.0,279.0,0.9965,400,1.0,800,0.9928,0.9972,106,no_gap
 2280,Fraser,transit_stop,1696.0,279.0,0.9965,400,1.0,800,1.0,0.9958,125,no_gap
@@ -1159,16 +1149,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5578,Glenridding Heights,playground|private,1881.0,371.0,0.4833,400,0.9357,800,0.1779,0.5583,400,gap
 5578,Glenridding Heights,park|city,1881.0,371.0,0.8841,400,1.0,800,0.9272,0.8735,223,no_gap
 5578,Glenridding Heights,park|private,1881.0,371.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
-5579,Glenridding Ravine,playground,1996.0,1597.0,0.255,400,0.6398,800,0.2624,0.2256,640,gap_check
-5579,Glenridding Ravine,park,1996.0,1597.0,0.999,400,1.0,800,1.0,0.995,83,no_gap
-5579,Glenridding Ravine,transit_stop,1996.0,1597.0,0.8963,400,0.999,800,0.8735,0.9875,213,no_gap
-5579,Glenridding Ravine,community_centre,1996.0,1597.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
-5579,Glenridding Ravine,rec_centre,1996.0,1597.0,0.0,2000,1.0,5000,0.0,0.0,3829,gap_check
-5579,Glenridding Ravine,library,1996.0,1597.0,0.0,2000,0.9724,5000,0.0,0.0,4152,gap_check
-5579,Glenridding Ravine,playground|city,1996.0,1597.0,0.255,400,0.6398,800,0.2624,0.2256,640,gap_check
-5579,Glenridding Ravine,playground|private,1996.0,1597.0,0.255,400,0.6398,800,0.2624,0.2256,640,gap_check
-5579,Glenridding Ravine,park|city,1996.0,1597.0,0.9629,400,1.0,800,0.9831,0.8822,137,no_gap
-5579,Glenridding Ravine,park|private,1996.0,1597.0,0.999,400,1.0,800,1.0,0.995,83,no_gap
+5579,Glenridding Ravine,playground,2035.0,1636.0,0.2693,400,0.6467,800,0.28,0.2256,640,gap_check
+5579,Glenridding Ravine,park,2035.0,1636.0,0.999,400,1.0,800,1.0,0.995,83,no_gap
+5579,Glenridding Ravine,transit_stop,2035.0,1636.0,0.8983,400,0.999,800,0.8765,0.9875,213,no_gap
+5579,Glenridding Ravine,community_centre,2035.0,1636.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+5579,Glenridding Ravine,rec_centre,2035.0,1636.0,0.0,2000,1.0,5000,0.0,0.0,3829,gap_check
+5579,Glenridding Ravine,library,2035.0,1636.0,0.0,2000,0.973,5000,0.0,0.0,4152,gap_check
+5579,Glenridding Ravine,playground|city,2035.0,1636.0,0.2693,400,0.6467,800,0.28,0.2256,640,gap_check
+5579,Glenridding Ravine,playground|private,2035.0,1636.0,0.2693,400,0.6467,800,0.28,0.2256,640,gap_check
+5579,Glenridding Ravine,park|city,2035.0,1636.0,0.9636,400,1.0,800,0.9835,0.8822,137,no_gap
+5579,Glenridding Ravine,park|private,2035.0,1636.0,0.999,400,1.0,800,1.0,0.995,83,no_gap
 4180,Glenwood,playground,2162.0,126.0,0.7757,400,1.0,800,0.9603,0.7642,254,no_gap
 4180,Glenwood,park,2162.0,126.0,0.9644,400,1.0,800,1.0,0.9622,125,no_gap
 4180,Glenwood,transit_stop,2162.0,126.0,0.9311,400,1.0,800,0.8968,0.9332,117,no_gap
@@ -1269,14 +1259,14 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3111,Griesbach,playground|private,3454.0,1268.0,0.4412,400,0.9884,800,0.0836,0.6487,371,gap_check
 3111,Griesbach,park|city,3454.0,1268.0,0.7533,400,1.0,800,0.3912,0.9634,149,no_gap
 3111,Griesbach,park|private,3454.0,1268.0,0.9236,400,1.0,800,0.7957,0.9977,94,no_gap
-3210,Grovenor,playground,1101.0,122.0,0.5159,400,1.0,800,0.4508,0.524,392,no_gap
+3210,Grovenor,playground,1101.0,122.0,0.515,400,1.0,800,0.4508,0.523,394,no_gap
 3210,Grovenor,park,1101.0,122.0,1.0,400,1.0,800,1.0,1.0,168,no_gap
 3210,Grovenor,transit_stop,1101.0,122.0,0.9591,400,1.0,800,0.959,0.9591,241,no_gap
 3210,Grovenor,community_centre,1101.0,122.0,1.0,800,1.0,1600,1.0,1.0,422,no_gap
 3210,Grovenor,rec_centre,1101.0,122.0,0.5831,2000,1.0,5000,0.582,0.5832,1906,no_gap
 3210,Grovenor,library,1101.0,122.0,0.1362,2000,1.0,5000,0.0902,0.142,2343,gap
-3210,Grovenor,playground|city,1101.0,122.0,0.5114,400,1.0,800,0.4508,0.5189,395,no_gap
-3210,Grovenor,playground|private,1101.0,122.0,0.5822,400,1.0,800,0.4918,0.5935,370,no_gap
+3210,Grovenor,playground|city,1101.0,122.0,0.5104,400,1.0,800,0.4508,0.5179,396,no_gap
+3210,Grovenor,playground|private,1101.0,122.0,0.5813,400,1.0,800,0.4918,0.5924,370,no_gap
 3210,Grovenor,park|city,1101.0,122.0,1.0,400,1.0,800,1.0,1.0,168,no_gap
 3210,Grovenor,park|private,1101.0,122.0,1.0,400,1.0,800,1.0,1.0,168,no_gap
 5610,Haddow,playground,1589.0,2.0,0.4191,400,0.9918,800,0.0,0.4197,427,gap
@@ -1439,16 +1429,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3480,Hudson,playground|private,902.0,0.0,0.3559,400,1.0,800,,0.3559,467,gap
 3480,Hudson,park|city,902.0,0.0,0.9235,400,1.0,800,,0.9235,154,no_gap
 3480,Hudson,park|private,902.0,0.0,1.0,400,1.0,800,,1.0,108,no_gap
-6320,Idylwylde,playground,791.0,29.0,0.7484,400,1.0,800,0.5517,0.7559,334,no_gap
-6320,Idylwylde,park,791.0,29.0,1.0,400,1.0,800,1.0,1.0,180,no_gap
-6320,Idylwylde,transit_stop,791.0,29.0,0.9949,400,1.0,800,1.0,0.9948,152,no_gap
-6320,Idylwylde,community_centre,791.0,29.0,1.0,800,1.0,1600,1.0,1.0,346,no_gap
-6320,Idylwylde,rec_centre,791.0,29.0,1.0,2000,1.0,5000,1.0,1.0,514,no_gap
-6320,Idylwylde,library,791.0,29.0,1.0,2000,1.0,5000,1.0,1.0,732,no_gap
-6320,Idylwylde,playground|city,791.0,29.0,0.7484,400,1.0,800,0.5517,0.7559,334,no_gap
-6320,Idylwylde,playground|private,791.0,29.0,0.7484,400,1.0,800,0.5517,0.7559,334,no_gap
-6320,Idylwylde,park|city,791.0,29.0,0.8534,400,1.0,800,0.7931,0.8556,268,no_gap
-6320,Idylwylde,park|private,791.0,29.0,1.0,400,1.0,800,1.0,1.0,180,no_gap
+6320,Idylwylde,playground,768.0,29.0,0.7409,400,1.0,800,0.5517,0.7483,335,no_gap
+6320,Idylwylde,park,768.0,29.0,1.0,400,1.0,800,1.0,1.0,180,no_gap
+6320,Idylwylde,transit_stop,768.0,29.0,0.9948,400,1.0,800,1.0,0.9946,152,no_gap
+6320,Idylwylde,community_centre,768.0,29.0,1.0,800,1.0,1600,1.0,1.0,346,no_gap
+6320,Idylwylde,rec_centre,768.0,29.0,1.0,2000,1.0,5000,1.0,1.0,514,no_gap
+6320,Idylwylde,library,768.0,29.0,1.0,2000,1.0,5000,1.0,1.0,733,no_gap
+6320,Idylwylde,playground|city,768.0,29.0,0.7409,400,1.0,800,0.5517,0.7483,335,no_gap
+6320,Idylwylde,playground|private,768.0,29.0,0.7409,400,1.0,800,0.5517,0.7483,335,no_gap
+6320,Idylwylde,park|city,768.0,29.0,0.849,400,1.0,800,0.7931,0.8512,268,no_gap
+6320,Idylwylde,park|private,768.0,29.0,1.0,400,1.0,800,1.0,1.0,180,no_gap
 2360,Industrial Heights,playground,6.0,0.0,0.0,400,1.0,800,,0.0,597,too_few_homes
 2360,Industrial Heights,park,6.0,0.0,0.5,400,1.0,800,,0.5,438,too_few_homes
 2360,Industrial Heights,transit_stop,6.0,0.0,1.0,400,1.0,800,,1.0,100,too_few_homes
@@ -1459,24 +1449,24 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2360,Industrial Heights,playground|private,6.0,0.0,0.0,400,1.0,800,,0.0,597,too_few_homes
 2360,Industrial Heights,park|city,6.0,0.0,0.5,400,1.0,800,,0.5,438,too_few_homes
 2360,Industrial Heights,park|private,6.0,0.0,0.5,400,1.0,800,,0.5,438,too_few_homes
-3240,Inglewood,playground,3141.0,236.0,0.703,400,1.0,800,0.839,0.6919,327,no_gap
-3240,Inglewood,park,3141.0,236.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
-3240,Inglewood,transit_stop,3141.0,236.0,0.9994,400,1.0,800,1.0,0.9993,143,no_gap
-3240,Inglewood,community_centre,3141.0,236.0,0.9943,800,1.0,1600,1.0,0.9938,425,no_gap
-3240,Inglewood,rec_centre,3141.0,236.0,1.0,2000,1.0,5000,1.0,1.0,1380,no_gap
-3240,Inglewood,library,3141.0,236.0,1.0,2000,1.0,5000,1.0,1.0,1106,no_gap
-3240,Inglewood,playground|city,3141.0,236.0,0.5186,400,0.9943,800,0.7331,0.5012,369,no_gap
-3240,Inglewood,playground|private,3141.0,236.0,0.703,400,1.0,800,0.839,0.6919,327,no_gap
-3240,Inglewood,park|city,3141.0,236.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
-3240,Inglewood,park|private,3141.0,236.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
-6330,Jackson Heights,playground,1357.0,0.0,0.5122,400,0.9971,800,,0.5122,380,no_gap
+3240,Inglewood,playground,3140.0,235.0,0.7029,400,1.0,800,0.8383,0.6919,327,no_gap
+3240,Inglewood,park,3140.0,235.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+3240,Inglewood,transit_stop,3140.0,235.0,0.9994,400,1.0,800,1.0,0.9993,143,no_gap
+3240,Inglewood,community_centre,3140.0,235.0,0.9943,800,1.0,1600,1.0,0.9938,425,no_gap
+3240,Inglewood,rec_centre,3140.0,235.0,1.0,2000,1.0,5000,1.0,1.0,1380,no_gap
+3240,Inglewood,library,3140.0,235.0,1.0,2000,1.0,5000,1.0,1.0,1106,no_gap
+3240,Inglewood,playground|city,3140.0,235.0,0.5188,400,0.9943,800,0.7362,0.5012,369,no_gap
+3240,Inglewood,playground|private,3140.0,235.0,0.7029,400,1.0,800,0.8383,0.6919,327,no_gap
+3240,Inglewood,park|city,3140.0,235.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+3240,Inglewood,park|private,3140.0,235.0,1.0,400,1.0,800,1.0,1.0,142,no_gap
+6330,Jackson Heights,playground,1357.0,0.0,0.5284,400,0.9971,800,,0.5284,375,no_gap
 6330,Jackson Heights,park,1357.0,0.0,0.9396,400,1.0,800,,0.9396,180,no_gap
 6330,Jackson Heights,transit_stop,1357.0,0.0,0.9801,400,1.0,800,,0.9801,143,no_gap
 6330,Jackson Heights,community_centre,1357.0,0.0,0.3854,800,1.0,1600,,0.3854,826,gap
 6330,Jackson Heights,rec_centre,1357.0,0.0,0.0,2000,1.0,5000,,0.0,3644,gap
 6330,Jackson Heights,library,1357.0,0.0,0.0,2000,1.0,5000,,0.0,3592,gap
-6330,Jackson Heights,playground|city,1357.0,0.0,0.5122,400,0.9971,800,,0.5122,380,no_gap
-6330,Jackson Heights,playground|private,1357.0,0.0,0.5122,400,0.9971,800,,0.5122,380,no_gap
+6330,Jackson Heights,playground|city,1357.0,0.0,0.5284,400,0.9971,800,,0.5284,375,no_gap
+6330,Jackson Heights,playground|private,1357.0,0.0,0.5284,400,0.9971,800,,0.5284,375,no_gap
 6330,Jackson Heights,park|city,1357.0,0.0,0.9381,400,1.0,800,,0.9381,180,no_gap
 6330,Jackson Heights,park|private,1357.0,0.0,0.9396,400,1.0,800,,0.9396,180,no_gap
 4220,Jamieson Place,playground,1383.0,0.0,0.4635,400,1.0,800,,0.4635,413,gap
@@ -1569,16 +1559,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2390,Kernohan,playground|private,1172.0,2.0,0.4309,400,1.0,800,0.0,0.4316,452,gap
 2390,Kernohan,park|city,1172.0,2.0,0.9906,400,1.0,800,1.0,0.9906,94,no_gap
 2390,Kernohan,park|private,1172.0,2.0,0.9906,400,1.0,800,1.0,0.9906,94,no_gap
-5574,Keswick,playground,3990.0,2420.0,0.3496,400,0.7995,800,0.3686,0.3204,479,gap_check
-5574,Keswick,park,3990.0,2420.0,0.9451,400,1.0,800,0.9103,0.9987,153,no_gap
-5574,Keswick,transit_stop,3990.0,2420.0,0.9218,400,1.0,800,0.8789,0.9879,212,no_gap
-5574,Keswick,community_centre,3990.0,2420.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
-5574,Keswick,rec_centre,3990.0,2420.0,0.0,2000,0.0559,5000,0.0,0.0,>5000,gap_check
-5574,Keswick,library,3990.0,2420.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
-5574,Keswick,playground|city,3990.0,2420.0,0.3496,400,0.7995,800,0.3686,0.3204,479,gap_check
-5574,Keswick,playground|private,3990.0,2420.0,0.3496,400,0.7995,800,0.3686,0.3204,479,gap_check
-5574,Keswick,park|city,3990.0,2420.0,0.9409,400,1.0,800,0.9033,0.9987,170,no_gap
-5574,Keswick,park|private,3990.0,2420.0,0.9451,400,1.0,800,0.9103,0.9987,153,no_gap
+5574,Keswick,playground,3978.0,2408.0,0.3507,400,0.8019,800,0.3704,0.3204,479,gap_check
+5574,Keswick,park,3978.0,2408.0,0.9449,400,1.0,800,0.9099,0.9987,153,no_gap
+5574,Keswick,transit_stop,3978.0,2408.0,0.9216,400,1.0,800,0.8783,0.9879,212,no_gap
+5574,Keswick,community_centre,3978.0,2408.0,0.0,800,0.0,1600,0.0,0.0,>1600,gap_check
+5574,Keswick,rec_centre,3978.0,2408.0,0.0,2000,0.053,5000,0.0,0.0,>5000,gap_check
+5574,Keswick,library,3978.0,2408.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+5574,Keswick,playground|city,3978.0,2408.0,0.3507,400,0.8019,800,0.3704,0.3204,479,gap_check
+5574,Keswick,playground|private,3978.0,2408.0,0.3507,400,0.8019,800,0.3704,0.3204,479,gap_check
+5574,Keswick,park|city,3978.0,2408.0,0.9407,400,1.0,800,0.9028,0.9987,170,no_gap
+5574,Keswick,park|private,3978.0,2408.0,0.9449,400,1.0,800,0.9099,0.9987,153,no_gap
 2400,Kildare,playground,1127.0,0.0,0.3842,400,1.0,800,,0.3842,495,gap
 2400,Kildare,park,1127.0,0.0,0.7036,400,1.0,800,,0.7036,288,no_gap
 2400,Kildare,transit_stop,1127.0,0.0,1.0,400,1.0,800,,1.0,165,no_gap
@@ -1609,16 +1599,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 2420,Killarney,playground|private,1294.0,22.0,0.5711,400,1.0,800,0.9545,0.5645,315,no_gap
 2420,Killarney,park|city,1294.0,22.0,0.8122,400,1.0,800,1.0,0.809,158,no_gap
 2420,Killarney,park|private,1294.0,22.0,0.9034,400,1.0,800,1.0,0.9017,157,no_gap
-6360,King Edward Park,playground,2087.0,135.0,0.8031,400,1.0,800,0.9481,0.793,272,no_gap
-6360,King Edward Park,park,2087.0,135.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
-6360,King Edward Park,transit_stop,2087.0,135.0,0.999,400,1.0,800,1.0,0.999,147,no_gap
-6360,King Edward Park,community_centre,2087.0,135.0,0.9291,800,1.0,1600,0.9778,0.9257,468,no_gap
-6360,King Edward Park,rec_centre,2087.0,135.0,1.0,2000,1.0,5000,1.0,1.0,1214,no_gap
-6360,King Edward Park,library,2087.0,135.0,1.0,2000,1.0,5000,1.0,1.0,1191,no_gap
-6360,King Edward Park,playground|city,2087.0,135.0,0.8007,400,1.0,800,0.9481,0.7905,284,no_gap
-6360,King Edward Park,playground|private,2087.0,135.0,0.8031,400,1.0,800,0.9481,0.793,272,no_gap
-6360,King Edward Park,park|city,2087.0,135.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
-6360,King Edward Park,park|private,2087.0,135.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
+6360,King Edward Park,playground,2085.0,133.0,0.8029,400,1.0,800,0.9474,0.793,272,no_gap
+6360,King Edward Park,park,2085.0,133.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
+6360,King Edward Park,transit_stop,2085.0,133.0,0.999,400,1.0,800,1.0,0.999,147,no_gap
+6360,King Edward Park,community_centre,2085.0,133.0,0.929,800,1.0,1600,0.9774,0.9257,468,no_gap
+6360,King Edward Park,rec_centre,2085.0,133.0,1.0,2000,1.0,5000,1.0,1.0,1214,no_gap
+6360,King Edward Park,library,2085.0,133.0,1.0,2000,1.0,5000,1.0,1.0,1191,no_gap
+6360,King Edward Park,playground|city,2085.0,133.0,0.8005,400,1.0,800,0.9474,0.7905,284,no_gap
+6360,King Edward Park,playground|private,2085.0,133.0,0.8029,400,1.0,800,0.9474,0.793,272,no_gap
+6360,King Edward Park,park|city,2085.0,133.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
+6360,King Edward Park,park|private,2085.0,133.0,1.0,400,1.0,800,1.0,1.0,170,no_gap
 4477,Kinglet Gardens,playground,940.0,863.0,0.4234,400,0.6553,800,0.46,0.013,719,gap_check
 4477,Kinglet Gardens,park,940.0,863.0,0.9202,400,0.9809,800,0.9699,0.3636,121,no_gap
 4477,Kinglet Gardens,transit_stop,940.0,863.0,0.3989,400,0.8426,800,0.4067,0.3117,478,gap_check
@@ -2569,16 +2559,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4463,Riverview Area,playground|private,135.0,0.0,0.0,400,0.0,800,,0.0,>800,gap
 4463,Riverview Area,park|city,135.0,0.0,0.963,400,0.9778,800,,0.963,80,no_gap
 4463,Riverview Area,park|private,135.0,0.0,0.963,400,0.9778,800,,0.963,80,no_gap
-4750,Rosenthal,playground,3132.0,1347.0,0.2162,400,0.9173,800,0.118,0.2902,510,gap_check
-4750,Rosenthal,park,3132.0,1347.0,0.742,400,1.0,800,0.4863,0.935,210,no_gap
-4750,Rosenthal,transit_stop,3132.0,1347.0,0.9419,400,1.0,800,0.9228,0.9563,185,no_gap
-4750,Rosenthal,community_centre,3132.0,1347.0,0.0,800,0.4432,1600,0.0,0.0,>1600,gap_check
-4750,Rosenthal,rec_centre,3132.0,1347.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
-4750,Rosenthal,library,3132.0,1347.0,0.3522,2000,1.0,5000,0.1411,0.5115,2214,gap_check
-4750,Rosenthal,playground|city,3132.0,1347.0,0.2162,400,0.9173,800,0.118,0.2902,510,gap_check
-4750,Rosenthal,playground|private,3132.0,1347.0,0.2162,400,0.9173,800,0.118,0.2902,510,gap_check
-4750,Rosenthal,park|city,3132.0,1347.0,0.7261,400,1.0,800,0.4855,0.9076,259,no_gap
-4750,Rosenthal,park|private,3132.0,1347.0,0.742,400,1.0,800,0.4863,0.935,210,no_gap
+4750,Rosenthal,playground,3175.0,1390.0,0.2132,400,0.9184,800,0.1144,0.2902,510,gap_check
+4750,Rosenthal,park,3175.0,1390.0,0.7455,400,1.0,800,0.5022,0.935,210,no_gap
+4750,Rosenthal,transit_stop,3175.0,1390.0,0.9427,400,1.0,800,0.9252,0.9563,185,no_gap
+4750,Rosenthal,community_centre,3175.0,1390.0,0.0,800,0.4507,1600,0.0,0.0,>1600,gap_check
+4750,Rosenthal,rec_centre,3175.0,1390.0,0.0,2000,0.0,5000,0.0,0.0,>5000,gap_check
+4750,Rosenthal,library,3175.0,1390.0,0.3609,2000,1.0,5000,0.1676,0.5115,2214,gap_check
+4750,Rosenthal,playground|city,3175.0,1390.0,0.2132,400,0.9184,800,0.1144,0.2902,510,gap_check
+4750,Rosenthal,playground|private,3175.0,1390.0,0.2132,400,0.9184,800,0.1144,0.2902,510,gap_check
+4750,Rosenthal,park|city,3175.0,1390.0,0.7298,400,1.0,800,0.5014,0.9076,259,no_gap
+4750,Rosenthal,park|private,3175.0,1390.0,0.7455,400,1.0,800,0.5022,0.935,210,no_gap
 1220,Rossdale,playground,413.0,12.0,0.6877,400,1.0,800,0.0833,0.7057,358,no_gap
 1220,Rossdale,park,413.0,12.0,1.0,400,1.0,800,1.0,1.0,50,no_gap
 1220,Rossdale,transit_stop,413.0,12.0,0.9637,400,1.0,800,1.0,0.9626,223,no_gap
@@ -2839,16 +2829,16 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 5151,Strathcona Junction,playground|private,22.0,0.0,0.0,400,1.0,800,,0.0,517,too_few_homes
 5151,Strathcona Junction,park|city,22.0,0.0,1.0,400,1.0,800,,1.0,66,too_few_homes
 5151,Strathcona Junction,park|private,22.0,0.0,1.0,400,1.0,800,,1.0,66,too_few_homes
-6710,Strathearn,playground,1039.0,71.0,0.8922,400,1.0,800,0.7465,0.9029,244,no_gap
-6710,Strathearn,park,1039.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
-6710,Strathearn,transit_stop,1039.0,71.0,0.9509,400,1.0,800,0.9437,0.9514,151,no_gap
-6710,Strathearn,community_centre,1039.0,71.0,1.0,800,1.0,1600,1.0,1.0,390,no_gap
-6710,Strathearn,rec_centre,1039.0,71.0,1.0,2000,1.0,5000,1.0,1.0,1109,no_gap
-6710,Strathearn,library,1039.0,71.0,1.0,2000,1.0,5000,1.0,1.0,988,no_gap
-6710,Strathearn,playground|city,1039.0,71.0,0.8922,400,1.0,800,0.7465,0.9029,244,no_gap
-6710,Strathearn,playground|private,1039.0,71.0,0.8922,400,1.0,800,0.7465,0.9029,244,no_gap
-6710,Strathearn,park|city,1039.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
-6710,Strathearn,park|private,1039.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+6710,Strathearn,playground,1037.0,71.0,0.892,400,1.0,800,0.7465,0.9027,245,no_gap
+6710,Strathearn,park,1037.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+6710,Strathearn,transit_stop,1037.0,71.0,0.9508,400,1.0,800,0.9437,0.9513,151,no_gap
+6710,Strathearn,community_centre,1037.0,71.0,1.0,800,1.0,1600,1.0,1.0,389,no_gap
+6710,Strathearn,rec_centre,1037.0,71.0,1.0,2000,1.0,5000,1.0,1.0,1110,no_gap
+6710,Strathearn,library,1037.0,71.0,1.0,2000,1.0,5000,1.0,1.0,989,no_gap
+6710,Strathearn,playground|city,1037.0,71.0,0.892,400,1.0,800,0.7465,0.9027,245,no_gap
+6710,Strathearn,playground|private,1037.0,71.0,0.892,400,1.0,800,0.7465,0.9027,245,no_gap
+6710,Strathearn,park|city,1037.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
+6710,Strathearn,park|private,1037.0,71.0,1.0,400,1.0,800,1.0,1.0,119,no_gap
 4730,Suder Greens,playground,1128.0,0.0,0.555,400,1.0,800,,0.555,347,no_gap
 4730,Suder Greens,park,1128.0,0.0,0.9309,400,1.0,800,,0.9309,192,no_gap
 4730,Suder Greens,transit_stop,1128.0,0.0,0.9902,400,1.0,800,,0.9902,170,no_gap
@@ -3109,14 +3099,14 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 3430,Wellington,playground|private,1172.0,0.0,0.7022,400,1.0,800,,0.7022,322,no_gap
 3430,Wellington,park|city,1172.0,0.0,1.0,400,1.0,800,,1.0,117,no_gap
 3430,Wellington,park|private,1172.0,0.0,1.0,400,1.0,800,,1.0,95,no_gap
-4580,West Jasper Place,playground,1135.0,85.0,0.6907,400,1.0,800,0.7765,0.6838,348,no_gap
+4580,West Jasper Place,playground,1135.0,85.0,0.6969,400,1.0,800,0.7765,0.6905,348,no_gap
 4580,West Jasper Place,park,1135.0,85.0,0.9374,400,1.0,800,0.9647,0.9352,255,no_gap
 4580,West Jasper Place,transit_stop,1135.0,85.0,0.8185,400,1.0,800,0.6706,0.8305,267,no_gap
 4580,West Jasper Place,community_centre,1135.0,85.0,0.9982,800,1.0,1600,1.0,0.9981,397,no_gap
 4580,West Jasper Place,rec_centre,1135.0,85.0,1.0,2000,1.0,5000,1.0,1.0,1551,no_gap
 4580,West Jasper Place,library,1135.0,85.0,1.0,2000,1.0,5000,1.0,1.0,1532,no_gap
-4580,West Jasper Place,playground|city,1135.0,85.0,0.6115,400,1.0,800,0.5882,0.6133,360,no_gap
-4580,West Jasper Place,playground|private,1135.0,85.0,0.6907,400,1.0,800,0.7765,0.6838,348,no_gap
+4580,West Jasper Place,playground|city,1135.0,85.0,0.6176,400,1.0,800,0.5882,0.62,360,no_gap
+4580,West Jasper Place,playground|private,1135.0,85.0,0.6969,400,1.0,800,0.7765,0.6905,348,no_gap
 4580,West Jasper Place,park|city,1135.0,85.0,0.9374,400,1.0,800,0.9647,0.9352,255,no_gap
 4580,West Jasper Place,park|private,1135.0,85.0,0.9374,400,1.0,800,0.9647,0.9352,255,no_gap
 4590,West Meadowlark Park,playground,1266.0,2.0,0.421,400,1.0,800,0.5,0.4209,477,gap
@@ -3129,26 +3119,26 @@ code,name,amenity,units,units_built_since_2021,share_within_primary,primary_m,sh
 4590,West Meadowlark Park,playground|private,1266.0,2.0,0.421,400,1.0,800,0.5,0.4209,477,gap
 4590,West Meadowlark Park,park|city,1266.0,2.0,1.0,400,1.0,800,1.0,1.0,215,no_gap
 4590,West Meadowlark Park,park|private,1266.0,2.0,1.0,400,1.0,800,1.0,1.0,213,no_gap
-5540,Westbrook Estates,playground,405.0,23.0,0.1506,400,0.7333,800,0.3913,0.1361,730,gap
-5540,Westbrook Estates,park,405.0,23.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
-5540,Westbrook Estates,transit_stop,405.0,23.0,0.521,400,0.963,800,0.4783,0.5236,516,no_gap
-5540,Westbrook Estates,community_centre,405.0,23.0,0.5827,800,1.0,1600,0.7391,0.5733,809,no_gap
-5540,Westbrook Estates,rec_centre,405.0,23.0,0.4,2000,1.0,5000,0.3913,0.4005,2275,gap
-5540,Westbrook Estates,library,405.0,23.0,0.0963,2000,1.0,5000,0.087,0.0969,2299,gap
-5540,Westbrook Estates,playground|city,405.0,23.0,0.1506,400,0.7333,800,0.3913,0.1361,730,gap
-5540,Westbrook Estates,playground|private,405.0,23.0,0.1506,400,0.7333,800,0.3913,0.1361,730,gap
-5540,Westbrook Estates,park|city,405.0,23.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
-5540,Westbrook Estates,park|private,405.0,23.0,1.0,400,1.0,800,1.0,1.0,88,no_gap
-3440,Westmount,playground,3464.0,208.0,0.595,400,0.9247,800,0.8413,0.5792,313,no_gap
-3440,Westmount,park,3464.0,208.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
-3440,Westmount,transit_stop,3464.0,208.0,0.9922,400,1.0,800,0.976,0.9932,140,no_gap
-3440,Westmount,community_centre,3464.0,208.0,0.8227,800,1.0,1600,0.9375,0.8154,564,no_gap
-3440,Westmount,rec_centre,3464.0,208.0,0.8617,2000,1.0,5000,0.9135,0.8584,1576,no_gap
-3440,Westmount,library,3464.0,208.0,0.5782,2000,1.0,5000,0.524,0.5817,1680,no_gap
-3440,Westmount,playground|city,3464.0,208.0,0.5924,400,0.9247,800,0.8413,0.5765,315,no_gap
-3440,Westmount,playground|private,3464.0,208.0,0.595,400,0.9247,800,0.8413,0.5792,313,no_gap
-3440,Westmount,park|city,3464.0,208.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
-3440,Westmount,park|private,3464.0,208.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
+5540,Westbrook Estates,playground,406.0,24.0,0.1502,400,0.734,800,0.375,0.1361,731,gap
+5540,Westbrook Estates,park,406.0,24.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+5540,Westbrook Estates,transit_stop,406.0,24.0,0.5197,400,0.9631,800,0.4583,0.5236,523,no_gap
+5540,Westbrook Estates,community_centre,406.0,24.0,0.5813,800,1.0,1600,0.7083,0.5733,809,no_gap
+5540,Westbrook Estates,rec_centre,406.0,24.0,0.399,2000,1.0,5000,0.375,0.4005,2276,gap
+5540,Westbrook Estates,library,406.0,24.0,0.0961,2000,1.0,5000,0.0833,0.0969,2296,gap
+5540,Westbrook Estates,playground|city,406.0,24.0,0.1502,400,0.734,800,0.375,0.1361,731,gap
+5540,Westbrook Estates,playground|private,406.0,24.0,0.1502,400,0.734,800,0.375,0.1361,731,gap
+5540,Westbrook Estates,park|city,406.0,24.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+5540,Westbrook Estates,park|private,406.0,24.0,1.0,400,1.0,800,1.0,1.0,87,no_gap
+3440,Westmount,playground,3462.0,206.0,0.5947,400,0.9246,800,0.8398,0.5792,313,no_gap
+3440,Westmount,park,3462.0,206.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
+3440,Westmount,transit_stop,3462.0,206.0,0.9922,400,1.0,800,0.9757,0.9932,140,no_gap
+3440,Westmount,community_centre,3462.0,206.0,0.8226,800,1.0,1600,0.9369,0.8154,565,no_gap
+3440,Westmount,rec_centre,3462.0,206.0,0.8616,2000,1.0,5000,0.9126,0.8584,1576,no_gap
+3440,Westmount,library,3462.0,206.0,0.578,2000,1.0,5000,0.5194,0.5817,1682,no_gap
+3440,Westmount,playground|city,3462.0,206.0,0.5921,400,0.9246,800,0.8398,0.5765,315,no_gap
+3440,Westmount,playground|private,3462.0,206.0,0.5947,400,0.9246,800,0.8398,0.5792,313,no_gap
+3440,Westmount,park|city,3462.0,206.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
+3440,Westmount,park|private,3462.0,206.0,1.0,400,1.0,800,1.0,1.0,133,no_gap
 4610,Westridge,playground,497.0,2.0,0.3783,400,1.0,800,1.0,0.3758,470,gap
 4610,Westridge,park,497.0,2.0,1.0,400,1.0,800,1.0,1.0,45,no_gap
 4610,Westridge,transit_stop,497.0,2.0,0.837,400,1.0,800,1.0,0.8364,209,no_gap
