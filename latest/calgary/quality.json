@@ -1,14 +1,14 @@
 {
  "city": "calgary",
- "built_at": "2026-11-16T21:48:02Z",
- "overall": "warn",
+ "built_at": "2026-11-17T20:34:43Z",
+ "overall": "fail",
  "checks": [
   {
    "source": "calgary.areas",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (15 days ago; expected within 400)",
-   "value": 15,
+   "detail": "last updated by the publisher 2026-11-01 (16 days ago; expected within 400)",
+   "value": 16,
    "threshold": 400
   },
   {
@@ -47,8 +47,8 @@
    "source": "calgary.wards",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (15 days ago; expected within 45)",
-   "value": 15,
+   "detail": "last updated by the publisher 2026-11-01 (16 days ago; expected within 45)",
+   "value": 16,
    "threshold": 45
   },
   {
@@ -71,8 +71,8 @@
    "source": "calgary.homes",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-15 (1 days ago; expected within 400)",
-   "value": 1,
+   "detail": "last updated by the publisher 2026-11-15 (2 days ago; expected within 400)",
+   "value": 2,
    "threshold": 400
   },
   {
@@ -135,8 +135,8 @@
    "source": "calgary.amenity.playground",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-15 (1 days ago; expected within 45)",
-   "value": 1,
+   "detail": "last updated by the publisher 2026-11-15 (2 days ago; expected within 45)",
+   "value": 2,
    "threshold": 45
   },
   {
@@ -175,8 +175,8 @@
    "source": "calgary.amenity.park",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-12 (4 days ago; expected within 45)",
-   "value": 4,
+   "detail": "last updated by the publisher 2026-11-12 (5 days ago; expected within 45)",
+   "value": 5,
    "threshold": 45
   },
   {
@@ -215,8 +215,8 @@
    "source": "calgary.amenity.transit_stop",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-09-30 (47 days ago; expected within 120)",
-   "value": 47,
+   "detail": "last updated by the publisher 2026-09-30 (48 days ago; expected within 120)",
+   "value": 48,
    "threshold": 120
   },
   {
@@ -255,8 +255,8 @@
    "source": "calgary.amenity.community_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (15 days ago; expected within 45)",
-   "value": 15,
+   "detail": "last updated by the publisher 2026-11-01 (16 days ago; expected within 45)",
+   "value": 16,
    "threshold": 45
   },
   {
@@ -295,8 +295,8 @@
    "source": "calgary.amenity.rec_centre",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-15 (1 days ago; expected within 45)",
-   "value": 1,
+   "detail": "last updated by the publisher 2026-11-15 (2 days ago; expected within 45)",
+   "value": 2,
    "threshold": 45
   },
   {
@@ -335,8 +335,8 @@
    "source": "calgary.amenity.library",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-01 (15 days ago; expected within 45)",
-   "value": 15,
+   "detail": "last updated by the publisher 2026-11-01 (16 days ago; expected within 45)",
+   "value": 16,
    "threshold": 45
   },
   {
@@ -381,45 +381,37 @@
   },
   {
    "source": "calgary.osm",
+   "check": "count_change",
+   "status": "fail",
+   "detail": "4,386 rows against 929 in the previous build (+372.1%)",
+   "value": 3.7212,
+   "threshold": 0.05
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "coverage",
+   "status": "pass",
+   "detail": "99.9% of dwelling units are in areas with an estimate",
+   "value": 0.9989,
+   "threshold": 0.97
+  },
+  {
+   "source": "calgary.people.city_actual",
+   "check": "stale",
+   "status": "pass",
+   "detail": "last updated by the publisher 2026-11-17 (0 days ago; expected within 7)",
+   "value": 0,
+   "threshold": 7
+  },
+  {
+   "source": "calgary.people.city_pace",
    "check": "read",
    "status": "warn",
-   "detail": "OpenStreetMap unreachable (OpenStreetMap could not be reached (HTTP Error 504: Gateway Timeout)); the copy read 2026-11-15 is used",
+   "detail": "could not read: HTTP Error 503: Service Unavailable; crowding left out",
    "value": null,
    "threshold": null
   },
   {
-   "source": "calgary.people.city_actual",
-   "check": "coverage",
-   "status": "pass",
-   "detail": "99.9% of dwelling units are in areas with an estimate",
-   "value": 0.9989,
-   "threshold": 0.97
-  },
-  {
-   "source": "calgary.people.city_actual",
-   "check": "stale",
-   "status": "pass",
-   "detail": "last updated by the publisher 2026-11-16 (0 days ago; expected within 7)",
-   "value": 0,
-   "threshold": 7
-  },
-  {
-   "source": "calgary.people.city_pace",
-   "check": "coverage",
-   "status": "pass",
-   "detail": "99.9% of dwelling units are in areas with an estimate",
-   "value": 0.9989,
-   "threshold": 0.97
-  },
-  {
-   "source": "calgary.people.city_pace",
-   "check": "stale",
-   "status": "pass",
-   "detail": "last updated by the publisher 2026-11-16 (0 days ago; expected within 7)",
-   "value": 0,
-   "threshold": 7
-  },
-  {
    "source": "calgary.people.model",
    "check": "coverage",
    "status": "pass",
@@ -431,7 +423,7 @@
    "source": "calgary.people.model",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-16 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-17 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   },
@@ -447,7 +439,7 @@
    "source": "calgary.people.census2021",
    "check": "stale",
    "status": "pass",
-   "detail": "last updated by the publisher 2026-11-16 (0 days ago; expected within 7)",
+   "detail": "last updated by the publisher 2026-11-17 (0 days ago; expected within 7)",
    "value": 0,
    "threshold": 7
   }

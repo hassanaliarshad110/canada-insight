@@ -1360,7 +1360,7 @@ MAC,Macewan Glen,playground|private,1739.0,0.0,0.8781,400,1.0,800,,0.8781,223,no
 MAC,Macewan Glen,park|city,1739.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
 MAC,Macewan Glen,park|private,1739.0,0.0,1.0,400,1.0,800,,1.0,72,no_gap
 MAH,Mahogany,playground,7811.0,2247.0,0.9236,400,1.0,800,0.8981,0.9329,218,no_gap
-MAH,Mahogany,park,7811.0,2247.0,0.9996,400,1.0,800,1.0,0.9994,87,no_gap
+MAH,Mahogany,park,7811.0,2247.0,0.9996,400,1.0,800,1.0,0.9994,78,no_gap
 MAH,Mahogany,transit_stop,7811.0,2247.0,0.845,400,0.9954,800,0.595,0.9459,237,no_gap
 MAH,Mahogany,community_centre,7811.0,2247.0,0.0,800,0.1454,1600,0.0,0.0,>1600,gap
 MAH,Mahogany,rec_centre,7811.0,2247.0,0.2034,2000,1.0,5000,0.3583,0.1149,2527,gap
@@ -1368,7 +1368,7 @@ MAH,Mahogany,library,7811.0,2247.0,0.3435,2000,1.0,5000,0.4281,0.2882,2339,gap
 MAH,Mahogany,playground|city,7811.0,2247.0,0.7667,400,0.9958,800,0.854,0.7242,275,no_gap
 MAH,Mahogany,playground|private,7811.0,2247.0,0.9236,400,1.0,800,0.8981,0.9329,218,no_gap
 MAH,Mahogany,park|city,7811.0,2247.0,0.9996,400,1.0,800,1.0,0.9994,93,no_gap
-MAH,Mahogany,park|private,7811.0,2247.0,0.9996,400,1.0,800,1.0,0.9994,87,no_gap
+MAH,Mahogany,park|private,7811.0,2247.0,0.9996,400,1.0,800,1.0,0.9994,78,no_gap
 MAN,Manchester,playground,1077.0,0.0,0.9898,400,1.0,800,,0.9883,140,no_gap
 MAN,Manchester,park,1077.0,0.0,1.0,400,1.0,800,,1.0,106,no_gap
 MAN,Manchester,transit_stop,1077.0,0.0,1.0,400,1.0,800,,1.0,100,no_gap
