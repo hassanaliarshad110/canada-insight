@@ -1,6 +1,6 @@
 {
  "city": "edmonton",
- "built_at": "2026-11-18T20:20:26Z",
+ "built_at": "2026-11-19T20:13:10Z",
  "version": "0.5.0",
  "files": [
   "access.json",
@@ -22,7 +22,7 @@
   "wards.geojson"
  ],
  "sha256": {
-  "access.json": "281c037db3cc47a53245e7aca2e227474c94d0a79b67a2eb5d689e3eea98a073",
+  "access.json": "66fa4a684f5f6b457dd83f103ed058e90ca227c11468b2e67356b9e5811bb0cd",
   "access_by_area.csv": "8ab66eeedda26ab267991bb678f1e70f1daaf51789847421e1390d65f03c2dab",
   "amenities/community_centre.geojson": "d37f5bbd5200807c74889060e05219a3e241943b8299507bc17a1ef26cb976ab",
   "amenities/library.geojson": "d4221d17af168c06b1fd173544ba2349b34334ef7c18cc325880a04959ad02bd",
@@ -35,9 +35,9 @@
   "amenities/rec_centre.geojson": "5a45a6c4f92fa8c3899b3816d1b7cb8599005a5f9c2804aae87954139637cf3b",
   "amenities/transit_stop.geojson": "aa5dde941a2f00149e4b86f34ce626100e5f841bd6c7cc1ef22510191e59420c",
   "areas.geojson": "48a47849b363cb5e9ba1e435e5090f2768704620d34ed7d475e3024fd3be73f5",
-  "osm_features.json": "c53dd49df8805cda9e550544c54267bd7d91fb7b8bebeed8baaa692a6871e72c",
-  "quality.json": "66c2fd3f54c884757d93812d105fce9909c326bd2dfd666bef72620743e1d4e0",
-  "sources.json": "287c89648e27a31a945238288d91adc516b7860d88e635cb4f024d1655173c7a",
+  "osm_features.json": "812fad5194e5d488874b4d9d08ea07ce7bf80c1d826499e7896d731fff279489",
+  "quality.json": "90eba5172e4383d0fd749583bbd02e4a506b6ae14c3b5b21b79f788080334cb8",
+  "sources.json": "696435d56cdd86a00c4456c8800ba6d61ad6dc0d1e72c505698ed8b4a4cfd527",
   "wards.geojson": "c54d88ab04fd1a0e0d74579720a30ca535e755546234f9ce25a49e0062b46704"
  }
 }
