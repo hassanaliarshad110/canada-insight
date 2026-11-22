@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-21T18:42:40Z",
+ "built_at": "2026-11-22T19:03:02Z",
  "version": "0.5.0",
  "files": [
   "access.json",
@@ -22,7 +22,7 @@
   "wards.geojson"
  ],
  "sha256": {
-  "access.json": "11a3c25b28a3941cf00ec7566a337b9fe68d22bfb931c9d0c9048c5738d9f194",
+  "access.json": "6bff4f735d4315266dad2891019df2a094c165f9f4bb73093509451bd5c09604",
   "access_by_area.csv": "86a1a3c455b19b596965c68899256b6a1d8c42cd35f9630523f275fcddd97371",
   "amenities/community_centre.geojson": "4622874c89276dbb7f7ecb29dd63d7a42ce803f7596b75979160e90fed676596",
   "amenities/library.geojson": "83dba4b9219b1568fd17becd1ac85527a539e18261d6eef100ed1d0340b93c4f",
@@ -36,8 +36,8 @@
   "amenities/transit_stop.geojson": "18fe8ff117aba210932c14eda82a6a488f8f316d80f87d43e64665729aca505c",
   "areas.geojson": "5774814aa8b165236cd3be322edeaf0d2313505378abef9bb6b9d7fd2f2d2027",
   "osm_features.json": "6e87cf4d5f08acc56a91f1f2abfaf1503e29ef44d1c1cf4367434bfb0e735cd3",
-  "quality.json": "437410f0ef6efc0ef54254d1dd9a723657b85061a01876b13312aea898f831ed",
-  "sources.json": "70acaad30db2ca928816d323cb493a64c453f2d273e10949b6fde80015cb4667",
+  "quality.json": "216fea0017484bd1ccbe6502ea5acb6c233097fb6428001c44a2466791b07280",
+  "sources.json": "9b60241b2b862b01719ba4857f78f75be90e4fa7b7b11c78a8226bb75cf3676e",
   "wards.geojson": "25c4cdf1f21213aaba80933f5b066a2c5e5f3f2865f2e878f056a60395b122bf"
  }
 }
