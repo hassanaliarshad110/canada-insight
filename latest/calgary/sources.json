@@ -1,6 +1,6 @@
 {
  "city": "calgary",
- "built_at": "2026-11-26T21:02:41Z",
+ "built_at": "2026-11-27T20:47:13Z",
  "sources": [
   {
    "id": "calgary.areas",
@@ -14,7 +14,7 @@
    "unit": "one community boundary",
    "limitations": [],
    "publisher_updated": "2026-11-01",
-   "fetched_at": "2026-11-26T20:31:13Z",
+   "fetched_at": "2026-11-27T20:17:29Z",
    "rows": 313,
    "query": null,
    "sha256": "5fa06aaeb436c50d4c63ded8bd2b66e877fb1ba53a9319428c9d90b28225122f",
@@ -34,7 +34,7 @@
    "unit": "one ward boundary",
    "limitations": [],
    "publisher_updated": "2026-11-01",
-   "fetched_at": "2026-11-26T20:31:15Z",
+   "fetched_at": "2026-11-27T20:17:31Z",
    "rows": 14,
    "query": null,
    "sha256": "8a8388f1b79fc9c2989c513e658cc89dbd7e56509ef3f072f8e756d57540c28e",
@@ -50,11 +50,11 @@
    "api": "https://data.calgary.ca/resource/4bsw-nn7w.json",
    "licence": "Open Government Licence - City of Calgary",
    "coverage": "whole city",
-   "period": "current roll (read 2026-11-26)",
+   "period": "current roll (read 2026-11-27)",
    "unit": "one assessed residential property (a house, a townhouse or a condominium unit)",
    "limitations": [],
    "publisher_updated": "2026-11-22",
-   "fetched_at": "2026-11-26T20:31:19Z",
+   "fetched_at": "2026-11-27T20:17:31Z",
    "rows": 502530,
    "query": "assessment_class='RE' AND property_type='LI' AND starts_with(sub_property_use,'R')",
    "sha256": "24ff6e2b148c98a0f52bb13ab271f950f358334bb222bac84776a1a36c9498b0",
@@ -78,7 +78,7 @@
     "Purpose-built rental buildings are one record each on the roll. Their units are taken from matching building permits (658 buildings, 43,677 units) or estimated from assessed value (1,569 buildings, 32,163 units). Records missing from the residential filter are read by roll number."
    ],
    "publisher_updated": null,
-   "fetched_at": "2026-11-26T20:34:01Z",
+   "fetched_at": "2026-11-27T20:18:57Z",
    "rows": 2227,
    "query": null,
    "sha256": "b8a9a80517d4f991e25445d788a8f67079d16d3ae50477935b722414f18b3185",
@@ -100,7 +100,7 @@
     "City-maintained play structures only; school, developer and condominium playgrounds that are not in the City's inventory are not counted."
    ],
    "publisher_updated": "2026-11-22",
-   "fetched_at": "2026-11-26T20:34:02Z",
+   "fetched_at": "2026-11-27T20:18:58Z",
    "rows": 1115,
    "query": "type_description='MULTI PLAY COMPLEX' AND life_cycle_status in('ACTIVE','INSTALLED')",
    "sha256": "05cf00463e819b46857d3cffc7f061309fca6c1039b1fd1d45af49ba8800dea9",
@@ -123,7 +123,7 @@
     "Parks in new communities may still be held by the developer and missing from the City's inventory."
    ],
    "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:34:08Z",
+   "fetched_at": "2026-11-27T20:18:59Z",
    "rows": 2957,
    "query": "planning_category not in('NON-PARK','PARKS DEPOT')",
    "sha256": "f491fa1af2c3727c661dffc9ec89d93270fcfda3565847b1aed23705aaac52bf",
@@ -145,7 +145,7 @@
     "A stop is not a service level: how often buses come is not measured here (planned: the GTFS timetable)."
    ],
    "publisher_updated": "2026-09-30",
-   "fetched_at": "2026-11-26T20:34:24Z",
+   "fetched_at": "2026-11-27T20:19:14Z",
    "rows": 6213,
    "query": "status='ACTIVE'",
    "sha256": "fc5a5104476072adf8eb8520a294aca3b4b7a2f6ddf00d234cdcb50f1f45d0ed",
@@ -167,7 +167,7 @@
     "Community association halls and centres as listed by the City; opening hours and programs are not measured."
    ],
    "publisher_updated": "2026-11-01",
-   "fetched_at": "2026-11-26T20:34:31Z",
+   "fetched_at": "2026-11-27T20:19:16Z",
    "rows": 109,
    "query": "type='Community Centre'",
    "sha256": "3a3a5dec2af8fbaf9181526774c94b9715a9df13db501ecad9c69ebbc47d50f5",
@@ -189,7 +189,7 @@
     "Leisure centres, aquatic and fitness centres and fieldhouses, municipal and not-for-profit. Arenas, outdoor pools, golf courses and other single-purpose sites are left out. Capacity and opening hours are not measured."
    ],
    "publisher_updated": "2026-11-22",
-   "fetched_at": "2026-11-26T20:34:40Z",
+   "fetched_at": "2026-11-27T20:19:17Z",
    "rows": 26,
    "query": "facility_type in('Leisure Centre','Leisure Centre - Municipal','Aquatic & Fitness Centre','Fieldhouse')",
    "sha256": "8f6f2f6c3f4b0bb40aef96d547bbaffd9fd0116430644032ac5358b2f8e78c1c",
@@ -211,7 +211,7 @@
     "Library branches as listed by the City; hours and size are not measured."
    ],
    "publisher_updated": "2026-11-01",
-   "fetched_at": "2026-11-26T20:34:47Z",
+   "fetched_at": "2026-11-27T20:19:17Z",
    "rows": 21,
    "query": "type='Library'",
    "sha256": "94aba724fd7d21f0ef17d3b41ecfe59ebe104886c1c5b243a88ebec1a0156502",
@@ -233,8 +233,8 @@
     "Volunteer-mapped: coverage is uneven, and a missing feature means nobody has mapped it.",
     "Only features not already in the city's inventory are added (matching rules in the method)."
    ],
-   "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:34:50Z",
+   "publisher_updated": "2026-11-27",
+   "fetched_at": "2026-11-27T20:19:19Z",
    "rows": 4386,
    "query": null,
    "sha256": "77e2cdc3cc544d869293d6683466e948b9a2c03f92894d0aadba73e14bd3fb87",
@@ -257,11 +257,11 @@
     "Communities with fewer than 100 residents are not included and get no residents or children.",
     "The City's figure for 2026 onward is a forecast (Calgary and Region Economic Outlook, spring 2026)."
    ],
-   "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:56:04Z",
+   "publisher_updated": "2026-11-27",
+   "fetched_at": "2026-11-27T20:40:13Z",
    "rows": 216,
    "query": null,
-   "sha256": "3b97968abd5bb71dfb1e0833db6429e42c38adf462babb545358d6290a0d87d0",
+   "sha256": "12c7ff706bffb0a3922879a65cdc792d42037db1b25085525883fe71f8d13847",
    "transformations": [
     "each area's residents and children spread evenly over its dwelling units",
     "areas with fewer than 100 residents are not in the source and get none"
@@ -281,11 +281,11 @@
     "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
     "Communities with fewer than 100 residents are not included and get no residents or children."
    ],
-   "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:56:04Z",
+   "publisher_updated": "2026-11-27",
+   "fetched_at": "2026-11-27T20:40:13Z",
    "rows": 216,
    "query": null,
-   "sha256": "a7211e16f2cdb9bfb61916fc432fba756f69db7a050dabf2e22d1ebccf599544",
+   "sha256": "9ac5ed507fa7b1565d6d1689e31af3a0d03dd4a130617f66f5c613dc11fea1a8",
    "transformations": [
     "each area's residents and children spread evenly over its dwelling units",
     "areas with fewer than 100 residents are not in the source and get none"
@@ -305,11 +305,11 @@
     "Estimates by community from Calgary Data Desk's population model, spread evenly over each community's dwelling units.",
     "Communities with fewer than 100 residents are not included and get no residents or children."
    ],
-   "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:56:04Z",
+   "publisher_updated": "2026-11-27",
+   "fetched_at": "2026-11-27T20:40:14Z",
    "rows": 216,
    "query": null,
-   "sha256": "3cdd748a11fd936dfd9ab10dbf2b91e0732e59a7723c3442a6c76deebb2aad78",
+   "sha256": "2d75b546ee36e1ab05d04b94e2bafbeae5004533af99e39573300b68f43318d0",
    "transformations": [
     "each area's residents and children spread evenly over its dwelling units",
     "areas with fewer than 100 residents are not in the source and get none"
@@ -330,11 +330,11 @@
     "Communities with fewer than 100 residents are not included and get no residents or children.",
     "No growth since May 2021: fast-growing communities are undercounted."
    ],
-   "publisher_updated": "2026-11-26",
-   "fetched_at": "2026-11-26T20:56:05Z",
+   "publisher_updated": "2026-11-27",
+   "fetched_at": "2026-11-27T20:40:14Z",
    "rows": 204,
    "query": null,
-   "sha256": "d6ea5d4716be691eeef46294e2afbf927496d503320451835ddad188f2b46ce0",
+   "sha256": "81a6b9ddfda3c0b08fb2996420da348dece5de42e6898113cbe69bb45608ddb5",
    "transformations": [
     "each area's residents and children spread evenly over its dwelling units",
     "areas with fewer than 100 residents are not in the source and get none"
